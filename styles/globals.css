@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* strong style */
+strong {
+    color: #ff5d17 !important;
+}
+
+/* inline code style */
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+    background-color: rgb(242, 243, 244);
+    font-weight: 500;
+    color: #fe00dc;
+    padding: 1px 4px;
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *))::before {
+    content: "";
+}
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: "";
+}
+
+
+/* codeblock style */
+.prose :where(pre):not(:where([class~="not-prose"] *)) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+/* link style */
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+    font-weight: 400;
+    color: #005dfe;
+}
+
+/* p tag style in admonitions */
+.prose :where(p):not(:where([class~="not-prose"] *)) {
+    margin-top: 10px;
+    margin-bottom: 10px;;
+}

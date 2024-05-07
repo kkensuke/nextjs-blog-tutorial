@@ -1,7 +1,21 @@
 import fs from "fs";
-import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import getPostMetadata from "../../../components/getPostMetadata";
+
+// import MarkdownIt from "markdown-it";
+// import docutilsPlugin from "markdown-it-docutils";
+import TOC from "../../../components/toc";
+import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import remarkDirective from 'remark-directive';
+import remarkDirectiveRehype from 'remark-directive-rehype';
+import CodeBlock from "../../../components/CodeBlock";
+import AdmonitionComponents from "../../../components/admonitions";
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css';
+// import rehypeMathjax from 'rehype-mathjax';
+
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
@@ -11,28 +25,46 @@ const getPostContent = (slug: string) => {
   return matterResult;
 };
 
+const PostPage = (props: any) => {
+  const slug = props.params.slug;
+  const post = getPostContent(slug);
+  // const text = MarkdownIt().use(docutilsPlugin).render(post.content)
+  
+  return (
+    <div>
+      <div>
+        <div className="my-12 text-center">
+          <h1 className="text-2xl text-slate-600">{post.data.title}</h1>
+          <p className="mt-2 text-slate-600">{post.data.subtitle}</p>
+          <p className="mt-2 text-slate-600">{post.data.date}</p>
+        </div>
+        
+        <TOC/>
+
+        <article className="post prose mx-auto max-w-screen-md">
+          {/* <div dangerouslySetInnerHTML={{ __html: text }}></div> */}
+          <Markdown
+            children={post.content}
+            remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
+            rehypePlugins={[rehypeKatex]}
+            components={{
+              ...AdmonitionComponents,
+              code : CodeBlock,
+            }}
+          />
+        </article>
+      </div>
+      
+    </div>
+  );
+};
+export default PostPage;
+
+
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
+  
   return posts.map((post) => ({
     slug: post.slug,
   }));
 };
-
-const PostPage = (props: any) => {
-  const slug = props.params.slug;
-  const post = getPostContent(slug);
-  return (
-    <div>
-      <div className="my-12 text-center">
-        <h1 className="text-2xl text-slate-600 ">{post.data.title}</h1>
-        <p className="text-slate-400 mt-2">{post.data.date}</p>
-      </div>
-
-      <article className="prose">
-        <Markdown>{post.content}</Markdown>
-      </article>
-    </div>
-  );
-};
-
-export default PostPage;

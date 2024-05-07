@@ -20,7 +20,7 @@ It was trained on an estimated **45 TB** of text data (pretty much anything that
 
 We can literally ask it to do anything. For example, if I ask for steps to bake a cake it gives me:
 
-```
+```none
 1. Preheat oven to 350°F.
 2. Grease and flour a 9-inch round cake pan.
 3. Stir cake mix, oil, eggs, and water in a large bowl with a spoon until blended.
@@ -29,14 +29,14 @@ We can literally ask it to do anything. For example, if I ask for steps to bake 
 
 Alternatively, I can provide it with an example of what I want. Such as:
 
-```
+```none
 [15 mins] Walk or jog lightlyy to warm up.
 [10 mins] 3 sets of Squats
 ```
 
 And it will understand that we're writing a work-out routine, and continue in that style — responding with something like this:
 
-```
+```none
 [10 mins] 3 sets of Push ups (use the bench/steps if you can't do regular ones)
 [10 mins] 3 sets of Lunges
 [10 mins] 3 sets of Sit ups
@@ -46,7 +46,7 @@ And it will understand that we're writing a work-out routine, and continue in th
 
 It can also do some pretty zany stuff, like translating from English to emoji.
 
-```
+```none
 I love pizza and beer.
 😀❤️🍕🍺
 
@@ -85,7 +85,7 @@ Also I've pushed the [full set of results on GitHub](https://github.com/pixegami
 
 As a baseline, I want to know how much the AI understands about the tone, structure and content of a 'poem.'
 
-```
+```none
 [Prompt]
 Write a short poem.
 
@@ -103,7 +103,7 @@ It's a pretty good start! It's structured but it doesn't rhyme. The language and
 
 Amongst the other 20 samples were also hilarious rubbish like this one 🤡 :
 
-```
+```none
 [Sample AI Response]
 Life is like a beach
 Where we take our coconut and whack it
@@ -121,7 +121,7 @@ Next, I wanted to extend the prompt with some theme, just to see how it is able 
 
 I picked a theme that isn't typically associated with poetry: **Space Exploration** (also because I've been watching a lot of old-school sci-fi stuff recently).
 
-```
+```none
 [Prompt]
 Write a short poem about space exploration.
 
@@ -138,7 +138,7 @@ It's definitely found a way to put the space theme in there — not too unnatura
 
 Now I know it can handle one theme, let's add another one to the mix and see what happens. Something _not_ commonly associated with either poetry nor space (we want to challenge the AI right?) — how about...
 
-```
+```none
 [Prompt]
 Write a short poem about space exploration and parkour.
 
@@ -150,7 +150,7 @@ She jumps, leaps, and lands
 
 Not bad. Here's another sample.
 
-```
+```none
 [Sample AI Response]
 Parkour through the cosmos
 jump to the moon and land with a moonwalk
@@ -170,7 +170,7 @@ My next task was to try something a bit more directed. This time I will give it 
 
 To keep it (relatively) easy for the AI, I started with a rhyming verse, like something from a Dr Seuss book:
 
-```
+```none
 [Prompt]
 It's a sunny day.
 And Milky wants to play!
@@ -182,7 +182,7 @@ but it's not in the hall.
 
 Some of the results from this were super interesting. My favorite one is:
 
-```
+```none
 [Sample AI Response]
 It's not on the stairs.
 It's not in the yard.
@@ -198,7 +198,7 @@ Structurally, "yard" and "dark" is also partial rhyme, but I think that was prob
 
 Still, I was really impressed with this result. Here's something else that I observed as well:
 
-```
+```none
 [Sample AI Response]
 Then in through the window
 stumbles a dog with a bark.
@@ -211,7 +211,7 @@ _Dog!_ It figured out that Milky in this story is a dog, even though that was ne
 
 Next let's test GPT-3's ability for creative story-telling as well. Here's a rhyming story with a bit of drama, written in a high-fantasy style:
 
-```
+```none
 [Prompt]
 A mysterious curse sweeps the land,
 and into townsfolk's hearts expand.
@@ -225,7 +225,7 @@ I ended the prompt with `But there is hope` because I was interested to see if t
 
 The results for this prompt were probably the most entertaining for me to read. My favorite:
 
-```
+```none
 [Sample AI Response]
 a prophecy is spoken,
 Which tells of one who will restore the sun.
@@ -245,7 +245,7 @@ A lot of the other samples were also quite interesting (check them out [here](ht
 
 And finally just for a bit of fun, let's see what it can do with hacker rap 🤣 :
 
-```
+```none
 [Prompt]
 When I'm tappin' I'm trapped in the screen
 I escape when the codebase is clean
@@ -253,7 +253,7 @@ I escape when the codebase is clean
 
 I loved it's work here as well. It did a good job picking up on both structure (rhyme) and content.
 
-```
+```none
 [Sample AI Response]
 I can write code, I can code all night
 You are my code and I am your light
@@ -263,7 +263,7 @@ We got the skill to make things run
 
 I also found this particular choice of words interesting:
 
-```
+```none
 The refactoring was a success, great!
 And I will not commit the same crime
 So I'm testin', testin', testin, testin' again

@@ -12,6 +12,7 @@ In fact, most of the projects on this site will require cloud interaction of som
 
 > To use AWS in these projects, we'll need to set up an account, the CLI, and the SDK.
 
+
 ### Create an account
 
 If you don't already have an account then [sign up here](https://portal.aws.amazon.com/billing/signup#/start).
@@ -47,7 +48,7 @@ Once the user is created, you'll need to generate access keys (passwords, essent
 
 Your access keys should look something like this:
 
-```
+```none
 Access key ID: AKIAIOSFODNN7EXAMPLE
 Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 ```
@@ -67,7 +68,7 @@ Additionally, you'll also be asked for a [default region](https://docs.aws.amazo
 
 You may leave them empty—but generally I like to use:
 
-```
+```none
 Default region name [None]: us-east-1
 Default output format [None]: json
 ```
@@ -76,7 +77,7 @@ Default output format [None]: json
 
 Once configured, the AWS CLI [saves the credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) and region/format profiles to your computer. They are typically in these locations:
 
-```
+```none
 ~/.aws/credentials
 ~/.aws/config
 ```

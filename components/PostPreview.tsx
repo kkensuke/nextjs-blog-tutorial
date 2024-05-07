@@ -2,18 +2,16 @@ import Link from "next/link";
 import { PostMetadata } from "./PostMetadata";
 
 const PostPreview = (props: PostMetadata) => {
+  const moreThan75: boolean = props.subtitle.length > 75;
+  const subtitle: string = props.subtitle.slice(0, 75) + (moreThan75 ? "..." : "");
   return (
-    <div
-      className="border border-slate-300 p-4 rounded-md shadow-sm
-    bg-white"
-    >
+    <Link href={`/posts/${props.slug}`}>
+    <div className="h-36 rounded-md border border-slate-300 bg-white p-4 shadow-sm">
       <p className="text-sm text-slate-400">{props.date}</p>
-
-      <Link href={`/posts/${props.slug}`}>
-        <h2 className=" text-violet-600 hover:underline mb-4">{props.title}</h2>
-      </Link>
-      <p className="text-slate-700">{props.subtitle}</p>
+        <h2 className="mb-4 text-sky-600">{props.title}</h2>
+      <p className="text-slate-700">{subtitle}</p>
     </div>
+    </Link>
   );
 };
 
