@@ -6,7 +6,7 @@ date: "2024-5-4"
 
 ## Latex Math
 
-Latex inline math: 
+Latex inline math:
 :::simple[]
 ```latex
 $\frac{1}{2} + \frac{1}{4} = \frac{3}{4}$

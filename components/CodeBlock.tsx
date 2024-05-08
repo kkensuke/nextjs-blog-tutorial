@@ -20,7 +20,7 @@ const CodeBlock = ({ children, className, node, ...rest}: any) => {
     }, 1500);
   };
   
-  const copyButton = ( // use "showCopyToClipboard && (" if you want to show the copy button only on hover
+  const copyButton = ( // use "= showCopyToClipboard && (" if you want to show the copy button only on hover
     <div className="absolute top-1 right-1 flex" >
       <div style={styleTooltip}>
         Copied!
@@ -51,7 +51,7 @@ const CodeBlock = ({ children, className, node, ...rest}: any) => {
       />
     </div>
   ) : (
-    // inline code (add border and {className} to <code> if you want to style inline code)
+    // inline code
     <code className="border border-gray-300">
       {children}
     </code>
