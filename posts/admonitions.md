@@ -1,6 +1,6 @@
 ---
 title: "Admonitions"
-subtitle: "A collection of admonitions and code blocks. A collection of admonitions and code blocks. A collection of admonitions and code blocks."
+subtitle: "A collection of admonitions and code blocks."
 date: "2024-4-27"
 ---
 
