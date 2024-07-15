@@ -1,25 +1,19 @@
-import getPostMetadata from "../components/getPostMetadata";
-import PostPreview from "../components/PostPreview";
-import { PostMetadata } from "../components/PostMetadata";
+import Link from 'next/link';
 
+// This is the main page of my website written in React with TypeScript and Tailwind CSS.
 const HomePage = () => {
-  const postMetadata: PostMetadata[] = getPostMetadata();
-
-  // Sort post metadata by date in descending order
-  postMetadata.sort((a, b) => {
-    // First, compare dates
-    const dateComparison = new Date(b.date).getTime() - new Date(a.date).getTime();
-    // If dates are the same, compare titles
-    return dateComparison === 0 ? a.title.localeCompare(b.title) : dateComparison;
-  });
-  
-  const postPreviews = postMetadata.map((post) => (
-    <PostPreview key={post.slug} {...post} />
-  ));
-
   return (
-    <div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">{postPreviews}</div>
+    <div className='mt-10'>
+      <h1 className="p-5 text-center text-4xl font-bold">Hi, I'm Ken! 👋</h1>
+      <p className="mt-4 text-center">🧑‍💻 This is the main page of my website. 🚀</p>
+      
+      {/* <p className="mt-4 text-center">📚 You can find all my blog posts here. 📝</p> */}
+      
+      <div className="mt-8 text-center">
+        <Link href="/blog">
+          <p className="text-xl text-blue-500 hover:underline">Go to the blog</p>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -20,8 +20,8 @@ export default function RootLayout({ children }: Props) {
           className="mx-auto"
           alt={"logo"}
         /> */}
-          <h1 className="mt-4 text-4xl font-bold text-white">Jack's Blog</h1>
-        <p className="mt-2 text-slate-300"> 🧑‍💻 Welcome to my tech blog 🚀 </p>
+          <h1 className="mt-4 text-4xl font-bold text-white">I'm Ken</h1>
+        <p className="mt-2 text-slate-300"> 🧑‍💻 Welcome to my website 🚀 </p>
       </div>
       </Link>
     </header>
@@ -30,19 +30,9 @@ export default function RootLayout({ children }: Props) {
   const navbar = (
     <nav className="mb-3 rounded-md border-2 border-slate-400 py-3">
       <ul className="flex flex-wrap justify-center text-xl text-black">
-        <Link href="/useful">
+        <Link href="/blog">
           <li className="mx-2 w-28 py-1 text-center hover:bg-slate-300">
-            Useful
-          </li>
-        </Link>
-        <Link href="/book">
-          <li className="mx-2 w-28 py-1 text-center hover:bg-slate-300">
-            Book
-          </li>
-        </Link>
-        <Link href="/computer">
-          <li className="mx-2 w-28 py-1 text-center hover:bg-slate-300">
-            Computer
+            Blog
           </li>
         </Link>
         <Link href="/publication">
@@ -60,10 +50,10 @@ export default function RootLayout({ children }: Props) {
   );
 
   const footer = (
-    <footer>
-      <div className="mt-12 border-t border-slate-400 py-6 text-center text-slate-400">
+    <footer className="mt-10">
+      <div className="border-t border-slate-400 py-6 text-center text-slate-400">
         <h3>Designed by Pixegami</h3>
-        <p>&copy; 2024 Jack's Blog</p>
+        <p>&copy; 2024 Ken</p>
       </div>
     </footer>
   );
@@ -72,12 +62,12 @@ export default function RootLayout({ children }: Props) {
     <html>
       <head />
       <body>
-        <div className="mx-auto max-w-screen-md px-6">
+        <div className="mx-auto min-h-[83vh] max-w-screen-md px-6">
           {header}
           {navbar}
           {children}
-          {footer}
         </div>
+        {footer}
         <Analytics />
         <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="kkensuke" data-description="Support me on Buy me a coffee!" data-message="" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
       </body>

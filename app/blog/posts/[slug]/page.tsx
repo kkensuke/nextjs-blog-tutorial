@@ -1,16 +1,16 @@
 import fs from "fs";
 import matter from "gray-matter";
-import getPostMetadata from "../../../components/getPostMetadata";
+import getPostMetadata from "../../../../components/getPostMetadata";
 
 // import MarkdownIt from "markdown-it";
 // import docutilsPlugin from "markdown-it-docutils";
-import TOC from "../../../components/toc";
+import TOC from "../../../../components/toc";
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
-import CodeBlock from "../../../components/CodeBlock";
-import AdmonitionComponents from "../../../components/admonitions";
+import CodeBlock from "../../../../components/CodeBlock";
+import AdmonitionComponents from "../../../../components/admonitions";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
