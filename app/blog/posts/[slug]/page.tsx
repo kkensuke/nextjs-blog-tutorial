@@ -9,7 +9,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
-import CodeBlock from "../../../../components/CodeBlock";
+// import CodeBlock from "../../../../components/CodeBlock";
 import Pre from "../../../../components/pre";
 import AdmonitionComponents from "../../../../components/admonitions";
 import remarkMath from 'remark-math';
@@ -52,7 +52,7 @@ const PostPage = (props: any) => {
             rehypePlugins={[rehypeKatex]}
             components={{
               ...AdmonitionComponents,
-              // code : CodeBlock,
+              // code : CodeBlock, // This function regards the code block with no language specified as inline code
               pre: Pre,
             }}
           />

@@ -6,59 +6,71 @@ date: "2024-4-27"
 
 ## Admonitions
 
-::::simple[]
+::::simple
 ```markdown
-:::note[]
+:::note
 This is a note admonition.
 :::
 ```
-:::note[]
+:::note
 This is a note admonition.
 :::
 ::::
 
+::::simple
+```markdown
+:::note{title="This is a title."}
+This is a note admonition.
+:::
+```
+:::note{title="This is a title."}
+This is a note admonition.
+:::
+::::
 
-:::abstract[]
+:::abstract
 This is an abstract admonition.
 :::
 
-:::warning[]
+
+:::warning
 This is a warning admonition.
 :::
 
-:::important[]
+
+:::important
 This is an important admonition.
 :::
 
-:::tip[]
+:::tip
 This is a tip admonition.
 :::
 
-:::example[]
+:::example
 This is an example admonition.
 :::
 
-:::comment[]
+:::comment
 This is a comment admonition.
 :::
 
-:::quote[]
+:::quote
 This is a quote admonition.
 :::
 
-:::question[]
+:::question
 This is a question admonition.
 :::
 
-:::simple[]
+:::simple
 This is a simple admonition.
 :::
 
 
 You can make nested admonitions by adding more colons to the opening and closing tags.
-::::note[]
+::::note
 
-:::important[]
+:::important
 This is an important admonition.
 :::
 
