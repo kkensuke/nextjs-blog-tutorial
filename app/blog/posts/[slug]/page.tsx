@@ -18,7 +18,6 @@ import 'katex/dist/katex.min.css';
 // import rehypeMathjax from 'rehype-mathjax';
 
 
-import rehypeImageSize from "../../../../components/img";
 
 
 
@@ -54,7 +53,7 @@ const PostPage = (props: any) => {
           <Markdown
             children={post.content}
             remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
-            rehypePlugins={[rehypeKatex, rehypeImageSize]}
+            rehypePlugins={[rehypeKatex]}
             components={{
               ...AdmonitionComponents,
               // code : CodeBlock, // This function regards the code block with no language specified as inline code
