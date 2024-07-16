@@ -17,7 +17,7 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 // import rehypeMathjax from 'rehype-mathjax';
 
-import NextImage from "next/image";
+
 import rehypeImageSize from "../../../../components/img";
 
 
@@ -31,17 +31,6 @@ const getPostContent = (slug: string) => {
 };
 
 
-const Img = (props: any) => {
-  const { src, alt, width, height } = props;
-  return (
-    <NextImage
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-    />
-  );
-};
 
 
 const PostPage = (props: any) => {
@@ -70,7 +59,7 @@ const PostPage = (props: any) => {
               ...AdmonitionComponents,
               // code : CodeBlock, // This function regards the code block with no language specified as inline code
               pre: Pre,
-              img: Img
+              // img: Img
             }}
           />
         </article>
