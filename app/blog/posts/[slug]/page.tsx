@@ -10,11 +10,13 @@ import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
 import CodeBlock from "../../../../components/CodeBlock";
+import Pre from "../../../../components/pre";
 import AdmonitionComponents from "../../../../components/admonitions";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 // import rehypeMathjax from 'rehype-mathjax';
+
 
 
 const getPostContent = (slug: string) => {
@@ -29,6 +31,7 @@ const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   // const text = MarkdownIt().use(docutilsPlugin).render(post.content)
+  
   
   return (
     <div>
@@ -49,7 +52,8 @@ const PostPage = (props: any) => {
             rehypePlugins={[rehypeKatex]}
             components={{
               ...AdmonitionComponents,
-              code : CodeBlock,
+              // code : CodeBlock,
+              pre: Pre,
             }}
           />
         </article>

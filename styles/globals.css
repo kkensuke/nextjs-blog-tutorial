@@ -9,26 +9,11 @@ strong {
 }
 
 /* inline code style */
-.prose :where(code):not(:where([class~="not-prose"] *)) {
+.prose code:not(pre code) {
     background-color: rgb(242, 243, 244);
     font-weight: 500;
     color: #fe00dc;
-    padding: 1px 4px;
-}
-
-.prose :where(code):not(:where([class~="not-prose"] *))::before {
-    content: "";
-}
-.prose :where(code):not(:where([class~="not-prose"] *))::after {
-    content: "";
-}
-
-
-/* codeblock style */
-.prose :where(pre):not(:where([class~="not-prose"] *)) {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 0px;
+    border: 1px solid #e5e7eb;
 }
 
 /* link style */

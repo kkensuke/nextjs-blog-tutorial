@@ -10,13 +10,27 @@ This is an `inline code` block.
 
 ## Code blocks
 
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
-```latex
-\int_{-\infty}^\infty e^{-x^2} dx = \sqrt{\pi}
+:::simple[]
+````md:markdown
 ```
+import numpy as np
+import matplotlib.pyplot as plt
+```
+````
 
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
-```python
+Output:
+```
+import numpy as np
+import matplotlib.pyplot as plt
+```
+:::
+
+
+
+
+:::simple[]
+````md:markdown
+```python:asdf.py
 def hello():
     for i in range(3):
         print("Hello, world!")
@@ -24,9 +38,46 @@ def hello():
 for i in range(3):
     hello()
 ```
+````
 
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text 
-```js
+Output:
+```python:asdf.py
+def hello():
+    for i in range(3):
+        print("Hello, world!")
+
+for i in range(3):
+    hello()
+```
+:::
+
+
+
+
+:::simple[]
+````md:markdown
+```python__diff:diff.py
+- def old_function():
+-    print("Old function")
++ def new_function():
++    print("New function")
+```
+````
+
+Output:
+```python__diff:diff.py
+- def old_function():
+-    print("Old function")
++ def new_function():
++    print("New function")
+```
+:::
+
+
+
+
+
+```js:code.js
 function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {
     return {...styleObject, ...style[className]};
