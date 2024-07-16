@@ -17,6 +17,9 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 // import rehypeMathjax from 'rehype-mathjax';
 
+import NextImage from "next/image";
+import rehypeImageSize from "../../../../components/img";
+
 
 
 const getPostContent = (slug: string) => {
@@ -27,11 +30,24 @@ const getPostContent = (slug: string) => {
   return matterResult;
 };
 
+
+const Img = (props: any) => {
+  const { src, alt, width, height } = props;
+  return (
+    <NextImage
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+    />
+  );
+};
+
+
 const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   // const text = MarkdownIt().use(docutilsPlugin).render(post.content)
-  
   
   return (
     <div>
@@ -49,11 +65,12 @@ const PostPage = (props: any) => {
           <Markdown
             children={post.content}
             remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
-            rehypePlugins={[rehypeKatex]}
+            rehypePlugins={[rehypeKatex, rehypeImageSize]}
             components={{
               ...AdmonitionComponents,
               // code : CodeBlock, // This function regards the code block with no language specified as inline code
               pre: Pre,
+              img: Img
             }}
           />
         </article>

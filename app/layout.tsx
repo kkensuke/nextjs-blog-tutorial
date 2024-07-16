@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react"
+import Footer from "./footer";
 
 interface Props {
   children: React.ReactNode;
@@ -30,14 +31,14 @@ export default function RootLayout({ children }: Props) {
   const navbar = (
     <nav className="mb-3 rounded-md border-2 border-slate-400 py-3">
       <ul className="flex flex-wrap justify-center text-xl text-black">
+        <Link href="/about">
+          <li className="mx-2 w-28 py-1 text-center hover:bg-slate-300">
+            About
+          </li>
+        </Link>
         <Link href="/blog">
           <li className="mx-2 w-28 py-1 text-center hover:bg-slate-300">
             Blog
-          </li>
-        </Link>
-        <Link href="/publication">
-          <li className="mx-2 w-28 py-1 text-center hover:bg-slate-300">
-            Publication
           </li>
         </Link>
         <Link href="/cv">
@@ -49,25 +50,16 @@ export default function RootLayout({ children }: Props) {
     </nav>
   );
 
-  const footer = (
-    <footer className="mt-10">
-      <div className="border-t border-slate-400 py-6 text-center text-slate-400">
-        <h3>Designed by Pixegami</h3>
-        <p>&copy; 2024 Ken</p>
-      </div>
-    </footer>
-  );
-
   return (
     <html>
       <head />
       <body>
-        <div className="mx-auto min-h-[83vh] max-w-screen-md px-6">
+        <div className="mx-auto min-h-[93vh] max-w-screen-md px-6">
           {header}
           {navbar}
           {children}
         </div>
-        {footer}
+        <Footer />
         <Analytics />
         <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="kkensuke" data-description="Support me on Buy me a coffee!" data-message="" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
       </body>
