@@ -19,8 +19,6 @@ import 'katex/dist/katex.min.css';
 
 
 
-
-
 const getPostContent = (slug: string) => {
   const folder = "posts/";
   const file = `${folder}${slug}.md`;
@@ -58,7 +56,6 @@ const PostPage = (props: any) => {
               ...AdmonitionComponents,
               // code : CodeBlock, // This function regards the code block with no language specified as inline code
               pre: Pre,
-              // img: Img
             }}
           />
         </article>

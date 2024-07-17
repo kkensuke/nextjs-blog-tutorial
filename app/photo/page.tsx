@@ -1,9 +1,9 @@
-const CVPage = () => {
+const AboutPage = () => {
   return (
     <div>
       <div className="my-12 text-center">
-        <h1 className="text-2xl text-slate-600">CV</h1>
-        <p className="mt-2 text-slate-400">This is a CV page</p>
+        <h1 className="text-2xl text-slate-600">Photos</h1>
+        <p className="mt-2 text-slate-400">This is a photos page</p>
       </div>
       
       <div className="prose mx-[5em] max-w-screen-md">
@@ -17,4 +17,4 @@ const CVPage = () => {
   )
 }
 
-export default CVPage
+export default AboutPage

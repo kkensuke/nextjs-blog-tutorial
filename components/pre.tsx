@@ -94,8 +94,8 @@ const Pre = ({
 
   return (
     <div className='my-3'>
-        {filename && <div className="code-block-title rounded-t-md bg-sky-700 py-0 pl-4 font-mono text-sm text-stone-200">{filename}</div>}
-        <div className="relative rounded-t-none"
+        {filename && <div className="code-block-title rounded-t-md border-[1px] border-slate-500 bg-white py-0 pl-4 font-mono text-sm text-black">{filename}</div>}
+        <div className="relative"
           onMouseEnter={() => setShowCopyToClipboard(true)}
           onMouseLeave={() => setShowCopyToClipboard(false)}
         >

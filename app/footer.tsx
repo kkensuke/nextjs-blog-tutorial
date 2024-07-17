@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="mt-10 bg-cyan-400 py-8 px-4 font-mono text-black">
+    <footer className="mt-10 bg-cyan-500 py-8 px-4 font-mono text-black">
       <div className="container mx-auto flex items-start justify-between">
         <div className="flex items-center">
           <img src="/images/simple_logo.png" alt="Logo" className="h-24 w-24" />
@@ -15,7 +15,8 @@ export default function Footer() {
               <li><a href="/" className="hover:underline">Home</a></li>
               <li><a href="/about" className="hover:underline">About</a></li>
               <li><a href="/blog" className="hover:underline">Blog</a></li>
-              <li><a href="/photos" className="hover:underline">Photos</a></li>
+              <li><a href="/photo" className="hover:underline">Photos</a></li>
+              <li><a href="/cv" className="hover:underline">CV</a></li>
             </ul>
           </div>
           <div>
@@ -37,7 +38,7 @@ export default function Footer() {
               <li><a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="hover:underline">Next.js</a></li>
               <li><a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Tailwind CSS</a></li>
               <li><a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Vercel</a></li>
-              <li><a href="https://www.prisma.io" target="_blank" rel="noopener noreferrer" className="hover:underline">Prisma</a></li>
+              {/* <li><a href="https://www.prisma.io" target="_blank" rel="noopener noreferrer" className="hover:underline">Prisma</a></li> */}
             </ul>
           </div>
         </div>
