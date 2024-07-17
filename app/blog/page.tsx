@@ -19,6 +19,9 @@ const HomePage = () => {
 
   return (
     <div>
+      <div className="my-8 text-center text-4xl text-slate-600">
+        Blog
+      </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">{postPreviews}</div>
     </div>
   );

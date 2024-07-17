@@ -48,7 +48,7 @@ const Pre = ({
   
   const copyButton = (
     <div className="absolute top-1 right-1 flex">
-      <div className="tooltip" style={styleTooltip}>
+      <div className="tooltip text-white" style={styleTooltip}>
         Copied!
       </div>
       <CopyToClipboard text={code} onCopy={handleClick}>
@@ -89,7 +89,7 @@ const Pre = ({
     return { style };
   };
   
-  // remove default margin and top border radius if no filename. fontfamily: 'monospace'
+  // remove default margin and top border radius if it has a filename. fontfamily: 'monospace'
   const customStyle = !filename ? { margin: '0' } : { margin: '0', borderTopLeftRadius: '0', borderTopRightRadius: '0', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px' };
 
   return (

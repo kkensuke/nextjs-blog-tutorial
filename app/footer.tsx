@@ -1,11 +1,13 @@
-
+import Link from 'next/link';
 
 export default function Footer() {
   return (
     <footer className="mt-10 bg-cyan-500 py-8 px-4 font-mono text-black">
       <div className="container mx-auto flex items-start justify-between">
         <div className="flex items-center">
-          <img src="/images/simple_logo.png" alt="Logo" className="h-24 w-24" />
+          <Link href="/">
+            <img src="/images/simple_logo.png" alt="Logo" className="h-24 w-24" />
+          </Link>
         </div>
         <div className="grid grid-cols-3 gap-32">
           <div>
@@ -13,10 +15,9 @@ export default function Footer() {
             <div className="mb-2 h-0.5 w-full bg-black"></div>
             <ul>
               <li><a href="/" className="hover:underline">Home</a></li>
-              <li><a href="/about" className="hover:underline">About</a></li>
               <li><a href="/blog" className="hover:underline">Blog</a></li>
               <li><a href="/photo" className="hover:underline">Photos</a></li>
-              <li><a href="/cv" className="hover:underline">CV</a></li>
+              <li><a href="/cv" target="_blank" rel="noopener noreferrer" className="hover:underline">Resume</a></li>
             </ul>
           </div>
           <div>
@@ -26,7 +27,6 @@ export default function Footer() {
               <li><a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:underline">X</a></li>
               <li><a href="https://github.com/kkensuke/nextjs-blog-tutorial" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a></li>
               <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a></li>
-              <li><a href="/cv" target="_blank" rel="noopener noreferrer" className="hover:underline">Resume</a></li>
               <li><a href="mailto:email@example.com" className="hover:underline">Email</a></li>
             </ul>
           </div>
@@ -43,8 +43,16 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="mt-8 text-center text-xs">
-        © 2024 Kensuke
+      <div className="text-md mt-24 flex flex-col items-center text-center">
+        <p className=""> © 2024 Kensuke </p>
+        <div className="mt-4 flex space-x-4">
+          <Link href="/">
+            <p className="hover:underline">Privacy Policy</p>
+          </Link>
+          <Link href="/">
+            <p className="hover:underline">Terms of Service</p>
+          </Link>
+        </div>
       </div>
     </footer>
   );
