@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 // This is the main page of my website written in React with TypeScript and Tailwind CSS.
-const HomePage = () => {
+export default function HomePage() {
   return (
     <div className='container mx-auto px-4'>      
       <section className="rounded-lg bg-gray-100 py-20 text-center shadow-md">
@@ -10,7 +10,6 @@ const HomePage = () => {
         <p className="mt-2 text-lg">🌟 Built with React, TypeScript, and Tailwind CSS. 🌈</p>
       </section>
 
-      {/* <main className="m-12 text-center"> */}
       <section className="mt-24">
         <h2 className="text-4xl font-semibold">About Me</h2>
         <p className="m-8 text-xl text-gray-700">I am a passionate web developer with experience in building modern web applications. I love working with the latest technologies and constantly learning new things.</p>
@@ -31,12 +30,6 @@ const HomePage = () => {
             </Link>
             <p  className="ml-8 mt-4"> - A full-stack application using Next.js and Prisma</p>
           </li>
-          <li className="py-6">
-            <Link href="/projects/project3">
-              <p className="text-blue-500 hover:underline">Project 3</p>
-            </Link>
-            <p  className="ml-8 mt-4"> - A blog website with Next.js and Markdown</p>
-          </li>
         </ul>
       </section>
 
@@ -56,5 +49,3 @@ const HomePage = () => {
     </div>
   );
 };
-
-export default HomePage;
