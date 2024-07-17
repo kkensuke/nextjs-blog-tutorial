@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="mb-2 h-0.5 w-full bg-black"></div>
             <ul>
               <li><a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:underline">X</a></li>
-              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a></li>
+              <li><a href="https://github.com/kkensuke/nextjs-blog-tutorial" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub</a></li>
               <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a></li>
               <li><a href="/cv" target="_blank" rel="noopener noreferrer" className="hover:underline">Resume</a></li>
               <li><a href="mailto:email@example.com" className="hover:underline">Email</a></li>
