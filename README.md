@@ -1,5 +1,6 @@
 
 # Features added
+- Header, Footer, Homepage
 - Table of contents
 - Code block with highlighting, line numbers and copy button, diff highlighting, file name
 - Admonition
