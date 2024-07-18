@@ -18,7 +18,7 @@ export default function Header() {
       </Link>
       
       <div className="block pr-4 sm:hidden">
-        <button className="px-3 py-2 text-white focus:outline-none" onClick={toggleMenu}>
+        <button className="px-3 py-2 text-black focus:outline-none" onClick={toggleMenu}>
           <svg
             className="h-6 w-6"
             fill="none"
@@ -56,14 +56,9 @@ export default function Header() {
             <p className='text-center'>Blog</p>
           </li>
         </Link>
-        <Link href="/photo">
+        <Link href="/material">
           <li className="cursor-pointer p-4 hover:underline sm:p-6 lg:p-10" onClick={toggleMenu}>
-            <p className='text-center'>Photos</p>
-          </li>
-        </Link>
-        <Link href="mailto:email@example.com">
-          <li className="cursor-pointer p-4 hover:underline sm:p-6 lg:p-10" onClick={toggleMenu}>
-            <p className='text-center'>Contact</p>
+            <p className='text-center'>Materials</p>
           </li>
         </Link>
       </ul>

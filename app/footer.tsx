@@ -3,13 +3,15 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="mt-10 bg-cyan-500 py-8 px-4 font-mono text-black">
-      <div className="container mx-auto flex items-start justify-between">
-        <div className="flex items-center">
-          <Link href="/">
-            <img src="/images/simple_logo.png" alt="Logo" className="h-24 w-24" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-3 gap-32">
+      <div className="container mx-auto">
+        
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-20">
+          <div className="">
+            <Link href="/">
+              <img src="/images/simple_logo.png" alt="Logo" className="h-24 w-24" />
+            </Link>
+          </div>
+          
           <div>
             <h5 className="mb-2 font-bold">Explore</h5>
             <div className="mb-2 h-0.5 w-full bg-black"></div>
@@ -20,6 +22,7 @@ export default function Footer() {
               <li><a href="/cv" target="_blank" rel="noopener noreferrer" className="hover:underline">Resume</a></li>
             </ul>
           </div>
+          
           <div>
             <h5 className="mb-2 font-bold">Connect</h5>
             <div className="mb-2 h-0.5 w-full bg-black"></div>
@@ -30,6 +33,7 @@ export default function Footer() {
               <li><a href="mailto:email@example.com" className="hover:underline">Email</a></li>
             </ul>
           </div>
+          
           <div>
             <h5 className="mb-2 font-bold">Powered by</h5>
             <div className="mb-2 h-0.5 w-full bg-black"></div>
@@ -41,8 +45,11 @@ export default function Footer() {
               {/* <li><a href="https://www.prisma.io" target="_blank" rel="noopener noreferrer" className="hover:underline">Prisma</a></li> */}
             </ul>
           </div>
+          
         </div>
+        
       </div>
+      
       <div className="text-md mt-24 flex flex-col items-center text-center">
         <p className=""> © 2024 Kensuke </p>
         <div className="mt-4 flex space-x-4">
@@ -54,6 +61,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
+      
     </footer>
   );
 }

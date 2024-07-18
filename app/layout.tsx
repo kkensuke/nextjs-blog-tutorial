@@ -2,7 +2,6 @@ import Link from "next/link";
 import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import Header from "./header";
-import Headera from "./headera";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
