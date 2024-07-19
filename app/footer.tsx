@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="mt-10 bg-cyan-500 py-8 px-4 font-mono text-black">
       <div className="container mx-auto">
-        
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-20">
+          
           <div className="">
             <Link href="/">
               <img src="/images/simple_logo.png" alt="Logo" className="h-24 w-24" />
@@ -46,7 +46,6 @@ export default function Footer() {
           </div>
           
         </div>
-        
       </div>
       
       <div className="text-md mt-24 flex flex-col items-center">
