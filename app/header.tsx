@@ -7,7 +7,10 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    // Toggle the value of isOpen in the state if the display size is small
+    if (window.innerWidth < 640) {
+      setIsOpen(!isOpen);
+    }
   };
 
   return (

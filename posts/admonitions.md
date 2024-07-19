@@ -28,10 +28,10 @@ This is a note admonition.
 :::
 ::::
 
+
 :::abstract
 This is an abstract admonition.
 :::
-
 
 :::warning
 This is a warning admonition.
@@ -99,182 +99,121 @@ interface AdmonitionProps {
   children: any;
 }
 
+
 const AbstractAdmonition = ({ title, children }: AdmonitionProps) => {
-  if (title === undefined) {
-    return (
-      <div className="admonition admonition-abstract bg-red-100 text-slate-600" >
-        <div className="admonition-title flex text-red-600"><FaRocket className='my-auto mr-2' size={'22'} color={''} /> Abstract </div>
-        <div className="border-t-2 border-red-500"></div>
-        <div className="admonition-content">{children}</div>
+  title = title || 'Abstract';
+  return (
+    <div className="admonition admonition-abstract bg-red-100 text-slate-600" >
+      <div className="admonition-title flex text-red-600">
+        <FaRocket className='my-auto mr-2' size={'22'} color={''} /> {title}
       </div>
-    );
-  } else {
-    return (
-      <div className="admonition admonition-abstract bg-red-100 text-slate-600" >
-        <div className="admonition-title flex text-red-600"><FaRocket className='my-auto mr-2' size={'22'} color={''} /> {title} </div>
-        <div className="border-t-2 border-red-500"></div>
-        <div className="admonition-content">{children}</div>
-      </div>
-    );
-  }
+      <div className="border-t-2 border-red-500"></div>
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
 }
 const NoteAdmonition = ({ title, children }: AdmonitionProps) => {
-  if (title === undefined) {
-    return (
-      <div className="admonition admonition-note bg-cyan-100 text-slate-600" >
-        <div className="admonition-title flex text-blue-600"><PiNotePencilBold className='my-auto mr-2' size={'22'} color={''} /> Note </div>
-        <div className="border-t-2 border-blue-500"></div>
-        <div className="admonition-content">{children}</div>
+  title = title || 'Note';
+  return (
+    <div className="admonition admonition-note bg-cyan-100 text-slate-600" >
+      <div className="admonition-title flex text-blue-600">
+        <PiNotePencilBold className='my-auto mr-2' size={'22'} color={''} /> {title}
       </div>
-    );
-  } else {
-    return (
-      <div className="admonition admonition-note bg-cyan-100 text-slate-600" >
-        <div className="admonition-title flex text-blue-600"><PiNotePencilBold className='my-auto mr-2' size={'22'} color={''} /> {title} </div>
-        <div className="border-t-2 border-blue-500"></div>
-        <div className="admonition-content">{children}</div>
-      </div>
-    );
-  }
+      <div className="border-t-2 border-blue-500"></div>
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
 }
 const ImportantAdmonition = ({ title, children }: AdmonitionProps) => {
-  if (title === undefined) {
-    return (
-      <div className="admonition admonition-important bg-yellow-100 text-slate-600" >
-        <div className="admonition-title flex text-orange-500"><FaFire className='my-auto mr-2' size={'20'} color={''} /> Important </div>
-        <div className="border-t-2 border-orange-400"></div>
-        <div className="admonition-content">{children}</div>
+  title = title || 'Important';
+  return (
+    <div className="admonition admonition-important bg-yellow-100 text-slate-600" >
+      <div className="admonition-title flex text-orange-500">
+        <FaFire className='my-auto mr-2' size={'20'} color={''} /> {title}
       </div>
-    );
-  } else {
-    return (
-      <div className="admonition admonition-important bg-yellow-100 text-slate-600" >
-        <div className="admonition-title flex text-orange-500"><FaFire className='my-auto mr-2' size={'20'} color={''} /> {title} </div>
-        <div className="border-t-2 border-orange-400"></div>
-        <div className="admonition-content">{children}</div>
-      </div>
-    );
-  }
+      <div className="border-t-2 border-orange-400"></div>
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
 }
 const TipAdmonition = ({ title, children }: AdmonitionProps) => {
-  if (title === undefined) {
-    return (
-      <div className="admonition admonition-tip bg-green-100 text-slate-600" >
-        <div className="admonition-title flex text-green-600"><FaRegLightbulb className='my-auto mr-2' size={'20'} color={''} /> Tip </div>
-        <div className="border-t-2 border-green-400"></div>
-        <div className="admonition-content">{children}</div>
+  title = title || 'Tip';
+  return (
+    <div className="admonition admonition-tip bg-green-100 text-slate-600" >
+      <div className="admonition-title flex text-green-600">
+        <FaRegLightbulb className='my-auto mr-2' size={'20'} color={''} /> {title}
       </div>
-    );
-  } else {
-    return (
-      <div className="admonition admonition-tip bg-green-100 text-slate-600" >
-        <div className="admonition-title flex text-green-600"><FaRegLightbulb className='my-auto mr-2' size={'20'} color={''} /> {title} </div>
-        <div className="border-t-2 border-green-400"></div>
-        <div className="admonition-content">{children}</div>
-      </div>
-    );
-  }
+      <div className="border-t-2 border-green-400"></div>
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
 }
 const WarningAdmonition = ({ title, children }: AdmonitionProps) => {
-  if (title === undefined) {
-    return (
-      <div className="admonition admonition-warning bg-red-100 text-slate-600" >
-        <div className="admonition-title flex text-red-500"><ImWarning className='my-auto mr-2' size={'20'} color={''} /> Warning </div>
-        <div className="border-t-2 border-red-500"></div>
-        <div className="admonition-content">{children}</div>
+  title = title || 'Warning';
+  return (
+    <div className="admonition admonition-warning bg-red-100 text-slate-600" >
+      <div className="admonition-title flex text-red-500">
+        <ImWarning className='my-auto mr-2' size={'20'} color={''} /> {title}
       </div>
-    );
-  } else {
-    return (
-      <div className="admonition admonition-warning bg-red-100 text-slate-600" >
-        <div className="admonition-title flex text-red-500"><ImWarning className='my-auto mr-2' size={'20'} color={''} /> {title} </div>
-        <div className="border-t-2 border-red-500"></div>
-        <div className="admonition-content">{children}</div>
-      </div>
-    );
-  }
+      <div className="border-t-2 border-red-500"></div>
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
 }
 const CommentAdmonition = ({ title, children }: AdmonitionProps) => {
-  if (title === undefined) {
-    return (
-      <div className="admonition admonition-comment bg-slate-100 text-slate-600" >
-        <div className="admonition-title flex text-slate-600"><FaRegCommentDots className='my-auto mr-2' size={'20'} color={''} /> Comment </div>
-        <div className="border-t-2 border-slate-400"></div>
-        <div className="admonition-content">{children}</div>
+  title = title || 'Comment';
+  return (
+    <div className="admonition admonition-comment bg-slate-100 text-slate-600" >
+      <div className="admonition-title flex text-slate-600">
+        <FaRegCommentDots className='my-auto mr-2' size={'20'} color={''} /> {title}
       </div>
-    );
-  } else {
-    return (
-      <div className="admonition admonition-comment bg-slate-100 text-slate-600" >
-        <div className="admonition-title flex text-slate-600"><FaRegCommentDots className='my-auto mr-2' size={'20'} color={''} /> {title} </div>
-        <div className="border-t-2 border-slate-400"></div>
-        <div className="admonition-content">{children}</div>
-      </div>
-    );
-  }
+      <div className="border-t-2 border-slate-400"></div>
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
 }
 const ExampleAdmonition = ({ title, children }: AdmonitionProps) => {
-  if (title === undefined) {
-    return (
-      <div className="admonition admonition-example bg-purple-100 text-slate-600" >
-        <div className="admonition-title flex text-purple-600"><AiOutlineExperiment className='my-auto mr-2' size={'22'} color={''} /> Example </div>
-        <div className="border-t-2 border-purple-400"></div>
-        <div className="admonition-content">{children}</div>
+  title = title || 'Example';
+  return (
+    <div className="admonition admonition-example bg-purple-100 text-slate-600" >
+      <div className="admonition-title flex text-purple-600">
+        <AiOutlineExperiment className='my-auto mr-2' size={'22'} color={''} /> {title}
       </div>
-    );
-  } else {
-    return (
-      <div className="admonition admonition-example bg-purple-100 text-slate-600" >
-        <div className="admonition-title flex text-purple-600"><AiOutlineExperiment className='my-auto mr-2' size={'22'} color={''} /> {title} </div>
-        <div className="border-t-2 border-purple-400"></div>
-        <div className="admonition-content">{children}</div>
-      </div>
-    );
-  }
+      <div className="border-t-2 border-purple-400"></div>
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
 }
 const QuoteAdmonition = ({ title, children }: AdmonitionProps) => {
-  if (title === undefined) {
-    return (
-      <div className="admonition admonition-quote bg-blue-100 italic text-slate-600" >
-        <div className="admonition-title flex text-blue-600"><FaQuoteLeft className='my-auto mr-2' size={'18'} color={''} /> Quote </div>
-        <div className="border-t-2 border-blue-500"></div>
-        <div className="admonition-content">{children}</div>
+  title = title || 'Quote';
+  return (
+    <div className="admonition admonition-quote bg-blue-100 italic text-slate-600" >
+      <div className="admonition-title flex text-blue-600">
+        <FaQuoteLeft className='my-auto mr-2' size={'18'} color={''} /> {title}
       </div>
-    );
-  } else {
-    return (
-      <div className="admonition admonition-quote bg-blue-100 italic text-slate-600" >
-        <div className="admonition-title flex text-blue-600"><FaQuoteLeft className='my-auto mr-2' size={'18'} color={''} /> {title} </div>
-        <div className="border-t-2 border-blue-500"></div>
-        <div className="admonition-content">{children}</div>
-      </div>
-    );
-  }
+      <div className="border-t-2 border-blue-500"></div>
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
 }
 const QuestionAdmonition = ({ title, children }: AdmonitionProps) => {
-  if (title === undefined) {
-    return (
-      <div className="admonition admonition-Question bg-slate-100 text-slate-600" >
-        <div className="admonition-title flex text-slate-600"><FaQuestion className='my-auto mr-2' size={'18'} color={''} /> Question </div>
-        <div className="border-t-2 border-slate-500"></div>
-        <div className="admonition-content">{children}</div>
+  title = title || 'Question';
+  return (
+    <div className="admonition admonition-Question bg-slate-100 text-slate-600" >
+      <div className="admonition-title flex text-slate-600">
+        <FaQuestion className='my-auto mr-2' size={'18'} color={''} /> {title}
       </div>
-    );
-  } else {
-    return (
-      <div className="admonition admonition-Question bg-slate-100 text-slate-600" >
-        <div className="admonition-title flex text-slate-600"><FaQuestion className='my-auto mr-2' size={'18'} color={''} /> {title} </div>
-        <div className="border-t-2 border-slate-500"></div>
-        <div className="admonition-content">{children}</div>
-      </div>
-    );
-  }
+      <div className="border-t-2 border-slate-500"></div>
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
 }
 const SimpleAdmonition = ({ children }: AdmonitionProps) => (
   <div className="admonition admonition-simple bg-gray-200 text-slate-600" >
     <div className="admonition-content">{children}</div>
   </div>
 );
+
 
 const AdmonitionComponents = {
   abstract: AbstractAdmonition,

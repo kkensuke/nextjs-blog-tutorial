@@ -1,8 +1,6 @@
-import Link from "next/link";
 import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import Header from "./header";
-import Navbar from "./navbar";
 import Footer from "./footer";
 
 interface Props {
@@ -16,7 +14,6 @@ export default function RootLayout({ children }: Props) {
       <body>
         <Header />
         <div className="mx-auto mt-10 min-h-[93vh] max-w-screen-md px-4">
-          {/* <Navbar /> */}
           {children}
         </div>
         <Footer />

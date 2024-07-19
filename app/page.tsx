@@ -27,13 +27,13 @@ export default function HomePage() {
             <Link href="/projects/project1">
               <p className="text-blue-500 hover:underline">Project 1</p>
             </Link>
-            <p  className="ml-4 mt-4 md:ml-8"> - A web application built with React and Tailwind CSS</p>
+            <p className="ml-4 mt-4 text-gray-700 md:ml-8"> - A web application built with React and Tailwind CSS</p>
           </li>
           <li className="mt-8">
             <Link href="/projects/project2">
               <p className="text-blue-500 hover:underline">Project 2</p>
             </Link>
-            <p  className="ml-4 mt-4 md:ml-8"> - A full-stack application using Next.js and Prisma</p>
+            <p className="ml-4 mt-4 text-gray-700 md:ml-8"> - A full-stack application using Next.js and Prisma</p>
           </li>
         </ul>
       </section>
