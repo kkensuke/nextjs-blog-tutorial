@@ -2,15 +2,12 @@ import fs from "fs";
 import matter from "gray-matter";
 import getPostMetadata from "../../../../components/getPostMetadata";
 
-// import MarkdownIt from "markdown-it";
-// import docutilsPlugin from "markdown-it-docutils";
 import TOC from "../../../../components/toc";
 import rehypeSlug from 'rehype-slug'; // rehype plugin to add id attributes to headings so that they can be linked to
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
-// import CodeBlock from "../../../../components/CodeBlock";
 import Pre from "../../../../components/pre";
 import AdmonitionComponents from "../../../../components/admonitions";
 import remarkMath from 'remark-math';
@@ -33,34 +30,42 @@ const getPostContent = (slug: string) => {
 const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
-  // const text = MarkdownIt().use(docutilsPlugin).render(post.content)
   
   return (
-    <div>
-      <div>
-        <div className="my-12 text-center">
-          <h1 className="text-2xl text-slate-600">{post.data.title}</h1>
-          <p className="mt-2 text-slate-600">{post.data.subtitle}</p>
-          <p className="mt-2 text-slate-600">{post.data.date}</p>
-        </div>
-        
-        <TOC/>
-        <article className="post prose mx-auto max-w-screen-md">
-          {/* <div dangerouslySetInnerHTML={{ __html: text }}></div> */}
-          <Markdown
-            children={post.content}
-            remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
-            rehypePlugins={[rehypeSlug, rehypeKatex]}
-            components={{
-              ...AdmonitionComponents,
-              // code : CodeBlock, // This function treats code blocks without a specified language as inline code.
-              pre: Pre,
-            }}
-          />
-        </article>
+    <>
+      <div className="my-12 mx-auto max-w-screen-sm text-center">
+        <h1 className="text-2xl text-slate-600">{post.data.title}</h1>
+        <p className="mt-2 text-slate-600">{post.data.subtitle}</p>
+        <p className="mt-2 text-slate-600">{post.data.date}</p>
       </div>
       
-    </div>
+      <div className="flex flex-col lg:flex-row lg:items-start">
+        
+        <div className="lg:order-1 lg:w-96 lg:min-w-[10px] lg:shrink">
+        </div>
+        
+        <div className="lg:order-3 lg:mr-0 lg:ml-20 lg:w-72 lg:shrink-0">
+            <div className="mx-auto max-w-[400px] lg:fixed lg:-mt-40">
+              <TOC />
+            </div>
+        </div>
+        
+        <div className="lg:order-2 lg:mx-auto lg:shrink-0">
+          <article className="post prose mx-auto">
+            <Markdown
+              children={post.content}
+              remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
+              rehypePlugins={[rehypeSlug, rehypeKatex]}
+              components={{
+                ...AdmonitionComponents,
+                pre: Pre,
+              }}
+            />
+          </article>
+        </div>
+        
+      </div>
+    </>
   );
 };
 export default PostPage;
@@ -73,3 +78,4 @@ export const generateStaticParams = async () => {
     slug: post.slug,
   }));
 };
+

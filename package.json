@@ -47,7 +47,6 @@
     "remark-embed-images": "^4.0.0",
     "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
-    "remark-toc": "^9.0.0",
     "save-dev": "^0.0.1-security",
     "tailwind-merge": "^2.3.0",
     "tocbot": "^4.27.13",

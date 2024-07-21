@@ -1,8 +1,19 @@
 ---
 title: "Admonitions"
-subtitle: "A collection of admonitions and code blocks."
+subtitle: "A guide to using admonitions in Markdown."
 date: "2024-4-27"
 ---
+
+
+## Directives in Text
+Directives in text can form with a single colon, such as :cite[smith04].
+Their syntax is `:name[label]{attributes}`.
+
+Leafs (block without content) can form by using two colons:
+
+::youtube[Video of a cat in a box]{vid=01ab2cd3efg}
+
+Their syntax is `::name[label]{attributes}` on its own line.
 
 
 ## Admonitions (or Callouts, Containers)

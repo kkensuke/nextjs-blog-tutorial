@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <div>
+    <div className="mx-auto max-w-screen-md">
       <div className="mt-16">
         <h1 className="text-4xl text-slate-600">Publications</h1>
         

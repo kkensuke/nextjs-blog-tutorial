@@ -18,7 +18,7 @@ const HomePage = () => {
   ));
 
   return (
-    <div>
+    <div className="mx-auto max-w-screen-md">
       <div className="my-8 text-center text-4xl text-slate-600">
         Blog
       </div>

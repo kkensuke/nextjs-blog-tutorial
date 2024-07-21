@@ -16,7 +16,7 @@ const TOC = () => {
 
   return (
     // sticky toc; lg:fixed lg:top-52 lg:right-7
-    <div className="my-10 mx-auto rounded-lg border-2">
+    <div className="mb-10 rounded-lg border-2 p-4">
       <h2 className="mb-1 border-b p-2 text-center text-xl font-semibold">
         Table of Contents
       </h2>
@@ -47,7 +47,6 @@ const TOC = () => {
 
         .is-active-link {
           color: #2b6cb0;
-          font-weight: 700;
         }
       `}</style>
     </div>

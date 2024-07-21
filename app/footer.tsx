@@ -48,7 +48,7 @@ export default function Footer() {
         </div>
       </div>
       
-      <div className="text-md mt-24 flex flex-col items-center">
+      <div className="text-md mt-14 flex flex-col items-center">
         <p className=""> © 2024 </p>
         <div className="mt-4 flex space-x-4">
           <Link href="/">

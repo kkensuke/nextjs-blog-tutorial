@@ -3,7 +3,7 @@ import Link from 'next/link';
 // This is the main page of my website written in React with TypeScript and Tailwind CSS.
 export default function HomePage() {
   return (
-    <div className='container mx-auto mt-16'>      
+    <div className='container mx-auto mt-16 max-w-screen-md'>      
       <section className="rounded-lg bg-gray-100 p-4 text-center shadow-md md:p-10">
         <h1 className="text-4xl font-bold md:text-6xl">Hi, I'm Ken! 👋</h1>
         <p className="mt-8 text-lg">🧑‍💻 Welcome to my personal website. 🚀</p>
