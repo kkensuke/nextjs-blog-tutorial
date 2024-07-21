@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-// This is the main page of my website written in React with TypeScript and Tailwind CSS.
 export default function HomePage() {
   return (
     <div className='container mx-auto mt-16 max-w-screen-md'>      
