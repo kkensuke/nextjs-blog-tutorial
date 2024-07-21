@@ -1,4 +1,4 @@
-const AboutPage = () => {
+export default function AboutPage() {
   return (
     <div>
       <div className="mt-16">
@@ -24,5 +24,3 @@ const AboutPage = () => {
     </div>
   )
 }
-
-export default AboutPage

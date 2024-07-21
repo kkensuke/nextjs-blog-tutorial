@@ -5,6 +5,7 @@ import getPostMetadata from "../../../../components/getPostMetadata";
 // import MarkdownIt from "markdown-it";
 // import docutilsPlugin from "markdown-it-docutils";
 import TOC from "../../../../components/toc";
+import rehypeSlug from 'rehype-slug'; // rehype plugin to add id attributes to headings so that they can be linked to
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
@@ -29,7 +30,6 @@ const getPostContent = (slug: string) => {
 
 
 
-
 const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
@@ -45,16 +45,15 @@ const PostPage = (props: any) => {
         </div>
         
         <TOC/>
-
         <article className="post prose mx-auto max-w-screen-md">
           {/* <div dangerouslySetInnerHTML={{ __html: text }}></div> */}
           <Markdown
             children={post.content}
             remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
-            rehypePlugins={[rehypeKatex]}
+            rehypePlugins={[rehypeSlug, rehypeKatex]}
             components={{
               ...AdmonitionComponents,
-              // code : CodeBlock, // This function regards the code block with no language specified as inline code
+              // code : CodeBlock, // This function treats code blocks without a specified language as inline code.
               pre: Pre,
             }}
           />

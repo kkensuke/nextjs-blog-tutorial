@@ -4,8 +4,8 @@ subtitle: "A collection of admonitions and code blocks."
 date: "2024-4-27"
 ---
 
-## Admonitions
 
+## Admonitions (or Callouts, Containers)
 ::::simple
 ```markdown:markdown
 :::note
