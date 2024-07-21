@@ -32,40 +32,44 @@ const PostPage = (props: any) => {
   const post = getPostContent(slug);
   
   return (
-    <>
-      <div className="my-12 mx-auto max-w-screen-sm text-center">
+    <div className="flex flex-col lg:flex-row lg:items-start">
+      
+      <div className="lg:order-1 lg:w-96 lg:min-w-[10px] lg:shrink">
+      </div>
+      
+      <div className="my-12 mx-auto max-w-screen-sm text-center lg:order-2 lg:hidden">
         <h1 className="text-2xl text-slate-600">{post.data.title}</h1>
         <p className="mt-2 text-slate-600">{post.data.subtitle}</p>
         <p className="mt-2 text-slate-600">{post.data.date}</p>
       </div>
       
-      <div className="flex flex-col lg:flex-row lg:items-start">
-        
-        <div className="lg:order-1 lg:w-96 lg:min-w-[10px] lg:shrink">
-        </div>
-        
-        <div className="lg:order-3 lg:mr-0 lg:ml-20 lg:w-72 lg:shrink-0">
-            <div className="mx-auto max-w-[400px] lg:fixed lg:-mt-40">
-              <TOC />
-            </div>
-        </div>
-        
-        <div className="lg:order-2 lg:mx-auto lg:shrink-0">
-          <article className="post prose mx-auto">
-            <Markdown
-              children={post.content}
-              remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
-              rehypePlugins={[rehypeSlug, rehypeKatex]}
-              components={{
-                ...AdmonitionComponents,
-                pre: Pre,
-              }}
-            />
-          </article>
-        </div>
-        
+      <div className="lg:sticky lg:top-0 lg:order-3 lg:mr-0 lg:ml-8 lg:w-80 lg:shrink-0">
+          <div className="mx-auto max-w-[400px] lg:mt-10">
+            <TOC />
+          </div>
       </div>
-    </>
+      
+      <div className="lg:order-2 lg:mx-auto lg:shrink-0">
+        <div className="my-12 mx-auto hidden max-w-screen-sm text-center lg:block"> {/* hidden lg:block  <-> lg:hidden */}
+          <h1 className="text-2xl text-slate-600">{post.data.title}</h1>
+          <p className="mt-2 text-slate-600">{post.data.subtitle}</p>
+          <p className="mt-2 text-slate-600">{post.data.date}</p>
+        </div>
+        
+        <article className="post prose mx-auto">
+          <Markdown
+            children={post.content}
+            remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
+            rehypePlugins={[rehypeSlug, rehypeKatex]}
+            components={{
+              ...AdmonitionComponents,
+              pre: Pre,
+            }}
+          />
+        </article>
+      </div>
+      
+    </div>
   );
 };
 export default PostPage;
@@ -78,4 +82,5 @@ export const generateStaticParams = async () => {
     slug: post.slug,
   }));
 };
+
 

@@ -16,16 +16,15 @@ const TOC = () => {
 
   return (
     // sticky toc; lg:fixed lg:top-52 lg:right-7
-    <div className="mb-10 rounded-lg border-2 p-4">
+    <div className="mb-10 rounded-lg border-2">
       <h2 className="mb-1 border-b p-2 text-center text-xl font-semibold">
         Table of Contents
       </h2>
-      <div className='toc my-1 flex justify-center'></div>
+      <div className='toc my-1 flex justify-center text-[13pt]'></div>
       <style jsx global>{`
         .toc {
           border-radius: 0.25rem;
           padding: 1rem;
-          font-size: 13pt;
         }
 
         .toc-list {

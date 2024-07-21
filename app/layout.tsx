@@ -58,9 +58,7 @@ export default function RootLayout({ children }: Props) {
       <head />
       <body>
         <Header />
-        {/* <div className="mx-auto min-h-[93vh] max-w-screen-md px-2"> */}
         <div className="min-h-[93vh] px-2">
-        {/* <div> */}
           {children}
         </div>
         <Footer />
