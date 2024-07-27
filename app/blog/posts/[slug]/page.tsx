@@ -64,8 +64,9 @@ const PostPage = (props: any) => {
             rehypePlugins={[rehypeSlug, rehypeKatex]}
             components={{
               ...AdmonitionComponents,
+              // img: CustomImage,
               p: ({ node, children }) => {
-                if (node && node.children && node.children[0].tagName === 'img') {
+                if (node && node.children && node.children[0]?.tagName === 'img') {
                   const imageNode = node.children[0];
                   const { properties } = imageNode;
                   return <CustomImage {...properties} />;
