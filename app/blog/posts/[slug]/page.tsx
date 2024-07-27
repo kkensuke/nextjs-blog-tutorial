@@ -14,6 +14,7 @@ import AdmonitionComponents from "../../../../components/admonitions";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
+import React from "react";
 // import rehypeMathjax from 'rehype-mathjax';
 
 
@@ -63,16 +64,9 @@ const PostPage = (props: any) => {
             remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
             rehypePlugins={[rehypeSlug, rehypeKatex]}
             components={{
+              p: React.Fragment, // https://github.com/remarkjs/react-markdown/issues/42
+              img: CustomImage,
               ...AdmonitionComponents,
-              // img: CustomImage,
-              p: ({ node, children }) => {
-                if (node && node.children && node.children[0]?.tagName === 'img') {
-                  const imageNode = node.children[0];
-                  const { properties } = imageNode;
-                  return <CustomImage {...properties} />;
-                }
-                return <p>{children}</p>;
-              },
               pre: Pre,
             }}
           />
