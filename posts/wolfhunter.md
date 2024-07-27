@@ -32,7 +32,7 @@ I set out to make a game loop that felt similar to the combat in [Pokemon Red/Bl
 
 The characters stand opposite each other, and take turns to fight. There's a bunch of other mechanics too, like strengths/weaknesses, status effects, and switching characters. Here's a scene from it:
 
-![images/pokemon_red_fight_scene](/images/pokemon_fight_scene.png)
+![images/pokemon_red_fight_scene](/images/pokemon_fight_scene.png "width=400px")
 
 For Wolfhunter, I copied the scene layout, the turn based fighting, and the status effects. I didn't have a chance to implement other aspects of Pokemon — so instead I doubled down on the mechanics I did implement.
 

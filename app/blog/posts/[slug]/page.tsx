@@ -9,6 +9,7 @@ import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
 import Pre from "../../../../components/pre";
+import CustomImage from "../../../../components/CustomImage";
 import AdmonitionComponents from "../../../../components/admonitions";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -63,6 +64,14 @@ const PostPage = (props: any) => {
             rehypePlugins={[rehypeSlug, rehypeKatex]}
             components={{
               ...AdmonitionComponents,
+              p: ({ node, children }) => {
+                if (node && node.children && node.children[0].tagName === 'img') {
+                  const imageNode = node.children[0];
+                  const { properties } = imageNode;
+                  return <CustomImage {...properties} />;
+                }
+                return <p>{children}</p>;
+              },
               pre: Pre,
             }}
           />
