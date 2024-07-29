@@ -1,6 +1,3 @@
-import fs from "fs";
-import Link from "next/link";
-import matter from "gray-matter";
 import { PostMetadata } from '../../../../components/PostMetadata';
 import PostPreview from "../../../../components/PostPreview";
 import getPostMetadata from "../../../../components/getPostMetadata";
