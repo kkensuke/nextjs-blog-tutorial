@@ -2,6 +2,7 @@
 title : "remark-gfm package"
 subtitle : "A collection of GFM features."
 date: "2024-5-3"
+tags: ["markdown", "gfm"]
 ---
 
 ## Autolink literals

@@ -13,8 +13,9 @@ strong {
     background-color: rgb(242, 243, 244);
     font-weight: 500;
     color: #fe00dc;
-    border: 1px solid #e5e7eb;
+    border: 0.5px solid #e5e7eb;
 }
+
 
 /* link style */
 .prose :where(a):not(:where([class~="not-prose"] *)) {

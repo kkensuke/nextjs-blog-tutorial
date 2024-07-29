@@ -2,6 +2,7 @@
 title: "Code block"
 subtitle: "A collection of code blocks."
 date: "2024-5-5"
+tags: ["markdown", "code"]
 ---
 
 ## Inline code

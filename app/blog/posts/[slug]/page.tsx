@@ -33,6 +33,24 @@ const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   
+  const title_section = (
+    <>
+      <p className="mt-2 text-right text-slate-600">{post.data.date}</p>
+      <h1 className="text-2xl text-slate-600">{post.data.title}</h1>
+      <p className="mt-2 text-slate-600">{post.data.subtitle}</p>
+      {/* if post.data.tags exist, return list of tags below */}
+      {post.data.tags && (
+        <ul className="mt-2 flex flex-wrap justify-center gap-1">
+          {post.data.tags.map((tag: string) => (
+            <li key={tag} className="mr-2">
+              <a href={`/blog/tags/${tag}`} className="rounded-md border-2 px-2 text-blue-500 hover:underline">{tag}</a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
+  )
+  
   return (
     <div className="flex flex-col lg:flex-row lg:items-start">
       
@@ -40,9 +58,7 @@ const PostPage = (props: any) => {
       </div>
       
       <div className="my-12 mx-auto max-w-screen-sm text-center lg:order-2 lg:hidden">
-        <h1 className="text-2xl text-slate-600">{post.data.title}</h1>
-        <p className="mt-2 text-slate-600">{post.data.subtitle}</p>
-        <p className="mt-2 text-slate-600">{post.data.date}</p>
+        {title_section}
       </div>
       
       <div className="lg:sticky lg:top-0 lg:order-3 lg:mr-0 lg:ml-8 lg:w-80 lg:shrink-0">
@@ -53,9 +69,7 @@ const PostPage = (props: any) => {
       
       <div className="lg:order-2 lg:mx-auto lg:shrink-0">
         <div className="my-12 mx-auto hidden max-w-screen-sm text-center lg:block"> {/* hidden lg:block  <-> lg:hidden */}
-          <h1 className="text-2xl text-slate-600">{post.data.title}</h1>
-          <p className="mt-2 text-slate-600">{post.data.subtitle}</p>
-          <p className="mt-2 text-slate-600">{post.data.date}</p>
+          {title_section}
         </div>
         
         <article className="post prose mx-auto">

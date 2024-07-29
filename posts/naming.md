@@ -2,6 +2,7 @@
 title: "Naming Conventions"
 subtitle: "How to name variables, functions, and classes"
 date: "2024-7-5"
+tags: ["naming", "code"]
 ---
 
 
