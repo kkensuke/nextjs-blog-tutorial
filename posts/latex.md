@@ -2,7 +2,7 @@
 title: "Latex"
 subtitle: "A collection of code blocks."
 date: "2024-7-5"
-tags: ["markdown", "latex"]
+tags: [Markdown, Latex]
 ---
 
 ## Latex

@@ -2,7 +2,7 @@
 title: "Admonitions"
 subtitle: "A guide to using admonitions in Markdown."
 date: "2024-4-27"
-tags: ["markdown", "admonitions", "directives"]
+tags: [Markdown, Admonitions]
 ---
 
 

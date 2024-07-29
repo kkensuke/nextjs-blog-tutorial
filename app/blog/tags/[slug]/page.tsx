@@ -2,6 +2,7 @@ import { PostMetadata } from '../../../../components/PostMetadata';
 import PostPreview from "../../../../components/PostPreview";
 import getPostMetadata from "../../../../components/getPostMetadata";
 import getAllTags from '../../../../components/getAllTags';
+import Link from 'next/link';
 
 
 const allTags = getAllTags();
@@ -38,7 +39,7 @@ const TagPage = ({ params }: TagPageProps) => {
   return (
     <div className="mx-auto max-w-screen-md">
       <div className="my-8 text-center text-4xl text-slate-600">
-        Blog
+        <Link href="/blog"> Blog </Link>
       </div>
       <div className="my-4 mx-4 text-center text-slate-600 sm:mx-16 sm:my-10">
         {allTags.length > 0 && tagsSection(slug)}
