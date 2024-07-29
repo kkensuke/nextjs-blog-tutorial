@@ -1,7 +1,9 @@
 
 # Features added
 - Header, Footer, Homepage
+- Markdown image
 - Table of contents
+- Tags
 - Code block with highlighting, line numbers and copy button, diff highlighting, file name
 - Admonition
 - Latex math

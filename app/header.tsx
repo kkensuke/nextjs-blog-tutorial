@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FaGithub } from 'react-icons/fa';
 
 export default function Header() {
   return (
@@ -24,6 +25,11 @@ export default function Header() {
             <p className='text-center'>Materials</p>
           </li>
         </Link>
+        <li className="cursor-pointer p-2 hover:underline sm:p-6 lg:p-10">
+          <a href="https://github.com/kkensuke/nextjs-blog-tutorial" target="_blank" rel="noopener noreferrer" className="hover:underline">
+            <FaGithub className='text-2xl lg:text-3xl' />
+          </a>
+        </li>
       </ul>
       
     </nav>
