@@ -19,7 +19,18 @@ const getPostMetadata = (): PostMetadata[] => {
       slug: fileName.replace(".md", ""),
     };
   });
-
+  
+  // Sort post metadata by date in descending order
+  posts.sort((a, b) => {
+    // First, compare dates
+    const dateComparison = new Date(b.date).getTime() - new Date(a.date).getTime();
+    // If dates are the same, compare titles
+    if (dateComparison === 0) {
+      return a.title.localeCompare(b.title);
+    }
+    return dateComparison;
+  });
+  
   return posts;
 };
 
