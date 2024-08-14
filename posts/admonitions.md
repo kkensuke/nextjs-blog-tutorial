@@ -93,7 +93,7 @@ This is an important admonition.
 ## Custom Admonitions
 You can create custom admonitions by adding a function to `components/admonitions.tsx` following the pattern of the existing admonitions.
 
-```tsx:components/admonitions.tsx
+```tsx[title=components/admonitions.tsx]
 import './admonitions.css'
 import { FaRocket } from 'react-icons/fa';
 import { PiNotePencilBold } from "react-icons/pi";

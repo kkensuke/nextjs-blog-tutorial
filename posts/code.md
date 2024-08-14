@@ -11,8 +11,8 @@ This is an `inline code` block.
 
 ## Code blocks
 
-:::simple[]
-````md:markdown
+:::simple
+````md[title=markdown]
 ```
 import numpy as np
 import matplotlib.pyplot as plt
@@ -29,9 +29,9 @@ import matplotlib.pyplot as plt
 
 
 
-:::simple[]
-````md:markdown
-```python:asdf.py
+:::simple
+````md[title=markdown]
+```python[title=diff.py]
 def hello():
     for i in range(3):
         print("Hello, world!")
@@ -42,7 +42,31 @@ for i in range(3):
 ````
 
 Output:
-```python:asdf.py
+```python[title=diff.py]
+def hello():
+    for i in range(3):
+        print("Hello, world!")
+
+for i in range(3):
+    hello()
+```
+:::
+
+
+:::simple
+````md[title=markdown]
+```python[showLineNumber=true]
+def hello():
+    for i in range(3):
+        print("Hello, world!")
+
+for i in range(3):
+    hello()
+```
+````
+
+Output:
+```python[showLineNumber=true]
 def hello():
     for i in range(3):
         print("Hello, world!")
@@ -54,10 +78,9 @@ for i in range(3):
 
 
 
-
-:::simple[]
-````md:markdown
-```python__diff:diff.py
+:::simple
+````md[title=markdown]
+```python[diff=true,title=asdf.py,showLineNumber=true]
 - def old_function():
 -    print("Old function")
 + def new_function():
@@ -66,7 +89,7 @@ for i in range(3):
 ````
 
 Output:
-```python__diff:diff.py
+```python[diff=true,title=asdf.py,showLineNumber=true]
 - def old_function():
 -    print("Old function")
 + def new_function():
@@ -74,11 +97,14 @@ Output:
 ```
 :::
 
+:::important
+No spaces are allowed after commas in the code attributes.  
+✅ [diff=true,title=asdf.py,showLineNumber=true]  
+❌ [diff=true, title=asdf.py, showLineNumber=true]
+:::
 
 
-
-
-```js:code.js
+```js[title=code.js]
 function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {
     return {...styleObject, ...style[className]};

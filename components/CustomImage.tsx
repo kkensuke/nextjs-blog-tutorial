@@ -3,21 +3,20 @@ import React, { CSSProperties } from 'react';
 interface CustomImageProps {
   alt?: string;
   src?: string;
-  title?: string;
+  dataAttributes?: string;
 }
 
-
-const CustomImage: React.FC<CustomImageProps> = ({ alt, src, title }) => {
+const CustomImage: React.FC<CustomImageProps> = ({ alt, src, dataAttributes }) => {
   if (!src) return null;
 
-  // Parse the width, align, and caption from the title
-  const widthMatch = title ? title.match(/width=(\d+px|\d+%)/) : null;
+  // Parse the width, align, and caption from the dataAttributes
+  const widthMatch = dataAttributes ? dataAttributes.match(/width=(\d+px|\d+%)/) : null;
   const width = widthMatch ? widthMatch[1] : 'auto';
 
-  const alignMatch = title ? title.match(/align=(left|center|right)/) : null;
+  const alignMatch = dataAttributes ? dataAttributes.match(/align=(left|center|right)/) : null;
   const align = alignMatch ? alignMatch[1] : 'center';
 
-  const captionMatch = title ? title.match(/caption='([^"]+)'/) : null;
+  const captionMatch = dataAttributes ? dataAttributes.match(/caption='([^"]+)'/) : null;
   const caption = captionMatch ? captionMatch[1] : '';
 
   const style: CSSProperties = {
