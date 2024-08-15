@@ -24,13 +24,13 @@ const Pre = ({
   
   const { className, children: code } = 'props' in children ? children.props : {className: '', children: ''};
   
-  const match = /language-(\w+)(?:\[(.*?)\])?/.exec(className || '');
+  const match = /language-(\w+)?(?:\[(.*)\])?/.exec(className || '');
   const lang = match ? match[1] : 'plaintext';
   const propertiesString = match && match[2] ? match[2] : '';
 
   const properties = propertiesString.split(',').reduce((acc, prop) => {
     const [key, value] = prop.split('=');
-    acc[key.trim()] = value?.trim() || '';
+    acc[key] = value || '';
     return acc;
   }, {} as Record<string, string>);
 
@@ -39,7 +39,7 @@ const Pre = ({
   const showLineNumber = properties['showLineNumber'] === 'true';
   
   
-  // copy
+  // Copy functionality
   const [showCopyToClipboard, setShowCopyToClipboard] = useState(false);
   const [tooltipStyle, setTooltipStyle] = useState<CSSProperties>({
     opacity: '0',
@@ -54,7 +54,7 @@ const Pre = ({
   };
   
   
-  // code diff
+  // Code diff handling
   const codeLines = String(code).split('\n');
   const addedLines: number[] = [];
   const removedLines: number[] = [];
@@ -77,7 +77,7 @@ const Pre = ({
   };
   
   
-  // remove default margin and top border radius if it has a title.
+  // Styling adjustments: remove default margin and top border radius if it has a title.
   const customStyle: CSSProperties = title
     ? { margin: '0', borderTopLeftRadius: '0', borderTopRightRadius: '0', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px' }
     : { margin: '0' };
