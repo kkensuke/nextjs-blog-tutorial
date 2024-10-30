@@ -14,44 +14,6 @@ import {
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { Copy, Check } from 'lucide-react';
 
-// Theme options with descriptions
-const themes = {
-  vscDarkPlus: {
-    style: vscDarkPlus,
-    name: 'VSCode Dark+',
-    description: 'Clean and professional, similar to VSCode'
-  },
-  dracula: {
-    style: dracula,
-    name: 'Dracula',
-    description: 'Popular dark theme with vibrant colors'
-  },
-  atomDark: {
-    style: atomDark,
-    name: 'Atom Dark',
-    description: 'Inspired by Atom editor'
-  },
-  oneDark: {
-    style: oneDark,
-    name: 'One Dark',
-    description: 'Elegant and balanced dark theme'
-  },
-  synthwave84: {
-    style: synthwave84,
-    name: 'Synthwave',
-    description: 'Retro cyberpunk vibes'
-  },
-  materialDark: {
-    style: materialDark,
-    name: 'Material Dark',
-    description: 'Based on Material Design'
-  },
-  coldarkDark: {
-    style: coldarkDark,
-    name: 'Coldark Dark',
-    description: 'Modern minimalist dark theme'
-  }
-};
 
 interface CodeBlockProps {
   children: React.ReactNode;
@@ -60,7 +22,6 @@ interface CodeBlockProps {
 
 const CodeBlock = ({ children, ...props }: CodeBlockProps) => {
   const [isCopied, setIsCopied] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState('coldarkDark');
   
   // Handle non-code blocks
   if (!children || typeof children !== 'object' || !('type' in children)) {
@@ -80,22 +41,6 @@ const CodeBlock = ({ children, ...props }: CodeBlockProps) => {
 
   return (
     <div className="my-4 space-y-2">
-      {/* Theme Selector */}
-      {/* <div className="flex items-center gap-2">
-        <label className="text-sm text-slate-500">Theme:</label>
-        <select 
-          value={currentTheme}
-          onChange={(e) => setCurrentTheme(e.target.value)}
-          className="rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-slate-700"
-        >
-          {Object.entries(themes).map(([key, theme]) => (
-            <option key={key} value={key}>
-              {theme.name} - {theme.description}
-            </option>
-          ))}
-        </select>
-      </div> */}
-
       {/* Code Block */}
       <div className="group overflow-hidden rounded-lg border border-slate-200 bg-slate-900">
         <div className="relative">
@@ -113,7 +58,7 @@ const CodeBlock = ({ children, ...props }: CodeBlockProps) => {
 
           <SyntaxHighlighter
             language={language}
-            style={themes[currentTheme as keyof typeof themes].style}
+            style={coldarkDark}
             showLineNumbers={true}
             customStyle={{
               margin: 0,
