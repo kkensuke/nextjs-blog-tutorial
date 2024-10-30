@@ -1,119 +1,136 @@
 "use client";
 
-import { CSSProperties, useState } from 'react';
+import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { 
+  vscDarkPlus,      // GitHub-like dark theme
+  dracula,          // Popular dark theme
+  atomDark,         // Atom editor dark theme
+  oneDark,          // One Dark theme
+  synthwave84,      // Retro/cyberpunk theme
+  materialDark,     // Material design dark
+  coldarkDark,      // Modern dark theme
+} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { FaRegCopy } from "react-icons/fa";
-import type { ClassAttributes, HTMLAttributes } from 'react'
-import type { ExtraProps } from 'react-markdown';
+import { Copy, Check } from 'lucide-react';
 
-// ref:
-// https://goodlife.tech/posts/react-markdown-code-highlight.html
-// https://www.newt.so/docs/tutorials/customize-code-block-using-react-markdown
+// Theme options with descriptions
+const themes = {
+  vscDarkPlus: {
+    style: vscDarkPlus,
+    name: 'VSCode Dark+',
+    description: 'Clean and professional, similar to VSCode'
+  },
+  dracula: {
+    style: dracula,
+    name: 'Dracula',
+    description: 'Popular dark theme with vibrant colors'
+  },
+  atomDark: {
+    style: atomDark,
+    name: 'Atom Dark',
+    description: 'Inspired by Atom editor'
+  },
+  oneDark: {
+    style: oneDark,
+    name: 'One Dark',
+    description: 'Elegant and balanced dark theme'
+  },
+  synthwave84: {
+    style: synthwave84,
+    name: 'Synthwave',
+    description: 'Retro cyberpunk vibes'
+  },
+  materialDark: {
+    style: materialDark,
+    name: 'Material Dark',
+    description: 'Based on Material Design'
+  },
+  coldarkDark: {
+    style: coldarkDark,
+    name: 'Coldark Dark',
+    description: 'Modern minimalist dark theme'
+  }
+};
 
-const Pre = ({
-  children,
-  ...props
-}: ClassAttributes<HTMLPreElement> &
-  HTMLAttributes<HTMLPreElement> &
-  ExtraProps) => {
-  if (!children || typeof children !== 'object' || !('type' in children) || children.type !== 'code') {
+interface CodeBlockProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const CodeBlock = ({ children, ...props }: CodeBlockProps) => {
+  const [isCopied, setIsCopied] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState('coldarkDark');
+  
+  // Handle non-code blocks
+  if (!children || typeof children !== 'object' || !('type' in children)) {
     return <code {...props}>{children}</code>;
   }
-  
-  const { className, children: code } = 'props' in children ? children.props : {className: '', children: ''};
-  
-  const match = /language-(\w+)?(?:\[(.*)\])?/.exec(className || '');
-  const lang = match ? match[1] : 'plaintext';
-  const propertiesString = match && match[2] ? match[2] : '';
 
-  const properties = propertiesString.split(',').reduce((acc, prop) => {
-    const [key, value] = prop.split('=');
-    acc[key] = value || '';
-    return acc;
-  }, {} as Record<string, string>);
+  // Extract code and language
+  const { className = '', children: codeString ='' } = 'props' in children ? children.props : {};
+  const match = /language-(\w+)/.exec(className || '');
+  const language = match?.[1] || 'plaintext';
 
-  const title = properties['title'] || '';
-  const isDiff = properties['diff'] === 'true';
-  const showLineNumber = properties['showLineNumber'] === 'true';
-  
-  
-  // Copy functionality
-  const [showCopyToClipboard, setShowCopyToClipboard] = useState(false);
-  const [tooltipStyle, setTooltipStyle] = useState<CSSProperties>({
-    opacity: '0',
-    visibility: 'hidden',
-  });
-
+  // Handle copy functionality
   const handleCopy = () => {
-    setTooltipStyle({ opacity: '1', visibility: 'visible' });
-    setTimeout(() => {
-      setTooltipStyle({ opacity: '0', visibility: 'hidden' });
-    }, 1500);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
   };
-  
-  
-  // Code diff handling
-  const codeLines = String(code).split('\n');
-  const addedLines: number[] = [];
-  const removedLines: number[] = [];
 
-  codeLines.forEach((line, index) => {
-    if (/^\+\s.*$/.test(line)) addedLines.push(index + 1);
-    if (/^\-\s.*$/.test(line)) removedLines.push(index + 1);
-  });
-
-  const getLineProps = (lineNumber: number): { style: CSSProperties } => {
-    if (isDiff) {
-      if (addedLines.includes(lineNumber)) {
-        return { style: { display: 'block', backgroundColor: 'rgba(0, 255, 0, 0.3)' } };
-      }
-      if (removedLines.includes(lineNumber)) {
-        return { style: { display: 'block', backgroundColor: 'rgba(255, 0, 0, 0.3)' } };
-      }
-    }
-    return { style: {} };
-  };
-  
-  
-  // Styling adjustments: remove default margin and top border radius if it has a title.
-  const customStyle: CSSProperties = title
-    ? { margin: '0', borderTopLeftRadius: '0', borderTopRightRadius: '0', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px' }
-    : { margin: '0' };
-  
-  
   return (
-    <div className='my-3'>
-        {title && <div className="code-block-title rounded-t-md border-[1px] border-slate-500 bg-white py-0 pl-4 font-mono text-sm text-black">{title}</div>}
-        <div className="relative"
-          onMouseEnter={() => setShowCopyToClipboard(true)}
-          onMouseLeave={() => setShowCopyToClipboard(false)}
+    <div className="my-4 space-y-2">
+      {/* Theme Selector */}
+      {/* <div className="flex items-center gap-2">
+        <label className="text-sm text-slate-500">Theme:</label>
+        <select 
+          value={currentTheme}
+          onChange={(e) => setCurrentTheme(e.target.value)}
+          className="rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-slate-700"
         >
-         {showCopyToClipboard && (
-            <div className="absolute top-1 right-1 flex">
-              <div className="tooltip text-white" style={tooltipStyle}>
-                Copied!
-              </div>
-              <CopyToClipboard text={String(code)} onCopy={handleCopy}>
-                <FaRegCopy className='text-slate-200 opacity-60 hover:opacity-100' size={24} />
-              </CopyToClipboard>
-            </div>
-          )}
+          {Object.entries(themes).map(([key, theme]) => (
+            <option key={key} value={key}>
+              {theme.name} - {theme.description}
+            </option>
+          ))}
+        </select>
+      </div> */}
+
+      {/* Code Block */}
+      <div className="group overflow-hidden rounded-lg border border-slate-200 bg-slate-900">
+        <div className="relative">
+          <div className="absolute right-4 top-4 z-10 opacity-0 transition-opacity group-hover:opacity-100">
+            <CopyToClipboard text={String(codeString)} onCopy={handleCopy}>
+              <button className="rounded-md bg-slate-700/50 p-2 text-slate-400 backdrop-blur-sm transition-colors hover:bg-slate-700 hover:text-slate-200">
+                {isCopied ? (
+                  <Check size={16} className="text-green-500" />
+                ) : (
+                  <Copy size={16} />
+                )}
+              </button>
+            </CopyToClipboard>
+          </div>
+
           <SyntaxHighlighter
-            // remove default margin and top border radius
-            customStyle={customStyle}
-            style={a11yDark}
-            language={lang}
-            wrapLines={true}
-            showLineNumbers={showLineNumber}
-            lineProps={getLineProps}
-            children={String(code).replace(/\n$/, '')}
-            codeTagProps={{style: {fontFamily: 'monospace'} }}
-          />
+            language={language}
+            style={themes[currentTheme as keyof typeof themes].style}
+            showLineNumbers={true}
+            customStyle={{
+              margin: 0,
+              borderRadius: 0,
+              fontSize: '14px',
+              padding: '1.5rem',
+            }}
+            codeTagProps={{
+              style: { fontFamily: 'ui-monospace, monospace' }
+            }}
+          >
+            {String(codeString).replace(/\n$/, '')}
+          </SyntaxHighlighter>
         </div>
+      </div>
     </div>
   );
 };
 
-export default Pre;
+export default CodeBlock;

@@ -21,6 +21,7 @@
     "framer-motion": "^11.1.7",
     "gray-matter": "^4.0.3",
     "jsdom": "^24.0.0",
+    "lucide-react": "^0.454.0",
     "markdown-it-docutils": "^0.1.6",
     "markdown-to-jsx": "^7.1.7",
     "mathjax": "^3.2.2",

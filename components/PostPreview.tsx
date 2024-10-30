@@ -1,31 +1,62 @@
+import React from 'react';
 import Link from "next/link";
+import { Calendar, Tag, ArrowRight } from 'lucide-react';
 import { PostMetadata } from "./PostMetadata";
 
 const PostPreview = (props: PostMetadata) => {
-  const moreThan75: boolean = props.subtitle.length > 75;
-  const subtitle: string = props.subtitle.slice(0, 75) + (moreThan75 ? "..." : "");
+  const moreThan100 = props.subtitle.length > 100;
+  const subtitle = props.subtitle.slice(0, 100) + (moreThan100 ? "..." : "");
+
   return (
-    <div>
-      <Link href={`/blog/posts/${props.slug}`}>
-      <div className="h-32 rounded-t-md border border-slate-300 bg-white p-4 shadow-sm">
-        <div className="flex justify-between">
-          <h2 className="mb-4 text-sky-600">{props.title}</h2>
-          <p className="text-right text-sm text-slate-400">{props.date}</p>
+    <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white will-change-transform">
+      <Link 
+        href={`/blog/posts/${props.slug}`} 
+        className="block overflow-hidden rounded-t-xl transition-colors hover:bg-slate-50"
+      >
+        <div className="p-6">
+          {/* Date */}
+          <div className="mb-4 flex items-center gap-2 text-sm text-slate-500">
+            <Calendar size={14} />
+            <span>{props.date}</span>
+          </div>
+
+          {/* Title */}
+          <h2 className="mb-3 text-xl font-semibold text-slate-800 transition-colors hover:text-sky-600">
+            {props.title}
+          </h2>
+
+          {/* Subtitle */}
+          <p className="mb-4 text-slate-600">
+            {subtitle}
+          </p>
+
+          {/* Read more indicator */}
+          <div className="flex items-center gap-2 text-sm font-medium text-sky-600">
+            Read more 
+            <ArrowRight size={16} />
+          </div>
         </div>
-        <p className="text-slate-700">{subtitle}</p>
-      </div>
       </Link>
-      {props.tags ? (
-        <ul className="flex flex-wrap gap-1 rounded-b-md border p-2">
-          {props.tags.map((tag: string) => (
-            <li key={tag} className="mr-2">
-              <a href={`/blog/tags/${tag}`} className="rounded-md border-2 px-2 text-slate-700 hover:underline">{tag}</a>
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <div className="rounded-b-md border p-2 text-slate-700"> no tags </div>
-      )}
+
+      {/* Tags section */}
+      <div className="border-t border-slate-100 bg-slate-50 px-6 py-4">
+        <div className="flex flex-wrap items-center gap-2">
+          <Tag size={14} className="text-slate-400" />
+          {props.tags && props.tags.length > 0 ? (
+            props.tags.map((tag: string) => (
+              <Link
+                key={tag}
+                href={`/blog/tags/${tag}`}
+                className="rounded-full bg-white px-3 py-1 text-sm text-slate-600 ring-1 ring-slate-200 hover:bg-slate-100 hover:text-slate-900"
+              >
+                {tag}
+              </Link>
+            ))
+          ) : (
+            <span className="text-sm text-slate-400">No tags</span>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

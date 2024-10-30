@@ -43,7 +43,7 @@ const PostPage = (props: any) => {
         <ul className="mt-2 flex flex-wrap justify-center gap-1">
           {post.data.tags.map((tag: string) => (
             <li key={tag} className="mr-2">
-              <a href={`/blog/tags/${tag}`} className="rounded-md border-2 px-2 text-slate-700 hover:underline">{tag}</a>
+              <a href={`/blog/tags/${tag}`} className="group flex items-center gap-1 rounded-full bg-slate-100 px-4 py-1.5 text-sm font-medium text-slate-700 transition-all hover:bg-slate-200 hover:shadow-md">{tag}</a>
             </li>
           ))}
         </ul>
@@ -52,7 +52,7 @@ const PostPage = (props: any) => {
   )
   
   return (
-    <div className="flex flex-col lg:flex-row lg:items-start">
+    <div className="mb-20 flex flex-col lg:flex-row lg:items-start">
       
       <div className="lg:order-1 lg:w-96 lg:min-w-[10px] lg:shrink">
       </div>
@@ -61,7 +61,7 @@ const PostPage = (props: any) => {
         {titleSection}
       </div>
       
-      <div className="lg:sticky lg:top-0 lg:order-3 lg:mr-0 lg:ml-8 lg:w-80 lg:shrink-0">
+      <div className="lg:sticky lg:top-10 lg:order-3 lg:mr-0 lg:ml-8 lg:w-80 lg:shrink-0">
           <div className="mx-auto max-w-[400px] lg:mt-10">
             <TOC />
           </div>

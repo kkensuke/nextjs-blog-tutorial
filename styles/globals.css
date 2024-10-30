@@ -4,9 +4,9 @@
 
 
 /* strong style */
-strong {
+/* strong {
     color: #ff5d17 !important;
-}
+} */
 
 /* inline code style */
 .prose code:not(pre code) {
