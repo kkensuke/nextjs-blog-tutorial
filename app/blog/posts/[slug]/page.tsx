@@ -5,6 +5,7 @@ import getPostMetadata from "../../../../components/getPostMetadata";
 import TOC from "../../../../components/toc";
 import rehypeSlug from 'rehype-slug'; // rehype plugin to add id attributes to headings so that they can be linked to
 import Markdown from 'react-markdown';
+import { Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
@@ -32,6 +33,14 @@ const getPostContent = (slug: string) => {
 const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
+  
+  // Define your components with proper typing
+  const components: Components = {
+    p: React.Fragment,
+    img: CustomImage as Components['img'],
+    pre: Pre,
+    ...AdmonitionComponents,
+  };
   
   const titleSection = (
     <>
@@ -77,12 +86,7 @@ const PostPage = (props: any) => {
             children={post.content}
             remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
             rehypePlugins={[rehypeSlug, rehypeKatex]}
-            components={{
-              p: React.Fragment, // https://github.com/remarkjs/react-markdown/issues/42
-              img: CustomImage,
-              ...AdmonitionComponents,
-              pre: Pre,
-            }}
+            components={components}
           />
         </article>
       </div>
