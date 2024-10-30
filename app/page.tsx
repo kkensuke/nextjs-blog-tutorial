@@ -127,13 +127,13 @@ export default function HomePage() {
       </section>
 
       {/* Blog Section */}
-      <section className="mb-28 mt-16 overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 md:p-10">
-        <Link href="/blog">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-slate-800 md:text-3xl">Latest Blog Posts</h2>
-          </div>
-        </Link>
-      </section>
+      <Link href="/blog">
+        <section className="mb-28 mt-16 overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 md:p-10">
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-bold text-slate-800 md:text-3xl">Latest Blog Posts</h2>
+            </div>
+        </section>
+      </Link>
     </div>
   );
 };

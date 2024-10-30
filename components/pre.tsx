@@ -22,9 +22,19 @@ const Pre: Components['pre'] = ({ children, ...props }) => {
     return <code {...props}>{children}</code>;
   }
 
-  const { className = '', children: codeString ='' } = 'props' in children ? children.props : {};
-  const match = /language-(\w+)/.exec(className || '');
-  const language = match?.[1] || 'plaintext';
+  const { className = '', children: codeString ='' } = 'props' in children ? children.props : {};  
+  const match = /language-(\w+)?(?:\[(.*)\])?/.exec(className || '');
+  const language = match ? match[1] : 'plaintext';
+  const propertiesString = match && match[2] ? match[2] : '';
+
+  const properties = propertiesString.split(',').reduce((acc, prop) => {
+    const [key, value] = prop.split('=');
+    acc[key] = value || '';
+    return acc;
+  }, {} as Record<string, string>);
+
+  const title = properties['title'] || '';
+  const showLineNumber = properties['showLineNumber'] === 'true';
 
   const handleCopy = () => {
     setIsCopied(true);
@@ -35,6 +45,13 @@ const Pre: Components['pre'] = ({ children, ...props }) => {
     <div className="my-4 space-y-2">
       <div className="group overflow-hidden rounded-lg border border-slate-200 bg-slate-900">
         <div className="relative">
+          <div>
+            {title && (
+              <div className="bg-slate-800 px-2 py-1 font-mono text-xs text-slate-300">
+                {title}
+              </div>
+            )}
+          </div>
           <div className="absolute right-4 top-4 z-10 opacity-0 transition-opacity group-hover:opacity-100">
             <CopyToClipboard text={String(codeString)} onCopy={handleCopy}>
               <button className="rounded-md bg-slate-700/50 p-2 text-slate-400 backdrop-blur-sm transition-colors hover:bg-slate-700 hover:text-slate-200">
@@ -45,7 +62,7 @@ const Pre: Components['pre'] = ({ children, ...props }) => {
           <SyntaxHighlighter
             language={language}
             style={coldarkDark}
-            showLineNumbers={true}
+            showLineNumbers={showLineNumber}
             customStyle={{
               margin: '0 1rem 0 0',
               borderRadius: 0,

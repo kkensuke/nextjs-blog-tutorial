@@ -80,7 +80,7 @@ for i in range(3):
 
 :::simple
 ````md[title=markdown]
-```python[diff=true,title=asdf.py,showLineNumber=true]
+```python[title=asdf.py,showLineNumber=true]
 - def old_function():
 -    print("Old function")
 + def new_function():
@@ -89,7 +89,7 @@ for i in range(3):
 ````
 
 Output:
-```python[diff=true,title=asdf.py,showLineNumber=true]
+```python[title=asdf.py,showLineNumber=true]
 - def old_function():
 -    print("Old function")
 + def new_function():
@@ -99,8 +99,8 @@ Output:
 
 :::important
 No spaces are allowed after commas in the code attributes.  
-✅ [diff=true,title=asdf.py,showLineNumber=true]  
-❌ [diff=true, title=asdf.py, showLineNumber=true]
+✅ [title=asdf.py,showLineNumber=true]  
+❌ [title=asdf.py, showLineNumber=true]
 :::
 
 

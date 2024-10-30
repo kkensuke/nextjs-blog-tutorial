@@ -26,18 +26,12 @@ const publications = [
   }
 ];
 
-const photos = [
-  { id: 1, title: "Conference Presentation", category: "Academic" },
-  { id: 2, title: "Research Team", category: "Team" },
-  { id: 3, title: "Lab Work", category: "Research" },
-  { id: 4, title: "Workshop", category: "Events" }
-];
 
-export default function AboutPage() {
+export default function PublicationsPage() {
   return (
-    <div className="mx-auto max-w-screen-md px-4">
+    <div className="mx-auto max-w-screen-md">
       {/* Publications Section */}
-      <section className="mt-16">
+      <section className="mt-12">
         <div className="mb-12 flex items-center gap-3">
           <BookOpen className="text-slate-600" size={32} />
           <h1 className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-4xl font-bold text-transparent">
@@ -91,38 +85,6 @@ export default function AboutPage() {
                 >
                   <ExternalLink size={20} />
                 </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Photos Section */}
-      <section className="mb-16 mt-24">
-        <div className="mb-12 flex items-center gap-3">
-          <Camera className="text-slate-600" size={32} />
-          <h1 className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-4xl font-bold text-transparent">
-            Photos
-          </h1>
-          <div className="h-px flex-1 bg-slate-200"></div>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2">
-          {photos.map((photo) => (
-            <div
-              key={photo.id}
-              className="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 bg-slate-50"
-            >
-              <img
-                src={`/api/placeholder/800/600`}
-                alt={photo.title}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent p-6 opacity-0 transition-opacity group-hover:opacity-100">
-                <h3 className="text-xl font-semibold text-white">
-                  {photo.title}
-                </h3>
-                <p className="text-sm text-slate-200">{photo.category}</p>
               </div>
             </div>
           ))}

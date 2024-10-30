@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Bookmark, Pencil } from 'lucide-react';
+import { BookOpen, Calendar, ExternalLink, Camera, Award } from 'lucide-react';
 import getPostMetadata from "../../components/getPostMetadata";
 import PostPreview from "../../components/PostPreview";
 import getAllTags from "../../components/getAllTags";
@@ -25,17 +26,13 @@ const BlogPage = () => {
   );
 
   return (
-    <div className="mx-auto mb-20 max-w-screen-md">
-      <div className="relative my-10 text-center">
-        <h1 className="relative z-10 bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text pb-2 text-5xl font-bold text-transparent">
+    <div className="mx-auto mb-20 mt-12 max-w-screen-md">
+      <div className="mb-12 flex items-center gap-3">
+        <Pencil className="text-slate-600" size={32} />
+        <h1 className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-4xl font-bold text-transparent">
           <Link href="/blog"> Blog </Link>
         </h1>
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Pencil 
-            size={120} 
-            className="rotate-12 text-slate-100" 
-          />
-        </div>
+        <div className="h-px flex-1 bg-slate-200"></div>
       </div>
 
       {allTags.length > 0 && (

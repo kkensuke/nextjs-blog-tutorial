@@ -29,7 +29,6 @@ const getPostContent = (slug: string) => {
 };
 
 
-
 const PostPage = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);

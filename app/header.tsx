@@ -72,9 +72,10 @@ const Header = () => {
   const SelectedTitle = TitleStyles.GradientWithIcon;
 
   const navItems = [
-    { label: 'Home', href: '/' },
+    // { label: 'Home', href: '/' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Materials', href: '/material' },
+    { label: 'Publications', href: '/publications' },
+    { label: 'Photos', href: '/photos' },
   ];
 
   return (
