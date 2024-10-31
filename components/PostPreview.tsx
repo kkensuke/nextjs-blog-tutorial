@@ -8,10 +8,10 @@ const PostPreview = (props: PostMetadata) => {
   const subtitle = props.subtitle.slice(0, 100) + (moreThan100 ? "..." : "");
 
   return (
-    <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white will-change-transform">
+    <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white will-change-transform hover:bg-slate-50">
       <Link 
         href={`/blog/posts/${props.slug}`} 
-        className="block overflow-hidden rounded-t-xl transition-colors hover:bg-slate-50"
+        className="block overflow-hidden rounded-xl transition-colors"
       >
         <div className="p-6">
           {/* Date */}
@@ -39,7 +39,7 @@ const PostPreview = (props: PostMetadata) => {
       </Link>
 
       {/* Tags section */}
-      <div className="border-t border-slate-100 bg-slate-50 px-6 py-4">
+      <div className="rounded-b-xl border-t border-slate-100 px-6 py-4">
         <div className="flex flex-wrap items-center gap-2">
           <Tag size={14} className="text-slate-400" />
           {props.tags && props.tags.length > 0 ? (
@@ -47,7 +47,7 @@ const PostPreview = (props: PostMetadata) => {
               <Link
                 key={tag}
                 href={`/blog/tags/${tag}`}
-                className="rounded-full bg-white px-3 py-1 text-sm text-slate-600 ring-1 ring-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                className="rounded-full bg-white px-2 text-sm text-slate-600 ring-1 ring-slate-200 hover:bg-slate-100 hover:text-slate-900"
               >
                 {tag}
               </Link>

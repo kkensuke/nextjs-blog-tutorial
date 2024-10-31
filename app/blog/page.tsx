@@ -16,7 +16,7 @@ const BlogPage = () => {
         <a
           key={tag}
           href={`/blog/tags/${tag}`}
-          className="group flex items-center gap-1 rounded-full bg-slate-100 px-4 py-1.5 text-sm font-medium text-slate-700 transition-all hover:bg-slate-200 hover:shadow-md"
+          className="group flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700 transition-all hover:bg-slate-200 hover:shadow-md"
         >
           <Bookmark size={14} className="opacity-60 group-hover:opacity-100" />
           {tag}
