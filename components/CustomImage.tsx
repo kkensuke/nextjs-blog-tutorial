@@ -24,7 +24,7 @@ const CustomImage: React.FC<CustomImageProps> = ({ alt, src, title }) => {
     height: 'auto',
     width,
     display: 'block',
-    margin: align === 'left' ? '0 auto 0 0' : align === 'right' ? '0 0 0 auto' : '0 auto',
+    margin: align === 'left' ? '2rem auto 2rem 0' : align === 'right' ? '2rem 0 2rem auto' : '2rem auto',
   };
 
   return (
