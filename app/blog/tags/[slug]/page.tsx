@@ -44,7 +44,7 @@ const TagPage = ({ params }: TagPageProps) => {
 
   return (
     <div className="mx-auto mt-12 max-w-screen-md">
-      <div className="mb-12 flex items-center gap-3">
+      <div className="mb-8 flex items-center gap-3">
         <Pencil className="text-slate-600" size={32} />
         <h1 className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-4xl font-bold text-transparent">
           <Link href="/blog"> Blog </Link>

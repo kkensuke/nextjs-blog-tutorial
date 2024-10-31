@@ -48,12 +48,13 @@ export default function HomePage() {
             {/* Skills Tags */}
             <div className="mt-6 flex flex-wrap gap-2">
               {[
-                'React', 
-                'TypeScript', 
-                'Node.js', 
-                'Next.js', 
-                'Tailwind CSS', 
-                'PostgreSQL'
+                'Python',
+                'C++',
+                'TypeScript',
+                'React',
+                'Next.js',
+                'Tailwind CSS',
+                'PostgreSQL',
               ].map((tech) => (
                 <span 
                   key={tech}

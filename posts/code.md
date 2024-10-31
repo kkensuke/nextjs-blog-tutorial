@@ -28,31 +28,6 @@ import matplotlib.pyplot as plt
 
 
 
-
-:::simple
-````md[title=markdown]
-```python[title=diff.py]
-def hello():
-    for i in range(3):
-        print("Hello, world!")
-
-for i in range(3):
-    hello()
-```
-````
-
-Output:
-```python[title=diff.py]
-def hello():
-    for i in range(3):
-        print("Hello, world!")
-
-for i in range(3):
-    hello()
-```
-:::
-
-
 :::simple
 ````md[title=markdown]
 ```python[showLineNumber=true]
@@ -104,7 +79,7 @@ No spaces are allowed after commas in the code attributes.
 :::
 
 
-```js[title=code.js]
+```js[title=code.js,showLineNumber=true]
 function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {
     return {...styleObject, ...style[className]};
