@@ -7,7 +7,8 @@ const Footer = () => {
     explore: [
       { label: 'Home', href: '/' },
       { label: 'Blog', href: '/blog' },
-      { label: 'Materials', href: '/material' }
+      { label: 'Photos', href: '/photos' },
+      { label: 'Publications', href: '/publications' },
     ],
     social: [
       { label: 'X', icon: Twitter, href: 'https://x.com' },
