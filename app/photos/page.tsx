@@ -40,7 +40,7 @@ export default function PhotosPage() {
       <section className="mb-16 mt-12">
         <div className="mb-12 flex items-center gap-3">
           <Camera className="text-slate-600" size={32} />
-          <h1 className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-4xl font-bold text-transparent">
+          <h1 className="bg-clip-text text-4xl font-bold text-slate-700">
             Photos
           </h1>
           <div className="h-px flex-1 bg-slate-200"></div>

@@ -28,7 +28,7 @@ const BlogPage = () => {
     <div className="mx-auto mb-20 mt-12 max-w-screen-md">
       <div className="mb-8 flex items-center gap-3">
         <Pencil className="text-slate-600" size={32} />
-        <h1 className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-4xl font-bold text-transparent">
+        <h1 className="bg-clip-text text-4xl font-bold text-slate-700">
           <Link href="/blog"> Blog </Link>
         </h1>
         <div className="h-px flex-1 bg-slate-200"></div>
