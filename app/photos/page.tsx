@@ -50,7 +50,7 @@ export default function PhotosPage() {
           {photos.map((photo) => (
             <div
               key={photo.id}
-              className="group relative aspect-video overflow-hidden rounded-xl border border-slate-200 bg-slate-50"
+              className="group relative my-20 aspect-video overflow-hidden rounded-xl border border-slate-200 bg-slate-50"
             >
               <img
                 src={photo.imagePath}
