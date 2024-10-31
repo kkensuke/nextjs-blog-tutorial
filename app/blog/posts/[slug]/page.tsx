@@ -12,6 +12,7 @@ import remarkDirectiveRehype from 'remark-directive-rehype';
 import Pre from "../../../../components/pre";
 import CustomImage from "../../../../components/CustomImage";
 import AdmonitionComponents from "../../../../components/admonitions";
+import { remarkTextDirectives, TextDirectiveComponents } from '../../../../components/textDirectives';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
@@ -39,6 +40,7 @@ const PostPage = (props: any) => {
     img: CustomImage as Components['img'],
     pre: Pre,
     ...AdmonitionComponents,
+    ...TextDirectiveComponents,
   };
   
   const titleSection = (
@@ -83,7 +85,7 @@ const PostPage = (props: any) => {
         <article className="post prose mx-auto">
           <Markdown
             children={post.content}
-            remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkMath]}
+            remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkTextDirectives, remarkMath]}
             rehypePlugins={[rehypeSlug, rehypeKatex]}
             components={components}
           />

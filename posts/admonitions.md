@@ -1,25 +1,45 @@
 ---
 title: "Admonitions"
-subtitle: "A guide to using admonitions in Markdown."
-date: "2024-4-27"
-tags: [Markdown, Admonitions]
+subtitle: "A guide to using admonitions and directives in Markdown"
+date: "2024-10-31"
+tags: [Markdown, Admonitions, Directives]
 ---
 
+This guide explains how to use directives and admonitions in Markdown to create rich, interactive content.
 
-## Directives in Text
-Directives in text can form with a single colon, such as :cite[smith04].
-Their syntax is `:name[label]{attributes}`.
+## Inline Directives `:name[label]{attributes}`
+::::simple{title="YouTube Link"}
+```markdown
+Watch this video on YouTube: :youtube[Click here]{#dQw4w9WgXcQ}.
+```
+:::simple
+Watch this video on YouTube: :youtube[Click here]{#dQw4w9WgXcQ}.
+:::
+::::
 
-Leafs (block without content) can form by using two colons:
+## Block Directives `::name[label]{attributes}`
+::::simple{title="YouTube Embed"}
+```markdown
+::youtube[Watch this amazing video]{#dQw4w9WgXcQ}
+```
+::youtube[Watch this amazing video]{#dQw4w9WgXcQ}
+::::
 
-::youtube[Video of a cat in a box]{vid=01ab2cd3efg}
+## Admonitions
 
-Their syntax is `::name[label]{attributes}` on its own line.
+Admonitions are specially formatted content blocks that help highlight important information.
 
+### Basic Syntax
+```markdown
+:::type
+Your content here
+:::
+```
 
-## Admonitions (or Callouts, Containers)
+### Available Types
+
 ::::simple
-```markdown:markdown
+```markdown
 :::note
 This is a note admonition.
 :::
@@ -29,26 +49,13 @@ This is a note admonition.
 :::
 ::::
 
-::::simple
-```markdown:markdown
-:::note{title="This is a title."}
-This is a note admonition.
-:::
-```
-:::note{title="This is a title."}
-This is a note admonition.
-:::
-::::
-
-
-:::abstract
-This is an abstract admonition.
+:::overview
+This is an overview admonition.
 :::
 
 :::warning
 This is a warning admonition.
 :::
-
 
 :::important
 This is an important admonition.
@@ -74,19 +81,45 @@ This is a quote admonition.
 This is a question admonition.
 :::
 
+:::simple{title="Simple Admonition"}
+This is a simple admonition with a custom title.
+:::
+
 :::simple
-This is a simple admonition.
+This is a simple admonition without a title.
 :::
 
-
-You can make nested admonitions by adding more colons to the opening and closing tags.
-::::note
-
-:::important
-This is an important admonition.
+### Custom Titles
+::::simple
+```markdown
+:::note{title="Did you know?"}
+You can customize the title of any admonition!
 :::
+```
 
+:::note{title="Did you know?"}
+You can customize the title of any admonition!
+:::
 ::::
+
+### Nested Admonitions
+You can nest admonitions by using more colons in the opening and closing tags:
+
+::::note{title="Outer Admonition"}
+This is the outer admonition.
+
+:::important{title="Inner Admonition"}
+This is a nested important admonition.
+:::
+::::
+
+## Best Practices
+
+1. Use inline directives (`:`) for elements that are part of your text flow
+2. Use block directives (`::`) for standalone elements like embeds
+3. Choose appropriate admonition types based on your content
+4. Use clear, descriptive titles for your admonitions
+5. Don't overuse admonitions - use them to highlight truly important information
 
 
 
@@ -112,10 +145,10 @@ interface AdmonitionProps {
 }
 
 
-const AbstractAdmonition = ({ title, children }: AdmonitionProps) => {
-  title = title || 'Abstract';
+const OverviewAdmonition = ({ title, children }: AdmonitionProps) => {
+  title = title || 'Overview';
   return (
-    <div className="admonition admonition-abstract bg-red-100 text-slate-600" >
+    <div className="admonition admonition-overview bg-red-100 text-slate-600" >
       <div className="admonition-title flex text-red-600">
         <FaRocket className='my-auto mr-2' size={'22'} color={''} /> {title}
       </div>
@@ -220,15 +253,25 @@ const QuestionAdmonition = ({ title, children }: AdmonitionProps) => {
     </div>
   );
 }
-const SimpleAdmonition = ({ children }: AdmonitionProps) => (
-  <div className="admonition admonition-simple bg-gray-200 text-slate-600" >
-    <div className="admonition-content">{children}</div>
-  </div>
-);
+const SimpleAdmonition = ({ title, children }: AdmonitionProps) => {
+  return (
+    <div className="admonition admonition-simple bg-gray-50 text-slate-600">
+      {title && (
+        <>
+          <div className="admonition-title flex text-slate-600">
+            {title}
+          </div>
+          <div className="border-t-2 border-slate-500"></div>
+        </>
+      )}
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
+};
 
 
 const AdmonitionComponents = {
-  abstract: AbstractAdmonition,
+  overview: OverviewAdmonition,
   note: NoteAdmonition,
   important: ImportantAdmonition,
   tip: TipAdmonition,

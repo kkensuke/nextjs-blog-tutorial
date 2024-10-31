@@ -1,6 +1,6 @@
 /* Custom CSS for admonitions */
 .admonition {
-    margin: 10px 0px;
+    margin: 1.5rem 0px;
     padding: 5px 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -9,7 +9,4 @@
 .admonition-title {
     font-size: 1.2em;
     font-weight: bold;
-}
-
-.admonition-content {
 }

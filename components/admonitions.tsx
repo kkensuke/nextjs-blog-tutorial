@@ -16,10 +16,10 @@ interface AdmonitionProps {
 }
 
 
-const AbstractAdmonition = ({ title, children }: AdmonitionProps) => {
-  title = title || 'Abstract';
+const OverviewAdmonition = ({ title, children }: AdmonitionProps) => {
+  title = title || 'Overview';
   return (
-    <div className="admonition admonition-abstract bg-red-100 text-slate-600" >
+    <div className="admonition admonition-overview bg-red-100 text-slate-600" >
       <div className="admonition-title flex text-red-600">
         <FaRocket className='my-auto mr-2' size={'22'} color={''} /> {title}
       </div>
@@ -124,15 +124,26 @@ const QuestionAdmonition = ({ title, children }: AdmonitionProps) => {
     </div>
   );
 }
-const SimpleAdmonition = ({ children }: AdmonitionProps) => (
-  <div className="admonition admonition-simple bg-gray-200 text-slate-600" >
-    <div className="admonition-content">{children}</div>
-  </div>
-);
+
+const SimpleAdmonition = ({ title, children }: AdmonitionProps) => {
+  return (
+    <div className="admonition admonition-simple bg-gray-50 text-slate-600">
+      {title && (
+        <>
+          <div className="admonition-title flex text-slate-600">
+            {title}
+          </div>
+          <div className="border-t-2 border-slate-500"></div>
+        </>
+      )}
+      <div className="admonition-content">{children}</div>
+    </div>
+  );
+};
 
 
 const AdmonitionComponents = {
-  abstract: AbstractAdmonition,
+  overview: OverviewAdmonition,
   note: NoteAdmonition,
   important: ImportantAdmonition,
   tip: TipAdmonition,
