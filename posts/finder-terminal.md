@@ -25,7 +25,7 @@ Terminal のカレントディレクトリを Finder で開くには、`open　.
 ![SCR-20230225-4ok.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/f5f80cbd-d13e-0efe-4df1-e4068f8a7789.png)
 
 実際に Finder から Terminal を開くには、Finder 上でディレクトリを選択して先ほどのショートカットキーを使うか、右クリックから下の赤枠部分のどちらかを選択して開きます。
-![SCR-20230225-4sf.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/a0b03cf8-9c42-8f95-b7e6-ed91af3f04c4.png)
+![SCR-20230225-4sf.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/a0b03cf8-9c42-8f95-b7e6-ed91af3f04c4.png "width=500px")
 
 
 

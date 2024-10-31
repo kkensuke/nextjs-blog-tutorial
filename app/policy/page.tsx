@@ -71,7 +71,7 @@ export default function PolicyPage() {
 
             <section className="mb-8">
               <h3 className="mb-4 text-xl font-semibold">4. Contact Information</h3>
-              <p>[Your Contact Details]</p>
+              <p></p>
             </section>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function PolicyPage() {
 
             <section className="mb-8">
               <h3 className="mb-4 text-xl font-semibold">1. Agreement to Terms</h3>
-              <p>By accessing [Your Website Name], you agree to these Terms of Service and any additional terms referenced herein.</p>
+              <p>By accessing this website, you agree to these Terms of Service and any additional terms referenced herein.</p>
             </section>
 
             <section className="mb-8">
@@ -111,7 +111,7 @@ export default function PolicyPage() {
 
             <section className="mb-8">
               <h3 className="mb-4 text-xl font-semibold">4. Contact Information</h3>
-              <p>[Your Contact Details]</p>
+              <p></p>
             </section>
           </div>
         </div>
@@ -119,7 +119,7 @@ export default function PolicyPage() {
 
       <footer className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
         <p>For any questions regarding our Privacy Policy or Terms of Service, please contact:</p>
-        <p className="mt-2">[Your Contact Details]</p>
+        <p className="mt-2">kkensuke</p>
       </footer>
     </div>
   );

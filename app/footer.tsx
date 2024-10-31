@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Github, Twitter, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { SiGithub, SiTwitter, SiLinkedin, SiGmail, SiChainlink } from 'react-icons/si';
 
 const Footer = () => {
   const footerLinks = {
@@ -11,10 +11,10 @@ const Footer = () => {
       { label: 'Publications', href: '/publications' },
     ],
     social: [
-      { label: 'X', icon: Twitter, href: 'https://x.com' },
-      { label: 'GitHub', icon: Github, href: 'https://github.com/kkensuke/nextjs-blog-tutorial' },
-      { label: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
-      { label: 'Email', icon: Mail, href: 'mailto:email@example.com' }
+      { label: 'X', icon: SiTwitter, href: 'https://x.com' },
+      { label: 'GitHub', icon: SiGithub, href: 'https://github.com/kkensuke/nextjs-blog-tutorial' },
+      { label: 'LinkedIn', icon: SiLinkedin, href: 'https://linkedin.com' },
+      { label: 'Email', icon: SiGmail, href: 'mailto:email@example.com' }
     ],
     tech: [
       { label: 'React', href: 'https://reactjs.org' },
@@ -101,10 +101,7 @@ const Footer = () => {
                     className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-900"
                   >
                     {link.label}
-                    <ExternalLink 
-                      size={14} 
-                      className="opacity-0 transition-opacity group-hover:opacity-100" 
-                    />
+                    <SiChainlink size={14} className="opacity-0 transition-opacity group-hover:opacity-100"/>
                   </a>
                 </li>
               ))}
