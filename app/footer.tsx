@@ -116,11 +116,8 @@ const Footer = () => {
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 text-sm text-slate-600 sm:flex-row">
           <p>© {new Date().getFullYear()} All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/" className="transition-colors hover:text-slate-900">
-              Privacy Policy
-            </Link>
-            <Link href="/" className="transition-colors hover:text-slate-900">
-              Terms of Service
+            <Link href="/policy" className="transition-colors hover:text-slate-900">
+              Privacy Policy & Terms of Service
             </Link>
           </div>
         </div>
