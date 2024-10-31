@@ -14,7 +14,7 @@ const TagSection = (slug: string) => (
         <a
           key={tag}
           href={`/blog/tags/${tag}`}
-          className={`group flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700 transition-all hover:bg-slate-200 hover:shadow-md ${tag === slug ? 'bg-cyan-100 text-cyan-700' : ''}`}
+          className={`group flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1.5 text-sm font-medium text-slate-700 transition-all hover:bg-slate-200 hover:shadow-md ${tag === slug ? 'bg-cyan-100 text-cyan-700 hover:bg-cyan-200' : ''}`}
         >
           <Bookmark size={14} className="opacity-60 group-hover:opacity-100" />
           {tag}
@@ -43,7 +43,7 @@ const TagPage = ({ params }: TagPageProps) => {
   ));
 
   return (
-    <div className="mx-auto mt-12 max-w-screen-md">
+    <div className="mx-auto mt-12 mb-20 max-w-screen-md">
       <div className="mb-8 flex items-center gap-3">
         <Pencil className="text-slate-600" size={32} />
         <h1 className="bg-clip-text text-4xl font-bold text-slate-700">
