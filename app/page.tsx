@@ -37,7 +37,7 @@ export default function HomePage() {
         </div>
 
         {/* Main Content */}
-        <div className="mt-6 grid gap-6 md:grid-cols-3">
+        <div className="mt-6">
           {/* Bio Column */}
           <div className="md:col-span-2 md:pr-6">
             <p className="text-lg leading-relaxed text-slate-600">
@@ -67,12 +67,8 @@ export default function HomePage() {
           </div>
 
           {/* Contact Column */}
-          <div className="space-y-4">
-            <a 
-              href="./directory/yourfile.pdf" 
-              download
-              className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600 transition-all hover:bg-slate-100"
-            >
+          <div className="mt-7 grid gap-4 sm:grid-cols-2">
+            <a href="/cv.pdf" download className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600 transition-all hover:bg-slate-100">
               <FileText size={18} />
               <span>Download CV</span>
             </a>
@@ -82,10 +78,7 @@ export default function HomePage() {
               <span className="text-sm">example.12345 [at] gmail.com</span>
             </div>
 
-            <a 
-              href="https://github.com/kkensuke/nextjs-blog-tutorial"
-              className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600 transition-all hover:bg-slate-100"
-            >
+            <a href="https://github.com/kkensuke/nextjs-blog-tutorial" className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600 transition-all hover:bg-slate-100">
               <Github size={18} />
               <span>GitHub Profile</span>
             </a>
@@ -94,6 +87,7 @@ export default function HomePage() {
               <span>📍 Tokyo, Japan</span>
             </div>
           </div>
+          
         </div>
       </section>
 
