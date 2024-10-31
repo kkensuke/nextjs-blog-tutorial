@@ -35,7 +35,7 @@ export default function PolicyPage() {
 
             <section className="mb-8">
               <h3 className="mb-4 text-xl font-semibold">1. Introduction</h3>
-              <p>Welcome to [Your Website Name] ("we," "our," or "us"). This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit our website.</p>
+              <p>Welcome to this website. This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit our website.</p>
             </section>
 
             <section className="mb-8">
