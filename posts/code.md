@@ -27,50 +27,38 @@ import matplotlib.pyplot as plt
 :::
 
 
-
 :::simple
 ````md[title=markdown]
-```python[showLineNumber=true]
-def hello():
-    for i in range(3):
-        print("Hello, world!")
-
-for i in range(3):
-    hello()
+```python[title=code.py]
+import numpy as np
+import matplotlib.pyplot as plt
 ```
 ````
 
 Output:
-```python[showLineNumber=true]
-def hello():
-    for i in range(3):
-        print("Hello, world!")
-
-for i in range(3):
-    hello()
+```python[title=code.py]
+import numpy as np
+import matplotlib.pyplot as plt
 ```
 :::
-
 
 
 :::simple
 ````md[title=markdown]
-```python[title=asdf.py,showLineNumber=true]
-- def old_function():
--    print("Old function")
-+ def new_function():
-+    print("New function")
+```python[title=code.py,showLineNumber=true]
+import numpy as np
+import matplotlib.pyplot as plt
 ```
 ````
 
 Output:
-```python[title=asdf.py,showLineNumber=true]
-- def old_function():
--    print("Old function")
-+ def new_function():
-+    print("New function")
+```python[title=code.py,showLineNumber=true]
+import numpy as np
+import matplotlib.pyplot as plt
 ```
 :::
+
+
 
 :::important
 No spaces are allowed after commas in the code attributes.  

@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Bookmark, Pencil } from 'lucide-react';
-import { BookOpen, Calendar, ExternalLink, Camera, Award } from 'lucide-react';
 import getPostMetadata from "../../components/getPostMetadata";
 import PostPreview from "../../components/PostPreview";
 import getAllTags from "../../components/getAllTags";
