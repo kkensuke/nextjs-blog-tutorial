@@ -27,7 +27,7 @@ const Footer = () => {
   return (
     <footer className="mt-auto border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+        <div className="grid justify-evenly gap-8 sm:grid-cols-2 md:grid-cols-4">
           {/* Logo Section */}
           <div className="flex flex-col gap-4">
             <Link href="/">
