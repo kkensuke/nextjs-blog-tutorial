@@ -15,7 +15,7 @@ export default function HomePage() {
             Welcome to my corner of the web where I share my journey in development.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <a href="https://github.com/kkensuke/nextjs-blog-tutorial" className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20">
+            <a href="https://github.com/kkensuke/nextjs-blog-tutorial" target="_blank" className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20">
               <Github size={18} />
               GitHub
             </a>
@@ -78,7 +78,7 @@ export default function HomePage() {
               <span className="text-sm">example.12345 [at] gmail.com</span>
             </div>
 
-            <a href="https://github.com/kkensuke/nextjs-blog-tutorial" className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600 transition-all hover:bg-slate-100">
+            <a href="https://github.com/kkensuke/nextjs-blog-tutorial" target="_blank" className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600 transition-all hover:bg-slate-100">
               <Github size={18} />
               <span>GitHub Profile</span>
             </a>

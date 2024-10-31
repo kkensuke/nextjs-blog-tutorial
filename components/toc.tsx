@@ -24,7 +24,7 @@ const TOC = () => {
   }, []);
 
   return (
-    <div className="sticky top-24 mb-10 hidden lg:block">
+    <div>
       <div className="rounded-xl border border-slate-200 bg-white shadow-sm">
         {/* Header */}
         <div className="flex items-center gap-2 border-b border-slate-200 p-4">
