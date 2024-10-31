@@ -17,8 +17,9 @@ const Header = () => {
 
   const navItems = [
     { label: 'Blog', href: '/blog' },
-    { label: 'Photos', href: '/photos' },
+    { label: 'Products', href: '/products' },
     { label: 'Publications', href: '/publications' },
+    { label: 'Photos', href: '/photos' },
   ];
 
   return (
