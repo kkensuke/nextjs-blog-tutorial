@@ -234,37 +234,6 @@ Tasklists (or checklists) are perfect for tracking progress and creating interac
 3. Update regularly
 4. Include completion dates for tracked items
 
-## Advanced GFM Features
-
-### Table of Contents Generation
-```markdown
-[[toc]]
-```
-
-### Custom Container Blocks
-```markdown
-:::warning
-This is a warning message
-:::
-
-:::tip
-This is a helpful tip
-:::
-```
-
-### Extended Syntax Highlighting
-```javascript
-// JavaScript code block
-function example() {
-    return 'Hello, World!';
-}
-```
-
-```python
-# Python code block
-def example():
-    return "Hello, World!"
-```
 
 ## Compatibility and Browser Support
 
@@ -281,19 +250,3 @@ def example():
 - [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 - [Remark GFM Plugin Documentation](https://github.com/remarkjs/remark-gfm)
 - [Markdown Guide](https://www.markdownguide.org/)
-
-## Common Issues and Solutions
-
-### Tables
-- Issue: Tables not rendering properly
-- Solution: Ensure proper spacing and alignment in markdown
-
-### Footnotes
-- Issue: Footnotes not linking correctly
-- Solution: Check for unique footnote identifiers
-
-### Tasklists
-- Issue: Checkboxes not interactive
-- Solution: Ensure proper markdown syntax and platform support
-
-Remember to keep your markdown clean and well-structured for optimal rendering and maintenance.
