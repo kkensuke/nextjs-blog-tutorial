@@ -2,7 +2,7 @@
 title: "Latex in Markdown"
 subtitle: "A comprehensive guide to writing mathematical expressions in Markdown"
 date: "2024-7-5"
-tags: [Markdown, Latex, Mathematics, Technical Writing]
+tags: [Markdown, Latex]
 ---
 
 ## Basic Latex Usage

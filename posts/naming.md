@@ -2,7 +2,7 @@
 title: "Naming Conventions in Programming"
 subtitle: "A Comprehensive Guide to Writing Clean and Maintainable Code"
 date: "2024-7-5"
-tags: [Code, Best Practices, Programming, Style Guide]
+tags: [Code, Style Guide]
 author: "Technical Documentation Team"
 ---
 
