@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "./header";
 import Footer from "./footer";
-import { StoreProvider } from '../lib/store/context';
+import { StoreProvider } from '@/lib/store/context';
 
 interface Props {
   children: React.ReactNode;

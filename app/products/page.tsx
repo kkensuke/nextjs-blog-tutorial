@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Check, Shield, Clock, Zap, ArrowRight } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { STORE_CONFIG } from '../../lib/store/config';
+import { STORE_CONFIG } from '@/lib/store/config';
 
 const features = [
   { title: "Feature 1", description: "Detailed explanation of feature 1" },
