@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Check, ChevronRight, CreditCard, Lock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { STORE_CONFIG } from '@/lib/store/config';
+import { STORE_CONFIG } from '../../lib/store/config';
 
 // Step indicators for the checkout process
 const CheckoutSteps = ({ currentStep }: { currentStep: number }) => {
