@@ -121,6 +121,13 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Products Link */}
+      <Link href="/products">
+        <section className="mt-16 rounded-xl border border-slate-200 p-6 transition-all hover:bg-slate-50">        
+          <h2 className='text-xl font-bold'>View Products</h2>
+        </section>
+      </Link>
+      
       {/* Publications Link */}
       <Link href="/publications">
         <section className="mt-16 rounded-xl border border-slate-200 p-6 transition-all hover:bg-slate-50">        

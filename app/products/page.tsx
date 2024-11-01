@@ -1,37 +1,19 @@
+'use client';
+
 import React from 'react';
-import { Check, ShoppingCart, Shield, Clock, Zap, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { Check, Shield, Clock, Zap, ArrowRight } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { STORE_CONFIG } from '@/lib/store/config';
 
-const ProductSalesPage = () => {
-  const features = [
-    { title: "Feature 1", description: "Detailed explanation of feature 1" },
-    { title: "Feature 2", description: "Detailed explanation of feature 2" },
-    { title: "Feature 3", description: "Detailed explanation of feature 3" },
-  ];
+const features = [
+  { title: "Feature 1", description: "Detailed explanation of feature 1" },
+  { title: "Feature 2", description: "Detailed explanation of feature 2" },
+  { title: "Feature 3", description: "Detailed explanation of feature 3" },
+];
 
-  const pricingPlans = [
-    {
-      name: "Basic",
-      price: "0",
-      period: "month",
-      features: ["Feature 1", "Feature 2", "Feature 3"],
-      isPopular: false,
-    },
-    {
-      name: "Pro",
-      price: "5",
-      period: "month",
-      features: ["All Basic features", "Feature 4", "Feature 5", "Feature 6"],
-      isPopular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "10",
-      period: "month",
-      features: ["All Pro features", "Feature 7", "Feature 8", "Priority Support"],
-      isPopular: false,
-    },
-  ];
+export default function ProductSalesPage() {
+  const pricingPlans = Object.values(STORE_CONFIG.products);
 
   return (
     <div className="mx-auto max-w-screen-xl px-4 py-16">
@@ -48,10 +30,10 @@ const ProductSalesPage = () => {
             A compelling description of your product that highlights its main value proposition and how it solves your customer's problems.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <a href="#pricing" className="flex items-center gap-2 rounded-full bg-blue-500 px-6 py-3 font-medium text-white transition-all hover:bg-blue-600">
+            <Link href="/checkout?plan=pro" className="flex items-center gap-2 rounded-full bg-blue-500 px-6 py-3 font-medium text-white transition-all hover:bg-blue-600">
               Get Started
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
@@ -80,27 +62,6 @@ const ProductSalesPage = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="mt-24">
-        <div className="grid gap-12 md:grid-cols-3">
-          <div className="text-center">
-            <Shield className="mx-auto h-12 w-12 text-blue-500" />
-            <h3 className="mt-4 text-lg font-semibold">Secure & Reliable</h3>
-            <p className="mt-2 text-slate-600">Your data is always protected</p>
-          </div>
-          <div className="text-center">
-            <Clock className="mx-auto h-12 w-12 text-blue-500" />
-            <h3 className="mt-4 text-lg font-semibold">24/7 Support</h3>
-            <p className="mt-2 text-slate-600">We're here to help anytime</p>
-          </div>
-          <div className="text-center">
-            <Zap className="mx-auto h-12 w-12 text-blue-500" />
-            <h3 className="mt-4 text-lg font-semibold">Lightning Fast</h3>
-            <p className="mt-2 text-slate-600">Optimized for performance</p>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section id="pricing" className="mt-24">
         <div className="text-center">
@@ -111,9 +72,9 @@ const ProductSalesPage = () => {
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {pricingPlans.map((plan, index) => (
+          {pricingPlans.map((plan) => (
             <div
-              key={index}
+              key={plan.id}
               className={`relative rounded-2xl border ${
                 plan.isPopular ? 'border-blue-500 shadow-lg' : 'border-slate-200'
               } bg-white p-8`}
@@ -136,18 +97,21 @@ const ProductSalesPage = () => {
                   </li>
                 ))}
               </ul>
-              <button className={`mt-8 w-full rounded-lg py-3 px-4 font-medium ${
-                plan.isPopular
-                  ? 'bg-blue-500 text-white hover:bg-blue-600'
-                  : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
-              }`}>
+              <Link 
+                href={`/checkout?plan=${plan.id}`}
+                className={`mt-8 block w-full rounded-lg py-3 px-4 text-center font-medium ${
+                  plan.isPopular
+                    ? 'bg-blue-500 text-white hover:bg-blue-600'
+                    : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
+                }`}
+              >
                 Get Started
-              </button>
+              </Link>
             </div>
           ))}
         </div>
       </section>
-
+      
       {/* FAQ Section */}
       <section className="mt-24">
         <div className="text-center">
@@ -180,13 +144,14 @@ const ProductSalesPage = () => {
           <p className="mt-4 text-lg text-slate-300">
             Join thousands of satisfied customers today
           </p>
-          <button className="mt-8 rounded-full bg-blue-500 px-8 py-3 font-medium text-white transition-all hover:bg-blue-600">
+          <Link 
+            href="/checkout?plan=pro"
+            className="mt-8 inline-block rounded-full bg-blue-500 px-8 py-3 font-medium text-white transition-all hover:bg-blue-600"
+          >
             Get Started Now
-          </button>
+          </Link>
         </div>
       </section>
     </div>
   );
-};
-
-export default ProductSalesPage;
+}
