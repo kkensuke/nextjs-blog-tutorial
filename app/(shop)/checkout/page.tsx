@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Shield, Clock } from 'lucide-react';
@@ -9,7 +9,8 @@ import { STORE_CONFIG } from '@/lib/shop/config';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
-export default function CheckoutPage() {
+// Separate client component for the checkout content
+function CheckoutContent() {
   const searchParams = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -155,5 +156,27 @@ export default function CheckoutPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+// Loading fallback component
+function CheckoutLoading() {
+  return (
+    <div className="flex min-h-[60vh] items-center justify-center">
+      <Card className="w-full max-w-md">
+        <CardContent className="pt-6">
+          <p className="text-center text-slate-600">Loading checkout details...</p>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
+// Main page component
+export default function CheckoutPage() {
+  return (
+    <Suspense fallback={<CheckoutLoading />}>
+      <CheckoutContent />
+    </Suspense>
   );
 }
