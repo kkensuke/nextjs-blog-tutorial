@@ -11,3 +11,4 @@
 - remark-gfm package (footnote, strikethrough, tasklist, table, etc.)
 - Sort posts by date
 - Buy me a coffee widget
+- Stripe payment
