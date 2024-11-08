@@ -1,25 +1,24 @@
 import fs from "fs";
 import matter from "gray-matter";
-import getPostMetadata from "../../../../components/getPostMetadata";
-
-import TOC from "../../../../components/toc";
 import rehypeSlug from 'rehype-slug'; // rehype plugin to add id attributes to headings so that they can be linked to
 import Markdown from 'react-markdown';
 import { Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import remarkDirective from 'remark-directive';
 import remarkDirectiveRehype from 'remark-directive-rehype';
-import Pre from "../../../../components/pre";
-import CustomImage from "../../../../components/CustomImage";
-// import AdmonitionComponents from "../../../../components/admonitions";
-import AdmonitionComponents from "../../../../components/admonitions_pale";
-import { remarkTextDirectives, TextDirectiveComponents } from '../../../../components/textDirectives';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import React from "react";
 // import rehypeMathjax from 'rehype-mathjax';
 
+import getPostMetadata from "@/lib/blog/getPostMetadata";
+import TOC from "@/components/blog/content/toc/index";
+import Pre from "@/components/blog/content/Pre";
+import CustomImage from "@/components/blog/content/img";
+// import AdmonitionComponents from "@/components/blog/content/admonition/index";
+import AdmonitionComponents from "@/components/blog/content/admonition/pale";
+import { remarkTextDirectives, TextDirectiveComponents } from '@/components/blog/content/directive';
 
 
 const getPostContent = (slug: string) => {

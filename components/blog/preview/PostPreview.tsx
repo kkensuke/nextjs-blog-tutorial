@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 import { Calendar, Tag, ArrowRight } from 'lucide-react';
-import { PostMetadata } from "./PostMetadata";
+import { PostMetadata } from "@/lib/blog/PostMetadata";
 
 const PostPreview = (props: PostMetadata) => {
   const moreThan100 = props.subtitle.length > 100;

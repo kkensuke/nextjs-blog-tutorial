@@ -1,10 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { Github, Code2, Terminal, Rocket, Sparkles } from 'lucide-react';
+import { SiGithub } from 'react-icons/si';
 
 const GradientWithIcon = () => (
   <div className="flex items-center gap-2">
-    <Code2 className="text-blue-500" size={24} />
     <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-xl font-bold text-transparent">
       kkensuke
     </span>
@@ -50,7 +49,7 @@ const Header = () => {
             rel="noopener noreferrer"
             className="flex h-9 w-9 items-center justify-center rounded-md text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900"
           >
-            <Github size={20} />
+            <SiGithub size={20} />
           </a>
         </div>
       </nav>

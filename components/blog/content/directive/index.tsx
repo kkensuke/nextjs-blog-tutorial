@@ -1,7 +1,6 @@
-// textDirectives.ts
 import { visit } from 'unist-util-visit';
 import { h } from 'hastscript';
-import { YouTubeEmbed } from './ClientComponents';
+import { YouTubeEmbed } from './client';
 
 // Define directive handlers for different types of text directives
 const directiveHandlers = {

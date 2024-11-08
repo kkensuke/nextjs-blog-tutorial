@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Header from "./header";
 import Footer from "./footer";
-import { StoreProvider } from '@/lib/store/context';
 
 interface Props {
   children: React.ReactNode;
@@ -13,7 +12,6 @@ export default function RootLayout({ children }: Props) {
     <html>
       <head />
       <body>
-        <StoreProvider>
           <Header />
           <div className="min-h-[93vh] px-2">
             {children}
@@ -32,7 +30,6 @@ export default function RootLayout({ children }: Props) {
             data-x_margin="18"
             data-y_margin="18"
           ></script>
-        </StoreProvider>
       </body>
     </html>
   );

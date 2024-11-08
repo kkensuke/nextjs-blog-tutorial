@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { Bookmark, Pencil } from 'lucide-react';
-import getPostMetadata from "../../components/getPostMetadata";
-import PostPreview from "../../components/PostPreview";
-import getAllTags from "../../components/getAllTags";
+import getPostMetadata from "@/lib/blog/getPostMetadata";
+import getAllTags from "@/lib/blog/getAllTags";
+import PostPreview from "@/components/blog/preview/PostPreview";
 
 const BlogPage = () => {
   const allTags = getAllTags();

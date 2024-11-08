@@ -7,8 +7,9 @@ const Footer = () => {
     explore: [
       { label: 'Home', href: '/' },
       { label: 'Blog', href: '/blog' },
-      { label: 'Photos', href: '/photos' },
+      { label: 'Products', href: '/products' },
       { label: 'Publications', href: '/publications' },
+      { label: 'Photos', href: '/photos' },
     ],
     social: [
       { label: 'X', icon: SiTwitter, href: 'https://x.com' },
@@ -17,7 +18,6 @@ const Footer = () => {
       { label: 'Email', icon: SiGmail, href: 'mailto:email@example.com' }
     ],
     tech: [
-      { label: 'React', href: 'https://reactjs.org' },
       { label: 'Next.js', href: 'https://nextjs.org' },
       { label: 'Tailwind CSS', href: 'https://tailwindcss.com' },
       { label: 'Vercel', href: 'https://vercel.com' }

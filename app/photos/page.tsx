@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Calendar, ExternalLink, Camera, Award } from 'lucide-react';
+import { Camera } from 'lucide-react';
 
 
 const photos = [
@@ -7,11 +7,7 @@ const photos = [
     id: 1,
     title: "Berkley",
     category: "",
-    // If images are in public folder
     imagePath: "/images/IMG_0454.jpg"
-    // If using import in src folder:
-    // import conferenceImage from './images/conference-presentation.jpg'
-    // imagePath: conferenceImage
   },
   {
     id: 2,

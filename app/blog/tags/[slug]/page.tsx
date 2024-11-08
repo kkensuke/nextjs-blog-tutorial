@@ -1,9 +1,9 @@
-import { PostMetadata } from '../../../../components/PostMetadata';
-import { Bookmark, Pencil } from 'lucide-react';
-import PostPreview from "../../../../components/PostPreview";
-import getPostMetadata from "../../../../components/getPostMetadata";
-import getAllTags from '../../../../components/getAllTags';
 import Link from 'next/link';
+import { Bookmark, Pencil } from 'lucide-react';
+import { PostMetadata } from '@/lib/blog/PostMetadata';
+import PostPreview from "@/components/blog/preview/PostPreview";
+import getPostMetadata from "@/lib/blog/getPostMetadata";
+import getAllTags from '@/lib/blog/getAllTags';
 
 
 const allTags = getAllTags();

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Calendar, ExternalLink, Camera, Award } from 'lucide-react';
+import { BookOpen, Calendar, ExternalLink, Award } from 'lucide-react';
 
 const publications = [
   {

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, FileText, ArrowRight, Github, ExternalLink } from 'lucide-react';
+import { Mail, FileText, ArrowRight, ExternalLink } from 'lucide-react';
+import { SiGithub } from 'react-icons/si';
 
 export default function HomePage() {
   return (
@@ -16,7 +17,7 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <a href="https://github.com/kkensuke/nextjs-blog-tutorial" target="_blank" className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20">
-              <Github size={18} />
+              <SiGithub size={18} />
               GitHub
             </a>
             <Link href="/blog" className="flex items-center gap-2 rounded-full bg-blue-500 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-blue-600">
@@ -79,7 +80,7 @@ export default function HomePage() {
             </div>
 
             <a href="https://github.com/kkensuke/nextjs-blog-tutorial" target="_blank" className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600 transition-all hover:bg-slate-100">
-              <Github size={18} />
+              <SiGithub size={18} />
               <span>GitHub Profile</span>
             </a>
 

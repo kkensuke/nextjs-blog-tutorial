@@ -4,12 +4,12 @@ import React from 'react';
 import Link from 'next/link';
 import { Check, Shield, Clock, Zap, ArrowRight } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { STORE_CONFIG } from '@/lib/store/config';
+import { STORE_CONFIG } from '@/lib/shop/config';
 
 const features = [
-  { title: "Feature 1", description: "Detailed explanation of feature 1" },
-  { title: "Feature 2", description: "Detailed explanation of feature 2" },
-  { title: "Feature 3", description: "Detailed explanation of feature 3" },
+  { title: "Feature 1", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit" },
+  { title: "Feature 2", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit" },
+  { title: "Feature 3", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit" },
 ];
 
 export default function ProductSalesPage() {
@@ -23,16 +23,15 @@ export default function ProductSalesPage() {
           <span className="mb-4 inline-block rounded-full bg-blue-500/10 px-4 py-1.5 text-sm font-medium text-blue-400">
             New Release
           </span>
-          <h1 className="bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-4xl font-bold text-transparent md:text-6xl">
-            Your Product Name
+          <h1 className="bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text py-1 text-4xl font-bold text-transparent md:text-6xl">
+            Name of your product
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-300">
-            A compelling description of your product that highlights its main value proposition and how it solves your customer's problems.
+            A brief description of the product. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Link href="/checkout?plan=pro" className="flex items-center gap-2 rounded-full bg-blue-500 px-6 py-3 font-medium text-white transition-all hover:bg-blue-600">
-              Get Started
-              <ArrowRight size={18} />
+              Get Started <ArrowRight size={18} />
             </Link>
           </div>
         </div>
@@ -70,7 +69,7 @@ export default function ProductSalesPage() {
             Choose the plan that's right for you
           </p>
         </div>
-
+        
         <div className="mt-16 grid gap-8 md:grid-cols-3">
           {pricingPlans.map((plan) => (
             <div
