@@ -126,7 +126,7 @@ This is a nested important admonition.
 ## Custom Admonitions
 You can create custom admonitions by adding a function to `components/admonitions_pale.tsx` (or `components/admonitions.tsx`) following the pattern of the existing admonitions.
 
-```tsx[title=components/admonitions_pale.tsx]
+```tsx[title=components/admonitions_pale.tsx,showLineNumbers=true]
 import React from 'react';
 
 interface AdmonitionProps {
@@ -313,7 +313,7 @@ export default AdmonitionComponents;
 
 Another example with a different color scheme:
 
-```tsx[title=components/admonitions.tsx]
+```tsx[title=components/admonitions.tsx,showLineNumbers=true]
 import './admonitions.css'
 import { FaRocket } from 'react-icons/fa';
 import { PiNotePencilBold } from "react-icons/pi";
@@ -475,7 +475,7 @@ export default AdmonitionComponents;
 ```
 
 
-```css[title=admonitions.css]
+```css[title=admonitions.css,showLineNumbers=true]
 .admonition {
     margin: 1.5rem 0px;
     padding: 5px 15px;

@@ -391,7 +391,7 @@ browser.compactmode.show    true
 
     4. Firefox を再起動します。
 
-```css[title=chrome/userChrome.css,showLineNumber=true]
+```css[title=chrome/userChrome.css,showLineNumbers=true]
 /* compact view settings */
 /* compact bookmarks popup panel in toolbar */
 #personal-bookmarks .bookmark-item,

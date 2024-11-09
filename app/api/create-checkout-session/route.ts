@@ -29,6 +29,10 @@ export async function POST(request: Request) {
         },
       ],
       mode: 'subscription',
+      automatic_tax: {
+        enabled: true
+      },
+      billing_address_collection: 'required',
       success_url: `${process.env.NEXT_PUBLIC_APP_URL}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/checkout?plan=${planId}`,
       metadata: {

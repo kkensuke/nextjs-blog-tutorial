@@ -34,7 +34,7 @@ const Pre: Components['pre'] = ({ children, ...props }) => {
   }, {} as Record<string, string>);
 
   const title = properties['title'] || '';
-  const showLineNumber = properties['showLineNumber'] === 'true';
+  const showLineNumbers = properties['showLineNumbers'] === 'true';
 
   const handleCopy = () => {
     setIsCopied(true);
@@ -62,12 +62,12 @@ const Pre: Components['pre'] = ({ children, ...props }) => {
           <SyntaxHighlighter
             language={language}
             style={coldarkDark}
-            showLineNumbers={showLineNumber}
+            showLineNumbers={showLineNumbers}
             customStyle={{
               margin: '0 1rem 0 0',
               borderRadius: 0,
               fontSize: '14px',
-              padding: '1.5rem',
+              padding: showLineNumbers ? '1rem 1rem 1rem 0.3rem' : '1rem',
             }}
             codeTagProps={{
               style: { fontFamily: 'ui-monospace, monospace' }

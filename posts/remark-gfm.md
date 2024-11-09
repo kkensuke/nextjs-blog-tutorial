@@ -13,30 +13,32 @@ author: "Documentation Team"
 ## Installation and Setup
 
 ```bash
-# Using npm
 npm install remark-gfm
-
-# Using yarn
-yarn add remark-gfm
-
-# Using pnpm
-pnpm add remark-gfm
 ```
 
 ### Integration with Remark
 
 ```javascript
+import rehypeStringify from 'rehype-stringify'
 import remarkGfm from 'remark-gfm'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import {read} from 'to-vfile'
+import {unified} from 'unified'
 
-// In your remark configuration
-const config = {
-  plugins: [remarkGfm]
-}
+const file = await unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkRehype)
+  .use(rehypeStringify)
+  .process(await read('example.md'))
+
+console.log(String(file))
 ```
 
 ## Autolink Literals
 
-GFM automatically converts URLs, email addresses, and references to links without requiring explicit markdown link syntax.
+GFM automatically converts URLs and email addresses to links without requiring explicit markdown link syntax.
 
 ### Examples
 
@@ -49,11 +51,6 @@ http://example.com
 # Email Addresses
 contact@example.com
 support@example.com
-
-# GitHub References
-#123                  // Issue/PR references
-@username            // User references
-organization/repo#123 // Cross-repository references
 ```
 
 ### Real-world Examples:
@@ -109,15 +106,15 @@ Strikethrough text is useful for showing changes, updates, or deprecated informa
 ### Use Cases
 
 1. **Showing Changes**:
-   Original price: ~~$99.99~~ Now: $79.99
+  - Original price: ~~\$99.99~~ Now: $79.99
 
 2. **Task Updates**:
-   - ~~Complete initial draft~~
-   - ~~Review with team~~
-   - Publish document
+  - ~~Complete initial draft~~
+  - ~~Review with team~~
+  - Publish document
 
 3. **Deprecated Features**:
-   ~~Use legacy API~~ Use new v2 API endpoints
+  ~~Use legacy API~~ Use new v2 API endpoints
 
 ### Nested Formatting
 
@@ -171,20 +168,33 @@ Tables in GFM provide flexible ways to organize and present data.
 | Row 1 | Data | Data |
 | Row 2 | Data | Data |
 
-### Advanced Table Features
 
+### Advanced Table Features
 #### Mixed Alignment
+```markdown
+| Left | Center | Right |
+| :- | :-: | -: |
+| Text | Text | Text |
+| Data | Data | Data |
+```
 | Left | Center | Right |
 | :- | :-: | -: |
 | Text | Text | Text |
 | Data | Data | Data |
 
 #### Complex Tables with Formatting
+```markdown
 | Feature | Status | Notes |
 | :- | :-: | :- |
-| Basic Tables | ✅ | **Fully** supported |
+| Basic Tables    | ✅ | **Fully** supported |
 | Mixed Alignment | ✅ | *Partially* supported |
-| Nested Lists | ❌ | Not supported in tables |
+| Nested Lists    | ❌ | Not supported in tables |
+```
+| Feature | Status | Notes |
+| :- | :-: | :- |
+| Basic Tables    | ✅ | **Fully** supported |
+| Mixed Alignment | ✅ | *Partially* supported |
+| Nested Lists    | ❌ | Not supported in tables |
 
 ### Best Practices for Tables
 1. Keep tables simple and readable

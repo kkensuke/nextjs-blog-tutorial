@@ -46,12 +46,7 @@ export const STORE_CONFIG = {
       isPopular: false
     }
   },
-  tax: {
-    rate: 0.10, // 10% tax rate
-    label: 'Tax'
-  },
   currency: {
-    code: 'USD',
     symbol: '$'
   }
 };

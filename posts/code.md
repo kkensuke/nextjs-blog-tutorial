@@ -46,14 +46,14 @@ import matplotlib.pyplot as plt
 
 :::simple
 ````md[title=markdown]
-```python[title=code.py,showLineNumber=true]
+```python[title=code.py,showLineNumbers=true]
 import numpy as np
 import matplotlib.pyplot as plt
 ```
 ````
 
 Output:
-```python[title=code.py,showLineNumber=true]
+```python[title=code.py,showLineNumbers=true]
 import numpy as np
 import matplotlib.pyplot as plt
 ```
@@ -63,12 +63,12 @@ import matplotlib.pyplot as plt
 
 :::important
 No spaces are allowed after commas in the code attributes.  
-✅ [title=asdf.py,showLineNumber=true]  
-❌ [title=asdf.py, showLineNumber=true]
+✅ [title=asdf.py,showLineNumbers=true]  
+❌ [title=asdf.py, showLineNumbers=true]
 :::
 
 
-```js[title=code.js,showLineNumber=true]
+```js[title=code.js,showLineNumbers=true]
 function createStyleObject(classNames, style) {
   return classNames.reduce((styleObject, className) => {
     return {...styleObject, ...style[className]};

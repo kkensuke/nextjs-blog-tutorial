@@ -12,9 +12,14 @@ const features = [
   { title: "Feature 3", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit" },
 ];
 
-export default function ProductSalesPage() {
-  const pricingPlans = Object.values(STORE_CONFIG.products);
+const pricingPlans = Object.values(STORE_CONFIG.products);
 
+const FAQ = [
+  { question: "How does billing work?", answer: "We offer monthly and annual billing options. You can upgrade, downgrade, or cancel your subscription at any time." },
+  { question: "Can I get a refund?", answer: "Yes, we offer a 30-day money-back guarantee. If you're not satisfied, we'll refund your purchase." },
+];
+
+export default function ProductSalesPage() {
   return (
     <div className="mx-auto max-w-screen-xl px-4 py-16">
       {/* Hero Section */}
@@ -119,20 +124,14 @@ export default function ProductSalesPage() {
             Everything you need to know about the product
           </p>
         </div>
-
+        
         <div className="mt-16 grid gap-8 md:grid-cols-2">
-          <div className="rounded-xl border border-slate-200 p-6">
-            <h3 className="text-lg font-semibold">How does billing work?</h3>
-            <p className="mt-2 text-slate-600">
-              We offer monthly and annual billing options. You can upgrade, downgrade, or cancel your subscription at any time.
-            </p>
-          </div>
-          <div className="rounded-xl border border-slate-200 p-6">
-            <h3 className="text-lg font-semibold">Can I get a refund?</h3>
-            <p className="mt-2 text-slate-600">
-              Yes, we offer a 30-day money-back guarantee. If you're not satisfied, we'll refund your purchase.
-            </p>
-          </div>
+          {FAQ.map((faq, index) => (
+            <div key={index} className="rounded-xl border border-slate-200 p-6">
+              <h3 className="text-lg font-semibold">{faq.question}</h3>
+              <p className="mt-2 text-slate-600">{faq.answer}</p>
+            </div>
+          ))}
         </div>
       </section>
 

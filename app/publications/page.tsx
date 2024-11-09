@@ -42,10 +42,7 @@ export default function PublicationsPage() {
 
         <div className="space-y-8">
           {publications.map((pub, index) => (
-            <div
-              key={index}
-              className="group relative rounded-xl border border-slate-200 bg-white p-6 transition-all hover:shadow-md"
-            >
+            <div key={index} className="group relative rounded-xl border border-slate-200 bg-white p-6 transition-all hover:shadow-md">
               <div className="flex items-start justify-between">
                 <div className="space-y-4">
                   <div className="flex items-center gap-2 text-sm text-slate-500">
@@ -67,10 +64,7 @@ export default function PublicationsPage() {
 
                   <div className="flex flex-wrap gap-2">
                     {pub.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700"
-                      >
+                      <span key={tag} className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700">
                         {tag}
                       </span>
                     ))}
