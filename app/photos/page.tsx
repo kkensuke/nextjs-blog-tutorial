@@ -5,7 +5,7 @@ import { Camera } from 'lucide-react';
 const photos = [
   {
     id: 1,
-    title: "Berkley",
+    title: "Berkeley",
     category: "",
     imagePath: "/images/IMG_0454.jpg"
   },

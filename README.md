@@ -4,6 +4,7 @@
 - Markdown image
 - Table of contents
 - Tags
+- Preview image
 - Code block with highlighting, line numbers and copy button, file name
 - Admonitions
 - Youtube embedding

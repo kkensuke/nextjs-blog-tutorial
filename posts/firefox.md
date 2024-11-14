@@ -1,7 +1,7 @@
 ---
 title: "Firefox"
-subtitle: "A guide to using admonitions in Markdown."
 date: "2024-10-31"
+subtitle: "A guide to using admonitions in Markdown."
 tags: [Firefox, Browser]
 ---
 

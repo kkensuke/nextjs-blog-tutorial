@@ -11,6 +11,10 @@
     border: 0.5px solid #e5e7eb;
 }
 
+li::marker {
+    color: rgb(82, 82, 82) !important;
+}
+
 /* link style */
 .prose :where(a):not(:where([class~="not-prose"] *)) {
     font-weight: 400;

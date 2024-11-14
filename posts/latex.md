@@ -1,14 +1,14 @@
 ---
 title: "Latex in Markdown"
-subtitle: "A comprehensive guide to writing mathematical expressions in Markdown"
 date: "2024-7-5"
+subtitle: "A comprehensive guide to writing mathematical expressions in Markdown"
 tags: [Markdown, Latex]
 ---
 
 ## Basic Latex Usage
 
 1. **Simple Inline Equations:**
-    :::simple[]
+    :::simple
     ```latex:markdown
     Here are some inline equations:
     - Area of a circle: $A = \pi r^2$
@@ -24,7 +24,7 @@ tags: [Markdown, Latex]
     :::
 
 2. **Basic Block Equations:**
-    :::simple[]
+    :::simple
     ```latex:markdown
     The Gaussian integral:
     $$
@@ -42,7 +42,7 @@ tags: [Markdown, Latex]
 ## Advanced Mathematical Expressions
 
 1. **Matrix Operations:**
-    :::simple[]
+    :::simple
     ```latex:markdown
     $$
     \begin{pmatrix}
@@ -77,7 +77,7 @@ tags: [Markdown, Latex]
     :::
 
 2. **Multi-line Equations with Alignment:**
-    :::simple[]
+    :::simple
     ```latex:markdown
     $$
     \begin{align}
@@ -100,7 +100,7 @@ tags: [Markdown, Latex]
 ## Special Mathematical Notations
 
 1. **Set Theory and Logic:**
-    :::simple[]
+    :::simple
     ```latex:markdown
     $$
     \begin{align}
@@ -121,7 +121,7 @@ tags: [Markdown, Latex]
     :::
 
 2. **Calculus and Series:**
-    :::simple[]
+    :::simple
     ```latex:markdown
     $$
     \begin{align}
@@ -144,7 +144,7 @@ tags: [Markdown, Latex]
 ## Famous Mathematical Constants and Equations
 
 1. **Euler's Identity:**
-    :::simple[]
+    :::simple
     ```latex:markdown
     The most beautiful equation in mathematics:
     $$
@@ -160,7 +160,7 @@ tags: [Markdown, Latex]
     :::
 
 2. **Important Mathematical Functions:**
-    :::simple[]
+    :::simple
     ```latex:markdown
     $$
     \begin{align}
@@ -180,7 +180,7 @@ tags: [Markdown, Latex]
     $$
     :::
 
-:::note[]
+:::note
 Remember that proper spacing in Latex equations can be achieved using:
 - `\,` for a small space
 - `\;` for a medium space

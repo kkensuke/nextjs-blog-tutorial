@@ -24,6 +24,15 @@ const PostPreview = (props: PostMetadata) => {
           <h2 className="mb-3 text-xl font-semibold text-slate-800 transition-colors hover:text-sky-600">
             {props.title}
           </h2>
+          
+          {/* Preview image */}
+          {props.previewImage && (
+            <img 
+              src={props.previewImage} 
+              alt={props.title} 
+              className="mb-4 h-28 w-full rounded-lg object-cover object-center" 
+            />
+          )}
 
           {/* Subtitle */}
           <p className="mb-4 text-slate-600">

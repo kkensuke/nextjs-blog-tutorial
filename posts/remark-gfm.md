@@ -1,9 +1,8 @@
 ---
 title: "GitHub Flavored Markdown with remark-gfm"
-subtitle: "A Comprehensive Guide to GFM Features and Usage"
 date: "2024-5-3"
+subtitle: "A Comprehensive Guide to GFM Features and Usage"
 tags: [Markdown]
-author: "Documentation Team"
 ---
 
 ## Introduction

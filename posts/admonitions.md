@@ -1,8 +1,8 @@
 ---
 title: "Admonitions"
-subtitle: "A guide to using admonitions and directives in Markdown"
 date: "2024-10-31"
-tags: [Markdown, Admonitions, Directives]
+subtitle: "A guide to using admonitions and directives in Markdown"
+tags: [Markdown, Admonitions]
 ---
 
 This guide explains how to use directives and admonitions in Markdown to create rich, interactive content.

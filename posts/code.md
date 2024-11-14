@@ -1,7 +1,7 @@
 ---
 title: "Code block"
-subtitle: "A collection of code blocks."
 date: "2024-5-5"
+subtitle: "A collection of code blocks."
 tags: [Markdown, Code]
 ---
 

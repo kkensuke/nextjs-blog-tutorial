@@ -1,8 +1,8 @@
 ---
 title: "スニペットアプリ Espanso を使おう！"
-subtitle: "Free and open-source text expander for Windows, macOS, and Linux"
 date: "2024-10-31"
-tags: [Espanso, Snippets]
+subtitle: "Free and open-source text expander for Windows, macOS, and Linux"
+tags: [Snippets]
 ---
 
 
@@ -80,15 +80,12 @@ matches:
 
 `match/base.yml` を変更したら、それを反映させるためにメニューバーで `Reload` をするか、コマンドで `espanso restart` を実行しましょう。
 
-::: note warn
-望まないスニペットの作動を防ぐために、`:` や `;` などの普段は使わない記号を接頭辞に用いると良いです。
+- 望まないスニペットの作動を防ぐために、`:` や `;` などの普段は使わない記号を接頭辞に用いると良いです。
+:::warning
+- `:a` を登録すると `:as` や `:ad` といったトリガーは使えなくなります。なぜなら、`:a` を入力した段階で別のテキストに置換されるからです。このようなことを防ぐために、短すぎるトリガーの設定は避けた方が良いです。
 :::
 
-::: note warn
-`:a` を登録すると `:as` や `:ad` といったトリガーは使えなくなります。なぜなら、`:a` を入力した段階で別のテキストに置換されるからです。このようなことを防ぐために、短すぎるトリガーの設定は避けた方が良いです。
-:::
-
-::: note
+:::note
 `match` ディレクトリにある全ての `.yml` ファイルは読み込まれるので、用途に応じてファイルを細かく分割することもできます。
 :::
 
