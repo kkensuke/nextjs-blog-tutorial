@@ -1,76 +1,73 @@
 ---
-title: "スニペットアプリ Espanso を使おう！"
+title: "Let's Use Espanso!"
 date: "2024-10-31"
 subtitle: "Free and open-source text expander for Windows, macOS, and Linux"
-previewImage: https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/1beaf074-0f49-9d46-a9c1-df9602a1d95a.png
 tags: [Snippets]
 ---
 
-
 ## [Espanso](https://espanso.org/)
-Espanso とは、オープンソースかつ無料で使用できる、クロスプラットフォームのスニペットアプリです。Espanso を使用すると、短いキーワードを入力するだけで、長いテキストを瞬時に入力できます。これにより、繰り返し入力する必要のあるテキストを簡単に入力できるようになります。Mac 標準のテキスト辞書よりも高速で、多機能です。
+Espanso is a free, open-source, cross-platform text expander. With Espanso, you can instantly input long text by typing short keywords. This makes it easy to input text that you need to repeat frequently. It's faster and more feature-rich than Mac's built-in text replacement.
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/1beaf074-0f49-9d46-a9c1-df9602a1d95a.png)
 
-Espanso は、Windows、macOS、Linux で動作し、正規表現、シェルスクリプトなどの高度な機能をサポートしています。
+Espanso works on Windows, macOS, and Linux, supporting advanced features like regular expressions and shell scripts.
 
 ![ezgif-1-5219cff875.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/c93e4c1d-18ef-9f17-0db9-9f4e5eff6e08.gif)
-
 
 ![ezgif-1-6d58091dfc.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/833f40ee-47d5-74e9-5bfd-df46d212664e.gif)
 
 
 
 
-## インストール
+## Installation
 https://espanso.org/docs/install/mac/
 
-インストールしたら、アプリを開きます。コマンドで `espanso status` を実行して動いているか確認しましょう。
+After installation, open the app. Verify it's running by executing `espanso status` in the terminal.
 
-## 設定
+## Configuration
 https://espanso.org/docs/getting-started/
 
-Espanso の設定は主に2つのファイルで行います。
+Espanso's configuration primarily uses two files:
 
 ```sh
-esnpanso/
+espanso/
   config/
     default.yml
   match/
     base.yml
 ```
 
-`espanso` のディレクトリの場所は OS によって異なり、`espanso path` によって確かめることができます。
+The `espanso` directory location varies by OS and can be found using `espanso path`:
 
 - Linux: `$XDG_CONFIG_HOME/espanso` (e.g. `/home/user/.config/espanso`)
-- MacOS: `$HOME/Library/Application Support/espanso` (e.g. `/Users/user/Library/Application Support/espanso`)
-- Windows: `{FOLDERID_RoamingAppData}\espanso` (e.g. `C:\Users\user\AppData\Roaming\espanso`)
+- MacOS: `$HOME/Library/Application Support/espanso`
+- Windows: `{FOLDERID_RoamingAppData}\espanso`
 
-`config/default.yml` ファイルは、初めは特に設定することはないです。
-もし、メニューバーのアイコンを非表示にたい場合は、`show_icon: false` と書き込むと良いです。
+Initially, `config/default.yml` doesn't need configuration.
+To hide the menubar icon, add `show_icon: false`.
 
 
-## 使い方
-スニペットの設定は `match/base.yml` ファイルに書き込みます。
+## Usage
+Configure snippets in `match/base.yml`.
 
-基本的には次のような文法で書きます。
+Basic syntax:
 ```yml
 matches: 
   - trigger: ":hello"
     replace: "world"
 
-# 複数行
+# Multiple lines
   - trigger: ":hello"
     replace: "line1\nline2"
 
-# 複数行
+# Multiple lines (preserved formatting)
   - trigger: ":include newlines"
     replace: |
               exactly as you see
               will appear these three
               lines of poetry
 
-# 改行なし
+# Single line (folded newlines)
   - trigger: ":fold newlines"
     replace: >
               this is really a
@@ -78,20 +75,19 @@ matches:
               despite appearances
 ```
 
-`match/base.yml` を変更したら、それを反映させるためにメニューバーで `Reload` をするか、コマンドで `espanso restart` を実行しましょう。
+After modifying `match/base.yml`, click `Reload` in the menubar or run `espanso restart`.
 
 :::warning
-- 望まないスニペットの作動を防ぐために、`:` や `;` などの普段は使わない記号を接頭辞に用いると良いです。
-- `:a` を登録すると `:as` や `:ad` といったトリガーは使えなくなります。なぜなら、`:a` を入力した段階で別のテキストに置換されるからです。このようなことを防ぐために、短すぎるトリガーの設定は避けた方が良いです。
+- Use prefixes like `:` or `;` to prevent unwanted triggers
+- Avoid short triggers like `:a` as they prevent longer triggers (`:as`, `:ad`) from working
 :::
 
 :::note
-`match` ディレクトリにある全ての `.yml` ファイルは読み込まれるので、用途に応じてファイルを細かく分割することもできます。
+All `.yml` files in the `match` directory are loaded, allowing organization by purpose.
 :::
 
-
-## 動的マッチ
-次の設定では、`:now` と入力すると `It's 11:29` のように現在時刻に変換します。
+## Dynamic Matches
+Example: `:now` outputs current time like `It's 11:29`:
 
 ```yml
   - trigger: ":now"
@@ -103,8 +99,8 @@ matches:
           format: "%H:%M"
 ```
 
-## 単語マッチ
-基本的な `trigger` と `match` の設定方法では、変換して欲しくない場面で変換が起こる可能性があります。例えば、トリガー `ther` によって `there` としたいとき、`other` と入力しても変換が実行され `othere` となってしまいます。これを防ぐためには、以下のように `word: true` のオプションをつけます。
+## Word Matches
+Use `word: true` to prevent unwanted replacements:
 
 ```yml
   - trigger: "ther"
@@ -112,17 +108,15 @@ matches:
     word: true
 ```
 
-## カーソルヒント
-テキストを変換した後に、カーソルが来る位置を `$|$` で決めることができます。
+## Cursor Hints
+Set cursor position after replacement using `$|$`:
 
 ```yml
   - trigger: ":div"
     replace: <div>$|$</div>
 ```
 
-
-## 一つのトリガーに複数の変換
-
+## Multiple Replacements for One Trigger
 ```yml
   - trigger: ":quote"
     replace: "Every moment is a fresh beginning."
@@ -132,13 +126,13 @@ matches:
     replace: "Whatever you do, do it well."
 ```
 
-## 複数のトリガーに一つの変換
+## Multiple Triggers for One Replacement
 ```yml
   - triggers: [":hello", ":hi"]
     replace: "world"
 ```
 
-## 複数のトリガーに複数の変換
+## Multiple Triggers for Multiple Replacements
 ```yml
   - triggers: [":ok",":emoji"]
     replace: "👍"
@@ -150,16 +144,14 @@ matches:
     replace: "⬇️"
 ```
 
-## 画像のマッチ
-
+## Image Matches
 ```yml
   - trigger: ":cat"
     image_path: "$CONFIG/images/cat.png"
 ```
 
-
-## Shell Exntension
-シェルコマンドを実行して、その結果を出力することもできます。
+## Shell Extension
+Execute shell commands and output results:
 
 ```yml
   - trigger: ":shell"
@@ -171,7 +163,7 @@ matches:
           cmd: "echo 'Hello from your shell'"
 ```
 
-以下の例では、ipify からパブリック IP を取得しています。
+Example getting public IP from ipify:
 ```yml
   - trigger: ":ip"
     replace: "{{output}}"
@@ -182,8 +174,8 @@ matches:
           cmd: "curl 'https://api.ipify.org'"
 ```
 
-## グローバル変数
-`match` に共通してよく使う変数がある場合はグローバル変数として設定すると、変更する際に便利です。
+## Global Variables
+Set commonly used variables globally:
 
 ```yml
 global_vars:
@@ -212,7 +204,7 @@ matches:
     replace: "{{three}}"
 ```
 
-例えば、ある `.yml` ファイルではよく用いるグローバル変数を定義しておき、他のファイルでインポートして使用することができます。
+You can import global variables from other files:
 
 ```yml
 imports:
@@ -223,16 +215,14 @@ matches:
     replace: "{{greet}} Jon"
 ```
 
+## Script Extension
+Execute external scripts:
 
-
-## Script Exntension
-外部ファイルを実行してその結果を受け取ることもできます。
-
-```py[title=script.py]
+```python[title=script.py]
 print("Hello from python")
 ```
 
-```yml[title=base.yml]
+```yml[title=match/base.yml]
   - trigger: ":pyscript"
     replace: "{{output}}"
     vars:
@@ -244,9 +234,8 @@ print("Hello from python")
             - /path/to/your/script.py
 ```
 
-
 ## Form Extension
-トリガーからフォームを生成し、定型文にそって文章を作成することもできます。
+Generate forms from triggers:
 
 ```yml
   - trigger: ":greet"
@@ -258,8 +247,7 @@ print("Hello from python")
 ![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/0d085e75-b23a-70af-604d-834d64d961d5.png)
 
 
-
-次の設定は、メールの定型文フォームから変換先の文章を作成します。
+Example email template form:
 ```yml
 matches:
   - trigger: ";reply"
@@ -273,7 +261,7 @@ matches:
 
         Looking forward to hearing from you
         
-        All the best，
+        All the best,
         ABC Support Team
     form_fields:
       choices:
@@ -289,7 +277,7 @@ matches:
 
 
 
-より複雑なフォームの使い方として、次のように Todo アイテムを作成できます。
+Complex form example - Todo item creation:
 ```yml
 global_vars:
   - name: "today"
@@ -356,7 +344,7 @@ matches:
 ![SCR-20240618-qyki.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/932694e0-8a4f-5c6d-8f57-d7bb38eca3de.png)
 
 
-## 例
+## Example
 ```yml[title=match/base.yml]
 imports:
   - "params.yml"
@@ -386,42 +374,14 @@ matches:
     replace: "{{address2}}"
 
 
-# 仕事
-  - trigger: ";osewa"
-    replace: "お世話になっております。"
-
-  - trigger: ";ariga"
-    replace: "ありがとうございます。"
-
-  - trigger: ";yoro"
-    replace: "よろしくお願いいたします。"
-
-  - trigger: ";otuka"
-    replace: "お疲れ様です。"
-
-  - trigger: ";itumo"
-    replace: |
-            いつもお世話になっております。
-            OO商事の田中です。
-    
-  - trigger: ":nanitozo"
-    replace: |
-            何卒よろしくお願い申し上げます。
-            
-            田中
-
-  - trigger: ";company"
-    replace: |
-            〒100-0001
-            東京都千代田区千代田1-1
-
+# Business
   - trigger: ";contact"
     replace: |
-            電話:   03-1234-5678
-            メール: example@example.com
+            Phone:   03-1234-5678
+            Email: example@example.com
 
 
-# symbol
+# Symbols
   - trigger: ";ctrl"
     replace: "⌃"
   - trigger: ";cmd"
@@ -478,20 +438,12 @@ matches:
 
 
 ## ChatGPT
-  - trigger: ";efix"
-    replace: "Please fix the following English text: "
-  - trigger: ";ejt"
-    replace: "Please translate the following text into Japanese: "
-  - trigger: ";jet"
-    replace: "以下のテキストを英語に翻訳してください: "
   - trigger: ";summ"
     replace: "Please summarize the following text: "
   - trigger: ";how"
     replace: "Please explain how to $|$"
   - trigger: ";mail"
     replace: "Please write an email about the following topic politely: "
-  - trigger: ";jmail"
-    replace: "以下の内容のメールを丁寧に書いてください: "
 
 
 # math
@@ -676,7 +628,7 @@ matches:
             plt.show()
 
 
-# 日時
+# date
   - trigger: ";today"
     replace: "{{today}}"
     vars:
@@ -700,22 +652,6 @@ matches:
         type: date
         params:
           format: "%H:%M"
-
-  - trigger: ";jdate"
-    replace: "{{today}}"
-    vars:
-    - name: today
-      type: date
-      params:
-        format: "%Y年%m月%d日"
-
-  - trigger: ";jtime"
-    replace: "{{time}}"
-    vars:
-    - name: time
-      type: date
-      params:
-        format: "%H時%M分"
 
 
 # Print the output of a shell command
@@ -748,12 +684,8 @@ matches:
           cmd: "curl 'https://api.ipify.org'"
 ```
 
-## パッケージを使う
-Espanso では `espanso install html-utils-package` のように実行することでパッケージをインストールすることができます。パッケージはとてもシンプルで自作することも簡単です。ぜひ以下のサイトから自分に便利そうなパッケージを探してインストールしてみてください。
+## Using Packages
+Install packages using commands like `espanso install html-utils-package`. Packages are simple and easy to create. Find useful packages at https://hub.espanso.org/html-utils-package
 
-https://hub.espanso.org/html-utils-package
-
-
-## 終わり
-この記事では説明していない機能もまだまだあるので、ぜひ[ドキュメント](https://espanso.org/docs/matches/basics/)で調べてみてください。
-
+## Conclusion
+There are many more features not covered here - check the [documentation](https://espanso.org/docs/matches/basics/) for more information.

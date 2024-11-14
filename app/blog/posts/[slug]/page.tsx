@@ -105,5 +105,3 @@ export const generateStaticParams = async () => {
     slug: post.slug,
   }));
 };
-
-

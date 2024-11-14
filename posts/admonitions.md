@@ -8,6 +8,17 @@ tags: [Markdown, Admonitions]
 This guide explains how to use directives and admonitions in Markdown to create rich, interactive content.
 
 ## Inline Directives `:name[label]{attributes}`
+::::simple{title="Button"}
+```markdown
+:btn[cmd], :btn[shift], :btn[ctrl], :btn[opt], :btn[enter],
+:btn[left], :btn[right], :btn[up], :btn[down], :btn[tab],
+:btn[space], :btn[delete], :btn[esc], :btn[custom]
+```
+:::simple
+:btn[cmd], :btn[shift], :btn[ctrl], :btn[opt], :btn[enter], :btn[left], :btn[right], :btn[up], :btn[down], :btn[tab], :btn[space], :btn[delete], :btn[esc], :btn[Custom]
+:::
+::::
+
 ::::simple{title="YouTube Link"}
 ```markdown
 Watch this video on YouTube: :youtube[Click here]{#dQw4w9WgXcQ}.
@@ -24,6 +35,7 @@ Watch this video on YouTube: :youtube[Click here]{#dQw4w9WgXcQ}.
 ```
 ::youtube[Watch this amazing video]{#dQw4w9WgXcQ}
 ::::
+
 
 ## Admonitions
 

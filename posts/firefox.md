@@ -15,7 +15,7 @@ tags: [Firefox, Browser]
 
 
 ## 1　設定を変更する
-`cmd + ,` で環境設定ページを開くことができます。初めは、デフォルトで使っているブラウザからデータをインポートするのが良いでしょう。その他、このページで好みの設定に変更してください。
+:btn[cmd] + :btn[,] で環境設定ページを開くことができます。初めは、デフォルトで使っているブラウザからデータをインポートするのが良いでしょう。その他、このページで好みの設定に変更してください。
 
 ![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/e1d72bc2-3ec1-2a16-bbce-7a1917f1eaac.png)
 
@@ -41,7 +41,7 @@ tags: [Firefox, Browser]
 4. マルチアカウントコンテナ
 同じサイトに異なるアカウントで同時にログインできます。例えば、一つのタブでは仕事用のアカウントを用いてあるサイトにログインし、もう一つのタブでは、私的なアカウントで同一のサイトにログインできます。
 
-5. スクリーンショット: `Cmd + Shift + S` 
+5. スクリーンショット: :btn[cmd] + :btn[shift] + :btn[S]
 スクリーンショットの範囲を以下の四つの方法で選択できます。
     - 自分で範囲を選択
     - カーソルが乗っているページの一部を自動的に選択
@@ -49,12 +49,12 @@ tags: [Firefox, Browser]
     - スクロールできる範囲全体を選択
 ![SCR-20230625-muis.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/90edc24f-23d0-6f96-520c-d8a829745611.png)
 
-6. Reader View: `Option + Cmd + R`
+1. Reader View: :btn[opt] + :btn[cmd] + :btn[R]
 Webページの無駄を取り除き、読みやすさを向上させます。
 
-7. デバイスの同期
+1. デバイスの同期
 
-8. `userChrome.css` でブラウザの見た目をカスタマイズできます。
+2. `userChrome.css` でブラウザの見た目をカスタマイズできます。
 
 
 
@@ -71,7 +71,7 @@ Webページの無駄を取り除き、読みやすさを向上させます。
 :::
 
 ::::simple
-[Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/) は、ウェブサイトをダークモードで表示し、読みやすくします。`Option + D` で切り替え可能です。
+[Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/) は、ウェブサイトをダークモードで表示し、読みやすくします。:btn[opt] + :btn[D] で切り替え可能です。
 
 :::note
 Dark Reader は、Firefox の PDF には機能しません。なので次のアドオン `doqment` を使うか、下の Bookmarklet (ブックマークのリンク先として Javascript の関数を登録したもの) を使って対応することができます。ここで紹介する Bookmarklet は、普通の Web ページの場合はページ全体の色を反転し、PDF の場合は、PDF のみの色を反転します（2回実行すると元に戻ります）。PDFビューアーの背景のダークモードは `4　about:config` 節を参照してください。
@@ -89,7 +89,7 @@ javascript:(function(){var L='style_combined',S='#viewerContainer>#viewer.pdfVie
 ::::
 
 :::simple
-[Duplicate Tabs Shortcut](https://addons.mozilla.org/en-US/firefox/addon/duplicate-tab-shortcut/) を使用すると、Windows / Linux では `Alt + Shift + D`、Mac では `Option + Shift + D` のキーボードショートカットでタブを複製できます。
+[Duplicate Tabs Shortcut](https://addons.mozilla.org/en-US/firefox/addon/duplicate-tab-shortcut/) を使用すると、Windows / Linux では :btn[Alt] + :btn[shift] + :btn[D]、Mac では :btn[opt] + :btn[shift] + :btn[D] のキーボードショートカットでタブを複製できます。
 :::
 
 :::simple
@@ -110,7 +110,7 @@ javascript:(function(){var L='style_combined',S='#viewerContainer>#viewer.pdfVie
 :::
 
 ::::simple
-[Open in Sidebar](https://addons.mozilla.org/en-US/firefox/addon/open_in_sidebar/) を使用すると、サイドバーに別のウェブサイトを表示できます。デフォルトで開くページを登録したり[`cmd + ,` -> Extensions & Themes -> `Open in Sidebar` -> Preferences]、この拡張機能をサイドバーで開くためのショートカットを登録すると便利です。登録方法は後述の項目 3-4 を参照してください。
+[Open in Sidebar](https://addons.mozilla.org/en-US/firefox/addon/open_in_sidebar/) を使用すると、サイドバーに別のウェブサイトを表示できます。デフォルトで開くページを登録したり[:btn[cmd] + :btn[,] -> Extensions & Themes -> `Open in Sidebar` -> Preferences]、この拡張機能をサイドバーで開くためのショートカットを登録すると便利です。登録方法は後述の項目 3-4 を参照してください。
 
 :::warning
 同様のアドオンに `Side View` というものもありますが、これを使用すると YouTube Music のバックグラウンド再生ができなくなります。
@@ -218,7 +218,7 @@ URLから不要な情報を削除します。
 :::simple
 [10 minute mail](https://addons.mozilla.org/en-US/firefox/addon/10-minutes-disposable-email/) は、10分間だけ有効な一時的なメールアドレスを生成します。一時的に試してみたいサービスのサインアップに便利です。
 
-<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/4e632eb5-dcb7-6cff-2d40-0e926b0b0535.png" align="center" width=300/>
+![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/4e632eb5-dcb7-6cff-2d40-0e926b0b0535.png 'width=300px')
 :::
 
 :::simple
@@ -236,7 +236,7 @@ URLから不要な情報を削除します。
 
 ::::simple
 [WebRTC Leak Shield](https://addons.mozilla.org/en-US/firefox/addon/webrtc-leak-shield/) は、WebRTCリークを防止します。
-<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/5c8fad46-3714-d3d2-f967-c47a6a30a683.png" width=400/>
+![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/5c8fad46-3714-d3d2-f967-c47a6a30a683.png 'width=300px')
 
 :::note
 WebRTC は Web Real-Time Communication（Web リアルタイム通信）の略で、ブラウザ間で外部ソフトウェアやプラグインを必要とせずにインターネットを通じて音声やビデオ通信を直接行う技術です。ビデオ会議やリアルタイム通信には便利ですが、プライバシー上の問題として IP アドレスの漏洩も懸念されます。ブラウザで WebRTC を無効にすると、IP の漏洩を防ぐことができます。
@@ -323,7 +323,7 @@ WebRTC は Web Real-Time Communication（Web リアルタイム通信）の略�
 仮想プライベートネットワーク（VPN）は、IPアドレスを隠したり、インターネットトラフィックを暗号化したり、地域制限のあるコンテンツにアクセスできるなどのメリットがあります。
 
 #### 5-1-2　CloudflareでDoH（DNS-over-HTTPS）を有効にする
-1. `cmd + ,` で環境設定ページにアクセスします。
+1. :btn[cmd] + :btn[,] で環境設定ページにアクセスします。
 2. 「ネットワーク設定」までスクロールし、「設定...」をクリックします。
 3. 「DNS over HTTPSを有効にする」を選択し、プロバイダーとして「Cloudflare」or「NextDNS」を選択します。
 4. 「OK」をクリックしてタブを閉じます。
@@ -455,7 +455,7 @@ browser.compactmode.show    true
 
 ## 7　その他
 - [Firefox のキーボードショートカット](https://support.mozilla.org/ja/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)
-- Cmd キーを押しながら、リンクをクリックすると必ず新しいタブでリンクを開きます。
+- :btn[cmd] を押しながら、リンクをクリックすると必ず新しいタブでリンクを開きます。
 
 
 ## 8　最後に

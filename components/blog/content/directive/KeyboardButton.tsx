@@ -1,0 +1,48 @@
+'use client';
+
+import React from 'react';
+
+// Keyboard button component
+export const KeyboardButton = ({ children } : { children: React.ReactNode }) => {
+  return (
+    <span className="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-sm font-medium text-gray-800 shadow-sm ring-1 ring-inset ring-gray-300">
+      {children}
+    </span>
+  );
+};
+
+// Map of key symbols
+const keySymbols: { [key: string]: string } = {
+  cmd: 'Cmd ⌘',
+  ctrl: 'Ctrl ⌃',
+  opt: 'Opt ⌥',
+  shift: 'Shift ⇧',
+  enter: 'Enter ↵',
+  left: '←',
+  right: '→',
+  up: '↑',
+  down: '↓',
+  tab: 'Tab ⇥',
+  space: 'Space ␣',
+  delete: 'Del ⌫',
+  esc: 'Esc ⎋',
+};
+
+// Component to render keyboard button with symbol
+export const KeyboardButtonWithSymbol = ({ keyName } : { keyName: string }) => {
+  const symbol = keySymbols[keyName] || keyName;
+  const display = symbol === keyName ? keyName : symbol;
+  return <KeyboardButton>{display}</KeyboardButton>;
+};
+
+// Directive handler
+export const textDirectiveHandler = (node : any, context : any) => {
+  const keyName = node.children[0]?.value || '';
+  return h('keyboard-button', { keyName });
+};
+
+export default KeyboardButtonWithSymbol;
+
+function h(arg0: string, arg1: { keyName: any; }) {
+  throw new Error('Function not implemented.');
+}

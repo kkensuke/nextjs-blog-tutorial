@@ -1,6 +1,7 @@
 import { visit } from 'unist-util-visit';
 import { h } from 'hastscript';
-import { YouTubeEmbed } from './client';
+import { YouTubeEmbed } from './YouTubeEmbed';
+import KeyboardButtonWithSymbol from './KeyboardButton';
 
 // Define directive handlers for different types of text directives
 const directiveHandlers = {
@@ -15,7 +16,11 @@ const directiveHandlers = {
         title,
         embed: 'false'
       });
-    }
+    },
+    btn: (node: any) => {
+      const keyName = node.children[0]?.value || '';
+      return h('keyboard-button', { keyName });
+    },
   },
   
   // Block directives (double colon)
@@ -29,7 +34,7 @@ const directiveHandlers = {
         title,
         embed: 'true'
       });
-    }
+    },
   }
 };
 
@@ -70,5 +75,7 @@ export const TextDirectiveComponents = {
       />
     );
   },
-  // Add more text directive components here...
+  'keyboard-button': ({ keyName }: { keyName: string }) => {
+    return <KeyboardButtonWithSymbol keyName={keyName} />;
+  },
 };

@@ -30,7 +30,7 @@ const PostPreview = (props: PostMetadata) => {
             <img 
               src={props.previewImage} 
               alt={props.title} 
-              className="mb-4 h-28 w-full rounded-lg object-cover object-center" 
+              className="mb-4 h-32 w-full rounded-lg object-cover object-center" 
             />
           )}
 
