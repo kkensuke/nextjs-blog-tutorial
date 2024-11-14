@@ -32,7 +32,7 @@ export const YouTubeEmbed: React.FC<YouTubeProps> = ({ videoId, title = '', embe
       rel="noopener noreferrer"
       className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 hover:underline"
     >
-      <FaYoutube className="text-lg" />
+      <FaYoutube className="h-[0.9em]"/>
       <span>{title || 'Watch on YouTube'}</span>
     </a>
   );

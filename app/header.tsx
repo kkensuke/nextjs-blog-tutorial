@@ -1,6 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import { AiOutlineHome } from "react-icons/ai";
+import { Pencil } from 'lucide-react';
+import { BsCart3 } from "react-icons/bs";
+import { BookOpen } from 'lucide-react';
+import { IoCameraOutline } from "react-icons/io5";
 import { SiGithub } from 'react-icons/si';
+
 
 const GradientWithIcon = () => (
   <div className="flex items-center gap-2">
@@ -15,10 +21,12 @@ const Header = () => {
   const SelectedTitle = GradientWithIcon;
 
   const navItems = [
-    { label: 'Blog', href: '/blog' },
-    { label: 'Products', href: '/products' },
-    { label: 'Publications', href: '/publications' },
-    { label: 'Photos', href: '/photos' },
+    { label: <AiOutlineHome size={26}/>,  title: 'Home', href: '/' },
+    { label: <Pencil size={24}/>,  title: 'Blog', href: '/blog' },
+    { label: <BsCart3 size={26}/>,  title: 'Products', href: '/products' },
+    { label: <BookOpen size={26}/>,  title: 'Publications', href: '/publications' },
+    { label: <IoCameraOutline size={29}/>,  title: 'Photos', href: '/photos' },
+    { label: <SiGithub size={24}/>,  title: 'GitHub', href: 'https://github.com/kkensuke/nextjs-blog-tutorial' },
   ];
 
   return (
@@ -34,7 +42,8 @@ const Header = () => {
           {/* Main nav items */}
           {navItems.map((item) => (
             <Link
-              key={item.label}
+              key={typeof item.label === 'string' ? item.label : item.href}
+              title={item.title}
               href={item.href}
               className="rounded-md px-2 py-2 text-sm font-medium font-light text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 sm:px-3 sm:text-xl"
             >
@@ -42,15 +51,6 @@ const Header = () => {
             </Link>
           ))}
 
-          {/* GitHub link */}
-          <a
-            href="https://github.com/kkensuke/nextjs-blog-tutorial"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-9 w-9 items-center justify-center rounded-md text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900"
-          >
-            <SiGithub size={20} />
-          </a>
         </div>
       </nav>
     </header>

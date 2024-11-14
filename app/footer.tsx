@@ -1,15 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
-import { SiGithub, SiTwitter, SiLinkedin, SiGmail, SiChainlink } from 'react-icons/si';
+import { AiOutlineHome } from "react-icons/ai";
+import { Pencil } from 'lucide-react';
+import { BsCart3 } from "react-icons/bs";
+import { BookOpen } from 'lucide-react';
+import { IoCameraOutline } from "react-icons/io5";
+import { SiGithub, SiTwitter, SiLinkedin, SiGmail } from 'react-icons/si';
+import { ExternalLink } from 'lucide-react';
 
 const Footer = () => {
   const footerLinks = {
     explore: [
-      { label: 'Home', href: '/' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Products', href: '/products' },
-      { label: 'Publications', href: '/publications' },
-      { label: 'Photos', href: '/photos' },
+      { label: 'Home', icon: AiOutlineHome, href: '/' },
+      { label: 'Blog', icon: Pencil, href: '/blog' },
+      { label: 'Products', icon: BsCart3, href: '/products' },
+      { label: 'Publications', icon: BookOpen, href: '/publications' },
+      { label: 'Photos', icon: IoCameraOutline, href: '/photos' }
     ],
     social: [
       { label: 'X', icon: SiTwitter, href: 'https://x.com' },
@@ -48,16 +54,20 @@ const Footer = () => {
               Explore
             </h3>
             <ul className="space-y-2">
-              {footerLinks.explore.map((link) => (
-                <li key={link.label}>
-                  <Link 
-                    href={link.href}
-                    className="text-slate-600 transition-colors hover:text-slate-900"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {footerLinks.explore.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <li key={link.label}>
+                    <Link 
+                      href={link.href}
+                      className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-900"
+                    >
+                      <Icon size={16} />
+                      {link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -101,7 +111,7 @@ const Footer = () => {
                     className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-900"
                   >
                     {link.label}
-                    <SiChainlink size={14} className="opacity-0 transition-opacity group-hover:opacity-100"/>
+                    <ExternalLink size={14}/>
                   </a>
                 </li>
               ))}
