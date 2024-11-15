@@ -1,65 +1,54 @@
 "use client";
 
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState } from 'react';
+
+const DEFAULT_FAVICON_SIZE = 48;
 
 interface LinkCardProps {
   children: React.ReactNode;
 }
 
-const MICROLINK_API = "https://api.microlink.io/";
-const DEFAULT_FAVICON_SIZE = 48;
-
-const LinkCard: React.FC<LinkCardProps> = ({ children }) => {
+const LinkCard = ({ children }: LinkCardProps) => {
   const [metaData, setMetaData] = useState({
-    title: "",
-    description: "",
-    imageUrl: "",
-    domain: "",
+    title: '',
+    description: '',
+    imageUrl: '',
+    domain: '',
   });
 
-  // Extract URL from children
-  const extractUrl = (node: React.ReactNode): string => {
-    if (React.isValidElement(node)) {
-      if (Array.isArray(node.props.children)) {
-        return node.props.children.join("") || "";
-      }
-      return node.props.children?.toString() || "";
+  const extractUrl = (children: React.ReactNode): string => {
+    if (React.isValidElement(children)) {
+      return children.props.children?.toString() || '';
     }
-    return node?.toString() || "";
+    return children?.toString() || '';
   };
 
-  const url = useMemo(() => extractUrl(children).trim(), [children]);
+  const url = extractUrl(children).trim();
 
-  // Fetch metadata when URL is valid
   useEffect(() => {
-    const fetchMetadata = async () => {
-      if (!url || !url.match(/^https?:\/\/.+/)) return;
-
-      try {
-        const response = await fetch(`${MICROLINK_API}?url=${encodeURIComponent(url)}`);
-        const data = await response.json();
-
-        if (data.status === "success") {
-          setMetaData({
-            title: data.data.title || "",
-            description: data.data.description || "",
-            imageUrl: data.data.image?.url || "",
-            domain: getDomain(url),
-          });
-        }
-      } catch (error) {
-        console.error("Metadata fetch error:", error);
-      }
-    };
-
-    fetchMetadata();
+    if (url && url.match(/^https?:\/\/.+/)) {
+      // Fetch metadata from Microlink API
+      fetch(`https://api.microlink.io/?url=${url}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.status === 'success') {
+            setMetaData({
+              title: data.data.title || '',
+              description: data.data.description || '',
+              imageUrl: data.data.image?.url || '',
+              domain: getDomain(url),
+            });
+          }
+        })
+        .catch((error) => console.error('Metadata fetch error:', error));
+    }
   }, [url]);
 
-  // Extract domain from URL
-  const getDomain = (url: string): string => {
+  const getDomain = (url: string) => {
     try {
-      const { hostname } = new URL(url);
-      return hostname;
+      let domain = url.replace(/^https?:\/\//, '');
+      domain = domain.split('/')[0];
+      return domain.split(':')[0];
     } catch {
       return url;
     }
@@ -74,7 +63,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ children }) => {
   }
 
   return (
-    <a
+    <a 
       href={url}
       target="_blank"
       rel="noopener noreferrer"
@@ -87,7 +76,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ children }) => {
             {metaData.title || metaData.domain}
           </p>
           <p className="truncate text-sm text-slate-600">
-            {metaData.description || ""}
+            {metaData.description || ''}
           </p>
         </div>
 
