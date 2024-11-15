@@ -251,10 +251,10 @@ Video Speed Controller この拡張機能は動画の再生速度制御、スキ
 ::::simple
 :::linkcard
 https://addons.mozilla.org/en-US/firefox/addon/youtube-audio/
-::::
+:::
 
 Youtube Audio を使用すると、YouTubeビデオの音声のみを再生でき、メモリの消費を抑えることができます。
-:::
+::::
 
 ::::simple
 :::linkcard
