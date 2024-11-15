@@ -13,3 +13,4 @@
 - Sort posts by date
 - Buy me a coffee widget
 - Stripe payment
+- Link card

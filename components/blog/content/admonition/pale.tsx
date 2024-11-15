@@ -1,4 +1,5 @@
 import React from 'react';
+import LinkCard from './link';
 
 interface AdmonitionProps {
   title: string;
@@ -165,6 +166,20 @@ const SimpleAdmonition = ({ title, children }: AdmonitionProps) => {
   );
 }
 
+
+const LinkAdmonition = ({ children }: { children: React.ReactNode }) => {
+  // Ensure we're passing the innermost text content
+  const getTextContent = (node: React.ReactNode): string => {
+    if (typeof node === 'string') return node;
+    if (Array.isArray(node)) return node.map(getTextContent).join('');
+    if (React.isValidElement(node)) return getTextContent(node.props.children);
+    return '';
+  };
+
+  return <LinkCard>{getTextContent(children)}</LinkCard>;
+};
+
+
 const AdmonitionComponents = {
   overview: OverviewAdmonition,
   note: NoteAdmonition,
@@ -176,6 +191,7 @@ const AdmonitionComponents = {
   quote: QuoteAdmonition,
   question: QuestionAdmonition,
   simple: SimpleAdmonition,
+  linkcard: LinkAdmonition,
 }
 
 export default AdmonitionComponents;
