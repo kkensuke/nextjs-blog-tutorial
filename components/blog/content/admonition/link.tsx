@@ -1,52 +1,65 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from "react";
 
 interface LinkCardProps {
   children: React.ReactNode;
 }
 
-const LinkCard = ({ children }: LinkCardProps) => {
+const MICROLINK_API = "https://api.microlink.io/";
+const DEFAULT_FAVICON_SIZE = 48;
+
+const LinkCard: React.FC<LinkCardProps> = ({ children }) => {
   const [metaData, setMetaData] = useState({
-    title: '',
-    description: '',
-    imageUrl: '',
-    domain: '',
+    title: "",
+    description: "",
+    imageUrl: "",
+    domain: "",
   });
 
-  const extractUrl = (children: React.ReactNode): string => {
-    if (React.isValidElement(children)) {
-      return children.props.children?.toString() || '';
+  // Extract URL from children
+  const extractUrl = (node: React.ReactNode): string => {
+    if (React.isValidElement(node)) {
+      if (Array.isArray(node.props.children)) {
+        return node.props.children.join("") || "";
+      }
+      return node.props.children?.toString() || "";
     }
-    return children?.toString() || '';
+    return node?.toString() || "";
   };
 
-  const url = extractUrl(children).trim();
+  const url = useMemo(() => extractUrl(children).trim(), [children]);
 
+  // Fetch metadata when URL is valid
   useEffect(() => {
-    if (url && url.match(/^https?:\/\/.+/)) {
-      // Fetch metadata from Microlink API
-      fetch(`https://api.microlink.io/?url=${url}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.status === 'success') {
-            setMetaData({
-              title: data.data.title || '',
-              description: data.data.description || '',
-              imageUrl: data.data.image?.url || '',
-              domain: getDomain(url),
-            });
-          }
-        })
-        .catch((error) => console.error('Metadata fetch error:', error));
-    }
+    const fetchMetadata = async () => {
+      if (!url || !url.match(/^https?:\/\/.+/)) return;
+
+      try {
+        const response = await fetch(`${MICROLINK_API}?url=${encodeURIComponent(url)}`);
+        const data = await response.json();
+
+        if (data.status === "success") {
+          setMetaData({
+            title: data.data.title || "",
+            description: data.data.description || "",
+            imageUrl: data.data.image?.url || "",
+            domain: getDomain(url),
+          });
+        }
+      } catch (error) {
+        console.error("Metadata fetch error:", error);
+      }
+    };
+
+    fetchMetadata();
   }, [url]);
 
-  const getDomain = (url: string) => {
+  // Extract domain from URL
+  const getDomain = (url: string): string => {
     try {
-      let domain = url.replace(/^https?:\/\//, '');
-      domain = domain.split('/')[0];
-      return domain.split(':')[0];
+      const { hostname } = new URL(url);
+      return hostname;
     } catch {
       return url;
     }
@@ -61,11 +74,11 @@ const LinkCard = ({ children }: LinkCardProps) => {
   }
 
   return (
-    <a 
+    <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="my-4 block rounded-2xl border border-slate-300 bg-white px-6 no-underline hover:border-slate-400 hover:bg-slate-50"
+      className="my-4 block rounded-2xl border border-slate-300 bg-white px-4 no-underline hover:border-slate-400 hover:bg-slate-50"
     >
       <div className="flex items-center gap-4">
         {/* URL Details */}
@@ -74,7 +87,7 @@ const LinkCard = ({ children }: LinkCardProps) => {
             {metaData.title || metaData.domain}
           </p>
           <p className="truncate text-sm text-slate-600">
-            {metaData.description || ''}
+            {metaData.description || ""}
           </p>
         </div>
 
@@ -84,11 +97,11 @@ const LinkCard = ({ children }: LinkCardProps) => {
             <img
               src={metaData.imageUrl}
               alt="Preview"
-              className="h-20 rounded-lg border-slate-300 object-cover"
+              className="mx-auto h-20 rounded-lg border-slate-300 object-cover"
             />
           ) : (
             <img
-              src={`https://www.google.com/s2/favicons?domain=${metaData.domain}&sz=48`}
+              src={`https://www.google.com/s2/favicons?domain=${metaData.domain}&sz=${DEFAULT_FAVICON_SIZE}`}
               alt="favicon"
               className="h-10 w-10 rounded-lg border border-slate-300"
             />
