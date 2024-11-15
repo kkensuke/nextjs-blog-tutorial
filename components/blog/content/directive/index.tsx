@@ -1,7 +1,6 @@
 import { visit } from 'unist-util-visit';
 import { h } from 'hastscript';
 import { YouTubeEmbed } from './YouTubeEmbed';
-import LinkCard from './LinkCard';
 import KeyboardButtonWithSymbol from './KeyboardButton';
 
 // Define directive handlers for different types of text directives
@@ -35,10 +34,6 @@ const directiveHandlers = {
         title,
         embed: 'true'
       });
-    },
-    link: (node: any) => {
-      const url = node.children[0]?.value || '';
-      return h('link-card', { url });
     },
   }
 };
@@ -82,8 +77,5 @@ export const TextDirectiveComponents = {
   },
   'keyboard-button': ({ keyName }: { keyName: string }) => {
     return <KeyboardButtonWithSymbol keyName={keyName} />;
-  },
-  'link-card': ({ url }: { url: string }) => {
-    return <LinkCard url={url} />;
   },
 };

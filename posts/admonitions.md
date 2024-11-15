@@ -37,16 +37,6 @@ Watch this video on YouTube: :youtube[Click here]{#dQw4w9WgXcQ}.
 ::youtube[Watch this amazing video]{#dQw4w9WgXcQ}
 ::::
 
-
-::::simple{title="Link Card"}
-```markdown
-::link[https://www.google.com]
-```
-
-::link[https://www.google.com]
-::::
-
-
 ## Admonitions
 
 Admonitions are specially formatted content blocks that help highlight important information.
