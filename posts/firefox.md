@@ -65,13 +65,21 @@ Webページの無駄を取り除き、読みやすさを向上させます。
 
 ### 3-1　生産性関連
 
-:::simple
-[Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/) は、無料で便利なオープンソースのパスワードマネージャーです。この拡張機能を使用するには、デスクトップアプリをインストールする必要があります。
-![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/9983d16d-9b5b-8f03-7683-9c3831f45387.png "width=300px")
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/
 :::
 
+Bitwarden は、無料で便利なオープンソースのパスワードマネージャーです。この拡張機能を使用するには、デスクトップアプリをインストールする必要があります。
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/9983d16d-9b5b-8f03-7683-9c3831f45387.png "width=300px")
+::::
+
 ::::simple
-[Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/) は、ウェブサイトをダークモードで表示し、読みやすくします。:btn[opt] + :btn[D] で切り替え可能です。
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/darkreader/
+:::
+
+Dark Reader は、ウェブサイトをダークモードで表示し、読みやすくします。:btn[opt] + :btn[D] で切り替え可能です。
 
 :::note
 Dark Reader は、Firefox の PDF には機能しません。なので次のアドオン `doqment` を使うか、下の Bookmarklet (ブックマークのリンク先として Javascript の関数を登録したもの) を使って対応することができます。ここで紹介する Bookmarklet は、普通の Web ページの場合はページ全体の色を反転し、PDF の場合は、PDF のみの色を反転します（2回実行すると元に戻ります）。PDFビューアーの背景のダークモードは `4　about:config` 節を参照してください。
@@ -82,160 +90,289 @@ javascript:(function(){var L='style_combined',S='#viewerContainer>#viewer.pdfVie
 ::::
 
 ::::simple
-[doqment](https://addons.mozilla.org/en-US/firefox/addon/doqment/) はPDF ビューアで PDF を見やすい色に変更できます。
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/doqment/
+:::
+
+doqment はPDF ビューアで PDF を見やすい色に変更できます。
 :::warning
 この拡張機能を有効にして PDF を閲覧している際は後述の `Zotero Connector` を使うことができません。PDF 以外を開いている場合では問題ありません。
 :::
 ::::
 
-:::simple
-[Duplicate Tabs Shortcut](https://addons.mozilla.org/en-US/firefox/addon/duplicate-tab-shortcut/) を使用すると、Windows / Linux では :btn[Alt] + :btn[shift] + :btn[D]、Mac では :btn[opt] + :btn[shift] + :btn[D] のキーボードショートカットでタブを複製できます。
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/duplicate-tab-shortcut/
 :::
 
-:::simple
-[G App Launcher](https://addons.mozilla.org/en-US/firefox/addon/google-shortcuts-all-google-se/) は、Gmail、Google Drive、Google カレンダー、Google マップ、Google 翻訳など、すべての Google サービスへのショートカットを表示します。
-:::
-
-
-:::simple
-[Grammar and Spell Checker - LanguageTool](https://addons.mozilla.org/en-US/firefox/addon/languagetool/) は、ウェブ上のどこでもスペルや文法の問題をチェックします。
-:::
-
-:::simple
-[Keepa.com - Amazon Price Tracker](https://addons.mozilla.org/en-US/firefox/addon/keepa/) は、Amazon製品の価格履歴グラフを表示します。
-:::
-
-:::simple
-[Multi-Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) を使用すると、同じウェブサイトで複数のアカウントを同時に使用できます。後述のSimple Tab Groupsと互換性があります。(このアドオンを使わなくてもコンテナの最低限の機能は使えるかもしれません。）
-:::
+Duplicate Tabs Shortcut を使用すると、Windows / Linux では :btn[Alt] + :btn[shift] + :btn[D]、Mac では :btn[opt] + :btn[shift] + :btn[D] のキーボードショートカットでタブを複製できます。
+::::
 
 ::::simple
-[Open in Sidebar](https://addons.mozilla.org/en-US/firefox/addon/open_in_sidebar/) を使用すると、サイドバーに別のウェブサイトを表示できます。デフォルトで開くページを登録したり[:btn[cmd] + :btn[,] -> Extensions & Themes -> `Open in Sidebar` -> Preferences]、この拡張機能をサイドバーで開くためのショートカットを登録すると便利です。登録方法は後述の項目 3-4 を参照してください。
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/google-shortcuts-all-google-se/
+:::
+
+G App Launcher は、Gmail、Google Drive、Google カレンダー、Google マップ、Google 翻訳など、すべての Google サービスへのショートカットを表示します。
+::::
+
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/languagetool/
+:::
+
+Grammar and Spell Checker - LanguageTool は、ウェブ上のどこでもスペルや文法の問題をチェックします。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/keepa/
+:::
+
+Keepa.com - Amazon Price Tracker は、Amazon製品の価格履歴グラフを表示します。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/
+:::
+
+Multi-Account Containers を使用すると、同じウェブサイトで複数のアカウントを同時に使用できます。後述のSimple Tab Groupsと互換性があります。(このアドオンを使わなくてもコンテナの最低限の機能は使えるかもしれません。）
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/open_in_sidebar/
+:::
+
+Open in Sidebar を使用すると、サイドバーに別のウェブサイトを表示できます。デフォルトで開くページを登録したり[:btn[cmd] + :btn[,] -> Extensions & Themes -> `Open in Sidebar` -> Preferences]、この拡張機能をサイドバーで開くためのショートカットを登録すると便利です。登録方法は後述の項目 3-4 を参照してください。
 
 :::warning
 同様のアドオンに `Side View` というものもありますが、これを使用すると YouTube Music のバックグラウンド再生ができなくなります。
 :::
 ::::
 
-:::simple
-[Print Edit WE](https://addons.mozilla.org/en-US/firefox/addon/print-edit-we/) を使用すると、プリントプレビューモードでWebページのコンテンツを編集できます。例えば、広告の部分だけ削除してからプリントアウトすることが可能です。
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/print-edit-we/
 :::
 
-:::simple
-[Simple Tab Groups](https://addons.mozilla.org/en-US/firefox/addon/simple-tab-groups/) はアドオンの中で最も便利なものだと思います。これにより、タブをグループ化して整理できます。グループ間を素早く切り替えることができ、たくさんのタブの中で迷子になることがありません。また、ブラウザを閉じてもグループと中のタブは保持されます。
+Print Edit WE を使用すると、プリントプレビューモードでWebページのコンテンツを編集できます。例えば、広告の部分だけ削除してからプリントアウトすることが可能です。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/simple-tab-groups/
+:::
+
+Simple Tab Groups はアドオンの中で最も便利なものだと思います。これにより、タブをグループ化して整理できます。グループ間を素早く切り替えることができ、たくさんのタブの中で迷子になることがありません。また、ブラウザを閉じてもグループと中のタブは保持されます。
 また `Multi-Account Containers` と互換性があり、それぞれのグループ内のタブをどのコンテナで開くか設定することもできます。この拡張機能をサイドバーで開くためのショートカットを登録すると便利です。登録方法は後述の項目 3-4 を参照してください。
 ![SCR-20240503-edyg.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/956c38a0-bf42-a3ab-3100-e4346319772c.png)
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/simple-translate/
 :::
 
-:::simple
-[Simple Translate](https://addons.mozilla.org/en-US/firefox/addon/simple-translate/) は、シンプルで軽量な翻訳ツールです。選択したテキストをポップアップウィンドウ上で翻訳して表示します。日本語に翻訳する場合は、設定画面で「ターゲットの言語」を日本語に変更します。
+Simple Translate は、シンプルで軽量な翻訳ツールです。選択したテキストをポップアップウィンドウ上で翻訳して表示します。日本語に翻訳する場合は、設定画面で「ターゲットの言語」を日本語に変更します。
 ![SCR-20230624-oicn.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/b69b195f-07bc-5d2d-a655-92ca875a0983.png)
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/single-file/
 :::
 
-:::simple
-[SingleFile](https://addons.mozilla.org/en-US/firefox/addon/single-file/) は、CSS、画像、フォント、フレームなどを含めた完全なページを1つのHTMLファイルとして保存することを可能にします。アノテーションしてから保存したり、ページ全体だけでなく、選択した範囲だけを保存することも可能です。
+SingleFile は、CSS、画像、フォント、フレームなどを含めた完全なページを1つのHTMLファイルとして保存することを可能にします。アノテーションしてから保存したり、ページ全体だけでなく、選択した範囲だけを保存することも可能です。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/swift-selection-search/
 :::
 
-:::simple
-[Swift Selection Search](https://addons.mozilla.org/en-US/firefox/addon/swift-selection-search/) を使用すると、選択したテキストに対してポップアップが表示されるので、使いたい検索エンジンで検索できます。
+Swift Selection Search を使用すると、選択したテキストに対してポップアップが表示されるので、使いたい検索エンジンで検索できます。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/tabliss/
 :::
 
-:::simple
-[Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/) は、美しい背景と複数のウィジェットを備えた新しいタブの拡張機能です。背景は `Unsplash` がおすすめです。
+Tabliss は、美しい背景と複数のウィジェットを備えた新しいタブの拡張機能です。背景は `Unsplash` がおすすめです。
 ![SCR-20230624-oilx.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/859d212e-b3ba-5c20-ec0c-3b573da2024f.png)
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/
 :::
 
-:::simple
-[Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) は、ユーザーが独自の JavaScript を実行するための拡張機能です。[既に他のユーザーによって作られた機能](https://openuserjs.org/)をインストールすることもできます。例えば、この [tumpio / Endless Google](https://openuserjs.org/scripts/tumpio/Endless_Google) は、Google の検索結果を、下方向に追加的に自動でロードしてくれるため、次のページのリンクを押す必要がなくなります。
+Tampermonkey は、ユーザーが独自の JavaScript を実行するための拡張機能です。[既に他のユーザーによって作られた機能](https://openuserjs.org/)をインストールすることもできます。例えば、この [tumpio / Endless Google](https://openuserjs.org/scripts/tumpio/Endless_Google) は、Google の検索結果を、下方向に追加的に自動でロードしてくれるため、次のページのリンクを押す必要がなくなります。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/
 :::
 
-:::simple
-[Wappalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/) はウェブサイトで用いられている技術を表示します。
+Wappalyzer はウェブサイトで用いられている技術を表示します。
+::::
+
+::::simple
+:::linkcard
+https://www.zotero.org/download/connectors
 :::
 
-:::simple
-[Zotero Connector](https://www.zotero.org/download/connectors) は、ウェブブラウザー内のコンテンツを自動的に検出し、1クリックでZoteroライブラリに追加できます。[Zotero](https://www.zotero.org/) というアプリ自体は文献管理にとても役立ちます。
+Zotero Connector は、ウェブブラウザー内のコンテンツを自動的に検出し、1クリックでZoteroライブラリに追加できます。[Zotero](https://www.zotero.org/) というアプリ自体は文献管理にとても役立ちます。
 ![zotero-connector.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/fb3c63c1-6de7-2236-ddd8-7ea5f2189985.png#center)
-:::
+::::
 
 ### 3-2　YouTube 関連
-:::simple
-[Enhancer for YouTube](https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube/) は、ビデオの再生速度制御、シネマモード、スクリーンショットなど、多くの便利な機能をYouTubeに追加します。ビデオの速度を0.05から(0.01、0.02、0.05、0.1、0.2、0.25、0.5、1)の間隔で微調整でき、2倍以上の速度にすることも可能です。
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube/
+:::
+
+Enhancer for YouTube は、ビデオの再生速度制御、シネマモード、スクリーンショットなど、多くの便利な機能をYouTubeに追加します。ビデオの速度を0.05から(0.01、0.02、0.05、0.1、0.2、0.25、0.5、1)の間隔で微調整でき、2倍以上の速度にすることも可能です。
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/0d3eb5df-c088-e883-d43b-67e94801d644.png)
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/videospeed/
 :::
 
-:::simple
-[Video Speed Controller](https://addons.mozilla.org/en-US/firefox/addon/videospeed/) この拡張機能は動画の再生速度制御、スキップ機能、一時停止程度ですが、`Enhancer for YouTube`と異なり、YouTube だけでなくAmazonプライムなど、どんな動画でも簡単なショートカットキーで機能して便利です。ビデオの速度は細かく調整でき、2倍速以上にすることも可能です。
-:::
+Video Speed Controller この拡張機能は動画の再生速度制御、スキップ機能、一時停止程度ですが、`Enhancer for YouTube`と異なり、YouTube だけでなくAmazonプライムなど、どんな動画でも簡単なショートカットキーで機能して便利です。ビデオの速度は細かく調整でき、2倍速以上にすることも可能です。
+::::
 
-:::simple
-[Youtube Audio](https://addons.mozilla.org/en-US/firefox/addon/youtube-audio/) を使用すると、YouTubeビデオの音声のみを再生でき、メモリの消費を抑えることができます。
-:::
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/youtube-audio/
+::::
 
-:::simple
-[YouTube™ Comment Translate](https://addons.mozilla.org/en-US/firefox/addon/youtube-comment-translate/)
-YouTube の各コメントの右上にアイコンが表示され、それを押すとコメントが翻訳されます。
-:::
-
-:::simple
-広告ブロック: 次のセキュリティの項目にも載せていますが、以下のどちらでも YouTube の広告を消せます。
-- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
-- [AdBlocker Ultimate](https://addons.mozilla.org/en-US/firefox/addon/adblocker-ultimate/)
-:::
-
-
-### 3-3　セキュリティ関連
-:::simple
-[AdBlocker Ultimate](https://addons.mozilla.org/en-US/firefox/addon/adblocker-ultimate/) は、すべての広告とトラッキングをウェブページから削除します。
-:::
-
-:::simple
-[CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/)
-ウェブサイトが Javascript API を使ってフィンガープリントするのを防ぐことができます。
+Youtube Audio を使用すると、YouTubeビデオの音声のみを再生でき、メモリの消費を抑えることができます。
 :::
 
 ::::simple
-[ClearURLs](https://addons.mozilla.org/en-US/firefox/addon/clearurls/) または [Neat URL](https://addons.mozilla.org/en-US/firefox/addon/neat-url/)
-URLから不要な情報を削除します。 
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/youtube-comment-translate/
+:::
+
+YouTube™ Comment Translate を使うと、YouTube の各コメントの右上にアイコンが表示され、それを押すとコメントが翻訳されます。
+::::
+
+::::simple
+広告ブロック: 次のセキュリティの項目にも載せていますが、以下のどちらでも YouTube の広告を消せます。
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/adblocker-ultimate/
+:::
+
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+:::
+::::
+
+
+### 3-3　セキュリティ関連
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/adblocker-ultimate/
+:::
+
+AdBlocker Ultimate は、すべての広告とトラッキングをウェブページから削除します。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/
+:::
+
+CanvasBlocker は、ウェブサイトが Javascript API を使ってフィンガープリントするのを防ぐことができます。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/clearurls/
+:::
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/neat-url/
+:::
+
+ClearURLs または Neat URL は URL から不要な情報を削除します。 
 
 :::warning
 前者は Simple tab groups と併用すると問題が発生します。(コンテナ上で開く新しいタブが複製される)
 :::
 ::::
 
-:::simple
-[Cookie AutoDelete](https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/) は、開いているブラウザタブで使用されなくなったときに自動的にCookieを削除します。
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/
 :::
 
-:::simple
-[Decentraleyes](https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/) は、Google Hosted Librariesなどからのリクエストを大幅に減らします。通常のコンテンツブロッカーを補完します。
-:::
-
-:::simple
-[Firefox Relay](https://addons.mozilla.org/en-US/firefox/addon/private-relay/) によって、自分のメールアドレスに紐付いたエイリアスメールアドレスを作ることができます。エイリアスメールアドレスに送信されたメッセージは、自分のメールアドレスの受信トレイに転送されます。いつでも削除でき、自分のメールアドレスを公開せずに済みます。
-:::
-
-:::simple
-[10 minute mail](https://addons.mozilla.org/en-US/firefox/addon/10-minutes-disposable-email/) は、10分間だけ有効な一時的なメールアドレスを生成します。一時的に試してみたいサービスのサインアップに便利です。
-
-![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/4e632eb5-dcb7-6cff-2d40-0e926b0b0535.png 'width=300px')
-:::
-
-:::simple
-[Flagfox](https://addons.mozilla.org/en-US/firefox/addon/flagfox/) は、現在のウェブサイトのサーバーの場所を示す国旗をサーチバーに表示します。
-:::
-
-:::simple
-[Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/) は、見えないトラッカーを自動的にブロックします。
-:::
-
-:::simple
-[uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) は、低メモリ使用量と高パフォーマンスを備えた広告ブロッカーです。
-広告ブロッカーとして意外にも、任意のウェブサイトの任意の要素を表示させないように設定することができます。右クリックから `Block element` を選択して表示させたくない要素を選ぶことができます。
-:::
+Cookie AutoDelete は、開いているブラウザタブで使用されなくなったときに自動的にCookieを削除します。
+::::
 
 ::::simple
-[WebRTC Leak Shield](https://addons.mozilla.org/en-US/firefox/addon/webrtc-leak-shield/) は、WebRTCリークを防止します。
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/
+:::
+
+Decentraleyes は、Google Hosted Librariesなどからのリクエストを大幅に減らします。通常のコンテンツブロッカーを補完します。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/private-relay/
+:::
+
+Firefox Relay によって、自分のメールアドレスに紐付いたエイリアスメールアドレスを作ることができます。エイリアスメールアドレスに送信されたメッセージは、自分のメールアドレスの受信トレイに転送されます。いつでも削除でき、自分のメールアドレスを公開せずに済みます。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/10-minutes-disposable-email/
+:::
+
+10 minute mail は、10分間だけ有効な一時的なメールアドレスを生成します。一時的に試してみたいサービスのサインアップに便利です。
+
+![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/4e632eb5-dcb7-6cff-2d40-0e926b0b0535.png 'width=300px')
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/flagfox/
+:::
+
+Flagfox は、現在のウェブサイトのサーバーの場所を示す国旗をサーチバーに表示します。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/
+:::
+
+Privacy Badger は、見えないトラッカーを自動的にブロックします。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+:::
+
+uBlock Origin は、低メモリ使用量と高パフォーマンスを備えた広告ブロッカーです。
+広告ブロッカーとして意外にも、任意のウェブサイトの任意の要素を表示させないように設定することができます。右クリックから `Block element` を選択して表示させたくない要素を選ぶことができます。
+::::
+
+::::simple
+:::linkcard
+https://addons.mozilla.org/en-US/firefox/addon/webrtc-leak-shield/
+:::
+
+WebRTC Leak Shieldは、WebRTCリークを防止します。
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/5c8fad46-3714-d3d2-f967-c47a6a30a683.png 'width=300px')
 
 :::note
@@ -449,9 +586,13 @@ browser.compactmode.show    true
 ```
 
 以下のリンクには、さらに多くのカスタマイズがあります。
-- https://github.com/MrOtherGuy/firefox-csshacks
-- https://github.com/Aris-t2/CustomCSSforFx
+:::linkcard
+https://github.com/MrOtherGuy/firefox-csshacks
+:::
 
+:::linkcard
+https://github.com/Aris-t2/CustomCSSforFx
+:::
 
 ## 7　その他
 - [Firefox のキーボードショートカット](https://support.mozilla.org/ja/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)

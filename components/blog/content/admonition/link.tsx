@@ -65,7 +65,7 @@ const LinkCard = ({ children }: LinkCardProps) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="my-4 block rounded-2xl border border-slate-200 bg-white px-6 no-underline hover:border-slate-400 hover:bg-slate-50"
+      className="my-4 block rounded-2xl border border-slate-300 bg-white px-6 no-underline hover:border-slate-400 hover:bg-slate-50"
     >
       <div className="flex items-center gap-4">
         {/* URL Details */}
@@ -84,7 +84,7 @@ const LinkCard = ({ children }: LinkCardProps) => {
             <img
               src={metaData.imageUrl}
               alt="Preview"
-              className="h-20 rounded-lg border border-slate-300 object-cover"
+              className="h-20 rounded-lg border-slate-300 object-cover"
             />
           ) : (
             <img
