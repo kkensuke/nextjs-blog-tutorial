@@ -1,7 +1,7 @@
 import { visit } from 'unist-util-visit';
 import { h } from 'hastscript';
 import { YouTubeEmbed } from './YouTubeEmbed';
-import { LinkCard } from './LinkCard';
+import LinkCard from './LinkCard';
 import KeyboardButtonWithSymbol from './KeyboardButton';
 
 // Define directive handlers for different types of text directives

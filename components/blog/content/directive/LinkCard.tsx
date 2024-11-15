@@ -1,10 +1,7 @@
-// components/blog/content/directive/client.tsx
 'use client';
 
 import React from 'react';
-import { Card, CardTitle } from '@/components/ui/card';
-import Image from 'next/image';
-
+import { Card } from '@/components/ui/card';
 
 interface LinkCardProps {
   url: string;
@@ -16,90 +13,87 @@ interface Metadata {
   image: string | null;
 }
 
-const getImageSize = (url: string): Promise<{ width: number; height: number }> => {
-  return new Promise((resolve, reject) => {
-    const img = new window.Image();
-    img.onload = () => {
-      resolve({ width: img.width, height: img.height });
-    };
-    img.onerror = reject;
-    img.src = url;
-  });
-};
-
-export const LinkCard: React.FC<LinkCardProps> = ({ url }) => {
+const LinkCard: React.FC<LinkCardProps> = ({ url }) => {
   const [metadata, setMetadata] = React.useState<Metadata | null>(null);
-  const [imageSize, setImageSize] = React.useState<{
-    width: number;
-    height: number;
-  } | null>(null);
+  const [error, setError] = React.useState<string | null>(null);
 
   React.useEffect(() => {
-    try {
-      const urlObj = new URL(url);
-      fetch(`/api/metadata?url=${urlObj.toString()}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setMetadata(data as Metadata);
-          if (data.image) {
-            getImageSize(data.image).then(setImageSize);
-          }
-        })
-        .catch(console.error);
-    } catch (e) {
-      console.error(e);
-    }
+    const fetchMetadata = async () => {
+      try {
+        const urlObj = new URL(url);
+        const response = await fetch(`/api/metadata?url=${encodeURIComponent(urlObj.toString())}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch metadata');
+        }
+        const data = await response.json();
+        setMetadata(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'An error occurred');
+        console.error('Error fetching metadata:', err);
+      }
+    };
+
+    fetchMetadata();
   }, [url]);
 
-  let urlObj: URL;
-  try {
-    urlObj = new URL(url);
-  } catch (e) {
-    console.error(e);
-    return <>{url}</>;
+  if (error) {
+    return (
+      <Card className="my-4 p-4">
+        <p className="text-red-500">Failed to load preview for: {url}</p>
+      </Card>
+    );
   }
 
   if (!metadata) {
-    return <>{url}</>;
+    return (
+      <Card className="my-4 p-4">
+        <p className="text-gray-500">Loading preview...</p>
+      </Card>
+    );
   }
 
   const { title, description, image } = metadata;
 
   return (
-    <Card className="my-4 overflow-hidden">
+    <Card className="my-4 overflow-hidden hover:bg-slate-50">
       <a
         href={url}
         className="flex gap-4"
         target="_blank"
         rel="noopener noreferrer"
       >
-        {image && imageSize && (
-          <div className="relative h-40 w-40 flex-shrink-0">
-            <Image
+        {image && (
+          <div className="relative h-32 w-32 flex-shrink-0">
+            <img
               src={image}
               alt={title || ""}
-              fill
-              className="object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
         )}
         <div className="flex flex-col justify-between p-4">
           <div>
-            <CardTitle className="text-lg">{title}</CardTitle>
-            <p className="mt-2 text-sm text-slate-600">{description}</p>
+            <h3 className="text-lg font-semibold">
+              {title || url}
+            </h3>
+            {description && (
+              <p className="mt-2 text-sm text-slate-600">
+                {description}
+              </p>
+            )}
           </div>
-          <div className="flex items-center gap-2 text-sm text-slate-500">
-            <Image
-              src={`https://www.google.com/s2/favicons?domain=${urlObj.hostname}`}
+          <div className="mt-2 flex items-center gap-2 text-sm text-slate-500">
+            <img
+              src={`https://www.google.com/s2/favicons?domain=${new URL(url).hostname}`}
               alt=""
-              width={16}
-              height={16}
-              className="rounded-sm"
+              className="h-4 w-4"
             />
-            <span>{urlObj.hostname}</span>
+            <span>{new URL(url).hostname}</span>
           </div>
         </div>
       </a>
     </Card>
   );
 };
+
+export default LinkCard;
