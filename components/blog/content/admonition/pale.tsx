@@ -158,7 +158,7 @@ const SimpleAdmonition = ({ title, children }: AdmonitionProps) => {
           <div className="admonition-title flex p-3 text-slate-700">
             {title}
           </div>
-          <div className="border-t-2 border-slate-200"></div>
+          <div className="border-t-2 border-slate-300"></div>
         </>
       )}
       <div className="admonition-content p-4">{children}</div>

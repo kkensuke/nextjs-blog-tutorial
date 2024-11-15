@@ -20,12 +20,16 @@ Espanso works on Windows, macOS, and Linux, supporting advanced features like re
 
 
 ## Installation
+:::linkcard
 https://espanso.org/docs/install/mac/
+:::
 
 After installation, open the app. Verify it's running by executing `espanso status` in the terminal.
 
 ## Configuration
-https://espanso.org/docs/getting-started/
+:::linkcard
+https://espanso.org/docs/get-started/
+:::
 
 Espanso's configuration primarily uses two files:
 
@@ -685,7 +689,10 @@ matches:
 ```
 
 ## Using Packages
-Install packages using commands like `espanso install html-utils-package`. Packages are simple and easy to create. Find useful packages at https://hub.espanso.org/html-utils-package
+Install packages using commands like `espanso install html-utils-package`. Packages are simple and easy to create. Find useful packages at 
+:::linkcard
+https://hub.espanso.org/html-utils-package
+:::
 
 ## Conclusion
 There are many more features not covered here - check the [documentation](https://espanso.org/docs/matches/basics/) for more information.

@@ -23,12 +23,16 @@ Espanso は、Windows、macOS、Linux で動作し、正規表現、シェルス
 
 
 ## インストール
+:::linkcard
 https://espanso.org/docs/install/mac/
+:::
 
 インストールしたら、アプリを開きます。コマンドで `espanso status` を実行して動いているか確認しましょう。
 
 ## 設定
-https://espanso.org/docs/getting-started/
+:::linkcard
+https://espanso.org/docs/get-started/
+:::
 
 Espanso の設定は主に2つのファイルで行います。
 
@@ -751,7 +755,9 @@ matches:
 ## パッケージを使う
 Espanso では `espanso install html-utils-package` のように実行することでパッケージをインストールすることができます。パッケージはとてもシンプルで自作することも簡単です。ぜひ以下のサイトから自分に便利そうなパッケージを探してインストールしてみてください。
 
+:::linkcard
 https://hub.espanso.org/html-utils-package
+:::
 
 
 ## 終わり

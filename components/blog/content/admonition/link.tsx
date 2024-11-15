@@ -65,24 +65,9 @@ const LinkCard = ({ children }: LinkCardProps) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="my-4 block rounded-2xl border border-slate-200 px-6 no-underline hover:border-slate-400 hover:bg-slate-50"
+      className="my-4 block rounded-2xl border border-slate-200 bg-white px-6 no-underline hover:border-slate-400 hover:bg-slate-50"
     >
       <div className="flex items-center gap-4">
-        {/* Thumbnail or Favicon */}
-        {metaData.imageUrl ? (
-          <img
-            src={metaData.imageUrl}
-            alt="Preview"
-            className="h-12 w-12 rounded-lg border border-slate-300 object-cover"
-          />
-        ) : (
-          <img
-            src={`https://www.google.com/s2/favicons?domain=${metaData.domain}&sz=48`}
-            alt="favicon"
-            className="h-10 w-10 rounded-lg border border-slate-300"
-          />
-        )}
-
         {/* URL Details */}
         <div className="flex-1 overflow-hidden">
           <p className="text-md truncate font-semibold text-slate-900">
@@ -93,20 +78,22 @@ const LinkCard = ({ children }: LinkCardProps) => {
           </p>
         </div>
 
-        {/* External Link Icon */}
-        <svg 
-          className="h-6 w-6 text-blue-500" 
-          fill="none" 
-          viewBox="0 0 24 24" 
-          stroke="currentColor"
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth={2} 
-            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
-          />
-        </svg>
+        {/* Image Section (right-aligned and 20% width) */}
+        <div className="w-1/5 flex-shrink-0">
+          {metaData.imageUrl ? (
+            <img
+              src={metaData.imageUrl}
+              alt="Preview"
+              className="h-20 rounded-lg border border-slate-300 object-cover"
+            />
+          ) : (
+            <img
+              src={`https://www.google.com/s2/favicons?domain=${metaData.domain}&sz=48`}
+              alt="favicon"
+              className="h-10 w-10 rounded-lg border border-slate-300"
+            />
+          )}
+        </div>
       </div>
     </a>
   );
