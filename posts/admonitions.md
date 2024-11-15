@@ -28,12 +28,22 @@ Watch this video on YouTube: :youtube[Click here]{#dQw4w9WgXcQ}.
 :::
 ::::
 
+
 ## Block Directives `::name[label]{attributes}`
 ::::simple{title="YouTube Embed"}
 ```markdown
 ::youtube[Watch this amazing video]{#dQw4w9WgXcQ}
 ```
 ::youtube[Watch this amazing video]{#dQw4w9WgXcQ}
+::::
+
+
+::::simple{title="Link Card"}
+```markdown
+::link[https://www.google.com]
+```
+
+::link[https://www.google.com]
 ::::
 
 
