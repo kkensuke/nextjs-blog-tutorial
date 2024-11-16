@@ -18,14 +18,23 @@ const CustomImage: React.FC<CustomImageProps> = ({ alt, src, title }) => {
 
   const captionMatch = title ? title.match(/caption='([^"]+)'/) : null;
   const caption = captionMatch ? captionMatch[1] : '';
+  
+  const imgStyleMarginBottom: string = caption ? '0' : '2rem';
 
-  const style: CSSProperties = {
+  const imgStyle: CSSProperties = {
     maxWidth: '100%',
     height: 'auto',
     width,
     display: 'block',
-    margin: align === 'left' ? '2rem auto 2rem 0' : align === 'right' ? '2rem 0 2rem auto' : '2rem auto',
+    margin: align === 'left' ? `2rem auto ${imgStyleMarginBottom} 0` : align === 'right' ? `2rem 0 ${imgStyleMarginBottom} auto` : `2rem auto ${imgStyleMarginBottom} auto`,
     borderRadius: '0.5rem',
+    border: '1px solid #ddd',
+  };
+  const captionStyle: CSSProperties = {
+    width,
+    margin: align === 'left' ? '5px auto 2rem 0' : align === 'right' ? '5px 0 2rem auto' : '5px auto 2rem auto',
+    // border: '1px solid #ddd',
+    textAlign: 'center',
   };
 
   return (
@@ -33,11 +42,9 @@ const CustomImage: React.FC<CustomImageProps> = ({ alt, src, title }) => {
       <img
         src={src}
         alt={alt || ''}
-        style={style}
+        style={imgStyle}
       />
-      <div style={style}>
-        {caption && <figcaption style={{ textAlign: 'center'}}>{caption}</figcaption>}
-      </div>
+      {caption && <figcaption style={captionStyle}>{caption}</figcaption>}
     </figure>
   );
 };

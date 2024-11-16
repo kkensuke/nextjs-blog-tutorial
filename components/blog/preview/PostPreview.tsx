@@ -11,7 +11,7 @@ const PostPreview = (props: PostMetadata) => {
     <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white will-change-transform hover:bg-slate-50">
       <Link 
         href={`/blog/posts/${props.slug}`} 
-        className="block overflow-hidden rounded-xl transition-colors"
+        className="block flex-1 overflow-hidden rounded-xl transition-colors"
       >
         <div className="p-6">
           {/* Date */}
