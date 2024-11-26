@@ -6,6 +6,7 @@ interface CustomImageProps {
   title?: string;
 }
 
+
 const CustomImage: React.FC<CustomImageProps> = ({ alt, src, title }) => {
   if (!src) return null;
 
@@ -15,6 +16,9 @@ const CustomImage: React.FC<CustomImageProps> = ({ alt, src, title }) => {
 
   const alignMatch = title ? title.match(/align=(left|center|right)/) : null;
   const align = alignMatch ? alignMatch[1] : 'center';
+  
+  const radiusMatch = title ? title.match(/radius=(\d+\.?\d*)/) : null;
+  const radius = radiusMatch ? `${radiusMatch[1]}rem` : '0.6rem';
 
   const captionMatch = title ? title.match(/caption='([^"]+)'/) : null;
   const caption = captionMatch ? captionMatch[1] : '';
@@ -24,14 +28,14 @@ const CustomImage: React.FC<CustomImageProps> = ({ alt, src, title }) => {
   const imgStyle: CSSProperties = {
     maxWidth: '100%',
     height: 'auto',
-    width,
+    width: width,
     display: 'block',
     margin: align === 'left' ? `2rem auto ${imgStyleMarginBottom} 0` : align === 'right' ? `2rem 0 ${imgStyleMarginBottom} auto` : `2rem auto ${imgStyleMarginBottom} auto`,
-    borderRadius: '0.5rem',
+    borderRadius: radius,
     border: '1px solid #ddd',
   };
   const captionStyle: CSSProperties = {
-    width,
+    width: width === 'auto' ? '400px' : width,
     margin: align === 'left' ? '5px auto 2rem 0' : align === 'right' ? '5px 0 2rem auto' : '5px auto 2rem auto',
     // border: '1px solid #ddd',
     textAlign: 'center',

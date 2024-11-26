@@ -85,8 +85,17 @@ const PostPage = (props: any) => {
         <article className="post prose mx-auto">
           <Markdown
             children={post.content}
-            remarkPlugins={[remarkGfm, remarkDirective, remarkDirectiveRehype, remarkTextDirectives, remarkMath]}
-            rehypePlugins={[rehypeSlug, rehypeKatex]}
+            remarkPlugins={[
+              remarkGfm,
+              remarkDirective,
+              remarkDirectiveRehype,
+              remarkTextDirectives,
+              remarkMath
+            ]}
+            rehypePlugins={[
+              rehypeSlug,
+              rehypeKatex
+            ]}
             components={components}
           />
         </article>

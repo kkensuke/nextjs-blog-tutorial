@@ -52,7 +52,8 @@ const Pre: Components['pre'] = ({ children, ...props }) => {
               </div>
             )}
           </div>
-          <div className="absolute right-4 top-4 z-10 opacity-0 transition-opacity group-hover:opacity-100">
+          {/* <div className="absolute right-4 top-4 z-10 opacity-0 transition-opacity group-hover:opacity-100"> */}
+          <div className={`absolute right-4 ${title ? 'top-8' : 'top-2.5'} z-10 opacity-0 transition-opacity group-hover:opacity-100`}>
             <CopyToClipboard text={String(codeString)} onCopy={handleCopy}>
               <button className="rounded-md bg-slate-700/50 p-2 text-slate-400 backdrop-blur-sm transition-colors hover:bg-slate-700 hover:text-slate-200">
                 {isCopied ? <Check size={16} className="text-green-500" /> : <Copy size={16} />}

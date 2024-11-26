@@ -248,7 +248,7 @@ Generate forms from triggers:
       Happy Birthday!
 ```
 
-![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/0d085e75-b23a-70af-604d-834d64d961d5.png)
+![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/0d085e75-b23a-70af-604d-834d64d961d5.png "width=250px radius=1.3")
 
 
 Example email template form:
@@ -277,8 +277,7 @@ matches:
           - sentence 4
 ```
 
-![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/adbd6d0e-377d-4072-8148-6904f2580930.png)
-
+![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/adbd6d0e-377d-4072-8148-6904f2580930.png "width=600px radius=0.8")
 
 
 Complex form example - Todo item creation:
