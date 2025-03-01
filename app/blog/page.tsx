@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Bookmark, Pencil } from 'lucide-react';
 import getPostMetadata from "@/lib/blog/getPostMetadata";
 import getAllTags from "@/lib/blog/getAllTags";
-import PostPreview from "@/components/blog/preview/PostPreview";
+import PostPreview from "@/components/blog/PostPreview";
 
 const BlogPage = () => {
   const allTags = getAllTags();

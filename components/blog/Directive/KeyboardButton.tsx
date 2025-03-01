@@ -35,14 +35,4 @@ export const KeyboardButtonWithSymbol = ({ keyName } : { keyName: string }) => {
   return <KeyboardButton>{display}</KeyboardButton>;
 };
 
-// Directive handler
-export const textDirectiveHandler = (node : any, context : any) => {
-  const keyName = node.children[0]?.value || '';
-  return h('keyboard-button', { keyName });
-};
-
 export default KeyboardButtonWithSymbol;
-
-function h(arg0: string, arg1: { keyName: any; }) {
-  throw new Error('Function not implemented.');
-}

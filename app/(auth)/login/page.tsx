@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card/card';
 import { Lock } from 'lucide-react';
+import { API } from '@/config/constants';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -18,7 +19,7 @@ export default function LoginPage() {
     const formData = new FormData(event.currentTarget);
     
     try {
-      const response = await fetch('/api/auth/login', {
+      const response = await fetch(API.AUTH.LOGIN, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

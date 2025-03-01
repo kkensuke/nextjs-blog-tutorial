@@ -1,8 +1,11 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card/card';
 import { PencilIcon, SaveIcon } from 'lucide-react';
+import ErrorBoundary from '@/components/common/ErrorBoundary';
+import { apiClient } from '@/lib/api/client';
+import { API } from '@/config/constants';
 
 export default function PostEditor() {
   const [post, setPost] = useState({
@@ -14,48 +17,40 @@ export default function PostEditor() {
   });
   const [status, setStatus] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus('Saving...');
-
-    try {
-      const response = await fetch('/api/posts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...post,
-          tags: post.tags.split(',').map(tag => tag.trim()).filter(Boolean).join(', ')
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to save post');
-      }
-
-      const data = await response.json();
-      setStatus('Post saved successfully!');
-      
-      // Reset form
-      setPost({
-        title: '',
-        subtitle: '',
-        content: '',
-        tags: '',
-        date: new Date().toISOString().split('T')[0]
-      });
-
-      // Clear success message after 3 seconds
-      setTimeout(() => setStatus(''), 3000);
-
-    } catch (error) {
+  
+    const formattedTags = post.tags.split(',').map(tag => tag.trim()).filter(Boolean).join(', ');
+    
+    const { data, error } = await apiClient.post(API.BLOG.POSTS, {
+      ...post,
+      tags: formattedTags
+    });
+  
+    if (error) {
       console.error('Error saving post:', error);
       setStatus('Error saving post. Please try again.');
+      return;
     }
-  };
+  
+    setStatus('Post saved successfully!');
+    
+    // Reset form
+    setPost({
+      title: '',
+      subtitle: '',
+      content: '',
+      tags: '',
+      date: new Date().toISOString().split('T')[0]
+    });
+  
+    // Clear success message after 3 seconds
+    setTimeout(() => setStatus(''), 3000);
+  }
 
   return (
+    <ErrorBoundary>
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -139,5 +134,6 @@ export default function PostEditor() {
         </form>
       </CardContent>
     </Card>
+    </ErrorBoundary>
   );
 }

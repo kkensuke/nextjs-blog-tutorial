@@ -2,10 +2,14 @@
 
 import React, { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Shield, Clock } from 'lucide-react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card/card';
+import Loading from '@/components/common/Loading';
+import { Shield } from 'lucide-react';
 import { loadStripe } from '@stripe/stripe-js';
 import { STORE_CONFIG } from '@/lib/shop/config';
+import { apiClient } from '@/lib/api/client';
+import { API } from '@/config/constants';
+
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
@@ -36,32 +40,24 @@ function CheckoutContent() {
     try {
       setIsLoading(true);
       setError(null);
-
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          planId: plan.id,
-          priceId: plan.stripePriceId, // Send the Stripe Price ID
-        }),
+  
+      const { data, error: apiError } = await apiClient.post(API.SHOP.CHECKOUT, {
+        planId: plan.id,
+        priceId: plan.stripePriceId,
       });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+  
+      if (apiError) {
+        throw new Error(apiError);
       }
-
-      const { sessionId } = await response.json();
-      
+  
       // Redirect to Stripe Checkout
       const stripe = await stripePromise;
       if (!stripe) throw new Error('Stripe failed to load');
-
+  
       const { error } = await stripe.redirectToCheckout({
-        sessionId,
+        sessionId: data.sessionId,
       });
-
+  
       if (error) {
         throw error;
       }
@@ -118,10 +114,7 @@ function CheckoutContent() {
               className="mt-6 w-full rounded-lg bg-blue-500 py-3 font-medium text-white transition-all hover:bg-blue-600 disabled:opacity-50"
             >
               {isLoading ? (
-                <span className="flex items-center justify-center gap-2">
-                  <Clock className="h-4 w-4 animate-spin" />
-                  Processing...
-                </span>
+                <Loading size="sm" text="Processing..." variant="primary" className="py-1" />
               ) : (
                 'Proceed to Payment'
               )}

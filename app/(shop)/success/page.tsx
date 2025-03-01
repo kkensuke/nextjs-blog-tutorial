@@ -2,9 +2,11 @@
 
 import React, { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card/card';
+import Loading from '@/components/common/Loading';
 import { Check, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { API } from '@/config/constants';
 
 // Separate component for the success content
 function SuccessContent() {
@@ -22,7 +24,7 @@ function SuccessContent() {
     }
 
     // Verify the checkout session
-    fetch(`/api/verify-session?session_id=${sessionId}`)
+    fetch(`${API.SHOP.VERIFY}?session_id=${sessionId}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
@@ -120,15 +122,7 @@ function SuccessContent() {
 
 // Loading fallback component
 function LoadingFallback() {
-  return (
-    <div className="flex min-h-[60vh] items-center justify-center">
-      <Card className="w-full max-w-md">
-        <CardContent className="pt-6">
-          <p className="text-center text-slate-600">Loading...</p>
-        </CardContent>
-      </Card>
-    </div>
-  );
+  return <Loading fullWidth text="Verifying your order..." variant="primary" />;
 }
 
 // Main page component

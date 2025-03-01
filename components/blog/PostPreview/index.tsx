@@ -1,11 +1,13 @@
 import React from 'react';
 import Link from "next/link";
 import { Calendar, Tag, ArrowRight } from 'lucide-react';
-import { PostMetadata } from "@/lib/blog/PostMetadata";
+import { PostMetadata } from "@/lib/blog/types";
+import { LIMITS } from '@/config/constants';
 
 const PostPreview = (props: PostMetadata) => {
-  const moreThan100 = props.subtitle.length > 100;
-  const subtitle = props.subtitle.slice(0, 100) + (moreThan100 ? "..." : "");
+  const moreThan = props.subtitle.length > LIMITS.POST_EXCERPT_LENGTH;
+  const subtitle = props.subtitle.slice(0, LIMITS.POST_EXCERPT_LENGTH) + 
+  (moreThan ? "..." : "");
 
   return (
     <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white will-change-transform hover:bg-slate-50">

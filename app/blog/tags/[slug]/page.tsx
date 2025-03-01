@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Bookmark, Pencil } from 'lucide-react';
-import { PostMetadata } from '@/lib/blog/PostMetadata';
-import PostPreview from "@/components/blog/preview/PostPreview";
+import { PostMetadata } from '@/lib/blog/types';
+import PostPreview from "@/components/blog/PostPreview";
 import getPostMetadata from "@/lib/blog/getPostMetadata";
 import getAllTags from '@/lib/blog/getAllTags';
 

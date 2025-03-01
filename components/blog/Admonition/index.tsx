@@ -1,6 +1,6 @@
 import React from 'react';
-import LinkCard from './link';
-import './admonitions.css'
+import LinkCard from './LinkCard';
+import './admonition.css'
 import { FaRocket } from 'react-icons/fa';
 import { PiNotePencilBold } from "react-icons/pi";
 import { FaFire } from "react-icons/fa";

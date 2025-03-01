@@ -10,15 +10,19 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import React from "react";
-// import rehypeMathjax from 'rehype-mathjax';
 
+import { Suspense } from 'react';
+import { FEATURES } from '@/config/constants';
+import Comment from "@/components/blog/Comment/Comment";
+import Loading from '@/components/common/Loading';
+import ErrorBoundary from "@/components/common/ErrorBoundary";
 import getPostMetadata from "@/lib/blog/getPostMetadata";
-import TOC from "@/components/blog/content/toc/index";
-import Pre from "@/components/blog/content/Pre";
-import CustomImage from "@/components/blog/content/img";
+import TOC from "@/components/blog/TableOfContents/index";
+import Pre from "@/components/blog/CodeBlock";
+import CustomImage from "@/components/blog/Image";
 // import AdmonitionComponents from "@/components/blog/content/admonition/index";
-import AdmonitionComponents from "@/components/blog/content/admonition/pale";
-import { remarkTextDirectives, TextDirectiveComponents } from '@/components/blog/content/directive';
+import AdmonitionComponents from "@/components/blog/Admonition/pale";
+import { remarkTextDirectives, TextDirectiveComponents } from '@/components/blog/Directive';
 
 
 const getPostContent = (slug: string) => {
@@ -30,7 +34,7 @@ const getPostContent = (slug: string) => {
 };
 
 
-const PostPage = (props: any) => {
+const PostContent = (props: any) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   
@@ -82,30 +86,47 @@ const PostPage = (props: any) => {
           {titleSection}
         </div>
         
-        <article className="post prose mx-auto">
-          <Markdown
-            children={post.content}
-            remarkPlugins={[
-              remarkGfm,
-              remarkDirective,
-              remarkDirectiveRehype,
-              remarkTextDirectives,
-              remarkMath
-            ]}
-            rehypePlugins={[
-              rehypeSlug,
-              rehypeKatex
-            ]}
-            components={components}
-          />
-        </article>
+        <ErrorBoundary fallback={
+          <div className="prose mx-auto p-6 text-center">
+            <h3>Failed to render post content</h3>
+            <p>We encountered an error while rendering this post's content.</p>
+          </div>
+        }>
+          <article className="post prose mx-auto">
+            <Markdown
+              children={post.content}
+              remarkPlugins={[
+                remarkGfm,
+                remarkDirective,
+                remarkDirectiveRehype,
+                remarkTextDirectives,
+                remarkMath
+              ]}
+              rehypePlugins={[
+                rehypeSlug,
+                rehypeKatex
+              ]}
+              components={components}
+            />
+          </article>
+        </ErrorBoundary>
       </div>
       
     </div>
   );
 };
-export default PostPage;
 
+export default function PostPage(props: any) {
+  return (
+    <>
+      <Suspense fallback={<Loading fullWidth text="Loading post..." />}>
+        <PostContent {...props} />
+      </Suspense>
+      
+      {FEATURES.ENABLE_COMMENTS && <Comment />}
+    </>
+  );
+}
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();

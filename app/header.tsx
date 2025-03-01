@@ -6,6 +6,8 @@ import { BsCart3 } from "react-icons/bs";
 import { BookOpen } from 'lucide-react';
 import { IoCameraOutline } from "react-icons/io5";
 import { SiGithub } from 'react-icons/si';
+import { ROUTES } from '@/config/constants';
+import { SITE_CONFIG } from '@/config/site';
 
 
 const GradientWithIcon = () => (
@@ -21,12 +23,12 @@ const Header = () => {
   const SelectedTitle = GradientWithIcon;
 
   const navItems = [
-    { label: <AiOutlineHome size={26}/>,  title: 'Home', href: '/' },
-    { label: <Pencil size={24}/>,  title: 'Blog', href: '/blog' },
-    { label: <BsCart3 size={26}/>,  title: 'Products', href: '/products' },
-    { label: <BookOpen size={26}/>,  title: 'Publications', href: '/publications' },
-    { label: <IoCameraOutline size={29}/>,  title: 'Photos', href: '/photos' },
-    { label: <SiGithub size={24}/>,  title: 'GitHub', href: 'https://github.com/kkensuke/nextjs-blog-tutorial' },
+    { label: <AiOutlineHome size={26}/>,  title: 'Home', href: ROUTES.HOME },
+    { label: <Pencil size={24}/>,  title: 'Blog', href: ROUTES.BLOG },
+    { label: <BsCart3 size={26}/>,  title: 'Products', href: ROUTES.PRODUCTS },
+    { label: <BookOpen size={26}/>,  title: 'Publications', href: ROUTES.PUBLICATIONS },
+    { label: <IoCameraOutline size={29}/>,  title: 'Photos', href: ROUTES.PHOTOS },
+    { label: <SiGithub size={24}/>,  title: 'GitHub', href: SITE_CONFIG.social.github },
   ];
 
   return (

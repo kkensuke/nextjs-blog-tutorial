@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkCard from './link';
+import LinkCard from './LinkCard';
 
 interface AdmonitionProps {
   title: string;

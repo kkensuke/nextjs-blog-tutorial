@@ -1,7 +1,9 @@
 import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { FEATURES } from "@/config/constants";
 import Header from "./header";
 import Footer from "./footer";
+import ErrorBoundary from "@/components/common/ErrorBoundary";
 
 interface Props {
   children: React.ReactNode;
@@ -12,12 +14,13 @@ export default function RootLayout({ children }: Props) {
     <html>
       <head />
       <body>
+        <ErrorBoundary>
           <Header />
           <div className="min-h-[93vh] px-2">
             {children}
           </div>
           <Footer />
-          <Analytics />
+          {FEATURES.ENABLE_ANALYTICS && <Analytics />}
           <script
             data-name="BMC-Widget"
             data-cfasync="false"
@@ -30,6 +33,7 @@ export default function RootLayout({ children }: Props) {
             data-x_margin="18"
             data-y_margin="18"
           ></script>
+        </ErrorBoundary>
       </body>
     </html>
   );
