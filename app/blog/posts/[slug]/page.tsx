@@ -20,9 +20,9 @@ import getPostMetadata from "@/lib/blog/getPostMetadata";
 import TOC from "@/components/blog/TableOfContents/index";
 import Pre from "@/components/blog/CodeBlock";
 import CustomImage from "@/components/blog/Image";
-// import AdmonitionComponents from "@/components/blog/content/admonition/index";
-import AdmonitionComponents from "@/components/blog/Admonition/pale";
-import { remarkTextDirectives, TextDirectiveComponents } from '@/components/blog/Directive';
+import AdmonitionComponents from "@/components/blog/Admonition/admonitionColor1";
+// import AdmonitionComponents from "@/components/blog/Admonition/admonitionColor2";
+import { remarkTextDirectives, TextDirectiveComponents } from '@/components/blog/Admonition/directive';
 
 
 const getPostContent = (slug: string) => {
