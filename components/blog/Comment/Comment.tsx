@@ -12,7 +12,7 @@ const Comment = () => {
     scriptElem.src = "https://utteranc.es/client.js";
     scriptElem.async = true;
     scriptElem.crossOrigin = "anonymous";
-    scriptElem.setAttribute("repo", "kkensuke/nextjs-blog-tutorial.github.io");
+    scriptElem.setAttribute("repo", "kkensuke/nextjs-blog-tutorial");
     scriptElem.setAttribute("issue-term", "pathname");
     scriptElem.setAttribute("label", "blog-comment");
     scriptElem.setAttribute("theme", "github-dark");
