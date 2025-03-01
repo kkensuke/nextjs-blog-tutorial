@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-const DEFAULT_FAVICON_SIZE = 48;
+const DEFAULT_FAVICON_SIZE = 64;
 
 interface LinkCardProps {
   children: React.ReactNode;
@@ -69,7 +69,7 @@ const LinkCard = ({ children }: LinkCardProps) => {
       rel="noopener noreferrer"
       className="my-4 block rounded-2xl border border-slate-300 bg-white px-4 no-underline hover:border-slate-400 hover:bg-slate-50"
     >
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2">
         {/* URL Details */}
         <div className="flex-1 overflow-hidden">
           <p className="text-md truncate font-semibold text-slate-900">
@@ -80,19 +80,19 @@ const LinkCard = ({ children }: LinkCardProps) => {
           </p>
         </div>
 
-        {/* Image Section (right-aligned and 20% width) */}
-        <div className="w-1/5 flex-shrink-0">
+        {/* Image Section (right-aligned) */}
+        <div className="w-2/5 flex-shrink-0">
           {metaData.imageUrl ? (
             <img
               src={metaData.imageUrl}
               alt="Preview"
-              className="mx-auto h-20 rounded-lg border-slate-300 object-cover"
+              className="mx-auto my-1 h-32 rounded-sm border-slate-300 object-cover"
             />
           ) : (
             <img
               src={`https://www.google.com/s2/favicons?domain=${metaData.domain}&sz=${DEFAULT_FAVICON_SIZE}`}
               alt="favicon"
-              className="h-10 w-10 rounded-lg border border-slate-300"
+              className="my-1 h-32 rounded-sm border border-slate-300"
             />
           )}
         </div>
