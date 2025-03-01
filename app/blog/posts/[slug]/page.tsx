@@ -123,7 +123,9 @@ export default function PostPage(props: any) {
         <PostContent {...props} />
       </Suspense>
       
-      {FEATURES.ENABLE_COMMENTS && <Comment />}
+      <div className="mb-28">
+        {FEATURES.ENABLE_COMMENTS && <Comment />}
+      </div>
     </>
   );
 }

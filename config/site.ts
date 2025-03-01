@@ -25,6 +25,7 @@ export const SITE_CONFIG = {
 export const BLOG_CONFIG = {
   postsPerPage: 10,
   featuredCategories: ['tutorial', 'tech', 'personal'],
+  comment_repo: 'kkensuke/nextjs-blog-tutorial',
 };
 
 export const THEME = {

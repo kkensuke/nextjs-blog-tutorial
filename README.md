@@ -14,3 +14,5 @@
 - remark-gfm package (footnote, strikethrough, tasklist, table, etc.)
 - Buy me a coffee widget
 - Stripe payment
+- Comment section (utterances)
+- Analytics (Vercel Analytics)
