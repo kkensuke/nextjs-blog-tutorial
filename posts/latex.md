@@ -9,7 +9,7 @@ tags: [Markdown, Latex]
 
 1. **Simple Inline Equations:**
     :::simple
-    ```latex:markdown
+    ```latex[title=markdown]
     Here are some inline equations:
     - Area of a circle: $A = \pi r^2$
     - Quadratic formula: $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
@@ -25,7 +25,7 @@ tags: [Markdown, Latex]
 
 2. **Basic Block Equations:**
     :::simple
-    ```latex:markdown
+    ```latex[title=markdown]
     The Gaussian integral:
     $$
     \int_{-\infty}^\infty e^{-x^2} dx = \sqrt{\pi}
@@ -43,7 +43,7 @@ tags: [Markdown, Latex]
 
 1. **Matrix Operations:**
     :::simple
-    ```latex:markdown
+    ```latex[title=markdown]
     $$
     \begin{pmatrix}
         a & b \\
@@ -78,7 +78,7 @@ tags: [Markdown, Latex]
 
 2. **Multi-line Equations with Alignment:**
     :::simple
-    ```latex:markdown
+    ```latex[title=markdown]
     $$
     \begin{align}
         (x + y)^3 &= (x + y)(x + y)^2 \\
@@ -101,7 +101,7 @@ tags: [Markdown, Latex]
 
 1. **Set Theory and Logic:**
     :::simple
-    ```latex:markdown
+    ```latex[title=markdown]
     $$
     \begin{align}
         A \cap (B \cup C) &= (A \cap B) \cup (A \cap C) \\
@@ -122,7 +122,7 @@ tags: [Markdown, Latex]
 
 2. **Calculus and Series:**
     :::simple
-    ```latex:markdown
+    ```latex[title=markdown]
     $$
     \begin{align}
         \frac{d}{dx}\left[\int_a^x f(t)dt\right] &= f(x) \\
@@ -145,7 +145,7 @@ tags: [Markdown, Latex]
 
 1. **Euler's Identity:**
     :::simple
-    ```latex:markdown
+    ```latex[title=markdown]
     The most beautiful equation in mathematics:
     $$
         e^{i\pi} + 1 = 0
@@ -161,7 +161,7 @@ tags: [Markdown, Latex]
 
 2. **Important Mathematical Functions:**
     :::simple
-    ```latex:markdown
+    ```latex[title=markdown]
     $$
     \begin{align}
         \zeta(s) &= \sum_{n=1}^{\infty} \frac{1}{n^s} \quad \text{(Riemann zeta function)} \\

@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/Card/card';
-import { PencilIcon, SaveIcon } from 'lucide-react';
+import { PencilIcon, SaveIcon, ImageIcon } from 'lucide-react';
 import ErrorBoundary from '@/components/common/ErrorBoundary';
 import { apiClient } from '@/lib/api/client';
 import { API } from '@/config/constants';
+import ImageUploadPanel, { UploadedImage } from './ImageUploadPanel';
 
 export default function PostEditor() {
   const [post, setPost] = useState({
@@ -16,6 +17,9 @@ export default function PostEditor() {
     date: new Date().toISOString().split('T')[0]
   });
   const [status, setStatus] = useState('');
+  const [showImageUploader, setShowImageUploader] = useState(true);
+  const [uploadedImages, setUploadedImages] = useState<UploadedImage[]>([]);
+  const markdownEditorRef = useRef<HTMLTextAreaElement>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -30,7 +34,12 @@ export default function PostEditor() {
   
     if (error) {
       console.error('Error saving post:', error);
-      setStatus('Error saving post. Please try again.');
+      // Check if the error is about a duplicate title
+      if (error.includes('already exists')) {
+        setStatus('Error: A post with this title already exists. Please use a different title.');
+      } else {
+        setStatus('Error saving post. Please try again.');
+      }
       return;
     }
   
@@ -44,10 +53,50 @@ export default function PostEditor() {
       tags: '',
       date: new Date().toISOString().split('T')[0]
     });
+    
+    // Clear uploaded images
+    setUploadedImages([]);
   
     // Clear success message after 3 seconds
     setTimeout(() => setStatus(''), 3000);
   }
+
+  const handleInsertImageUrl = (url: string) => {
+    if (!markdownEditorRef.current) return;
+
+    const textarea = markdownEditorRef.current;
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    
+    // Get image name if we can match it from our uploads
+    const image = uploadedImages.find(img => img.url === url);
+    const imageAlt = image ? image.name : 'Image';
+    
+    // Create markdown image syntax with a new line after it
+    const imageMarkdown = `![${imageAlt}](${url})\n`;
+    
+    // Insert at cursor position or replace selected text
+    const newContent = 
+      post.content.substring(0, start) + 
+      imageMarkdown +
+      post.content.substring(end);
+    
+    setPost({
+      ...post,
+      content: newContent
+    });
+    
+    // Set focus back to textarea and place cursor on the new line after inserted text
+    setTimeout(() => {
+      textarea.focus();
+      const newCursorPosition = start + imageMarkdown.length;
+      textarea.setSelectionRange(newCursorPosition, newCursorPosition);
+    }, 0);
+  };
+
+  const toggleImageUploader = () => {
+    setShowImageUploader(!showImageUploader);
+  };
 
   return (
     <ErrorBoundary>
@@ -104,8 +153,30 @@ export default function PostEditor() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">Content (Markdown)</label>
+            <div className="flex items-center justify-between">
+              <label className="block text-sm font-medium text-gray-700">Content (Markdown)</label>
+              <button
+                type="button"
+                onClick={toggleImageUploader}
+                className="flex items-center gap-1 rounded-md bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 hover:bg-slate-200"
+              >
+                <ImageIcon size={14} />
+                {showImageUploader ? 'Hide Image Manager' : 'Show Image Manager'}
+              </button>
+            </div>
+            
+            {showImageUploader && (
+              <div className="mb-4 mt-2 rounded-lg border border-gray-200 p-4">
+                <ImageUploadPanel 
+                  onImageUrlCopy={handleInsertImageUrl} 
+                  uploadedImages={uploadedImages}
+                  setUploadedImages={setUploadedImages}
+                />
+              </div>
+            )}
+            
             <textarea
+              ref={markdownEditorRef}
               value={post.content}
               onChange={(e) => setPost({ ...post, content: e.target.value })}
               rows={15}
