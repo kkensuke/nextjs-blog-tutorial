@@ -31,13 +31,13 @@ Before diving into language-specific conventions, let's establish the fundamenta
 Python's naming conventions are outlined in [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/), the official style guide for Python code.
 
 ### Package Names
-- **Convention**: All-lowercase names
-- **Pattern**: `lowercase`
+- **Convention**: All-lowercase names, preferably short single words
+- **Pattern**: `lowercase` (preferred), `lowercase_with_underscores` (acceptable for multi-word packages)
 - **Examples**:
   - ✅ `requests`
   - ✅ `numpy`
+  - ✅ `my_package` (acceptable though single-word is preferred)
   - ❌ `MyPackage`
-  - ❌ `my_package`
 
 ### Module Names
 - **Convention**: All-lowercase with optional underscores
@@ -167,7 +167,10 @@ Python's naming conventions are outlined in [PEP 8 – Style Guide for Python Co
 - **Variables/Functions**: camelCase
 - **Classes**: PascalCase
 - **Constants**: UPPERCASE_WITH_UNDERSCORES
-- **Private Fields**: #prefixed
+- **Private Fields**: #prefixed (e.g., `#privateField`)
+- **Acronyms**: Two approaches:
+  - Treat as single word: `htmlParser`, `jsonData` (increasingly preferred in modern style guides)
+  - All caps: `HTMLParser`, `JSONData` (still common in many codebases)
 - **Examples**:
   ```javascript
   // Variables
@@ -187,42 +190,13 @@ Python's naming conventions are outlined in [PEP 8 – Style Guide for Python Co
 
   // Constants
   const MAX_ATTEMPTS = 3;
+  
+  // Acronyms - both styles shown
+  const jsonParser = new JSONParser();
+  const htmlElement = document.querySelector('div');
   ```
 
-### Java
-- **Variables/Methods**: camelCase
-- **Classes/Interfaces**: PascalCase
-- **Constants**: UPPERCASE_WITH_UNDERSCORES
-- **Packages**: lowercase.with.dots
-- **Examples**:
-  ```java
-  package com.example.project;
 
-  public class UserProfile {
-      private static final int MAX_ATTEMPTS = 3;
-      private String userName;
-      
-      public String getUserName() {
-          return userName;
-      }
-  }
-  ```
-
-### C#
-- **Variables/Methods**: camelCase
-- **Classes/Interfaces**: PascalCase
-- **Properties**: PascalCase
-- **Private Fields**: _camelCase
-- **Examples**:
-  ```csharp
-  public class UserProfile
-  {
-      private string _firstName;
-      public string FirstName { get; set; }
-      
-      public string GetFullName() {}
-  }
-  ```
 
 ## Abbreviations and Acronyms
 
@@ -322,8 +296,6 @@ transform = lambda x, y: (x * y) + (x / y)  # Better as a named function
 ### Style Checkers
 - Python: `pylint`, `flake8`
 - JavaScript: `eslint`
-- Java: `checkstyle`
-- C#: StyleCop
 
 ### Documentation
 - [PEP 8](https://peps.python.org/pep-0008/) - Python Style Guide
