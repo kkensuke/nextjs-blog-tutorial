@@ -1,7 +1,7 @@
 ---
 title: "Moving Between Finder, Terminal, and VScode"
 date: "2024-10-31"
-subtitle: "You often want to quickly move between Finder, Terminal, and VScode. Here are the methods to do so."
+subtitle: "Moving Between Finder, Terminal, and VScode"
 tags: [Mac, Finder, Terminal]
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: "Finder, Terminal, VScode 間の移動"
+title: "Finder, Terminal, VScode 間を簡単に移動する方法"
 date: "2024-10-31"
-subtitle: "Finder, Terminal, VScode 間をパッと移動したいことがよくあると思います。そのための方法を以下にまとめました。"
+subtitle: "Finder, Terminal, VScode 間を簡単に移動する方法"
 tags: [Mac, Finder, Terminal]
 ---
 

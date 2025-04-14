@@ -1,7 +1,7 @@
 ---
 title: "Firefox"
 date: "2024-10-31"
-subtitle: "A guide to using admonitions in Markdown."
+subtitle: "Firefox の便利な機能と設定"
 tags: [Firefox, Browser]
 ---
 
@@ -49,12 +49,12 @@ tags: [Firefox, Browser]
     - スクロールできる範囲全体を選択
 ![SCR-20230625-muis.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/90edc24f-23d0-6f96-520c-d8a829745611.png)
 
-1. Reader View: :btn[opt] + :btn[cmd] + :btn[R]
+6. Reader View: :btn[opt] + :btn[cmd] + :btn[R]
 Webページの無駄を取り除き、読みやすさを向上させます。
 
-1. デバイスの同期
+7. デバイスの同期
 
-2. `userChrome.css` でブラウザの見た目をカスタマイズできます。
+8. `userChrome.css` でブラウザの見た目をカスタマイズできます。
 
 
 
@@ -96,7 +96,7 @@ https://addons.mozilla.org/en-US/firefox/addon/doqment/
 
 doqment はPDF ビューアで PDF を見やすい色に変更できます。
 :::warning
-この拡張機能を有効にして PDF を閲覧している際は後述の `Zotero Connector` を使うことができません。PDF 以外を開いている場合では問題ありません。
+この拡張機能を有効にして PDF を閲覧している際は後述の `Zotero Connector` を使うことができません。PDF 以外を開いている場合は問題ありません。
 :::
 ::::
 
