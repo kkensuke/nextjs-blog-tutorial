@@ -23,12 +23,16 @@ Espanso は、Windows、macOS、Linux で動作し、正規表現、シェルス
 
 
 ## インストール
+:::linkcard
 https://espanso.org/docs/install/mac/
+:::
 
 インストールしたら、アプリを開きます。そして、ターミナルを開き、コマンドで `espanso status` を実行して動いているか確認しましょう。
 
 ## 設定
-https://espanso.org/docs/getting-started/
+:::linkcard
+https://espanso.org/docs/get-started/
+:::
 
 Espanso の設定は主に2つのファイルで行います。
 
@@ -81,15 +85,15 @@ matches:
 
 `match/base.yml` を変更したら、それを反映させるためにメニューバーで `Reload` をするか、コマンドで `espanso restart` を実行しましょう。
 
-::: note warn
+:::warning
 望まないスニペットの作動を防ぐために、`:` や `;` などの普段は使わない記号を接頭辞に用いると良いです。
 :::
 
-::: note warn
+:::warning
 `:a` を登録すると `:as` や `:ad` といったトリガーは使えなくなります。なぜなら、`:a` を入力した段階で別のテキストに置換されるからです。このようなことを防ぐために、短すぎるトリガーの設定は避けた方が良いです。
 :::
 
-::: note
+:::tip
 `match` ディレクトリにある全ての `.yml` ファイルは読み込まれるので、用途に応じてファイルを細かく分割することもできます。
 :::
 
@@ -192,7 +196,9 @@ matches:
     replace: "{{three}}"
 ```
 
-例えば、同じディレクトリの階層にある `params.yml` ファイルで、よく用いるグローバル変数を定義しておき、メインのファイルでインポートして使用することができます。espanso のディレクトリを GitHub などで管理したいが、一部プライベートなパラメーターを含むような場合は、それらを `params.yml` に入れておき、`params.yml` を `.gitignore` に追加する方法があります。
+
+espanso のディレクトリを GitHub などで管理したいが、一部プライベートなパラメーターを含むような場合は、`params.yml` に入れておき、`params.yml` を `.gitignore` に追加する方法があります。`match` ディレクトリにある `*.yml` ファイルは全て読み込まれます。それ以外の場合は、直接パスを指定して import することもできます。
+
 
 ```sh
 esnpanso/
@@ -203,9 +209,10 @@ esnpanso/
     params.yml
 ```
 
-```base.yml
+```yml
+# base.yml
 imports:
-  - "params.yml"
+  - "paths/to/your.yml"
 
 matches:
   - trigger: ":hello"
@@ -243,7 +250,7 @@ matches:
         type: "clipboard"
 ```
 
-::: note
+:::tip
 各トリガーにクリップボード変数を定義するのが面倒な方は、`global_vars` に定義しておくと良いです。
 :::
 
@@ -318,7 +325,7 @@ matches:
           cmd: "open -a Terminal.app; echo 'code ~/github/dotfiles/espanso/'"
 ```
 
-::: note warn
+:::warning
 以下のように、直接呼び出す書き方もできますが、最初に開かれているファイルの一部が消される可能性があります。
 ```yml
   - trigger: ";espanso"
@@ -395,7 +402,7 @@ Youtube を開くトリガー。デフォルトのブラウザで開きます。
 ```
 
 
-::: note
+:::tip
 指示を変更すれば、いろいろな種類のトリガーを作成できます！
 :::
 

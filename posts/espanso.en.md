@@ -5,33 +5,31 @@ subtitle: "Free and open-source text expander for Windows, macOS, and Linux"
 tags: [Snippets]
 ---
 
+
 ## [Espanso](https://espanso.org/)
-Espanso is a free, open-source, cross-platform text expander. With Espanso, you can instantly input long text by typing short keywords. This makes it easy to input text that you need to repeat frequently. It's faster and more feature-rich than Mac's built-in text replacement.
+Espanso is an open-source, free-to-use, cross-platform snippet app. With Espanso, you can instantly input long text by simply typing short keywords. This makes it easy to enter text that you need to type repeatedly. It's faster and more feature-rich than the standard Mac text replacement feature.
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/1beaf074-0f49-9d46-a9c1-df9602a1d95a.png)
 
-Espanso works on Windows, macOS, and Linux, supporting advanced features like regular expressions and shell scripts.
+Espanso works on Windows, macOS, and Linux, and supports advanced features like regular expressions and shell scripts.
 
 ![ezgif-1-5219cff875.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/c93e4c1d-18ef-9f17-0db9-9f4e5eff6e08.gif)
 
 ![ezgif-1-6d58091dfc.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/833f40ee-47d5-74e9-5bfd-df46d212664e.gif)
-
-
-
 
 ## Installation
 :::linkcard
 https://espanso.org/docs/install/mac/
 :::
 
-After installation, open the app. Verify it's running by executing `espanso status` in the terminal.
+After installation, open the app. Then, open your terminal and run the command `espanso status` to check if it's running.
 
 ## Configuration
 :::linkcard
 https://espanso.org/docs/get-started/
 :::
 
-Espanso's configuration primarily uses two files:
+Espanso's configuration is mainly done in two files:
 
 ```sh
 espanso/
@@ -41,37 +39,36 @@ espanso/
     base.yml
 ```
 
-The `espanso` directory location varies by OS and can be found using `espanso path`:
+The location of the `espanso` directory varies by OS and can be found using the command `espanso path`:
 
-- Linux: `$XDG_CONFIG_HOME/espanso` (e.g. `/home/user/.config/espanso`)
-- MacOS: `$HOME/Library/Application Support/espanso`
-- Windows: `{FOLDERID_RoamingAppData}\espanso`
+-   Linux: `$XDG_CONFIG_HOME/espanso` (e.g. `/home/user/.config/espanso`)
+-   MacOS: `$HOME/Library/Application Support/espanso` (e.g. `/Users/user/Library/Application Support/espanso`)
+-   Windows: `{FOLDERID_RoamingAppData}\espanso` (e.g. `C:\Users\user\AppData\Roaming\espanso`)
 
-Initially, `config/default.yml` doesn't need configuration.
-To hide the menubar icon, add `show_icon: false`.
-
+Initially, you usually don't need to configure anything in the `config/default.yml` file.
+If you want to hide the menu bar icon, you can write `show_icon: false`.
 
 ## Usage
-Configure snippets in `match/base.yml`.
+Snippet settings are written in the `match/base.yml` file.
 
-Basic syntax:
+Basically, you write them using the following syntax:
 ```yml
-matches: 
+matches:
   - trigger: ":hello"
     replace: "world"
 
-# Multiple lines
+# Multi-line
   - trigger: ":hello"
     replace: "line1\nline2"
 
-# Multiple lines (preserved formatting)
+# Multi-line
   - trigger: ":include newlines"
     replace: |
               exactly as you see
               will appear these three
               lines of poetry
 
-# Single line (folded newlines)
+# No newlines (folded)
   - trigger: ":fold newlines"
     replace: >
               this is really a
@@ -79,19 +76,22 @@ matches:
               despite appearances
 ```
 
-After modifying `match/base.yml`, click `Reload` in the menubar or run `espanso restart`.
+After changing `match/base.yml`, either select `Reload` from the menu bar or run the command `espanso restart` in the terminal to apply the changes.
 
 :::warning
-- Use prefixes like `:` or `;` to prevent unwanted triggers
-- Avoid short triggers like `:a` as they prevent longer triggers (`:as`, `:ad`) from working
+To prevent unwanted snippet activation, it's a good idea to use symbols you don't normally use, like `:` or `;`, as prefixes.
 :::
 
-:::note
-All `.yml` files in the `match` directory are loaded, allowing organization by purpose.
+:::warning
+If you register `:a`, triggers like `:as` or `:ad` will no longer work. This is because typing `:a` will immediately replace it with other text. To prevent this, it's best to avoid setting triggers that are too short.
+:::
+
+:::tip
+All `.yml` files in the `match` directory are loaded, so you can also split files into smaller ones according to their purpose.
 :::
 
 ## Dynamic Matches
-Example: `:now` outputs current time like `It's 11:29`:
+With the following setting, typing `:now` will convert it to the current time, like `It's 11:29`.
 
 ```yml
   - trigger: ":now"
@@ -104,7 +104,7 @@ Example: `:now` outputs current time like `It's 11:29`:
 ```
 
 ## Word Matches
-Use `word: true` to prevent unwanted replacements:
+With the basic `trigger` and `match` setup, unwanted expansions can occur. For example, if you want the trigger `ther` to expand to `there`, typing `other` would also trigger the expansion, resulting in `othere`. To prevent this, add the `word: true` option as shown below.
 
 ```yml
   - trigger: "ther"
@@ -112,15 +112,16 @@ Use `word: true` to prevent unwanted replacements:
     word: true
 ```
 
-## Cursor Hints
-Set cursor position after replacement using `$|$`:
+## Cursor Hint
+After the text is expanded, you can specify the cursor position using `$|$`.
 
 ```yml
   - trigger: ":div"
     replace: <div>$|$</div>
 ```
 
-## Multiple Replacements for One Trigger
+## One Trigger, Multiple Replacements
+
 ```yml
   - trigger: ":quote"
     replace: "Every moment is a fresh beginning."
@@ -130,13 +131,13 @@ Set cursor position after replacement using `$|$`:
     replace: "Whatever you do, do it well."
 ```
 
-## Multiple Triggers for One Replacement
+## Multiple Triggers, One Replacement
 ```yml
   - triggers: [":hello", ":hi"]
     replace: "world"
 ```
 
-## Multiple Triggers for Multiple Replacements
+## Multiple Triggers, Multiple Replacements
 ```yml
   - triggers: [":ok",":emoji"]
     replace: "👍"
@@ -149,37 +150,14 @@ Set cursor position after replacement using `$|$`:
 ```
 
 ## Image Matches
+
 ```yml
   - trigger: ":cat"
     image_path: "$CONFIG/images/cat.png"
 ```
 
-## Shell Extension
-Execute shell commands and output results:
-
-```yml
-  - trigger: ":shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo 'Hello from your shell'"
-```
-
-Example getting public IP from ipify:
-```yml
-  - trigger: ":ip"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "curl 'https://api.ipify.org'"
-```
-
 ## Global Variables
-Set commonly used variables globally:
+If you have variables that are commonly used across `match`es, setting them as global variables is convenient for making changes.
 
 ```yml
 global_vars:
@@ -208,25 +186,220 @@ matches:
     replace: "{{three}}"
 ```
 
-You can import global variables from other files:
+If you want to manage your espanso directory with Git (e.g., on GitHub) but it contains some private parameters, you can put them in `params.yml` and add `params.yml` to your `.gitignore` file. ;traAll `*.yml` files in the `match` directory will be loaded. Otherwise, you can import files by specifying the path directly.
+
+
+```sh
+espanso/
+  config/
+    default.yml
+  match/
+    base.yml
+    params.yml
+```
+
 
 ```yml
+# base.yml
 imports:
-  - "/path/to/other/matchsets.yml"
+  - "path/to/your.yml"
 
 matches:
   - trigger: ":hello"
     replace: "{{greet}} Jon"
 ```
 
-## Script Extension
-Execute external scripts:
+## Clipboard Extension
+You can include the content of the clipboard in the expanded output. This eliminates the need for a separate paste operation.
 
-```python[title=script.py]
+For example, if you want to create an HTML `<a>` tag using a link you just copied, define the trigger as follows:
+```yml
+  - trigger: ":aref"
+    replace: "<a href='{{clip}}' />$|$</a>"
+    vars:
+      - name: "clip"
+        type: "clipboard"
+```
+
+Markdown trigger example:
+```yml
+  - trigger: ";mdlink"
+    replace: "[$|$]({{clip}})"
+    vars:
+      - name: "clip"
+        type: "clipboard"
+
+  - trigger: ";mdcode"
+    replace: |
+          ```
+          {{clip}}
+          ```
+    vars:
+      - name: "clip"
+        type: "clipboard"
+```
+
+:::tip
+If defining the clipboard variable for each trigger is cumbersome, it's a good idea to define it in `global_vars`.
+:::
+
+## Shell Extension
+You can also execute shell commands and output their results.
+
+```yml
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+```
+
+The following example is a trigger that gets your public IP from ipify.
+```yml
+  - trigger: ":ip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "curl 'https://api.ipify.org'"
+```
+
+The following example is a trigger that generates a UUID (Universally Unique Identifier).
+```yml
+  - trigger: ";uuid"
+    replace: "{{output}}"
+    vars:
+    - name: output
+      type: shell
+      params:
+        # macOS,Linux:
+        cmd: "uuidgen"
+        # Windows (requires PowerShell):
+        # cmd: "powershell -command \"[guid]::NewGuid().ToString()\""
+```
+
+The following multiple examples deviate from the app's original purpose but are triggers for opening apps, websites, or files.
+
+First, triggers to open a terminal or a specific folder.
+```yml
+  - trigger: ";term"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "open -a Terminal.app"
+
+  - trigger: ";dotfile"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "open ~/github/dotfiles/"
+```
+
+A trigger to open the `espanso` directory in VSCode via the terminal. The terminal will open, and `code ~/github/dotfiles/espanso/` will be typed, so pressing Enter will open it.
+```yml
+  - trigger: ";espanso"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "open -a Terminal.app; echo 'code ~/github/dotfiles/espanso/'"
+```
+
+:::warning
+You can also write it to call directly as shown below, but there's a possibility that part of the currently open file might be erased.
+```yml
+  - trigger: ";espanso"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "code ~/github/dotfiles/espanso/"
+```
+:::
+
+A trigger to create a new file with `CotEditor.app` and open it.
+```yml
+  - trigger: ";newfile"
+    replace: "{{output}}"
+    vars:
+      - name: uuid
+        type: shell
+        params:
+          cmd: "uuidgen"
+      - name: output
+        type: shell
+        params:
+          cmd: "cd ~/Desktop; touch {{uuid}}.md; open /Applications/CotEditor.app {{uuid}}.md"
+```
+
+A trigger to open YouTube. It opens in the default browser.
+```yml
+  - trigger: ";you"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "open 'https://www.youtube.com/'"
+```
+
+A trigger to search for the content copied to the clipboard.
+```yml
+  - trigger: ";ggl"
+    replace: "{{output}}"
+    vars:
+      - name: "clip"
+        type: "clipboard"
+      - name: output
+        type: shell
+        params:
+          cmd: "open 'https://www.google.com/search?q={{clip}}'"
+```
+
+A trigger to translate the content copied to the clipboard using Google Gemini. Please define `GEMINI_API_KEY` in `global_vars` before using.
+```yml
+  - trigger: ";transen"
+    replace: "{{translation}}"
+    vars:
+      - name: translation
+        type: shell
+        params:
+          cmd: >
+            curl -s \
+              "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={{GEMINI_API_KEY}}" \
+              -H 'Content-Type: application/json' \
+              -X POST \
+              -d '{
+                    "contents": [{
+                      "parts": [{"text": "Translate the following to English. Provide ONLY the translated text, no explanations or markdown: {{clipboard}}"}]
+                    }]
+                  }' \
+            | jq -r '.candidates[0].content.parts[0].text | split("\n")[0]'
+```
+
+:::tip
+By changing the command, you can create various kinds of triggers!
+:::
+
+## Script Extension
+You can also execute external scripts and receive their results.
+
+`script.py`
+```py
 print("Hello from python")
 ```
 
-```yml[title=match/base.yml]
+`base.yml`
+```yml
   - trigger: ":pyscript"
     replace: "{{output}}"
     vars:
@@ -239,7 +412,7 @@ print("Hello from python")
 ```
 
 ## Form Extension
-Generate forms from triggers:
+You can also generate a form from a trigger and create text based on a template.
 
 ```yml
   - trigger: ":greet"
@@ -248,10 +421,9 @@ Generate forms from triggers:
       Happy Birthday!
 ```
 
-![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/0d085e75-b23a-70af-604d-834d64d961d5.png "width=250px radius=1.3")
+![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/0d085e75-b23a-70af-604d-834d64d961d5.png)
 
-
-Example email template form:
+The following setting creates the expanded text from an email template form.
 ```yml
 matches:
   - trigger: ";reply"
@@ -277,10 +449,9 @@ matches:
           - sentence 4
 ```
 
-![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/adbd6d0e-377d-4072-8148-6904f2580930.png "width=600px radius=0.8")
+![screenshot.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/adbd6d0e-377d-4072-8148-6904f2580930.png)
 
-
-Complex form example - Todo item creation:
+As a more complex example of using forms, you can create a Todo item like this:
 ```yml
 global_vars:
   - name: "today"
@@ -290,7 +461,10 @@ global_vars:
   - name: "day1"
     type: shell
     params:
+      # For macOS/Linux (BSD date)
       cmd: "date -v+1d '+%Y/%m/%d'"
+      # For GNU date (common on Linux)
+      # cmd: "date -d '+1 day' '+%Y/%m/%d'"
   - name: "day2"
     type: shell
     params:
@@ -311,7 +485,6 @@ global_vars:
     type: shell
     params:
       cmd: "date -v+6d '+%Y/%m/%d'"
-
 
 matches:
   - trigger: ";todo"
@@ -346,352 +519,14 @@ matches:
 
 ![SCR-20240618-qyki.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/414636/932694e0-8a4f-5c6d-8f57-d7bb38eca3de.png)
 
+## Examples
 
-## Example
-```yml[title=match/base.yml]
-imports:
-  - "params.yml"
-
-
-matches:
-
-# Espanso
-  - trigger: ";trg"
-    replace: "  - trigger: \"\"\n  replace: \"\"$|$"
-
-
-# Private
-  - trigger: ";name"
-    replace: "{{name}}"
-  - trigger: ";Name"
-    replace: "{{Name}}"
-
-  - trigger: ";m1"
-    replace: "{{email1}}"
-  - trigger: ";m2"
-    replace: "{{email2}}"
-
-  - trigger: ";tonai"
-    replace: "{{address1}}"
-  - trigger: ";jikka"
-    replace: "{{address2}}"
-
-
-# Business
-  - trigger: ";contact"
-    replace: |
-            Phone:   03-1234-5678
-            Email: example@example.com
-
-
-# Symbols
-  - trigger: ";ctrl"
-    replace: "⌃"
-  - trigger: ";cmd"
-    replace: "⌘"
-  - trigger: ";shift"
-    replace: "⇧"
-  - trigger: ";opt"
-    replace: "⌥"
-  - trigger: ";kall"
-    replace: "⌃⌥⇧⌘"
-
-
-# Emoji
-  - triggers: [";ok",";emoji"]
-    replace: "👍"
-  - triggers: [";ok",";emoji"]
-    replace: "✅"
-  - triggers: [";up",";emoji"]
-    replace: "⬆️"
-  - triggers: [";down",";emoji"]
-    replace: "⬇️"
-  - triggers: [";pc",";emoji"]
-    replace: "🧑‍💻"
-  - triggers: [";pc",";emoji"]
-    replace: "💻"
-  - triggers: [";bow",";emoji"]
-    replace: "🙇"
-  - triggers: [";bow",";emoji"]
-    replace: "🙇‍♂️"
-  - triggers: [";smile",";emoji"]
-    replace: "😊"
-  - triggers: [";sw",";emoji"]
-    replace: "😅"
-  - triggers: [";sw",";emoji"]
-    replace: "💦"
-  - triggers: [";ll",";emoji"]
-    replace: "😂"
-  - triggers: [";tear",";emoji"]
-    replace: "🥲"
-  - triggers: [";glass",";emoji"]
-    replace: "😎"
-  - triggers: [":think",":emoji"]
-    replace: "🤔"
-  - triggers: [";cry",";emoji"]
-    replace: "😭"
-  - triggers: [";exp",";emoji"]
-    replace: "🤯"
-  - triggers: [";sleep",";emoji"]
-    replace: "😪"
-  - triggers: [";sleep",";emoji"]
-    replace: "😴"
-  - triggers: [";sheep",";emoji"]
-    replace: "🐑"
-
-
-## ChatGPT
-  - trigger: ";summ"
-    replace: "Please summarize the following text: "
-  - trigger: ";how"
-    replace: "Please explain how to $|$"
-  - trigger: ";mail"
-    replace: "Please write an email about the following topic politely: "
-
-
-# math
-# Multiplication. Usage: ;mul(43,533)
-  - regex: ";mul\\((?P<num1>.*),(?P<num2>.*)\\)"
-    replace: "{{result}}"
-    vars:
-      - name: result
-        type: shell
-        params:
-          cmd: "expr $ESPANSO_NUM1 '*' $ESPANSO_NUM2"
-# Division. Usage: ;div(533,43)
-  - regex: ";div\\((?P<num1>.*),(?P<num2>.*)\\)"
-    replace: "{{result}}"
-    vars:
-      - name: result
-        type: shell
-        params:
-          cmd: "expr $ESPANSO_NUM1 / $ESPANSO_NUM2"
-# Power. Usage: ;pow(5,9)
-  - regex: ";pow\\((?P<num1>.*),(?P<num2>.*)\\)"
-    replace: "{{result}}"
-    vars:
-      - name: result
-        type: shell
-        params:
-          cmd: "echo $[$ESPANSO_NUM1 ** $ESPANSO_NUM2]"
-# Square Root. Usage: ;sqrt(643459)
-  - regex: ";sqrt\\((?P<num>.*)\\)"
-    replace: "{{result}}"
-    vars:
-      - name: result
-        type: shell
-        params:
-          cmd: "echo $[$ESPANSO_NUM ** 0.5]"
-
-
-
-# programming
-  - trigger: ";local"
-    replace: "localhost:3000/"
-
-  - trigger: ";lorem"
-    replace: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Donec sed odio operae, eu vulputate felis rhoncus. Salutantibus vitae elit libero, a pharetra augue. Nihil hic munitissimus habendi senatus locus, nihil horum? A communi observantia non est recedendum."
-
-
-# markdown
-  - trigger: "-["
-    replace: "- [ ] "
-
-  - trigger: ";["
-    replace: "[$|$]()"
-
-  - trigger: ";br"
-    replace: "<br/>"
-
-  - trigger: "``js"
-    replace: "```javascript\n$|$\n```"
-
-  - trigger: "``pt"
-    replace: "```plaintext\n$|$\n```"
-
-  - trigger: "``sh"
-    replace: "```shell\n$|$\n```"
-
-  - trigger: "``ts"
-    replace: "```typescript\n$|$\n```"
-
-  - trigger: "``y"
-    replace: "```yaml\n$|$\n```"
-
-
-# Latex
-  - trigger: ";fr"
-    replace: "\\frac{$|$}{}"
-
-  - trigger: ";sq"
-    replace: "\\sqrt{$|$}"
-
-  - trigger: ";cd"
-    replace: "\\cdot"
-
-  - trigger: ";align"
-    replace: |
-            \begin{align}
-            #    $|$
-            #    &= \\
-            #    &= 
-            \end{align}
-
-  - trigger: ";lfig"
-    replace: |
-            \begin{figure}[H]
-                \centering
-                \includegraphics[width=10cm]{$|$.pdf}
-                \caption{}
-                \label{fig:}
-            \end{figure}
-
-  - trigger: ";lth"
-    replace: |
-            \begin{theorem}
-                $|$
-                \begin{align}
-                \end{align}
-            \end{theorem}
-
-  - regex: ";lit"
-    replace: |
-            \begin{itemize}
-            %    \item $|$
-            \end{itemize}
-
-
-# Python
-  - trigger: ";np"
-    replace: "import numpy as np"
-
-  - trigger: ";mat"
-    replace: "import matplotlib.pyplot as plt"
-
-  - trigger: ";class"
-    replace: |
-            class Name:
-                def __init__(self, , ):
-                    self. = 
-                    self. = 
-            
-                def method(self):
-                    pass
-
-  - trigger: ";open"
-    replace: |
-            with open('example.txt', 'r') as file:
-                content = file.read()
-                print(content)
-            
-            with open('example.txt', 'w') as file:
-                file.write('New content')
-
-  - trigger: ";pkl"
-    replace: |
-            import pickle
-            
-            # Function to save data to a file using pickle
-            def save_data(data, filename):
-                try:
-                    with open(filename, 'wb') as f:
-                        pickle.dump(data, f)
-                    print(f"Data saved to {filename} successfully.")
-                except IOError:
-                    print(f"Error saving data to {filename}.")
-            
-            # Function to load data from a file using pickle
-            def load_data(filename):
-                try:
-                    with open(filename, 'rb') as f:
-                        data = pickle.load(f)
-                    print(f"Data loaded from {filename} successfully.")
-                    return data
-                except IOError:
-                    print(f"Error loading data from {filename}.")
-                    return None
-            
-            # Save data
-            save_data(example_data, 'example_data.pkl')
-            
-            # Load data
-            loaded_data = load_data('example_data.pkl')
-
-  - trigger: ";plot"
-    replace: |
-            plt.plot(, , color="black", linestyle='dashed', marker="o")
-            plt.xlabel("", fontsize=18)
-            plt.ylabel("$\partial_{\\theta} C$", fontsize=18)
-            plt.xticks(fontsize=18)
-            plt.yticks(fontsize=18)
-            # plt.ylim([1e-7, 1e-0])
-            plt.legend(bbox_to_anchor=(1.01, 1), loc="upper left", fontsize=18)
-            plt.title(f"", fontsize=18)
-            # plt.savefig(f"{}", bbox_inches="tight")
-            plt.show()
-
-
-# date
-  - trigger: ";today"
-    replace: "{{today}}"
-    vars:
-      - name: today
-        type: date
-        params:
-          format: "%Y/%m/%d"
-
-  - trigger: ";tomorrow"
-    replace: "{{tomorrow}}"
-    vars:
-      - name: tomorrow
-        type: shell
-        params:
-          cmd: "date -v+1d '+%Y/%m/%d'"
-
-  - trigger: ";time"
-    replace: "{{time}}"
-    vars:
-      - name: time
-        type: date
-        params:
-          format: "%H:%M"
-
-
-# Print the output of a shell command
-  - trigger: ";shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo 'Hello from your shell'"
-
-
-# Lookup word definition using Free Dictionary API. Use like ;def(word)
-  - regex: ";def\\((?P<word>.*)\\)"
-    replace: "{{definition}}"
-    vars:
-      - name: definition
-        type: shell
-        params:
-          cmd: "curl -s https://api.dictionaryapi.dev/api/v2/entries/en/$ESPANSO_WORD | grep -o '\"definition\":\"[^\"]*\"' | head -n 1 | sed 's/\"definition\":\"\\([^\"]*\\)\"/\\1/'"
-
-
-# Outputs public IP address
-  - trigger: ";ip"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "curl 'https://api.ipify.org'"
-```
-
-## Using Packages
-Install packages using commands like `espanso install html-utils-package`. Packages are simple and easy to create. Find useful packages at 
+Examples of triggers that couldn't be included here can be found in the following repository:
 :::linkcard
-https://hub.espanso.org/html-utils-package
+https://github.com/kkensuke/dotfiles/tree/main/espanso/match
 :::
 
-## Conclusion
-There are many more features not covered here - check the [documentation](https://espanso.org/docs/matches/basics/) for more information.
+Alternatively, the following site is also helpful:
+:::linkcard
+https://ee.qqv.com.au/usage/cookbook/
+:::
