@@ -157,7 +157,7 @@ After the text is expanded, you can specify the cursor position using `$|$`.
 ```
 
 ## Global Variables
-If you have variables that are commonly used across `match`es, setting them as global variables is convenient for making changes.
+If you have variables that are commonly used across `matches`, setting them as global variables is convenient for making changes.
 
 ```yml
 global_vars:
@@ -186,7 +186,7 @@ matches:
     replace: "{{three}}"
 ```
 
-If you want to manage your espanso directory with Git (e.g., on GitHub) but it contains some private parameters, you can put them in `params.yml` and add `params.yml` to your `.gitignore` file. ;traAll `*.yml` files in the `match` directory will be loaded. Otherwise, you can import files by specifying the path directly.
+If you want to manage your espanso directory with Git (e.g., on GitHub) but it contains some private parameters, you can put them in `params.yml` and add `params.yml` to your `.gitignore` file. All `*.yml` files in the `match` directory will be loaded. Otherwise, you can import files by specifying the path directly.
 
 
 ```sh
@@ -302,10 +302,11 @@ First, triggers to open a terminal or a specific folder.
           cmd: "open ~/github/dotfiles/"
 ```
 
-A trigger to open the `espanso` directory in VSCode via the terminal. The terminal will open, and `code ~/github/dotfiles/espanso/` will be typed, so pressing Enter will open it.
+A trigger to open the `espanso` directory in VSCode via the terminal. The terminal will open, and `code ~/github/dotfiles/espanso/` will be executed in the terminal.
+
 ```yml
   - trigger: ";espanso"
-    replace: "{{output}}"
+    replace: "{{output}}\n"
     vars:
       - name: output
         type: shell

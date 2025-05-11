@@ -314,10 +314,10 @@ matches:
           cmd: "open ~/github/dotfiles/"
 ```
 
-ターミナルを経由し、VScode で `espanso` ディレクトリを開くトリガー。ターミナルが開き、`code ~/github/dotfiles/espanso/` と入力されるので、エンターキーを押すと開きます。
+ターミナルを経由し、VScode で `espanso` ディレクトリを開くトリガー。ターミナルが開き、`code ~/github/dotfiles/espanso/` が実行されます。
 ```yml
   - trigger: ";espanso"
-    replace: "{{output}}"
+    replace: "{{output}}\n"
     vars:
       - name: output
         type: shell
