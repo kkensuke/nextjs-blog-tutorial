@@ -1,65 +1,69 @@
 import React from 'react';
 import Link from 'next/link';
-import { Mail, FileText, ArrowRight, ExternalLink } from 'lucide-react';
+import { Mail, FileText, ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
 import { SiGithub } from 'react-icons/si';
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto mt-16 max-w-screen-md px-4">      
+    <div className="container mx-auto mt-8 max-w-screen-lg px-4 pb-16">      
       {/* Hero Section */}
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 px-6 py-16 text-center text-white shadow-xl md:px-12 md:py-24">
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-8 py-20 text-center text-white shadow-2xl md:px-16 md:py-28">
         <div className="relative z-10">
-          <h1 className="bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-4xl font-bold text-transparent md:text-6xl">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm">
+            <Sparkles className="h-4 w-4 text-yellow-300" />
+            <span className="text-sm font-medium">Welcome</span>
+          </div>
+          
+          <h1 className="mb-6 bg-gradient-to-r from-blue-200 via-cyan-200 to-teal-200 bg-clip-text text-5xl font-bold text-transparent md:text-7xl">
             Hi, I'm Ken! 👋
           </h1>
-          <p className="mt-6 text-lg text-slate-300">
-            Welcome to my corner of the web where I share my journey in development.
+          
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
+            Welcome to my corner of the web where I share my journey in development, design, and creative exploration.
           </p>
-          <div className="mt-8 flex justify-center gap-4">
-            <a href="https://github.com/kkensuke/nextjs-blog-tutorial" target="_blank" className="flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20">
-              {SiGithub({ size: 18 })}
-              GitHub
+          
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <a 
+              href="https://github.com/kkensuke/nextjs-blog-tutorial" 
+              target="_blank"
+              className="group flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 font-medium text-white backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/20"
+            >
+              {SiGithub({ size: 20 })}
+              <span>GitHub</span>
             </a>
-            <Link href="/blog" className="flex items-center gap-2 rounded-full bg-blue-500 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-blue-600">
-              <ArrowRight size={18} />
-              Read Blog
+            <Link 
+              href="/blog"
+              className="group flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 font-medium text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50"
+            >
+              <span>Read Blog</span>
+              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20"></div>
+        
       </section>
 
       {/* About Section */}
-      <section className="mt-16 rounded-2xl border border-slate-200 bg-white p-6 md:p-10">
-        {/* Header */}
-        <div className="flex items-center gap-3">
-          <h2 className="text-2xl font-bold text-slate-800 md:text-3xl">About Me</h2>
-          <div className="h-px flex-1 bg-slate-200"></div>
+      <section className="mt-16 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md md:p-12">
+        <div className="mb-8 flex items-center gap-3">
+          <div className="h-1 w-12 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">About Me</h2>
         </div>
 
-        {/* Main Content */}
-        <div className="mt-6">
-          {/* Bio Column */}
-          <div className="md:col-span-2 md:pr-6">
-            <p className="text-lg leading-relaxed text-slate-600">
-              I am a passionate web developer with experience in building modern web applications. 
-              I love working with the latest technologies and constantly learning new things.
-            </p>
-            
-            {/* Skills Tags */}
-            <div className="mt-6 flex flex-wrap gap-2">
-              {[
-                'Python',
-                'C++',
-                'TypeScript',
-                'React',
-                'Next.js',
-                'Tailwind CSS',
-                'PostgreSQL',
-              ].map((tech) => (
+        <div className="space-y-8">
+          <p className="text-lg leading-relaxed text-slate-600">
+            I am a passionate web developer with experience in building modern web applications. 
+            I love working with the latest technologies and constantly learning new things.
+          </p>
+          
+          {/* Skills Tags */}
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">Technical Skills</h3>
+            <div className="flex flex-wrap gap-2">
+              {['Python', 'C++', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'PostgreSQL'].map((tech) => (
                 <span 
                   key={tech}
-                  className="rounded-full bg-slate-100 px-3 py-1 text-sm text-slate-700"
+                  className="group rounded-full bg-gradient-to-r from-slate-100 to-slate-50 px-4 py-2 text-sm font-medium text-slate-700 ring-1 ring-slate-200 transition-all hover:scale-105 hover:shadow-md"
                 >
                   {tech}
                 </span>
@@ -67,82 +71,104 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Contact Column */}
-          <div className="mt-7 grid gap-4 sm:grid-cols-2">
-            <a href="/cv.pdf" download className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600 transition-all hover:bg-slate-100">
-              <FileText size={18} />
-              <span>Download CV</span>
+          {/* Contact Grid */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            <a 
+              href="/cv.pdf" 
+              download 
+              className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 transition-all hover:border-blue-300 hover:shadow-md"
+            >
+              <div className="rounded-lg bg-blue-100 p-2 text-blue-600 transition-colors group-hover:bg-blue-200">
+                <FileText size={20} />
+              </div>
+              <span className="font-medium text-slate-700">Download CV</span>
             </a>
 
-            <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600">
-              <Mail size={18} />
-              <span className="text-sm">example.12345 [at] gmail.com</span>
+            <a 
+              href="https://github.com/kkensuke/nextjs-blog-tutorial" 
+              target="_blank"
+              className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 transition-all hover:border-slate-300 hover:shadow-md"
+            >
+              <div className="rounded-lg bg-slate-100 p-2 text-slate-700 transition-colors group-hover:bg-slate-200">
+                {SiGithub({ size: 20 })}
+              </div>
+              <span className="font-medium text-slate-700">GitHub Profile</span>
+            </a>
+
+            <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4">
+              <div className="rounded-lg bg-slate-100 p-2 text-slate-600">
+                <Mail size={20} />
+              </div>
+              <span className="text-sm text-slate-600">example.12345(at)gmail.com</span>
             </div>
 
-            <a href="https://github.com/kkensuke/nextjs-blog-tutorial" target="_blank" className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 text-slate-600 transition-all hover:bg-slate-100">
-              {SiGithub({ size: 18 })}
-              <span>GitHub Profile</span>
-            </a>
-
-            <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-3 font-medium text-slate-600">
-              <span>📍 Tokyo, Japan</span>
+            <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4">
+              <span className="text-2xl">📍</span>
+              <span className="font-medium text-slate-700">Tokyo, Japan</span>
             </div>
           </div>
-          
         </div>
       </section>
 
       {/* Projects Section */}
-      <section className="mt-16 rounded-2xl border border-slate-200 bg-white p-6 md:p-10">
-        <h2 className="text-2xl font-bold text-slate-800 md:text-3xl">Featured Projects</h2>
-        <div className="mt-8 space-y-8">
-          <div className="group rounded-xl border border-slate-200 p-6 transition-all hover:bg-slate-50">
-            <Link href="/projects/project1" className="block">
+      {/*
+      <section className="mt-16 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md md:p-12">
+        <div className="mb-8 flex items-center gap-3">
+          <div className="h-1 w-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></div>
+          <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">Featured Projects</h2>
+        </div>
+        
+        <div className="space-y-4">
+          {[
+            { title: "Project 1", desc: "A web application built with React and Tailwind CSS", link: "/projects/project1" },
+            { title: "Project 2", desc: "A full-stack application using Next.js and Prisma", link: "/projects/project2" }
+          ].map((project) => (
+            <Link 
+              key={project.title}
+              href={project.link}
+              className="group block rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-6 transition-all hover:border-slate-300 hover:shadow-lg"
+            >
               <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-slate-800">Project 1</h3>
-                  <p className="mt-2 text-slate-600">A web application built with React and Tailwind CSS</p>
+                <div className="flex-1">
+                  <h3 className="mb-2 text-xl font-semibold text-slate-900 transition-colors group-hover:text-blue-600">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-600">{project.desc}</p>
                 </div>
-                <ExternalLink size={20} className="text-slate-400 transition-colors group-hover:text-slate-900" />
+                <ExternalLink 
+                  size={20} 
+                  className="text-slate-400 transition-all group-hover:translate-x-1 group-hover:text-blue-500" 
+                />
               </div>
             </Link>
-          </div>
-
-          <div className="group rounded-xl border border-slate-200 p-6 transition-all hover:bg-slate-50">
-            <Link href="/projects/project2" className="block">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-xl font-semibold text-slate-800">Project 2</h3>
-                  <p className="mt-2 text-slate-600">A full-stack application using Next.js and Prisma</p>
-                </div>
-                <ExternalLink size={20} className="text-slate-400 transition-colors group-hover:text-slate-900" />
-              </div>
-            </Link>
-          </div>
+          ))}
         </div>
       </section>
+      */}
 
-      {/* Products Link */}
-      <Link href="/products">
-        <section className="mt-16 rounded-xl border border-slate-200 p-6 transition-all hover:bg-slate-50">        
-          <h2 className='text-xl font-bold'>View Products</h2>
-        </section>
-      </Link>
-      
-      {/* Publications Link */}
-      <Link href="/publications">
-        <section className="mt-16 rounded-xl border border-slate-200 p-6 transition-all hover:bg-slate-50">        
-          <h2 className='text-xl font-bold'>View Publications</h2>
-        </section>
-      </Link>
-      
-      {/* Photos Section */}
-      <Link href="/photos">
-        <section className="my-16 rounded-xl border border-slate-200 p-6 transition-all hover:bg-slate-50">        
-          <h2 className='text-xl font-bold'>View Photos</h2>
-        </section>
-      </Link>
-      
+      {/* Quick Links Grid */}
+      <div className="mt-16 grid gap-4 md:grid-cols-3">
+        {[
+          { title: "Products", href: "/products" },
+          { title: "Publications", href: "/publications" },
+          { title: "Photos", href: "/photos" }
+        ].map((item) => (
+          <Link 
+            key={item.title}
+            href={item.href}
+            className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:scale-105 hover:shadow-lg"
+          >
+            <div className="relative flex items-center justify-between">
+              <h3 className="text-xl font-bold text-slate-900">{item.title}</h3>
+              <ArrowRight 
+                size={24} 
+                className="text-slate-400 transition-all group-hover:translate-x-2 group-hover:text-slate-900" 
+              />
+            </div>
+          </Link>
+        ))}
+      </div>
+    
     </div>
   );
-};
+}
