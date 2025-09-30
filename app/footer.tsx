@@ -5,11 +5,30 @@ import { Pencil } from 'lucide-react';
 import { BsCart3 } from "react-icons/bs";
 import { BookOpen } from 'lucide-react';
 import { IoCameraOutline } from "react-icons/io5";
-import { SiGithub, SiTwitter, SiLinkedin, SiGmail } from 'react-icons/si';
+import { SiGithub, SiLinkedin, SiGmail } from 'react-icons/si';
+import { FaXTwitter } from "react-icons/fa6";
 import { ExternalLink } from 'lucide-react';
+import { IconType } from 'react-icons';
+import { LucideIcon } from 'lucide-react';
+
+// Define types for the footer links
+type FooterLinkWithIcon = {
+  label: string;
+  icon: IconType | LucideIcon;
+  href: string;
+};
+
+type FooterLinkNoIcon = {
+  label: string;
+  href: string;
+};
 
 const Footer = () => {
-  const footerLinks = {
+  const footerLinks: {
+    explore: FooterLinkWithIcon[];
+    social: FooterLinkWithIcon[];
+    tech: FooterLinkNoIcon[];
+  } = {
     explore: [
       { label: 'Home', icon: AiOutlineHome, href: '/' },
       { label: 'Blog', icon: Pencil, href: '/blog' },
@@ -18,7 +37,7 @@ const Footer = () => {
       { label: 'Photos', icon: IoCameraOutline, href: '/photos' }
     ],
     social: [
-      { label: 'X', icon: SiTwitter, href: 'https://x.com' },
+      { label: 'X', icon: FaXTwitter, href: 'https://x.com' },
       { label: 'GitHub', icon: SiGithub, href: 'https://github.com/kkensuke/nextjs-blog-tutorial' },
       { label: 'LinkedIn', icon: SiLinkedin, href: 'https://linkedin.com' },
       { label: 'Email', icon: SiGmail, href: 'mailto:email@example.com' }
@@ -32,7 +51,7 @@ const Footer = () => {
 
   return (
     <footer className="mt-auto border-t border-slate-200 bg-white">
-      <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8">
+      <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16">
         <div className="grid justify-evenly gap-8 sm:grid-cols-2 md:grid-cols-4">
           {/* Logo Section */}
           <div className="flex flex-col gap-4">
@@ -55,7 +74,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               {footerLinks.explore.map((link) => {
-                const Icon = link.icon;
+                const Icon = link.icon as React.ComponentType<{ size?: number }>;
                 return (
                   <li key={link.label}>
                     <Link 
@@ -78,7 +97,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               {footerLinks.social.map((link) => {
-                const Icon = link.icon;
+                const Icon = link.icon as React.ComponentType<{ size?: number }>;
                 return (
                   <li key={link.label}>
                     <a 

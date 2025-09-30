@@ -23,12 +23,12 @@ const Header = () => {
   const SelectedTitle = GradientWithIcon;
 
   const navItems = [
-    { label: <AiOutlineHome size={26}/>,  title: 'Home', href: ROUTES.HOME },
-    { label: <Pencil size={24}/>,  title: 'Blog', href: ROUTES.BLOG },
-    { label: <BsCart3 size={26}/>,  title: 'Products', href: ROUTES.PRODUCTS },
-    { label: <BookOpen size={26}/>,  title: 'Publications', href: ROUTES.PUBLICATIONS },
-    { label: <IoCameraOutline size={29}/>,  title: 'Photos', href: ROUTES.PHOTOS },
-    { label: <SiGithub size={24}/>,  title: 'GitHub', href: SITE_CONFIG.social.github },
+    { icon: AiOutlineHome, size: 26, title: 'Home', href: ROUTES.HOME },
+    { icon: Pencil, size: 24, title: 'Blog', href: ROUTES.BLOG },
+    { icon: BsCart3, size: 26, title: 'Products', href: ROUTES.PRODUCTS },
+    { icon: BookOpen, size: 26, title: 'Publications', href: ROUTES.PUBLICATIONS },
+    { icon: IoCameraOutline, size: 29, title: 'Photos', href: ROUTES.PHOTOS },
+    { icon: SiGithub, size: 24, title: 'GitHub', href: SITE_CONFIG.social.github },
   ];
 
   return (
@@ -42,17 +42,19 @@ const Header = () => {
         {/* Navigation */}
         <div className="flex items-center md:gap-4">
           {/* Main nav items */}
-          {navItems.map((item) => (
-            <Link
-              key={typeof item.label === 'string' ? item.label : item.href}
-              title={item.title}
-              href={item.href}
-              className="rounded-md px-2 py-2 text-sm font-medium font-light text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 sm:px-3 sm:text-xl"
-            >
-              {item.label}
-            </Link>
-          ))}
-
+          {navItems.map((item) => {
+            const Icon = item.icon as React.ComponentType<{ size?: number }>;
+            return (
+              <Link
+                key={item.href}
+                title={item.title}
+                href={item.href}
+                className="rounded-md px-2 py-2 text-sm font-light font-medium text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900 sm:px-3 sm:text-xl"
+              >
+                <Icon size={item.size} />
+              </Link>
+            );
+          })}
         </div>
       </nav>
     </header>

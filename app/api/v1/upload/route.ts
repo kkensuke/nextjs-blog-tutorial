@@ -28,7 +28,8 @@ async function parseMultipartForm(request: Request) {
       throw new Error(`File "${file.name}" exceeds the maximum allowed size of ${LIMITS.MAX_UPLOAD_SIZE_MB}MB`);
     }
     
-    const buffer = Buffer.from(await file.arrayBuffer());
+    // const buffer = Buffer.from(await file.arrayBuffer());
+    const buffer = new Uint8Array(await file.arrayBuffer());
     const originalName = file.name;
     const fileExtension = path.extname(originalName);
     const id = uuidv4();

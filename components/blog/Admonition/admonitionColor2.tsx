@@ -22,7 +22,8 @@ const OverviewAdmonition = ({ title, children }: AdmonitionProps) => {
   return (
     <div className="my-3 rounded-xl border bg-red-100 text-slate-600" >
       <div className="flex p-3 text-red-600">
-        <FaRocket className='my-auto mr-2' size={'22'} color={''} /> {title}
+        {FaRocket({ className: 'my-auto mr-2', size: 22 })}
+        {title}
       </div>
       <div className="border-t-2 border-red-500"></div>
       <div className="p-4">{children}</div>
@@ -34,7 +35,8 @@ const NoteAdmonition = ({ title, children }: AdmonitionProps) => {
   return (
     <div className="my-3 rounded-xl border bg-cyan-100 text-slate-600" >
       <div className="flex p-3 text-blue-600">
-        <PiNotePencilBold className='my-auto mr-2' size={'22'} color={''} /> {title}
+        {PiNotePencilBold({ className: 'my-auto mr-2', size: 22 })}
+        {title}
       </div>
       <div className="border-t-2 border-blue-500"></div>
       <div className="p-4">{children}</div>
@@ -46,7 +48,8 @@ const ImportantAdmonition = ({ title, children }: AdmonitionProps) => {
   return (
     <div className="my-3 rounded-xl border bg-yellow-100 text-slate-600" >
       <div className="flex p-3 text-orange-500">
-        <FaFire className='my-auto mr-2' size={'20'} color={''} /> {title}
+        {FaFire({ className: 'my-auto mr-2', size: 20 })}
+        {title}
       </div>
       <div className="border-t-2 border-orange-400"></div>
       <div className="p-4">{children}</div>
@@ -58,7 +61,8 @@ const TipAdmonition = ({ title, children }: AdmonitionProps) => {
   return (
     <div className="my-3 rounded-xl border bg-green-100 text-slate-600" >
       <div className="flex p-3 text-green-600">
-        <FaRegLightbulb className='my-auto mr-2' size={'20'} color={''} /> {title}
+        {FaRegLightbulb({ className: 'my-auto mr-2', size: 20 })}
+        {title}
       </div>
       <div className="border-t-2 border-green-400"></div>
       <div className="p-4">{children}</div>
@@ -70,7 +74,8 @@ const WarningAdmonition = ({ title, children }: AdmonitionProps) => {
   return (
     <div className="my-3 rounded-xl border bg-red-100 text-slate-600" >
       <div className="flex p-3 text-red-500">
-        <ImWarning className='my-auto mr-2' size={'20'} color={''} /> {title}
+        {ImWarning({ className: 'my-auto mr-2', size: 20, color: '' })}
+        {title}
       </div>
       <div className="border-t-2 border-red-500"></div>
       <div className="p-4">{children}</div>
@@ -82,7 +87,8 @@ const CommentAdmonition = ({ title, children }: AdmonitionProps) => {
   return (
     <div className="my-3 rounded-xl border bg-slate-100 text-slate-600" >
       <div className="flex p-3 text-slate-600">
-        <FaRegCommentDots className='my-auto mr-2' size={'20'} color={''} /> {title}
+        {FaRegCommentDots({ className: 'my-auto mr-2', size: 20, color: '' })}
+        {title}
       </div>
       <div className="border-t-2 border-slate-400"></div>
       <div className="p-4">{children}</div>
@@ -94,7 +100,8 @@ const ExampleAdmonition = ({ title, children }: AdmonitionProps) => {
   return (
     <div className="my-3 rounded-xl border bg-purple-100 text-slate-600" >
       <div className="flex p-3 text-purple-600">
-        <AiOutlineExperiment className='my-auto mr-2' size={'22'} color={''} /> {title}
+        {AiOutlineExperiment({ className: 'my-auto mr-2', size: 22, color: '' })}
+        {title}
       </div>
       <div className="border-t-2 border-purple-400"></div>
       <div className="p-4">{children}</div>
@@ -106,7 +113,8 @@ const QuoteAdmonition = ({ title, children }: AdmonitionProps) => {
   return (
     <div className="my-3 rounded-xl border bg-blue-100 italic text-slate-600" >
       <div className="flex p-3 text-blue-600">
-        <FaQuoteLeft className='my-auto mr-2' size={'18'} color={''} /> {title}
+        {FaQuoteLeft({ className: 'my-auto mr-2', size: 18, color: '' })}
+        {title}
       </div>
       <div className="border-t-2 border-blue-500"></div>
       <div className="p-4">{children}</div>
@@ -118,7 +126,8 @@ const QuestionAdmonition = ({ title, children }: AdmonitionProps) => {
   return (
     <div className="my-3 rounded-xl border bg-slate-100 text-slate-600" >
       <div className="flex p-3 text-slate-600">
-        <FaQuestion className='my-auto mr-2' size={'18'} color={''} /> {title}
+        {FaQuestion({ className: 'my-auto mr-2', size: 18, color: '' })}
+        {title}
       </div>
       <div className="border-t-2 border-slate-500"></div>
       <div className="p-4">{children}</div>

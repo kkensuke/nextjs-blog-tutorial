@@ -15,7 +15,7 @@ export const YouTubeEmbed: React.FC<YouTubeProps> = ({ videoId, title = '', embe
     return (
       <div className="relative my-4 w-full overflow-hidden rounded-lg bg-slate-100 pt-[56.25%]">
         <iframe
-          className="absolute top-0 left-0 h-full w-full"
+          className="absolute left-0 top-0 h-full w-full"
           src={`https://www.youtube.com/embed/${videoId}`}
           title={title || 'YouTube video player'}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -32,7 +32,7 @@ export const YouTubeEmbed: React.FC<YouTubeProps> = ({ videoId, title = '', embe
       rel="noopener noreferrer"
       className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 hover:underline"
     >
-      <FaYoutube className="h-[0.9em]"/>
+      {FaYoutube({ className: 'h-[0.9em]', size: 16 })}
       <span>{title || 'Watch on YouTube'}</span>
     </a>
   );
