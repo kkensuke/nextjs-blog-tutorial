@@ -21,7 +21,7 @@ import TOC from "@/components/blog/TableOfContents/index";
 import Pre from "@/components/blog/CodeBlock";
 import CustomImage from "@/components/blog/Image";
 import AdmonitionComponents from "@/components/blog/Admonition/admonitionColor1";
-// import AdmonitionComponents from "@/components/blog/Admonition/admonitionColor2";
+// import AdmonitionComponents from "@/components/blog/Admonition/admonitionColor2"; // Alternative Admonition style
 import { remarkTextDirectives, TextDirectiveComponents } from '@/components/blog/Admonition/directive';
 
 
@@ -71,18 +71,18 @@ const PostContent = (props: any) => {
       <div className="lg:order-1 lg:w-96 lg:min-w-[10px] lg:shrink">
       </div>
       
-      <div className="my-12 mx-auto max-w-screen-sm text-center lg:order-2 lg:hidden">
+      <div className="mx-auto my-12 max-w-screen-sm text-center lg:order-2 lg:hidden">
         {titleSection}
       </div>
       
-      <div className="lg:sticky lg:top-10 lg:order-3 lg:mr-0 lg:ml-8 lg:w-80 lg:shrink-0">
+      <div className="lg:sticky lg:top-10 lg:order-3 lg:ml-8 lg:mr-0 lg:w-80 lg:shrink-0">
           <div className="mx-auto max-w-[400px] lg:mt-10">
             <TOC />
           </div>
       </div>
       
       <div className="lg:order-2 lg:mx-auto lg:shrink-0">
-        <div className="my-12 mx-auto hidden max-w-screen-sm text-center lg:block"> {/* hidden lg:block  <-> lg:hidden */}
+        <div className="mx-auto my-12 hidden max-w-screen-sm text-center lg:block"> {/* hidden lg:block  <-> lg:hidden */}
           {titleSection}
         </div>
         
