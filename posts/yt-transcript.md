@@ -15,7 +15,9 @@ tags: [Python, YouTube, AI, FastAPI]
 - あるいは、「面白そうだが、動画の尺が長いので見る前に要点だけ知りたい」ということもあるでしょう。
 - 今回紹介するのは、YouTube 動画の文字起こしを取得し、さらに Google Gemini API を使って要約まで自動作成してくれる Python ツール（CLI & GUI）です。
 
+:::linkcard
 https://github.com/kkensuke/yt_dlp_transcript
+:::
 
 
 ## 2. このツールでできること

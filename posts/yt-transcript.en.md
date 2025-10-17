@@ -15,8 +15,9 @@ tags: [Python, YouTube, AI, FastAPI]
 - Or perhaps, "This looks interesting, but the video is long, so I want to know just the key points before watching."
 - The tool introduced here is a Python tool (CLI & GUI) that extracts YouTube video transcripts and even automatically creates summaries using the Google Gemini API.
 
+:::linkcard
 https://github.com/kkensuke/yt_dlp_transcript
-
+:::
 
 ## 2. What This Tool Can Do
 ### Main Features
