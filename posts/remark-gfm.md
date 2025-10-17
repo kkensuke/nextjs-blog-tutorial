@@ -68,14 +68,30 @@ Footnotes allow you to add references and additional information without clutter
 
 ### Basic Syntax
 
+:::simple
 ```markdown
 Here's a statement that needs a reference[^1].
-You can also use inline footnotes^[Like this one!].
 
 [^1]: This is the reference text.
 ```
+Here's a statement that needs a reference[^1].
+
+[^1]: This is the reference text.
+:::
 
 ### Examples with Multiple References
+
+:::simple
+```markdown
+Here's a complex example[^1] with multiple footnotes[^2] demonstrating different use cases[^3].
+
+[^1]: First footnote with simple text.
+[^2]: Second footnote with multiple lines:
+    - Supporting point 1
+    - Supporting point 2
+    - Supporting point 3
+[^3]: Third footnote with `code` and [links](https://example.com).
+```
 
 Here's a complex example[^1] with multiple footnotes[^2] demonstrating different use cases[^3].
 
@@ -85,6 +101,7 @@ Here's a complex example[^1] with multiple footnotes[^2] demonstrating different
     - Supporting point 2
     - Supporting point 3
 [^3]: Third footnote with `code` and [links](https://example.com).
+:::
 
 ### Best Practices:
 - Use meaningful reference labels

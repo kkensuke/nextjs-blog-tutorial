@@ -167,6 +167,9 @@ Pythonの命名規則は、Pythonコードの公式スタイルガイドであ�
 ### 3-1 JavaScript/TypeScript
 - **変数/関数**：camelCase
 - **クラス**：PascalCase
+- **Interface**（TypeScript）：PascalCase
+- **型(type)**（TypeScript）：PascalCase
+- **列挙型(enum)**：PascalCase + UPPERCASE
 - **定数**：UPPERCASE_WITH_UNDERSCORES
 - **非公開フィールド**：#接頭辞付き（例：`#privateField`）
 - **頭字語**：二つのアプローチ：
@@ -187,6 +190,21 @@ Pythonの命名規則は、Pythonコードの公式スタイルガイドであ�
       #privateField = 'secret';
       
       constructor() {}
+  }
+
+  // インターフェース
+  interface User {
+      id: string;
+      name: string;
+      email: string;
+  }
+  // 型
+  type UserID = string | number;
+  // 列挙型
+  enum UserRole {
+      ADMIN,
+      USER,
+      GUEST
   }
 
   // 定数
@@ -215,7 +233,6 @@ Pythonの命名規則は、Pythonコードの公式スタイルガイドであ�
 - `init` は「initialize」（初期化）
 - `auth` は「authentication」（認証）
 - `admin` は「administrator」（管理者）
-- `prof` は「professor」（教授）（学術的文脈で）
 
 ### 4-3 頭字語
 - **HTTP**：HyperText Transfer Protocol（ハイパーテキスト転送プロトコル）
