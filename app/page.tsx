@@ -52,7 +52,7 @@ export default function HomePage() {
 
         <div className="space-y-8">
           <p className="text-lg leading-relaxed text-slate-600">
-            I am a passionate web developer with experience in building modern web applications. 
+            I am a PhD student specializing in Quantum Computing and Machine Learning.
             I love working with the latest technologies and constantly learning new things.
           </p>
           
@@ -73,7 +73,7 @@ export default function HomePage() {
 
           {/* Contact Grid */}
           <div className="grid gap-4 sm:grid-cols-2">
-            <a 
+            {/* <a 
               href="/cv.pdf" 
               download 
               className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 transition-all hover:border-blue-300 hover:shadow-md"
@@ -82,7 +82,7 @@ export default function HomePage() {
                 <FileText size={20} />
               </div>
               <span className="font-medium text-slate-700">Download CV</span>
-            </a>
+            </a> */}
 
             <a 
               href="https://github.com/kkensuke/nextjs-blog-tutorial" 
@@ -95,12 +95,12 @@ export default function HomePage() {
               <span className="font-medium text-slate-700">GitHub Profile</span>
             </a>
 
-            <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4">
+            {/* <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4">
               <div className="rounded-lg bg-slate-100 p-2 text-slate-600">
                 <Mail size={20} />
               </div>
               <span className="text-sm text-slate-600">example.12345(at)gmail.com</span>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4">
               <span className="text-2xl">📍</span>
@@ -147,6 +147,7 @@ export default function HomePage() {
       */}
 
       {/* Quick Links Grid */}
+      {/*
       <div className="mt-16 grid gap-4 md:grid-cols-3">
         {[
           { title: "Products", href: "/products" },
@@ -168,7 +169,8 @@ export default function HomePage() {
           </Link>
         ))}
       </div>
-    
+     */}
+     
     </div>
   );
 }

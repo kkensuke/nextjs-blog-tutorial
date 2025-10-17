@@ -25,8 +25,8 @@ const Header = () => {
   const navItems = [
     { icon: AiOutlineHome, size: 26, title: 'Home', href: ROUTES.HOME },
     { icon: Pencil, size: 24, title: 'Blog', href: ROUTES.BLOG },
-    { icon: BsCart3, size: 26, title: 'Products', href: ROUTES.PRODUCTS },
-    { icon: BookOpen, size: 26, title: 'Publications', href: ROUTES.PUBLICATIONS },
+    // { icon: BsCart3, size: 26, title: 'Products', href: ROUTES.PRODUCTS },
+    // { icon: BookOpen, size: 26, title: 'Publications', href: ROUTES.PUBLICATIONS },
     { icon: IoCameraOutline, size: 29, title: 'Photos', href: ROUTES.PHOTOS },
     { icon: SiGithub, size: 24, title: 'GitHub', href: SITE_CONFIG.social.github },
   ];

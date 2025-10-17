@@ -32,15 +32,15 @@ const Footer = () => {
     explore: [
       { label: 'Home', icon: AiOutlineHome, href: '/' },
       { label: 'Blog', icon: Pencil, href: '/blog' },
-      { label: 'Products', icon: BsCart3, href: '/products' },
-      { label: 'Publications', icon: BookOpen, href: '/publications' },
+      // { label: 'Products', icon: BsCart3, href: '/products' },
+      // { label: 'Publications', icon: BookOpen, href: '/publications' },
       { label: 'Photos', icon: IoCameraOutline, href: '/photos' }
     ],
     social: [
-      { label: 'X', icon: FaXTwitter, href: 'https://x.com' },
       { label: 'GitHub', icon: SiGithub, href: 'https://github.com/kkensuke/nextjs-blog-tutorial' },
-      { label: 'LinkedIn', icon: SiLinkedin, href: 'https://linkedin.com' },
-      { label: 'Email', icon: SiGmail, href: 'mailto:email@example.com' }
+      // { label: 'X', icon: FaXTwitter, href: 'https://x.com' },
+      // { label: 'LinkedIn', icon: SiLinkedin, href: 'https://linkedin.com' },
+      // { label: 'Email', icon: SiGmail, href: 'mailto:email@example.com' }
     ],
     tech: [
       { label: 'Next.js', href: 'https://nextjs.org' },
