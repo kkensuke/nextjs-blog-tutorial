@@ -1,11 +1,12 @@
 ---
-title: "Admonitions"
+title: "Admonitions in This Blog’s Markdown"
 date: "2024-10-31"
-subtitle: "A guide to using admonitions and directives in Markdown"
+subtitle: "A guide to using admonitions and directives in this blog’s Markdown files"
 tags: [Markdown, Admonitions]
 ---
 
-This guide explains how to use directives and admonitions in Markdown to create rich, interactive content.
+
+This guide shows how to use admonitions and directives in this blog’s Markdown files to improve content presentation.
 
 ## Inline Directives `:name[label]{attributes}`
 ::::simple{title="Button"}

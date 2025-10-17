@@ -1,7 +1,7 @@
 ---
-title: "Latex in Markdown"
+title: "Latex in This Blog’s Markdown"
 date: "2024-7-5"
-subtitle: "A comprehensive guide to writing mathematical expressions in Markdown"
+subtitle: "A guide to using Latex in this blog’s Markdown files"
 tags: [Markdown, Latex]
 ---
 
