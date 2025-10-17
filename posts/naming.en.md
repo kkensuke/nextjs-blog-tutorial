@@ -167,6 +167,9 @@ Python's naming conventions are outlined in [PEP 8 – Style Guide for Python Co
 - **Variables/Functions**: camelCase
 - **Classes**: PascalCase
 - **Constants**: UPPERCASE_WITH_UNDERSCORES
+- **Interface**（TypeScript）：PascalCase
+- **Type**（TypeScript）：PascalCase
+- **Enum**（TypeScript）：PascalCase + UPPERCASE
 - **Private Fields**: #prefixed (e.g., `#privateField`)
 - **Acronyms**: Two approaches:
   - Treat as single word: `htmlParser`, `jsonData` (increasingly preferred in modern style guides)
@@ -186,6 +189,20 @@ Python's naming conventions are outlined in [PEP 8 – Style Guide for Python Co
       #privateField = 'secret';
       
       constructor() {}
+  }
+  
+  // Interface
+  interface User {
+      id: number;
+      name: string;
+  }
+  // Type
+  type UserID = string | number;
+  // Enum
+  enum UserRole {
+      ADMIN,
+      USER,
+      GUEST
   }
 
   // Constants
@@ -214,7 +231,6 @@ Python's naming conventions are outlined in [PEP 8 – Style Guide for Python Co
 - `init` for "initialize"
 - `auth` for "authentication"
 - `admin` for "administrator"
-- `prof` for "professor" (in academic contexts)
 
 ### 4-3 Acronyms
 - **HTTP**: HyperText Transfer Protocol
