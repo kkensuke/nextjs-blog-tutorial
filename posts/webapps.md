@@ -1,6 +1,6 @@
 ---
 title: "Web Apps"
-date: "2025-10-18"
+date: "2022-10-18"
 subtitle: "Useful Web Apps"
 previewImage: "/images/10-minute-mail.jpeg"
 tags: [App]

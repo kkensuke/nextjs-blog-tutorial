@@ -1,6 +1,6 @@
 ---
 title: "Mac Apps"
-date: "2025-10-18"
+date: "2022-10-18"
 subtitle: "Useful & Free Mac Apps"
 previewImage: "/images/monitorcontrol.jpeg"
 tags: [App]
