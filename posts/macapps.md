@@ -51,7 +51,7 @@ You can check the device battery information of Mac, iPad, and iPhone with `coco
 https://app.diagrams.net/
 :::
 `draw.io` is a free and open source diagram software for making flowchart, network diagrams, and so on. The UI is very simple and easy to use. You can use it from a browser or desktop app. You can put mathematical equations in the diagram with $LaTeX$.
-![Image](/images/haar-int.jpeg "width=500px")
+![Image](/images/drawio.jpeg "width=500px")
 
 
 ## Hand Mirror
