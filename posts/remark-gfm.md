@@ -36,38 +36,29 @@ console.log(String(file))
 ```
 
 ## Autolink Literals
-
 GFM automatically converts URLs and email addresses to links without requiring explicit markdown link syntax.
 
 ### Examples
-
+:::simple
 ```markdown
-# Standard URLs
-www.example.com
-https://example.com
-http://example.com
-
-# Email Addresses
-contact@example.com
-support@example.com
+Visit our website at www.company.com or contact us at support@company.com.
+Follow us on https://twitter.com/company for updates.
 ```
-
-### Real-world Examples:
 
 Visit our website at www.company.com or contact us at support@company.com.
 Follow us on https://twitter.com/company for updates.
+:::
 
 ### Limitations and Best Practices:
 - Autolinks must be surrounded by whitespace
 - URLs with special characters might need explicit linking
 - Some domains might require explicit `http://` or `https://` prefix
 
-## Footnotes
 
+## Footnotes
 Footnotes allow you to add references and additional information without cluttering the main content.
 
 ### Basic Syntax
-
 :::simple
 ```markdown
 Here's a statement that needs a reference[^1].
@@ -79,28 +70,27 @@ Here's a statement that needs a reference[^1].
 [^1]: This is the reference text.
 :::
 
-### Examples with Multiple References
-
+### Examples
 :::simple
 ```markdown
-Here's a complex example[^1] with multiple footnotes[^2] demonstrating different use cases[^3].
+Here's a complex example[^example] with multiple footnotes[^multiple] demonstrating different use cases[^different].
 
-[^1]: First footnote with simple text.
-[^2]: Second footnote with multiple lines:
+[^example]: First footnote with simple text.
+[^multiple]: Second footnote with multiple lines:
     - Supporting point 1
     - Supporting point 2
     - Supporting point 3
-[^3]: Third footnote with `code` and [links](https://example.com).
+[^different]: Third footnote with `code` and [links](https://example.com).
 ```
 
-Here's a complex example[^1] with multiple footnotes[^2] demonstrating different use cases[^3].
+Here's a complex example[^example] with multiple footnotes[^multiple] demonstrating different use cases[^different].
 
-[^1]: First footnote with simple text.
-[^2]: Second footnote with multiple lines:
+[^example]: First footnote with simple text.
+[^multiple]: Second footnote with multiple lines:
     - Supporting point 1
     - Supporting point 2
     - Supporting point 3
-[^3]: Third footnote with `code` and [links](https://example.com).
+[^different]: Third footnote with `code` and [links](https://example.com).
 :::
 
 ### Best Practices:
@@ -109,18 +99,19 @@ Here's a complex example[^1] with multiple footnotes[^2] demonstrating different
 - Consider using inline footnotes for brief additions
 - Order footnotes logically
 
-## Strikethrough
 
+## Strikethrough
 Strikethrough text is useful for showing changes, updates, or deprecated information.
 
 ### Basic Syntax
-
+:::simple
 ```markdown
 ~~Strikethrough text~~
 ```
+~~Strikethrough text~~
+:::
 
-### Use Cases
-
+### Examples
 1. **Showing Changes**:
   - Original price: ~~\$99.99~~ Now: $79.99
 
@@ -133,19 +124,16 @@ Strikethrough text is useful for showing changes, updates, or deprecated informa
   ~~Use legacy API~~ Use new v2 API endpoints
 
 ### Nested Formatting
-
 You can combine strikethrough with other formatting:
 - ~~**Bold strikethrough**~~
 - ~~*Italic strikethrough*~~
 - ~~`code strikethrough`~~
 
-## Tables
 
+## Tables
 Tables in GFM provide flexible ways to organize and present data.
 
-### Alignment Options
-
-#### Left-aligned (Default)
+### Alignment Options: Left-aligned (Default)
 ```markdown
 | Header 1 | Header 2 | Header 3 |
 | - | - | - |
@@ -158,7 +146,7 @@ Tables in GFM provide flexible ways to organize and present data.
 | Row 1 | Data | Data |
 | Row 2 | Data | Data |
 
-#### Right-aligned
+### Alignment Options: Right-aligned
 ```markdown
 | Header 1 | Header 2 | Header 3 |
 | -: | -: | -: |
@@ -171,7 +159,7 @@ Tables in GFM provide flexible ways to organize and present data.
 | Row 1 | Data | Data |
 | Row 2 | Data | Data |
 
-#### Center-aligned
+### Alignment Options: Center-aligned
 ```markdown
 | Header 1 | Header 2 | Header 3 |
 | :-: | :-: | :-: |
@@ -185,8 +173,7 @@ Tables in GFM provide flexible ways to organize and present data.
 | Row 2 | Data | Data |
 
 
-### Advanced Table Features
-#### Mixed Alignment
+### Alignment Options: Mixed Alignment
 ```markdown
 | Left | Center | Right |
 | :- | :-: | -: |
@@ -197,20 +184,6 @@ Tables in GFM provide flexible ways to organize and present data.
 | :- | :-: | -: |
 | Text | Text | Text |
 | Data | Data | Data |
-
-#### Complex Tables with Formatting
-```markdown
-| Feature | Status | Notes |
-| :- | :-: | :- |
-| Basic Tables    | ✅ | **Fully** supported |
-| Mixed Alignment | ✅ | *Partially* supported |
-| Nested Lists    | ❌ | Not supported in tables |
-```
-| Feature | Status | Notes |
-| :- | :-: | :- |
-| Basic Tables    | ✅ | **Fully** supported |
-| Mixed Alignment | ✅ | *Partially* supported |
-| Nested Lists    | ❌ | Not supported in tables |
 
 ### Best Practices for Tables
 1. Keep tables simple and readable
@@ -219,18 +192,21 @@ Tables in GFM provide flexible ways to organize and present data.
 4. Align text left
 5. Use center alignment sparingly
 
-## Tasklists
 
+## Tasklists
 Tasklists (or checklists) are perfect for tracking progress and creating interactive to-do lists.
 
 ### Basic Syntax
-
+:::simple
 ```markdown
 - [ ] Unchecked item
 - [x] Checked item
 ```
+- [ ] Unchecked item
+- [x] Checked item
+:::
 
-### Real-world Examples
+### Examples
 
 #### Project Checklist
 - [ ] Project Setup

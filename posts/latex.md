@@ -97,93 +97,143 @@ tags: [Markdown, Latex]
     $$
     :::
 
-## Special Mathematical Notations
 
-1. **Set Theory and Logic:**
-    :::simple
-    ```latex[title=markdown]
-    $$
-    \begin{align}
-        A \cap (B \cup C) &= (A \cap B) \cup (A \cap C) \\
-        \forall x \in \mathbb{R}, \exists y &: y > x \\
-        P(A|B) &= \frac{P(B|A)P(A)}{P(B)}
-    \end{align}
-    $$
-    ```
-    Output:
-    $$
-    \begin{align}
-        A \cap (B \cup C) &= (A \cap B) \cup (A \cap C) \\
-        \forall x \in \mathbb{R}, \exists y &: y > x \\
-        P(A|B) &= \frac{P(B|A)P(A)}{P(B)}
-    \end{align}
-    $$
-    :::
+## Other examples
 
-2. **Calculus and Series:**
-    :::simple
-    ```latex[title=markdown]
-    $$
-    \begin{align}
-        \frac{d}{dx}\left[\int_a^x f(t)dt\right] &= f(x) \\
-        \sum_{n=0}^{\infty} x^n &= \frac{1}{1-x}, |x| < 1 \\
-        \lim_{x \to 0} \frac{\sin x}{x} &= 1
-    \end{align}
-    $$
-    ```
-    Output:
-    $$
-    \begin{align}
-        \frac{d}{dx}\left[\int_a^x f(t)dt\right] &= f(x) \\
-        \sum_{n=0}^{\infty} x^n &= \frac{1}{1-x}, |x| < 1 \\
-        \lim_{x \to 0} \frac{\sin x}{x} &= 1
-    \end{align}
-    $$
-    :::
+:::simple
+```latex[title=markdown]
+$$
+    A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+$$
+```
+Output:
+$$
+    A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+$$
+:::
 
-## Famous Mathematical Constants and Equations
+:::simple
+```latex[title=markdown]
+$$
+    \forall x \in \mathbb{R}, \exists y : y > x
+$$
+```
+Output:
+$$
+    \forall x \in \mathbb{R}, \exists y : x < y
+$$
+:::
 
-1. **Euler's Identity:**
-    :::simple
-    ```latex[title=markdown]
-    The most beautiful equation in mathematics:
-    $$
-        e^{i\pi} + 1 = 0
-    $$
-    ```
-    Output:
-    
-    The most beautiful equation in mathematics:
-    $$
-        e^{i\pi} + 1 = 0
-    $$
-    :::
+:::simple
+```latex[title=markdown]
+$$
+    P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+$$
+```
+Output:
+$$
+    P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+$$
+:::
 
-2. **Important Mathematical Functions:**
-    :::simple
-    ```latex[title=markdown]
-    $$
-    \begin{align}
-        \zeta(s) &= \sum_{n=1}^{\infty} \frac{1}{n^s} \quad \text{(Riemann zeta function)} \\
-        \Gamma(z) &= \int_0^{\infty} t^{z-1}e^{-t}dt \quad \text{(Gamma function)} \\
-        \vartheta(z) &= \sum_{n=-\infty}^{\infty} e^{-\pi n^2 z} \quad \text{(Theta function)}
-    \end{align}
-    $$
-    ```
-    Output:
-    $$
-    \begin{align}
-        \zeta(s) &= \sum_{n=1}^{\infty} \frac{1}{n^s} \quad \text{(Riemann zeta function)} \\
-        \Gamma(z) &= \int_0^{\infty} t^{z-1}e^{-t}dt \quad \text{(Gamma function)} \\
-        \vartheta(z) &= \sum_{n=-\infty}^{\infty} e^{-\pi n^2 z} \quad \text{(Theta function)}
-    \end{align}
-    $$
-    :::
 
-:::note
-Remember that proper spacing in Latex equations can be achieved using:
-- `\,` for a small space
-- `\;` for a medium space
-- `\quad` for a large space
-- `\qquad` for an extra large space
+:::simple
+```latex[title=markdown]
+$$
+    \frac{d}{dx}\left[\int_a^x f(t)dt\right] = f(x)
+$$
+```
+Output:
+$$
+    \frac{d}{dx}\left[\int_a^x f(t)dt\right] = f(x)
+$$
+:::
+
+:::simple
+```latex[title=markdown]
+$$
+    \sum_{n=0}^{\infty} x^n = \frac{1}{1-x}, |x| < 1
+$$
+```
+Output:
+$$
+    \sum_{n=0}^{\infty} x^n = \frac{1}{1-x}, |x| < 1 
+$$
+:::
+
+:::simple
+```latex[title=markdown]
+$$
+    \lim_{x \to 0} \frac{\sin x}{x} = 1
+$$
+```
+Output:
+$$
+    \lim_{x \to 0} \frac{\sin x}{x} = 1
+$$
+:::
+
+
+:::simple
+```latex[title=markdown]
+The most beautiful equation in mathematics:
+$$
+    e^{i\pi} + 1 = 0
+$$
+```
+Output:
+
+The most beautiful equation in mathematics:
+$$
+    e^{i\pi} + 1 = 0
+$$
+:::
+
+
+:::simple
+```latex[title=markdown]
+$$
+    \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} \quad \text{(Riemann zeta function)}
+$$
+```
+Output:
+$$
+    \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} \quad \text{(Riemann zeta function)}
+$$
+:::
+
+:::simple
+```latex[title=markdown]
+$$
+    \Gamma(z) = \int_0^{\infty} t^{z-1}e^{-t}dt \quad \text{(Gamma function)}
+$$
+```
+Output:
+$$
+    \Gamma(z) = \int_0^{\infty} t^{z-1}e^{-t}dt \quad \text{(Gamma function)}
+$$
+:::
+
+:::simple
+```latex[title=markdown]
+$$
+    \vartheta(z) = \sum_{n=-\infty}^{\infty} e^{-\pi n^2 z} \quad \text{(Theta function)}
+$$
+```
+Output:
+$$
+    \vartheta(z) = \sum_{n=-\infty}^{\infty} e^{-\pi n^2 z} \quad \text{(Theta function)}
+$$
+:::
+
+
+
+:::note{title="Spacing in LaTeX"}
+| Feature | Notation | Output |
+| - | - | - |
+| Negative space | `$a \! b$` | $a\!b$ |
+| Small space | `$a \, b$` | $a\,b$ |
+| Medium space | `$a \; b$` | $a\;b$ |
+| Large space | `$a \quad b$` | $a\quad b$ |
+| Extra large space | `$a \qquad b$` | $a\qquad b$ |
 :::
