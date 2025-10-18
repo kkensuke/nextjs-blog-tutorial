@@ -1,7 +1,7 @@
 ---
 title: "Code blocks in This Blog’s Markdown"
 date: "2024-5-5"
-subtitle: "A guide to using code blocks in this blog’s Markdown files"
+subtitle: "A guide to using code blocks in this blog’s markdown"
 tags: [Markdown, Code]
 ---
 
