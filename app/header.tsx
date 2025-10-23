@@ -28,7 +28,7 @@ const Header = () => {
     // { icon: BsCart3, size: 26, title: 'Products', href: ROUTES.PRODUCTS },
     // { icon: BookOpen, size: 26, title: 'Publications', href: ROUTES.PUBLICATIONS },
     { icon: IoCameraOutline, size: 29, title: 'Photos', href: ROUTES.PHOTOS },
-    { icon: SiGithub, size: 24, title: 'GitHub', href: SITE_CONFIG.social.github },
+    { icon: SiGithub, size: 24, title: 'GitHub', href: SITE_CONFIG.links.github },
   ];
 
   return (
