@@ -86,7 +86,7 @@ export default function HomePage() {
             </a> */}
 
             <a 
-              href="https://github.com/kkensuke/nextjs-blog-tutorial" 
+              href={SITE_CONFIG.links.github}
               target="_blank"
               className="group flex items-center gap-3 rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white p-4 transition-all hover:border-slate-300 hover:shadow-md"
             >
