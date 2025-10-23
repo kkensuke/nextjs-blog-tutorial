@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <Link href="/">
               <img 
-                src="/images/simple_logo.png" 
+                src="/images/simple_logo.jpeg" 
                 alt="Logo" 
                 className="h-12 w-12 rounded-xl"
               />
