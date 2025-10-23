@@ -10,6 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { ExternalLink } from 'lucide-react';
 import { IconType } from 'react-icons';
 import { LucideIcon } from 'lucide-react';
+import { SITE_CONFIG } from '@/config/site';
 
 // Define types for the footer links
 type FooterLinkWithIcon = {
@@ -37,7 +38,7 @@ const Footer = () => {
       { label: 'Photos', icon: IoCameraOutline, href: '/photos' }
     ],
     social: [
-      { label: 'GitHub', icon: SiGithub, href: 'https://github.com/kkensuke/nextjs-blog-tutorial' },
+      { label: 'GitHub', icon: SiGithub, href: SITE_CONFIG.links.github },
       // { label: 'X', icon: FaXTwitter, href: 'https://x.com' },
       // { label: 'LinkedIn', icon: SiLinkedin, href: 'https://linkedin.com' },
       // { label: 'Email', icon: SiGmail, href: 'mailto:email@example.com' }

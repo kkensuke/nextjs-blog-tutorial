@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Mail, FileText, ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
 import { SiGithub } from 'react-icons/si';
+import { SITE_CONFIG } from '@/config/site';
 
 export default function HomePage() {
   return (
@@ -24,7 +25,7 @@ export default function HomePage() {
           
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <a 
-              href="https://github.com/kkensuke/nextjs-blog-tutorial" 
+              href={SITE_CONFIG.links.github}
               target="_blank"
               className="group flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 font-medium text-white backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/20"
             >
