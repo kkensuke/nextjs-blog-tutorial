@@ -4,10 +4,56 @@ import { FEATURES } from "@/config/constants";
 import Header from "./header";
 import Footer from "./footer";
 import ErrorBoundary from "@/components/common/ErrorBoundary";
+import { Metadata } from "next";
+import { SITE_CONFIG } from "@/config/site";
 
 interface Props {
   children: React.ReactNode;
 }
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
+  title: {
+    default: SITE_CONFIG.title,
+    template: `%s | ${SITE_CONFIG.name}`,
+  },
+  description: SITE_CONFIG.description,
+  keywords: [
+    'Next.js',
+    'TypeScript',
+    'Blog',
+    'Programming',
+    'Tutorial',
+  ],
+  authors: [{ name: SITE_CONFIG.name }],
+  creator: SITE_CONFIG.name,
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['ja_JP'],
+    url: SITE_CONFIG.url,
+    title: SITE_CONFIG.title,
+    description: SITE_CONFIG.description,
+    siteName: SITE_CONFIG.name,
+    images: [
+      {
+        url: SITE_CONFIG.ogImage,
+        alt: SITE_CONFIG.name,
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function RootLayout({ children }: Props) {
   return (

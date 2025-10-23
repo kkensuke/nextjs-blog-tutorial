@@ -24,6 +24,8 @@ import AdmonitionComponents from "@/components/blog/Admonition/admonitionColor1"
 // import AdmonitionComponents from "@/components/blog/Admonition/admonitionColor2"; // Alternative Admonition style
 import { remarkTextDirectives, TextDirectiveComponents } from '@/components/blog/Admonition/directive';
 
+import { Metadata } from 'next';
+import { SITE_CONFIG } from '@/config/site';
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
@@ -32,6 +34,42 @@ const getPostContent = (slug: string) => {
   const matterResult = matter(content);
   return matterResult;
 };
+
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+  const post = getPostContent(params.slug);
+  const postUrl = `${SITE_CONFIG.url}/blog/posts/${params.slug}`;
+  
+  const imageUrl = post.data.previewImage 
+    ? post.data.previewImage.startsWith('http')
+      ? post.data.previewImage
+      : `${SITE_CONFIG.url}${post.data.previewImage}`
+    : SITE_CONFIG.ogImage;
+
+  return {
+    title: post.data.title,
+    description: post.data.subtitle || post.data.title,
+    keywords: post.data.tags || [],
+    authors: [{ name: SITE_CONFIG.name }],
+    openGraph: {
+      title: post.data.title,
+      description: post.data.subtitle || post.data.title,
+      type: 'article',
+      publishedTime: post.data.date,
+      authors: [SITE_CONFIG.name],
+      tags: post.data.tags || [],
+      url: postUrl,
+      images: [
+        {
+          url: imageUrl,
+          alt: post.data.title,
+        },
+      ],
+    },
+    alternates: {
+      canonical: postUrl,
+    },
+  };
+}
 
 
 const PostContent = (props: any) => {

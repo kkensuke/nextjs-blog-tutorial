@@ -3,11 +3,12 @@
  */
 
 export const SITE_CONFIG = {
-  title: 'kkensuke',
-  description: 'Building the future with code and creativity.',
-  author: 'Ken',
+  name: 'kkensuke',
+  title: 'kkensuke - Blog',
+  description: 'Building the future with code and creativity. Blog about programming, web development, and technology.',
   url: 'https://nextjs-blog-tutorial-nine-olive.vercel.app',
-  social: {
+  ogImage: 'https://nextjs-blog-tutorial-nine-olive.vercel.app/og-image.jpeg',
+  links: {
     twitter: 'https://x.com',
     github: 'https://github.com/kkensuke/nextjs-blog-tutorial',
     linkedin: 'https://linkedin.com',
@@ -16,8 +17,8 @@ export const SITE_CONFIG = {
   navigation: [
     { title: 'Home', path: '/' },
     { title: 'Blog', path: '/blog' },
-    { title: 'Products', path: '/products' },
-    { title: 'Publications', path: '/publications' },
+    // { title: 'Products', path: '/products' },
+    // { title: 'Publications', path: '/publications' },
     { title: 'Photos', path: '/photos' },
   ],
 };
