@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /owner
+Disallow: /owner/*
+Disallow: /api/
+Disallow: /login
+
+# Disallow checkout pages (if you uncomment products feature)
+# Disallow: /checkout
+# Disallow: /success
+
+# Sitemap
+Sitemap: https://nextjs-blog-tutorial-nine-olive.vercel.app/sitemap.xml
