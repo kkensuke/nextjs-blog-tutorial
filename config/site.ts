@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   title: 'kkensuke',
   description: 'Building the future with code and creativity.',
   author: 'Ken',
-  url: 'https://nextjs-blog-tutorial-nine-olive.vercel.app/',
+  url: 'https://nextjs-blog-tutorial-nine-olive.vercel.app',
   social: {
     twitter: 'https://x.com',
     github: 'https://github.com/kkensuke/nextjs-blog-tutorial',
