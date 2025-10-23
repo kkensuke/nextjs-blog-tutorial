@@ -9,7 +9,7 @@ const TOC = () => {
     tocbot.init({
       tocSelector: '.toc',
       contentSelector: '.post',
-      headingSelector: 'h2, h3',
+      headingSelector: 'h2',
       hasInnerContainers: true,
       linkClass: 'toc-link',
       activeLinkClass: 'is-active-link',
@@ -18,6 +18,7 @@ const TOC = () => {
       collapseDepth: 6,
       scrollSmooth: true,
       scrollSmoothDuration: 420,
+      headingsOffset: typeof window !== 'undefined' ? window.innerHeight / 2 : 300,
     });
 
     return () => tocbot.destroy();
