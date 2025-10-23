@@ -130,14 +130,14 @@ cat file1.txt file2.txt         # Show multiple files
 cat > newfile.txt               # Create file with input (Ctrl+D to finish)
 ```
 
-`head`** / **`tail`: Show beginning or end of file
+`head` / `tail`: Show beginning or end of file
 ```bash
 head file.txt                   # First 10 lines (default)
 head -n 5 file.txt              # First 5 lines
 tail -f logfile.txt             # Follow file in real-time (useful for logs)
 ```
 
-`less`** / **`more`: View files page by page
+`less` / `more`: View files page by page
 ```bash
 less largefile.txt              # Navigate with arrow keys, q to quit
 ```
@@ -173,7 +173,7 @@ cp file1 file2 file3 target/     # Copy multiple files to directory
 ```
 
 :::note
-**Copy behavior:**
+Copy behavior:
 - `cp file1 file2` - This overwrite file2 with contents of file1.
 - `cp -r dir1 dir2` - If dir2 exists, creates dir1 inside dir2. If dir2 doesn't exist, creates exact copy
 :::
@@ -253,13 +253,56 @@ awk '/pattern/ {print $0}' file.txt  # Print lines matching pattern
 
 ## Permissions
 
-`chmod`: Change file permissions
+Permissions control who can **open**, **modify**, or **run** a file or directory. You can set file permissions for the file owner, group, and others using a symbolic or numeric (octal) method with the `chmod` command.
 
-### Understanding Permission Numbers
+### Checking Current Permissions
+You can view current permissions using `ls -l`:
+```bash
+ls -l file.txt
+# -rwxr-xr--  1 user  group  1234 Aug  4 15:18 file.txt
+```
 
-The three digits represent: **[owner] [group] [others]**
+The first 10 characters represent the file type and permissions:
+- The first character indicates the file type (`-` for regular file, `d` for directory).
+- The next 9 characters `rwxr-xr--` represent permissions for owner, group, and others.
+- `r` = read, `w` = write, `x` = execute, `-` = no permission.
+- owner: `rwx` (read, write, execute)
+- group: `r-x` (read, execute)
+- others: `r--` (read only)
 
-Each digit is calculated by adding:
+
+### Symbolic Permission Changes
+You can change permissions using the following symbols and syntax with `chmod`:
+
+**Targets:**
+- `u` = user (owner)
+- `g` = group
+- `o` = others
+- `a` = all (user + group + others)
+
+**Operations:**
+- `=` = set exact permissions
+- `+` = add permission
+- `-` = remove permission
+
+**Permission Types:**
+- `r` = read the file's contents (for directories: list files).
+- `w` = modify the file (for directories: create/delete files).
+- `x` = run the file as a program (for directories: enter the directory / use `cd`).
+
+**Examples:**
+```bash
+chmod u+x script.sh             # Make executable for owner
+chmod g-w file.txt              # Remove write for group
+chmod o-r secret.txt            # Remove read for others
+chmod a+r file.txt              # Add read for all
+chmod u=rwx,g=rx,o=r file.txt   # Set specific permissions
+```
+
+### Numeric (Octal) Permission Changes (Advanced)
+You can also set file permissions using a three-digit octal number, like `chmod 755 file.txt`.
+The three digits represent permissions for: **[owner] [group] [others]**.
+Each digit is a sum of the following values:
 - **4** = read (r)
 - **2** = write (w)
 - **1** = execute (x)
@@ -281,34 +324,26 @@ chmod 777 file.txt              # Full permissions for everyone (rarely needed)
 chmod 700 file.txt              # Private file (owner only)
 ```
 
-### Symbolic Permission Changes
-
-**Targets:**
-- `u` = user (owner)
-- `g` = group
-- `o` = others
-- `a` = all
-
-**Operations:**
-- `=` = set exact permissions
-- `+` = add permission
-- `-` = remove permission
-
-**Examples:**
-```bash
-chmod u+x script.sh             # Make executable for owner
-chmod g-w file.txt              # Remove write for group
-chmod o-r secret.txt            # Remove read for others
-chmod a+r file.txt              # Add read for all
-chmod u=rwx,g=rx,o=r file.txt   # Set specific permissions
-```
-
-`chmod -R`: Change permissions recursively
+`chmod -R`: Change permissions on directories and their contents recursively
 ```bash
 chmod -R 755 directory/         # Apply to directory and all contents
 ```
+Be careful — applying `755` recursively can make private files readable by everyone.
 
-`chown`: Change file owner
+### Permission Code Correspondence
+
+| Permission | Owner | Group | Others | Description |
+|------------|-------|-------|--------|-------------|
+| `700` | `rwx` | `---` | `---` | Private file (owner full access only) |
+| `755` | `rwx` | `r-x` | `r-x` | Common for executable scripts |
+| `644` | `rw-` | `r--` | `r--` | Common for documents/config files |
+| `600` | `rw-` | `---` | `---` | Read/write for owner only |
+| `777` | `rwx` | `rwx` | `rwx` | Full access for everyone (rarely safe) |
+
+
+### Changing owner and group
+
+`chown`: Change file owner:
 ```bash
 chown user file.txt             # Change owner
 chown user:group file.txt       # Change owner and group
