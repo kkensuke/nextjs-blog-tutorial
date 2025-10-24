@@ -8,32 +8,11 @@ tags: [Alias, Zsh]
 
 
 If you are using command line, there must be commands you use frequently.
-Some commands are long and you might think that copying them every time is a waste of time. In such case, you can use `alias` for a command. If you want to use `h` as an alias for `cd ~`, you define `alias h='cd ~'` in `~/.zshrc` (or `~/.bashrc`). If you can't find such files in your home directory, you need to make it with `touch ~/.zshrc`.
+Some commands are long and you might think that copying them every time is a waste of time. In such cases, you can use `alias` for a command. If you want to use `h` as an alias for `cd ~`, you define `alias h='cd ~'` in `~/.zshrc` (or `~/.bashrc`). If you can't find such files in your home directory, you need to make it with `touch ~/.zshrc`.
 
 If you find some useful aliases below, write them in `~/.zshrc`.
 
 ## Basic
-
-### Customize and colorize PROMPT
-```bash
-PS1="%F{082}%n%f %F{051}%~%f %# "
-RPROMPT='%T'
-```
-
-- `PS1` is the main (left) prompt and `RPROMPT` is the right prompt.
-- `%n` means username
-- `%~` means current directory
-- `%#` shows `#` if you are root, `%` if not.
-- `%T` shows the current time in 24-hour format (`%t` for 12-hour format).
-- you can colorize your prompt by using `%F{color number}` ~ `%f`. You can find color numbers [here](https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit).
-
-Read more about Prompt Expansion in this [link](https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html).
-
-
-### Put a blank line before every prompt except the first one.
-```bash
-precmd() { precmd() { echo } }
-```
 
 ### change directory
 
@@ -294,7 +273,35 @@ $GREEN gsec$NORMAL — 👮 SECURITY"
 ```
 
 
-Reference:
+### gitignore.io
+gitignore.io enable us to make .gitignore file easily
+```bash
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+```
+
+
+## Extra: Customize and colorize PROMPT
+```bash
+PS1="%F{082}%n%f %F{051}%~%f %# "
+RPROMPT='%T'
+```
+
+- `PS1` is the main (left) prompt and `RPROMPT` is the right prompt.
+- `%n` means username
+- `%~` means current directory
+- `%#` shows `#` if you are root, `%` if not.
+- `%T` shows the current time in 24-hour format (`%t` for 12-hour format).
+- you can colorize your prompt by using `%F{color number}` ~ `%f`. You can find color numbers [here](https://en.wikipedia.org/wiki/ANSI_escape_code#8-bit).
+
+Read more about Prompt Expansion in this [link](https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html).
+
+If you want to put a blank line before every prompt except the first one, you can use the following code:
+```bash
+precmd() { precmd() { echo } }
+```
+
+
+## Reference
 - [jupyterbook Development Conventions](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md#commit-messages)
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - [Emoji-Log](https://github.com/ahmadawais/Emoji-Log)
@@ -303,10 +310,3 @@ Reference:
 - [Complete list of github markdown emoji markup ](https://gist.github.com/rxaviers/7360908)
 - [Commit message examples](https://gist.github.com/mono0926/e6ffd032c384ee4c1cef5a2aa4f778d7)
 
-
-
-### gitignore.io
-gitignore.io enable us to make .gitignore file easily
-```bash
-function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
-```
