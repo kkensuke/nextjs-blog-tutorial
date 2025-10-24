@@ -125,9 +125,7 @@ alias chrome='open /Applications/Google\ Chrome.app'
 - `hr` opens the current directory.
 - `c` opens CotEditor.
 - `vs` opens Visual Studio Code.
-- `fire` opens Firefox.
 - `chrome` opens Google Chrome.
-- `safari` opens Safari.
 
 ### others
 ```bash

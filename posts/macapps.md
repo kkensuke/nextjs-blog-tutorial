@@ -84,7 +84,7 @@ You can also make a latex equation image from a menu bar.
 :::linkcard
 https://github.com/MonitorControl/MonitorControl#readme
 :::
-`MonitorControl` is a free and open-source app for adjusting the brightness of your Mac screen and **external monitors**. You don't need to use the monitor's buttons anymore! You can adjust the brightness with shortcut keys.
+`MonitorControl` is a free and open-source app for adjusting the brightness of your **external monitors**. You don't need to use the monitor's buttons anymore! You can adjust the brightness with shortcut keys.
 ![Image](/images/monitorcontrol.jpeg "width=300px")
 
 
