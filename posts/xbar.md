@@ -2,7 +2,7 @@
 title: "xbar: Customizing Your Mac Menu Bar"
 date: "2025-10-18"
 subtitle: "Put Any Information in Your Mac Menu Bar with Simple Shell Scripts"
-tags: [Mac, Shell, Productivity]
+tags: [MacOS, Shell, Productivity]
 ---
 
 ## What is xbar?
