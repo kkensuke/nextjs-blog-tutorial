@@ -9,7 +9,6 @@ import remarkDirectiveRehype from 'remark-directive-rehype';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
-// import rehypeMathjax from 'rehype-mathjax';
 import React from "react";
 
 import { Suspense } from 'react';
@@ -144,7 +143,6 @@ const PostContent = (props: any) => {
               rehypePlugins={[
                 rehypeSlug,
                 rehypeKatex
-                // rehypeMathjax
               ]}
               components={components}
             />
