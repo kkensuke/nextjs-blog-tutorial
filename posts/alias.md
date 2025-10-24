@@ -7,10 +7,21 @@ tags: [Alias, Zsh]
 
 
 
-If you are using command line, there must be commands you use frequently.
-Some commands are long and you might think that copying them every time is a waste of time. In such cases, you can use `alias` for a command. If you want to use `h` as an alias for `cd ~`, you define `alias h='cd ~'` in `~/.zshrc` (or `~/.bashrc`). If you can't find such files in your home directory, you need to make it with `touch ~/.zshrc`.
+If you use the command line, there are probably some commands you run frequently.
+Some of these commands can be quite long, and copying or typing them each time can be tedious. In such cases, you can create an **alias** for a command.
 
-If you find some useful aliases below, write them in `~/.zshrc`.
+For example, if you want to use `h` as a shortcut for `cd ~`, you can define it in your shell configuration file:
+```bash
+alias h='cd ~'
+```
+
+Add this line to your `~/.zshrc` (or `~/.bashrc`).
+If you don’t see such a file in your home directory, you can create one with:
+```bash
+touch ~/.zshrc
+```
+If you find any useful aliases below, add them to your `~/.zshrc` file.
+
 
 ## Basic
 
