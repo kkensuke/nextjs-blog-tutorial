@@ -86,12 +86,11 @@ dif(){ diff --color -u $1 $2 }
 alias imgopt='open -a ImageOptim .'
 alias grep='grep --color'
 ```
-```{admonition} Function
-:class: note
+:::note{title="Function"}
 You can make an alias with arguments, which is called a function. Functions are defined as `function_name() { commands }`. For example, `fb` takes two arguments, `$1` and `$2`. `$1` is the first argument and `$2` is the second argument. Use like `fb "*.pdf" 10` to find files with the name `pdf` larger than 10 MB.
 
 In addition to `$1` and `$2`, there are other special variables: `$0` is the function name. `$@` is all arguments. `$#` is the number of arguments. `$?` is the exit status of the last command. `$$` is the process ID of the current shell. `$!` is the process ID of the last command run in the background.
-```
+:::
 
 - `fb` finds files larger than `$2` MB with the name `$1` in the current directory.
     - `-size +$2M` option finds files larger than `$2` MB.
@@ -100,9 +99,9 @@ In addition to `$1` and `$2`, there are other special variables: `$0` is the fun
     - `-exec ls -lhS "{}" +` option executes `ls -lhS` command for each file found.
 - `rn` renames files with the extension `$1` by removing `$2` from the file name. For example, `rn txt asdf` renames `aaasdfff.txt` to `aaff.txt`.
 
-```{note}
+:::note
 `-exec <command> {} +` is a common syntax to execute `<command>` for each file found. `{}` is a placeholder for the file name. `+` is a delimiter to tell the end of the command.
-```
+:::
 
 ### open apps
 ```bash
