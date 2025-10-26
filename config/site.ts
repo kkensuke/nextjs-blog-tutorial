@@ -6,11 +6,11 @@ export const SITE_CONFIG = {
   name: 'kkensuke',
   title: 'kkensuke - Blog',
   description: 'Building the future with code and creativity. Blog about programming, web development, and technology.',
-  url: 'https://nextjs-blog-tutorial-nine-olive.vercel.app',
-  ogImage: 'https://nextjs-blog-tutorial-nine-olive.vercel.app/og-image.jpeg',
+  url: 'https://kkensuke.vercel.app',
+  ogImage: 'https://kkensuke.vercel.app/og-image.jpeg',
   links: {
     twitter: 'https://x.com',
-    github: 'https://github.com/kkensuke/nextjs-blog-tutorial',
+    github: 'https://github.com/kkensuke/pages',
     linkedin: 'https://linkedin.com',
     email: 'example.12345@gmail.com',
   },
@@ -26,7 +26,7 @@ export const SITE_CONFIG = {
 export const BLOG_CONFIG = {
   postsPerPage: 10,
   featuredCategories: ['tutorial', 'tech', 'personal'],
-  comment_repo: 'kkensuke/nextjs-blog-tutorial',
+  comment_repo: 'kkensuke/pages',
 };
 
 export const THEME = {
