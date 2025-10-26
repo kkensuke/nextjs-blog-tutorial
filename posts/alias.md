@@ -39,7 +39,7 @@ alias dl="cd ~/Downloads"
 alias h='cd ~'
 alias /='cd /'
 
-# Change working directory to the top-most Finder window location.
+# Change working directory to the topmost Finder window location.
 cdf() { cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')" }
 ```
 
@@ -54,7 +54,7 @@ alias pwd='sed "s/ /\\\ /g" <<< ${PWD/#$HOME/"~"}'
 alias p='pwd'
 alias path='echo -e ${PATH//:/\\n}'
 ```
-- `ls`: To use `gls`, you need to install `coreutils` with `brew install coreutils`. You can use the same colorization as `tree` command.
+- `ls`: To use `gls`, you need to install `coreutils` with `brew install coreutils`. You can use the same colorization as the `tree` command.
     - `--color` option colorize the output of `gls` command.
     - `--group-directories-first` option puts directories first.
     - `-F` option adds a trailing `/` to directory names, `@` to symbolic links, and so on. 
@@ -98,7 +98,7 @@ alias imgopt='open -a ImageOptim .'
 alias grep='grep --color'
 ```
 :::note{title="Function"}
-You can make an alias with arguments, which is called a function. Functions are defined as `function_name() { commands }`. For example, `fb` takes two arguments, `$1` and `$2`. `$1` is the first argument and `$2` is the second argument. Use like `fb "*.pdf" 10` to find files with the name `pdf` larger than 10 MB.
+You can make an alias with arguments, which is called a function. Functions are defined as `function_name() { commands }`. For example, `fb` takes two arguments, `$1` and `$2`. `$1` is the first argument and `$2` is the second argument. Use it like `fb "*.pdf" 10` to find files with the name `pdf` larger than 10 MB.
 
 In addition to `$1` and `$2`, there are other special variables: `$0` is the function name. `$@` is all arguments. `$#` is the number of arguments. `$?` is the exit status of the last command. `$$` is the process ID of the current shell. `$!` is the process ID of the last command run in the background.
 :::
@@ -141,7 +141,7 @@ zipen(){
 }
 ```
 
-`zipen` zips files and encrypts them with a password as `enc.zip`. Use like `zipen file1 file2 dir1`.
+`zipen` zips files and encrypts them with a password into `enc.zip`. Use like `zipen file1 file2 dir1`.
 
 :::note
 `"$@"` is a special variable that expands to all arguments. For example, `"$@"` is expanded to `file1 file2 dir1` in the above example.
@@ -230,7 +230,7 @@ ginit() {
     gh repo create --"$1" --source=. --push
 }
 ```
-You need to install [GitHub CLI](https://cli.github.com/) to use `gh` command.
+You need to install [GitHub CLI](https://cli.github.com/) to use the `gh` command.
 
 
 ### Commit Messages with Emoji
@@ -282,7 +282,7 @@ $GREEN gsec$NORMAL — 👮 SECURITY"
 
 
 ### gitignore.io
-gitignore.io enable us to make .gitignore file easily
+`gitignore.io` enables us to make .gitignore file easily
 ```bash
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 ```
