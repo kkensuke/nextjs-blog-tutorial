@@ -33,15 +33,16 @@ sudo nvram StartupMute=%01
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Disable Notifcations
+# Disable Notifications
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 
 ## Keyboard
-# deactivate the CapsLockDelay
+# Deactivate the CapsLockDelay
 hidutil property --set '{"CapsLockDelayOverride":0}'
 
-# Deley until repeat and Key repeat rate
+# Delay until repeat: 15 (225ms) and Key repeat rate: 2 (30ms)
+# Lower values = faster repeat
 defaults write -g InitialKeyRepeat -int 15
 defaults write -g KeyRepeat -int 2
 
@@ -62,7 +63,7 @@ defaults delete com.apple.dock persistent-others
 defaults write com.apple.dock show-process-indicators -bool false
 defaults write com.apple.dock show-recents -bool false
 
-# Showing the Dock
+# No delay for auto-hiding the dock
 defaults write com.apple.dock autohide-time-modifier -int 0
 
 # change the size of icons in the dock
@@ -115,7 +116,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # set coteditor as default editor for any .txt file
 defaults write com.apple.LaunchServices LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.coteditor.CotEditor;}'
 
-# Spring Loading
+# Spring Loading (hovering over a folder to open it) delay set to zero
 defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
 # Show Library folder
@@ -127,7 +128,7 @@ chmod 000 ~/{Documents,Movies,Music,Pictures}
 
 
 
-## Others
+## Others ##
 # showing and hiding Launchpad
 defaults write com.apple.dock springboard-show-duration -float 0
 defaults write com.apple.dock springboard-hide-duration -float 0
