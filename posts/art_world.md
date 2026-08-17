@@ -14,7 +14,7 @@ tags: [Art]
 ## 第1章：神から人間へ。知性と美の目覚め（15〜16世紀・ルネサンス期）
 神を中心とした中世の価値観から離れ、人間の肉体美や知性、そして科学的な探求（解剖学や遠近法）が開花した時代です。また、北ヨーロッパではイタリアとは異なる緻密な写実性が追求されました。
 
-### アルノルフィーニの肖像（The Arnolfini Portrait）
+### [アルノルフィーニの肖像（The Arnolfini Portrait）](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%8E%E3%83%AB%E3%83%95%E3%82%A3%E3%83%BC%E3%83%8B%E5%A4%AB%E5%A6%BB%E5%83%8F)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_Arnolfini_portrait_%281434%29.jpg/1280px-The_Arnolfini_portrait_%281434%29.jpg)
 * **作者:** ヤン・ファン・エイク (Jan van Eyck)
 * **制作年:** 1434年
@@ -25,7 +25,7 @@ tags: [Art]
     * **隠された象徴と謎:** 描かれているのは富裕な商人アルノルフィーニとその妻（諸説あり）ですが、二人の手の重ね方や脱がれた靴、犬など、画面内のあらゆるモチーフが「結婚の誓い」や「忠節」を示す暗号として機能しています。
     * **画家の存在証明:** 奥の壁に掛けられた凸面鏡には、絵のモデルである二人の背中だけでなく、部屋を訪れたもう二人の人物（うち一人は画家自身とされる）が精巧に描き込まれており、「ヤン・ファン・エイクここにありき」という署名とともに、この場に立ち会った証人としての画家の自負がうかがえます。
 
-### ヴィーナスの誕生（The Birth of Venus）
+### [ヴィーナスの誕生（The Birth of Venus）](https://ja.wikipedia.org/wiki/%E3%83%B4%E3%82%A3%E3%83%BC%E3%83%8A%E3%82%B9%E3%81%AE%E8%AA%95%E7%94%9F)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/960px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg)
 * **作者:** サンドロ・ボッティチェリ (Sandro Botticelli)
 * **制作年:** 1485年頃
@@ -36,7 +36,7 @@ tags: [Art]
     * **新プラトン主義の体現:** 当時のフィレンツェ（メディチ家周辺）で流行した「目に見える肉体の美しさは、神聖で精神的な美の反映である」という思想に基づき、ヴィーナスは単なる官能の対象ではなく、高貴な愛のイデアとして描かれています。
     * **流麗な線描の美学:** 同時代の画家たちが陰影による立体感（モデリング）を追求したのに対し、ボッティチェリは優美でリズミカルな輪郭線によって人物や波を縁取り、現実離れした装飾的で軽やかな美しさを確立しました。
 
-### 岩窟の聖母（The Virgin of the Rocks）
+### [岩窟の聖母（The Virgin of the Rocks）](https://ja.wikipedia.org/wiki/%E5%B2%A9%E7%AA%9F%E3%81%AE%E8%81%96%E6%AF%8D)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg/960px-Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg)
 * **作者:** レオナルド・ダ・ヴィンチ (Leonardo da Vinci)
 * **制作年:** 1483-1486年頃（ルーヴル版）、1495-1508年頃（ロンドン版）
@@ -47,7 +47,7 @@ tags: [Art]
     * **計算された幾何学:** 4人の人物が安定したピラミッド型（三角形）の構図の中に美しく収められており、ルネサンス美術が理想とした神聖なる秩序と調和を体現しています。
     * **背景の隠喩:** 背後に描かれた荒々しい岩肌は、現世の厳しさや教会の庇護を象徴するとも、あるいは聖母マリアの穢れなき純粋さを際立たせるための対比であるとも考察されています。
 
-### 快楽の園（The Garden of Earthly Delights）
+### [快楽の園（The Garden of Earthly Delights）](https://ja.wikipedia.org/wiki/%E5%BF%AB%E6%A5%BD%E3%81%AE%E5%9C%92)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/The_Garden_of_earthly_delights.jpg/1280px-The_Garden_of_earthly_delights.jpg)
 * **作者:** ヒエロニムス・ボス (Hieronymus Bosch)
 * **制作年:** 1490年〜1510年頃
@@ -60,7 +60,7 @@ tags: [Art]
         * **【中央：現世の快楽】** 巨大な果物や異形の動物たちと戯れ、裸で享楽にふける人間たちの狂騒が画面を埋め尽くしています。人間の欲望の暴走を描いたものとも、あるいは原罪が存在しないパラレルワールドを描いたものとも言われています。
         * **【右図：地獄】** 欲に溺れた者たちが待ち受ける凄惨な罰の光景です。巨大な楽器が拷問器具に変わり、奇怪な悪魔たちが人間を弄ぶその様子は、後世のシュルレアリストたちに多大なインスピレーションを与えました。
 
-### 最後の晩餐（The Last Supper）
+### [最後の晩餐（The Last Supper）](https://ja.wikipedia.org/wiki/%E6%9C%80%E5%BE%8C%E3%81%AE%E6%99%A9%E9%A4%90_%28%E3%83%AC%E3%82%AA%E3%83%8A%E3%83%AB%E3%83%89%29)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/960px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg)
 * **作者:** レオナルド・ダ・ヴィンチ (Leonardo da Vinci)
 * **制作年:** 1495年〜1498年
@@ -71,7 +71,7 @@ tags: [Art]
     * **緻密な構図の魔法:** 3人ずつ4つのグループに分かれて感情を露わにする使徒たちに対し、中央のイエスだけが完全な静寂を保った正三角形のシルエットで描かれ、神聖さが際立ちます。
     * **完璧な遠近法:** 部屋の壁や天井の線はすべて、イエスの右こめかみ付近の「消失点」に向かって収束するように計算し尽くされており、鑑賞者の視線が自然と物語の中心（イエス）に吸い寄せられる構造になっています。
 
-### モナ・リザ（Mona Lisa）
+### [モナ・リザ（Mona Lisa）](https://ja.wikipedia.org/wiki/%E3%83%A2%E3%83%8A%E3%83%BB%E3%83%AA%E3%82%B6)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1280px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg)
 * **作者:** レオナルド・ダ・ヴィンチ (Leonardo da Vinci)
 * **制作年:** 1503年〜1506年頃
@@ -82,7 +82,7 @@ tags: [Art]
     * **視線の追従性:** 身体は斜めを向けつつ、顔だけをこちらに向けるポーズ（コントラポスト）が採用されており、どこから見ても彼女と目が合うような不思議な双方向のコミュニケーションをもたらします。
     * **大宇宙と小宇宙の共鳴:** 背後には、荒涼とした岩山や蛇行する川といった原始的で架空の自然風景が描かれています。これは、人間の肉体（小宇宙）と大自然（大宇宙）が脈々と繋がっているという、ダ・ヴィンチ自身の壮大な生命哲学を反映していると考えられています。
 
-### アダムの創造（The Creation of Adam）
+### [アダムの創造（The Creation of Adam）](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%80%E3%83%A0%E3%81%AE%E5%89%B5%E9%80%A0)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/960px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg)
 * **作者:** ミケランジェロ (Michelangelo)
 * **制作年:** 1508年〜1512年
@@ -93,7 +93,7 @@ tags: [Art]
     * **隠された知のシンボル:** 神を囲む天使たちと赤いマントのシルエットの輪郭が「人間の脳の断面図」と完全に一致するという医学的な指摘があり、ミケランジェロが「神は人間に生命だけでなく、知性（理性）をも授けた」という深い哲学的メッセージを忍ばせたと考えられています。
     * **究極の肉体美:** 彫刻家でもあったミケランジェロの解剖学への深い造詣がいかんなく発揮されており、理想化された骨格と筋肉の表現は、ルネサンス期における人体表現の最高到達点を示しています。
 
-### アテナイの学堂（The School of Athens）
+### [アテナイの学堂（The School of Athens）](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%86%E3%83%8A%E3%82%A4%E3%81%AE%E5%AD%A6%E5%A0%82)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/960px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg)
 * **作者:** ラファエロ (Raphael)
 * **制作年:** 1509年〜1511年
@@ -109,7 +109,7 @@ tags: [Art]
 ## 第2章：光と影のドラマと、市民社会の台頭（17世紀・バロック期）
 絶対王政やカトリック教会の権力が強まる一方で、オランダのように商業で豊かになった市民階級が台頭した時代です。劇的な明暗法（キアロスクーロ）を用い、物語の決定的な瞬間や人々の生活を演劇的に描きました。
 
-### 夜警（The Night Watch）
+### [夜警（The Night Watch）](https://ja.wikipedia.org/wiki/%E5%A4%9C%E8%AD%A6_%28%E7%B5%B5%E7%94%BB%29)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg/960px-La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg)
 * **作者:** レンブラント・ファン・レイン (Rembrandt van Rijn)
 * **制作年:** 1642年
@@ -120,7 +120,7 @@ tags: [Art]
     * **天才的な光の操作:** スポットライトを浴びたかのように輝く中央の隊長と副官、そして謎の少女に視線が誘導されるよう、極端な明暗法（キアロスクーロ）が駆使され、画面に圧倒的な奥行きとドラマを生み出しています。
     * **感情のざわめき:** 槍を構える者、太鼓を叩く者、犬に向かって吠える者など、一人ひとりの個性と心理状態が生き生きと描き分けられており、画面の奥から喧騒が聞こえてくるような躍動感があります。
 
-### ラス・メニーナス（Las Meninas）
+### [ラス・メニーナス（Las Meninas）](https://ja.wikipedia.org/wiki/%E3%83%A9%E3%82%B9%E3%83%BB%E3%83%A1%E3%83%8B%E3%83%BC%E3%83%8A%E3%82%B9)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg/960px-Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg)
 * **作者:** ディエゴ・ベラスケス (Diego Velázquez)
 * **制作年:** 1656年
@@ -131,7 +131,7 @@ tags: [Art]
     * **鏡が明かす空間の秘密:** 奥の壁に掛けられた鏡には、スペイン国王フェリペ4世と王妃の姿がぼんやりと映り込んでいます。つまり、ベラスケスが描いているのは鑑賞者の位置に立っている国王夫妻であり、私たちは「国王の視線」を疑似体験させられているという驚異的なトリックが隠されています。
     * **イリュージョンと現実の境界:** 卓越した筆さばきによる空気感の描写に加え、描く者と描かれる者、カンヴァスの中と外の世界を反転させるメタ構造は、ピカソをはじめとする後世の芸術家たちに絶大な影響を与えました。
 
-### 真珠の耳飾りの少女（Girl with a Pearl Earring）
+### [真珠の耳飾りの少女（Girl with a Pearl Earring）](https://ja.wikipedia.org/wiki/%E7%9C%9F%E7%8F%A0%E3%81%AE%E8%80%B3%E9%A3%BE%E3%82%8A%E3%81%AE%E5%B0%91%E5%A5%B3)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/960px-1665_Girl_with_a_Pearl_Earring.jpg)
 * **作者:** ヨハネス・フェルメール (Johannes Vermeer)
 * **制作年:** 1665年頃
@@ -147,7 +147,7 @@ tags: [Art]
 ## 第3章：激動する社会と、荒ぶる自然への畏怖（19世紀前半・ロマン主義など）
 フランス革命などの政治的動乱や、理性では測れない激しい感情、大自然の圧倒的な力に芸術家たちが目を向けた時代です。日本の浮世絵が世界最高の木版画技術を誇っていたのもこの時期です。
 
-### 1808年5月3日（The 3rd of May 1808）
+### [1808年5月3日（The 3rd of May 1808）](https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%89%E3%83%AA%E3%83%BC%E3%83%89%E3%80%811808%E5%B9%B45%E6%9C%883%E6%97%A5)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg/3840px-El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg)
 * **作者:** フランシスコ・デ・ゴヤ (Francisco de Goya)
 * **制作年:** 1814年
@@ -158,7 +158,7 @@ tags: [Art]
     * **劇的な明暗法（キアロスクーロ）:** 地上に置かれたランタンの強烈な光が、死の恐怖に直面する民衆を鮮明に浮かび上がらせます。対照的に、銃を構える兵士たちは顔の描かれない暗い影の塊として配置され、感情を持たない「殺戮のマシーン」としての非情さが強調されています。
     * **無垢なる犠牲の象徴:** 中央で抵抗するように両手を広げる白いシャツの男は、キリストの磔刑を視覚的に連想させ、不条理な暴力に対する純粋な犠牲のシンボルとして鑑賞者の胸に迫ります。
 
-### 民衆を導く自由の女神（Liberty Leading the People）
+### [民衆を導く自由の女神（Liberty Leading the People）](https://ja.wikipedia.org/wiki/%E6%B0%91%E8%A1%86%E3%82%92%E5%B0%8E%E3%81%8F%E8%87%AA%E7%94%B1%E3%81%AE%E5%A5%B3%E7%A5%9E)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/960px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg)
 * **作者:** ウジェーヌ・ドラクロワ (Eugène Delacroix)
 * **制作年:** 1830年
@@ -169,7 +169,7 @@ tags: [Art]
     * **階級を超えた団結:** シルクハットを被ったブルジョワの青年、剣を握る労働者、そして二丁拳銃を構える少年など、身分の異なる人々が共にバリケードを越えていく姿が描かれており、革命における民衆の連帯がドラマチックに表現されています。
     * **生と死のコントラスト:** 足元に横たわる犠牲者たちの暗く沈んだ色彩が、前へと進むマリアンヌや民衆たちの生命力あふれる躍動感をより一層際立たせています。
 
-### 神奈川沖浪裏（The Great Wave off Kanagawa）
+### [神奈川沖浪裏（The Great Wave off Kanagawa）](https://ja.wikipedia.org/wiki/%E7%A5%9E%E5%A5%88%E5%B7%9D%E6%B2%96%E6%B5%AA%E8%A3%8F)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/The_Great_Wave_off_Kanagawa.jpg/3840px-The_Great_Wave_off_Kanagawa.jpg)
 * **作者:** 葛飾北斎 (Katsushika Hokusai)
 * **制作年:** 1830年頃
@@ -185,7 +185,7 @@ tags: [Art]
 ## 第4章：近代都市の歓びと、光のイノベーション（19世紀後半・印象派〜ポスト印象派）
 産業革命によって近代的な都市生活やレジャーが生まれ、カメラの普及によって「絵画にしかできないこと」が模索された時代です。太陽の光の移ろいや、個人の主観的な世界観がカンヴァスに鮮やかに描き出されました。
 
-### 印象、日の出（Impression, Sunrise）
+### [印象、日の出（Impression, Sunrise）](https://ja.wikipedia.org/wiki/%E5%8D%B0%E8%B1%A1%E3%83%BB%E6%97%A5%E3%81%AE%E5%87%BA)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/960px-Monet_-_Impression%2C_Sunrise.jpg)
 * **作者:** クロード・モネ (Claude Monet)
 * **制作年:** 1872年
@@ -196,7 +196,7 @@ tags: [Art]
     * **画期的な筆致:** 形をきっちりと描く伝統的な手法を捨て、荒く素早い筆のタッチ（筆触分割）を採用しています。青灰色に沈む海と空の中に、ぽっかりと浮かぶオレンジ色の太陽の輝きが鮮烈な印象を残します。
     * **反逆の証:** 当時の保守的な美術界からは「未完成の壁紙以下」と酷評されましたが、この批判的な言葉を逆手に取り、彼らは自らの新しい表現様式を誇り高く「印象派」と名乗ることになりました。
 
-### ムーラン・ド・ラ・ギャレットの舞踏会（Bal du moulin de la Galette）
+### [ムーラン・ド・ラ・ギャレットの舞踏会（Bal du moulin de la Galette）](https://ja.wikipedia.org/wiki/%E3%83%A0%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%BB%E3%83%89%E3%83%BB%E3%83%A9%E3%83%BB%E3%82%AE%E3%83%A3%E3%83%AC%E3%83%83%E3%83%88%E3%81%AE%E8%88%9E%E8%B8%8F%E4%BC%9A)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg/960px-Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg)
 * **作者:** ピエール＝オーギュスト・ルノワール (Pierre-Auguste Renoir)
 * **制作年:** 1876年
@@ -206,7 +206,7 @@ tags: [Art]
     * **光の魔法:** 木漏れ日が人物の服や地面に落とす斑点状の光と影のゆらめきを、軽やかな筆致で表現しています。この巧みな光の描写が、絵画全体に生命力とリズミカルな動きをもたらしています。
     * **時代の空気感の保存:** 当時の最新のファッションや、人々が談笑し踊る際の豊かな表情が丁寧に描かれており、19世紀末のパリが持っていた華やかで楽天的な空気をそのままカンヴァスに封じ込めたかのような作品です。
 
-### ラ・グランド・ジャット島の日曜日の午後（A Sunday Afternoon on the Island of La Grande Jatte）
+### [ラ・グランド・ジャット島の日曜日の午後（A Sunday Afternoon on the Island of La Grande Jatte）](https://ja.wikipedia.org/wiki/%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%83%E3%83%88%E5%B3%B6%E3%81%AE%E6%97%A5%E6%9B%9C%E6%97%A5%E3%81%AE%E5%8D%88%E5%BE%8C)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/A_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.jpg/960px-A_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.jpg)
 * **作者:** ジョルジュ・スーラ (Georges Seurat)
 * **制作年:** 1884年〜1886年
@@ -216,7 +216,7 @@ tags: [Art]
     * **計算された静寂:** 印象派が重んじた「一瞬の光の移ろい」とは対照的に、スーラは厳密な幾何学に基づく構図を採用しました。セーヌ川畔で憩う人々はどこか彫刻のように静止しており、永遠の時間を生きているかのような感覚を与えます。
     * **近代社会の影:** 晴れやかな休日の情景でありながら、描かれた人物たちの間には視線や感情の交錯がほとんどありません。この独特の距離感は、近代化が進む都市生活特有の「群衆の中の孤独」や人間関係の希薄さを暗示していると評されています。
 
-### ひまわり（Sunflowers）
+### [ひまわり（Sunflowers）](https://ja.wikipedia.org/wiki/%E3%81%B2%E3%81%BE%E3%82%8F%E3%82%8A_%28%E7%B5%B5%E7%94%BB%29)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vincent_Willem_van_Gogh_127.jpg/500px-Vincent_Willem_van_Gogh_127.jpg)
 * **作者:** フィンセント・ファン・ゴッホ (Vincent Van Gogh)
 * **制作年:** 1888年〜1889年
@@ -227,7 +227,7 @@ tags: [Art]
     * **生命のサイクル:** 固い蕾、満開に咲き誇る花、そして枯れて頭を垂れる姿までがひとつの花瓶の中に同居しており、生命の誕生から終焉までの輪廻が表現されています。
     * **圧倒的な物質感:** 絵の具をチューブから直接絞り出したかのように分厚く塗り重ねる「インパスト技法」により、花々はまるで画面から彫り出されたかのような立体感と、生々しいまでのエネルギーを放っています。
 
-### 星月夜（The Starry Night）
+### [星月夜（The Starry Night）](https://ja.wikipedia.org/wiki/%E6%98%9F%E6%9C%88%E5%A4%9C)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg)
 * **作者:** フィンセント・ファン・ゴッホ (Vincent Van Gogh)
 * **制作年:** 1889年
@@ -238,7 +238,7 @@ tags: [Art]
     * **死と永遠を繋ぐ架け橋:** 画面左手前で黒々とした炎のように天に向かってうねり上がる糸杉は、西洋では墓地に植えられる「死の象徴」です。ゴッホはこの木を、地上の苦悩と天上（星の世界）の永遠を繋ぐスピリチュアルな柱として描き込んでいます。
     * **感情の物理学:** 太くうねる筆触（インパスト）によって描かれた空の流動的な動きは、ゴッホの精神的な動揺の表れであると同時に、物理学における「乱流」のパターンに驚くほど酷似していると科学的にも評価されています。
 
-### 睡蓮（Water Lilies）
+### [睡蓮（Water Lilies）](https://ja.wikipedia.org/wiki/%E7%9D%A1%E8%93%AE_%28%E3%83%A2%E3%83%8D%29)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/f/fd/Le_bassin_aux_nymph%C3%A9as_-_Claude_Monet.jpg)
 * **作者:** クロード・モネ (Claude Monet)
 * **制作年:** 1897年〜1926年
@@ -254,7 +254,7 @@ tags: [Art]
 ## 第5章：内面の叫びと、戦火が落とす影（19世紀末〜20世紀中盤・近代美術）
 二つの世界大戦や大恐慌、テクノロジーの急速な発展の中で、現代人が抱える「疎外感」や「不安」が浮き彫りになった時代です。目に見える現実の崩壊と、人間の内面（心理）の表現が極限まで追求されました。
 
-### 叫び（The Scream）
+### [叫び（The Scream）](https://ja.wikipedia.org/wiki/%E5%8F%AB%E3%81%B3_%28%E3%82%A8%E3%83%89%E3%83%B4%E3%82%A1%E3%83%AB%E3%83%89%E3%83%BB%E3%83%A0%E3%83%B3%E3%82%AF%29)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/960px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg)
 * **作者:** エドヴァルド・ムンク (Edvard Munch)
 * **制作年:** 1893年
@@ -265,7 +265,7 @@ tags: [Art]
     * **感情の視覚化:** 不気味に波打つフィヨルドの曲線と、血のように赤く染め上げられた空の不協和音のような色彩が、ムンク自身が体験したというパニック発作的な恐怖体験を生々しく伝えています。
     * **現代人の孤独の象徴:** 背景を無関心に歩き去る二人の友人のシルエットが、極限状態にある主人公の孤独感を浮き彫りにしています。この両性具有的でのっぺらぼうのような顔は、近代社会を生きるあらゆる人間の疎外感や実存的不安を代弁するアイコンとなりました。
 
-### 接吻（The Kiss）
+### [接吻（The Kiss）](https://ja.wikipedia.org/wiki/%E6%8E%A5%E5%90%BB_%28%E3%82%AF%E3%83%AA%E3%83%A0%E3%83%88%29)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg/960px-The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg)
 * **作者:** グスタフ・クリムト (Gustav Klimt)
 * **制作年:** 1907年〜1908年
@@ -276,7 +276,7 @@ tags: [Art]
     * **ジェンダーの象徴的装飾:** 二人を包み込む衣装には異なる文様が描かれています。男性側には白と黒の鋭い長方形（直線的・理性的エネルギー）、女性側には色鮮やかな円形や花模様（曲線的・感情的エネルギー）が配され、相反する性が補完し合う関係性を示唆しています。
     * **現実からの遊離:** 背景には具体的な風景が描かれず、金色のオーラのような抽象空間が広がっています。これにより、二人の愛の瞬間が現実世界の時間や空間を超越した、永遠のものとして演出されています。
 
-### ダンス（The Dance）
+### [ダンス（The Dance）](https://www.hermitagemuseum.org/digital-collection/28411/?lng=en)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/a/a7/Matissedance.jpg)
 * **作者:** アンリ・マティス (Henri Matisse)
 * **制作年:** 1910年
@@ -286,7 +286,7 @@ tags: [Art]
     * **極限まで削ぎ落とされた要素:** 使用されている色は、人物を彩る「赤」、大地を示す「緑」、空を表す「青」のたった3色のみです。この強烈なコントラストが、生命のエネルギーをダイレクトに視覚へと訴えかけます。
     * **生命の躍動と調和:** 手を取り合い円陣を組んで踊る5人の全裸の人物は、人類の根源的な喜びや、自然界と一体化する生命の循環を象徴しています。流れるようなしなやかな輪郭線が、無限に続く音楽的なリズムを感じさせます。
 
-### アメリカン・ゴシック（American Gothic）
+### [アメリカン・ゴシック（American Gothic）](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E3%83%B3%E3%83%BB%E3%82%B4%E3%82%B7%E3%83%83%E3%82%AF)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/960px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg)
 * **作者:** グラント・ウッド (Grant Wood)
 * **制作年:** 1930年
@@ -297,7 +297,7 @@ tags: [Art]
     * **緻密な画面構成:** ピッチフォーク（三又の農具）の直線的なフォルムと、背景にあるゴシック様式の窓枠の形が視覚的に呼応するように計算されています。
     * **解釈の二面性:** 北方ルネサンスの影響を感じさせる硬質で極めて写実的なタッチで描かれた本作は、田舎の保守的で閉鎖的な価値観への痛烈な皮肉であるという見方と、過酷な時代を生き抜く農民の生真面目さと不屈の精神に対するオマージュであるという見方で、真っ二つに評価が分かれています。
 
-### ゲルニカ（Guernica）
+### [ゲルニカ（Guernica）](https://ja.wikipedia.org/wiki/%E3%82%B2%E3%83%AB%E3%83%8B%E3%82%AB_%28%E7%B5%B5%E7%94%BB%29)
 ![Image](https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg)
 * **作者:** パブロ・ピカソ (Pablo Picasso)
 * **制作年:** 1937年
@@ -309,7 +309,7 @@ tags: [Art]
     * **多義的なシンボル:** 死んだ我が子を抱いて泣き叫ぶ母親、槍に貫かれていななく馬（犠牲となる無辜の民の象徴）、冷たい光を放つ目玉のような電球（破壊兵器と化した現代テクノロジーへの警鐘）、そして傲然と立つ牛（暴力、あるいはスペインそのもの）など、画面の随所に強烈な暗喩が散りばめられています。
 
 
-### ナイトホークス（Nighthawks）
+### [ナイトホークス（Nighthawks）](https://ja.wikipedia.org/wiki/%E3%83%8A%E3%82%A4%E3%83%88%E3%83%9B%E3%83%BC%E3%82%AF%E3%82%B9_%28%E7%B5%B5%E7%94%BB%29)
 ![Image](https://upload.wikimedia.org/wikipedia/commons/7/7b/Hopper_Nighthawks.jpg)
 * **作者:** エドワード・ホッパー (Edward Hopper)
 * **制作年:** 1942年
