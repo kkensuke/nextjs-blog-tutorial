@@ -126,7 +126,7 @@ const PostContent = async (props: any) => {
       <p className="mt-2 text-slate-600">{post.data.subtitle}</p>
       <div className="mt-3 flex justify-center gap-4 text-sm">
         <a
-          className="text-slate-500 underline hover:text-slate-700"
+          className="text-slate-500 underline transition-colors hover:text-slate-300"
           href={markdownUrl}
           rel="noopener noreferrer"
           target="_blank"
@@ -135,7 +135,7 @@ const PostContent = async (props: any) => {
         </a>
         {alternateSlug && (
           <Link
-            className="font-medium text-sky-600 hover:text-sky-700 hover:underline"
+            className="font-medium text-sky-400 transition-colors hover:text-sky-300 hover:underline"
             href={`/blog/posts/${alternateSlug}`}
           >
             {language === 'en' ? '日本語で読む' : 'Read in English'}
