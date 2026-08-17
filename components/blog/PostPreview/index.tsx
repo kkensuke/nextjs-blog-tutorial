@@ -16,7 +16,7 @@ const PostPreview = (props: PostPreviewProps) => {
   (moreThan ? "..." : "");
 
   return (
-    <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white will-change-transform hover:bg-slate-50">
+    <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white will-change-transform hover:bg-[#171717]">
       <Link 
         href={`/blog/posts/${props.slug}`} 
         className="block flex-1 overflow-hidden rounded-xl transition-colors"
@@ -29,7 +29,7 @@ const PostPreview = (props: PostPreviewProps) => {
           </div>
 
           {/* Title */}
-          <h2 className="mb-3 text-xl font-semibold text-slate-800 transition-colors hover:text-sky-600">
+          <h2 className="mb-3 text-xl font-semibold text-slate-800 transition-colors hover:text-sky-300">
             {props.title}
           </h2>
           
@@ -64,7 +64,7 @@ const PostPreview = (props: PostPreviewProps) => {
               <Link
                 key={tag}
                 href={`/blog/tags/${tag}${language === 'en' ? '?lang=en' : ''}`}
-                className="rounded-full bg-white px-2 text-sm text-slate-600 ring-1 ring-slate-200 hover:bg-slate-100 hover:text-slate-900"
+                className="rounded-full bg-white px-2 text-sm text-slate-600 ring-1 ring-slate-200 hover:bg-[#171717] hover:text-slate-300"
               >
                 {tag}
               </Link>
