@@ -2,110 +2,238 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* inline code style */
+/* Inline code */
 .prose code:not(pre code) {
-    background-color: rgb(242, 243, 244);
-    font-weight: 500;
-    color: #ff007f; /* Updated to a modern pink color */
-    border: 0.5px solid #e5e7eb;
+  background-color: #172033;
+  border: 0.5px solid #334155;
+  color: #f472b6;
+  font-weight: 500;
 }
 
-/* list marker style */
+/* Dark typography defaults for blog content. */
+.prose {
+  --tw-prose-body: #d4d4d4;
+  --tw-prose-headings: #fafafa;
+  --tw-prose-lead: #a3a3a3;
+  --tw-prose-links: #7dd3fc;
+  --tw-prose-bold: #fafafa;
+  --tw-prose-counters: #a3a3a3;
+  --tw-prose-bullets: #737373;
+  --tw-prose-hr: #404040;
+  --tw-prose-quotes: #f5f5f5;
+  --tw-prose-quote-borders: #525252;
+  --tw-prose-captions: #a3a3a3;
+  --tw-prose-code: #fafafa;
+  --tw-prose-pre-code: #d4d4d4;
+  --tw-prose-pre-bg: #171717;
+  --tw-prose-th-borders: #525252;
+  --tw-prose-td-borders: #404040;
+}
+
 li::marker {
-    color: rgb(82, 82, 82) !important;
+  color: #94a3b8 !important;
 }
 
-/* link style */
 .prose :where(a):not(:where([class~="not-prose"] *)) {
-    font-weight: 400;
+  font-weight: 400;
 }
 
-/* p tag style in admonitions */
 .prose :where(p):not(:where([class~="not-prose"] *)) {
-    margin-top: 10px;
-    margin-bottom: 10px;;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-
 
 .prose :where(.prose > :first-child):not(:where([class~="not-prose"] *)) {
-    margin-top: 1.5rem !important;
+  margin-top: 1.5rem !important;
 }
 .prose :where(.prose > :last-child):not(:where([class~="not-prose"] *)) {
-    margin-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
-.prose :where(h2 + *):not(:where([class~="not-prose"] *)) {
-    margin-top: 1.5rem !important;
-}
-.prose :where(h3 + *):not(:where([class~="not-prose"] *)) {
-    margin-top: 1.5rem !important;
-}
+.prose :where(h2 + *):not(:where([class~="not-prose"] *)),
+.prose :where(h3 + *):not(:where([class~="not-prose"] *)),
 .prose :where(h4 + *):not(:where([class~="not-prose"] *)) {
-    margin-top: 1.5rem !important;
+  margin-top: 1.5rem !important;
 }
-
-
 
 @layer base {
   :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 3.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
-        --primary: 0 0% 9%;
-        --primary-foreground: 0 0% 98%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
-        --radius: 0.5rem;
-    }
-  .dark {
-        --background: 0 0% 3.9%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
-    }
-}
-@layer base {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
   * {
     @apply border-border;
-    }
+  }
+
   body {
     @apply bg-background text-foreground;
-    }
+  }
+}
+
+/*
+ * The site is permanently dark. These rules normalize legacy light-only
+ * Tailwind utilities without adding dark: variants throughout the codebase.
+ */
+[class~="bg-white"] {
+  background-color: hsl(var(--card));
+}
+[class~="bg-white/80"] {
+  background-color: hsl(var(--background) / 0.88);
+}
+:is([class~="bg-slate-50"], [class~="bg-gray-50"], [class~="bg-neutral-50"]) {
+  background-color: hsl(var(--secondary));
+}
+:is([class~="bg-slate-100"], [class~="bg-gray-100"]) {
+  background-color: hsl(var(--muted));
+}
+:is([class~="bg-slate-200"], [class~="bg-gray-200"]) {
+  background-color: hsl(var(--accent));
+}
+
+[class~="from-slate-100"] {
+  --tw-gradient-from: hsl(var(--muted)) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--muted) / 0) var(--tw-gradient-to-position);
+}
+[class~="from-slate-50"] {
+  --tw-gradient-from: hsl(var(--secondary)) var(--tw-gradient-from-position);
+  --tw-gradient-to: hsl(var(--secondary) / 0) var(--tw-gradient-to-position);
+}
+[class~="to-slate-50"] {
+  --tw-gradient-to: hsl(var(--secondary)) var(--tw-gradient-to-position);
+}
+[class~="to-white"] {
+  --tw-gradient-to: hsl(var(--card)) var(--tw-gradient-to-position);
+}
+
+:is(
+  [class~="text-slate-900"], [class~="text-slate-800"], [class~="text-slate-700"],
+  [class~="text-gray-900"], [class~="text-gray-800"], [class~="text-gray-700"]
+) {
+  color: hsl(var(--foreground));
+}
+:is([class~="text-slate-600"], [class~="text-gray-600"]) {
+  color: #cbd5e1;
+}
+:is([class~="text-slate-500"], [class~="text-gray-500"]) {
+  color: #94a3b8;
+}
+
+:is(
+  [class~="border-slate-100"], [class~="border-slate-200"], [class~="border-slate-300"],
+  [class~="border-gray-200"], [class~="border-gray-300"]
+) {
+  border-color: hsl(var(--border));
+}
+:is([class~="divide-slate-200"], [class~="divide-gray-200"]) > :not([hidden]) ~ :not([hidden]) {
+  border-color: hsl(var(--border));
+}
+:is([class~="ring-slate-200"], [class~="ring-gray-200"]) {
+  --tw-ring-color: hsl(var(--border));
+}
+
+:is([class~="hover:bg-slate-50"], [class~="hover:bg-slate-100"], [class~="hover:bg-gray-100"]):hover {
+  background-color: hsl(var(--accent));
+}
+:is([class~="hover:bg-slate-200"], [class~="hover:bg-gray-200"]):hover {
+  background-color: hsl(var(--secondary));
+}
+:is([class~="hover:text-slate-900"], [class~="hover:text-slate-700"], [class~="hover:text-gray-900"]):hover {
+  color: hsl(var(--foreground));
+}
+:is([class~="hover:border-slate-300"], [class~="hover:border-slate-400"]):hover {
+  border-color: #475569;
+}
+.group:hover :is([class~="group-hover:bg-slate-200"], [class~="group-hover:bg-gray-200"]) {
+  background-color: hsl(var(--accent));
+}
+[class~="focus:ring-offset-2"]:focus {
+  --tw-ring-offset-color: hsl(var(--background));
+}
+
+:is([class~="bg-red-50"], [class~="bg-red-100"]) { background-color: #450a0a; }
+:is([class~="bg-green-50"], [class~="bg-green-100"]) { background-color: #052e16; }
+:is([class~="bg-blue-50"], [class~="bg-blue-100"]) { background-color: #172554; }
+:is([class~="bg-yellow-50"], [class~="bg-yellow-100"]) { background-color: #422006; }
+:is([class~="bg-cyan-50"], [class~="bg-cyan-100"]) { background-color: #083344; }
+:is([class~="bg-indigo-50"], [class~="bg-indigo-100"]) { background-color: #1e1b4b; }
+:is([class~="bg-sky-50"], [class~="bg-sky-100"]) { background-color: #082f49; }
+:is([class~="bg-amber-50"], [class~="bg-amber-100"]) { background-color: #451a03; }
+:is([class~="bg-emerald-50"], [class~="bg-emerald-100"]) { background-color: #022c22; }
+:is([class~="bg-rose-50"], [class~="bg-rose-100"]) { background-color: #4c0519; }
+:is([class~="bg-violet-50"], [class~="bg-violet-100"]) { background-color: #2e1065; }
+:is([class~="bg-teal-50"], [class~="bg-teal-100"]) { background-color: #042f2e; }
+:is([class~="bg-purple-50"], [class~="bg-purple-100"]) { background-color: #3b0764; }
+:is([class~="bg-orange-50"], [class~="bg-orange-100"]) { background-color: #431407; }
+
+:is([class~="text-red-700"], [class~="text-red-600"]) { color: #fca5a5; }
+:is([class~="text-green-700"], [class~="text-green-600"]) { color: #86efac; }
+:is([class~="text-blue-700"], [class~="text-blue-600"]) { color: #93c5fd; }
+:is([class~="text-yellow-700"], [class~="text-yellow-600"]) { color: #fde047; }
+[class~="text-cyan-700"] { color: #67e8f9; }
+[class~="text-indigo-700"] { color: #a5b4fc; }
+[class~="text-sky-700"] { color: #7dd3fc; }
+[class~="text-amber-700"] { color: #fcd34d; }
+[class~="text-emerald-700"] { color: #6ee7b7; }
+[class~="text-rose-700"] { color: #fda4af; }
+[class~="text-neutral-700"] { color: #d4d4d4; }
+[class~="text-violet-700"] { color: #c4b5fd; }
+[class~="text-teal-700"] { color: #5eead4; }
+:is([class~="text-purple-700"], [class~="text-purple-600"]) { color: #d8b4fe; }
+:is([class~="text-orange-700"], [class~="text-orange-600"]) { color: #fdba74; }
+
+:is(
+  [class~="border-red-200"], [class~="border-red-300"], [class~="border-green-200"], [class~="border-blue-200"],
+  [class~="border-indigo-200"], [class~="border-sky-200"], [class~="border-amber-200"],
+  [class~="border-emerald-200"], [class~="border-rose-200"], [class~="border-neutral-200"],
+  [class~="border-violet-200"], [class~="border-teal-200"], [class~="border-cyan-200"]
+) {
+  border-color: hsl(var(--border));
+}
+
+[class~="hover:bg-red-200"]:hover { background-color: #7f1d1d; }
+[class~="hover:bg-green-200"]:hover { background-color: #14532d; }
+[class~="hover:bg-blue-200"]:hover { background-color: #1e3a8a; }
+[class~="hover:bg-yellow-200"]:hover { background-color: #713f12; }
+[class~="hover:text-red-800"]:hover { color: #fecaca; }
+.group:hover [class~="group-hover:bg-blue-200"] { background-color: #1e3a8a; }
+
+/* Table of contents uses component-level CSS, so keep its fixed colors readable. */
+.toc-link {
+  color: #94a3b8 !important;
+}
+.toc-link:hover {
+  color: #f8fafc !important;
+}
+.is-active-link {
+  color: #60a5fa !important;
+}
+.is-active-link + .toc-list .toc-link {
+  color: #cbd5e1 !important;
 }
