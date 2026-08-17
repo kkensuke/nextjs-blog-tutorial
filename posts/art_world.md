@@ -18,6 +18,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/The_Arnolfini_portrait_%281434%29.jpg/1280px-The_Arnolfini_portrait_%281434%29.jpg)
 * **作者:** ヤン・ファン・エイク (Jan van Eyck)
 * **制作年:** 1434年
+* **大きさ:** 82.2 × 60 cm
 * **作品の魅力と美術史における重要性:**
     * **北方ルネサンスの至宝:** イタリアとは異なる独自の発展を遂げたフランドル美術の最高傑作であり、油彩技法のポテンシャルを極限まで引き出した緻密な描写が特徴です。
     * **驚異的な写実性:** 着衣の重厚な質感や毛皮の細やかさ、シャンデリアの金属の輝きに至るまで、光の反射と物質の質感が息を呑むほどのリアリティで再現されています。
@@ -28,6 +29,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg/960px-Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg)
 * **作者:** サンドロ・ボッティチェリ (Sandro Botticelli)
 * **制作年:** 1485年頃
+* **大きさ:** 172.5 × 278.5 cm
 * **作品の魅力と美術史における重要性:**
     * **古代神話の華麗なる復活:** 中世キリスト教美術ではタブーとされていた「異教の神の裸体」を、ルネサンスの夜明けとともに堂々と、そして極めて美しく描き出した画期的な作品です。
     * **愛と美の女神の顕現:** 海の泡から生まれ、大きな帆立貝に乗ってキュプロス島に流れ着いたヴィーナスが、西風の神ゼフュロスに吹かれ、季節の女神から花の衣を掛けられようとする神話のワンシーンを詩情豊かに再現しています。
@@ -38,6 +40,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg/960px-Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg)
 * **作者:** レオナルド・ダ・ヴィンチ (Leonardo da Vinci)
 * **制作年:** 1483-1486年頃（ルーヴル版）、1495-1508年頃（ロンドン版）
+* **大きさ:** 199 × 122 cm（ルーヴル版）
 * **作品の魅力と美術史における重要性:**
     * **神秘に満ちた空間:** 聖母マリア、幼子イエス、洗礼者ヨハネ、そして天使が、薄暗く切り立った奇岩の風景の中に配された、謎めいた雰囲気漂う作品です。
     * **スフマート技法の真髄:** 輪郭線を用いず、色彩の境界を煙のようにぼかしていくダ・ヴィンチ独自の技法「スフマート」が完璧に駆使されており、人物の肌の類まれな柔らかさと、空間の奥深さが見事に表現されています。
@@ -48,6 +51,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/The_Garden_of_earthly_delights.jpg/1280px-The_Garden_of_earthly_delights.jpg)
 * **作者:** ヒエロニムス・ボス (Hieronymus Bosch)
 * **制作年:** 1490年〜1510年頃
+* **大きさ:** 185.8 × 約325.5 cm（開扉時。中央パネル幅172.5 cm、両翼各76.5 cm）
 * **作品の魅力と美術史における重要性:**
     * **奇想天外な大作:** 500年以上前に描かれたとは到底思えないほどのシュールで独創的な世界観を持つ、美術史における最大のミステリーとも言える祭壇画（三連画）です。
     * **閉じた扉に描かれた創造:** 普段閉じられている外側の扉には、神による天地創造の3日目にあたる、静寂に包まれたモノクロームの世界が描かれています。
@@ -60,6 +64,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/960px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg)
 * **作者:** レオナルド・ダ・ヴィンチ (Leonardo da Vinci)
 * **制作年:** 1495年〜1498年
+* **大きさ:** 460 × 880 cm
 * **作品の魅力と美術史における重要性:**
     * **究極の心理ドラマ:** ミラノの修道院の食堂の壁に描かれた巨大なテンペラ画。イエスが「この中に私を裏切る者がいる」と爆弾発言をした直後、12人の使徒たちに走った動揺と波紋を、まるで映画のワンシーンのように劇的に切り取っています。
     * **革新的なグループ描写:** 従来の『最後の晩餐』では裏切り者のユダだけをテーブルの手前に孤立させて描くのがお約束でしたが、ダ・ヴィンチはユダを他の使徒と同じ並びに置きながらも、彼だけを暗い影の中に沈み込ませ、体をのけぞらせる仕草によって内面の罪悪感を見事に表現しました。
@@ -70,6 +75,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1280px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg)
 * **作者:** レオナルド・ダ・ヴィンチ (Leonardo da Vinci)
 * **制作年:** 1503年〜1506年頃
+* **大きさ:** 77 × 53 cm
 * **作品の魅力と美術史における重要性:**
     * **世界で最も有名な微笑み:** 単なる裕福な女性の肖像画という枠を完全に超え、人間の心理の深淵や生命の神秘そのものをカンヴァスに定着させた、西洋絵画の代名詞とも言えるルーヴル美術館の至宝です。
     * **アルカイック・スマイルの進化:** 目元と口元の輪郭線を煙のように幾重にもぼかして描く「スフマート技法」により、見る角度や鑑賞者の心理状態によって、優しく微笑んでいるようにも、どこか哀しげにも見えるという「生きた表情」の謎めいた効果を生み出しました。
@@ -80,6 +86,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/960px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg)
 * **作者:** ミケランジェロ (Michelangelo)
 * **制作年:** 1508年〜1512年
+* **大きさ:** 280 × 570 cm
 * **作品の魅力と美術史における重要性:**
     * **天井画のハイライト:** ヴァチカンのシスティーナ礼拝堂の広大な天井を飾るフレスコ画の中で、最も有名で図像学的に重要な一場面です。旧約聖書に基づく、最初の人間アダムに魂が吹き込まれる劇的な瞬間を描いています。
     * **指先が交わる奇跡の瞬間:** 空を駆ける父なる神の力強い指先と、大地に横たわるアダムの力なく伸ばされた指先が、あと数ミリで触れ合おうとする緊張感。このわずかな隙間に、神から人へと生命のスパークが受け渡される神秘が集約されています。
@@ -90,6 +97,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg/960px-%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg)
 * **作者:** ラファエロ (Raphael)
 * **制作年:** 1509年〜1511年
+* **大きさ:** 500 × 770 cm
 * **作品の魅力と美術史における重要性:**
     * **知の殿堂の視覚化:** ヴァチカン宮殿の壁画として描かれた盛期ルネサンスの最高峰。古代ギリシアの偉大な哲学者や科学者たちが一堂に会する、時空を超えた理想郷を描き出しています。
     * **二大巨頭の対比:** 画面の中央では、天（イデアの世界）を指差すプラトンと、地（現実・経験の世界）を示すアリストテレスが歩み寄っており、西洋哲学の根幹をなす二つの思想体系が視覚的に表現されています。
@@ -105,6 +113,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg/960px-La_ronda_de_noche%2C_por_Rembrandt_van_Rijn.jpg)
 * **作者:** レンブラント・ファン・レイン (Rembrandt van Rijn)
 * **制作年:** 1642年
+* **大きさ:** 約363 × 438 cm（現存する画面部分）
 * **作品の魅力と美術史における重要性:**
     * **集団肖像画の革命:** 17世紀オランダのバロック美術を代表する至宝。当時の集団肖像画が「全員が並んで前を向く記念撮影」のような退屈なものであったのに対し、レンブラントは自警団が出動する直前の「物語性あふれる劇的な瞬間」として描き出すという前代未聞の挑戦を行いました。
     * **タイトルの誤解:** 長年表面のニスが変色して黒ずんでいたため「夜の光景」だと勘違いされ『夜警』という通称が定着しましたが、修復によって本来は明るい昼間の情景を描いたものであることが判明しています。
@@ -115,6 +124,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg/960px-Las_Meninas%2C_by_Diego_Vel%C3%A1zquez%2C_from_Prado_in_Google_Earth.jpg)
 * **作者:** ディエゴ・ベラスケス (Diego Velázquez)
 * **制作年:** 1656年
+* **大きさ:** 320.5 × 281.5 cm
 * **作品の魅力と美術史における重要性:**
     * **「絵画の神学」とも呼ばれる最高傑作:** 西洋美術史において、これほどまでに「見ること」の複雑な構造を仕掛け、多くの画家や哲学者を魅了し続けている作品は他にありません。
     * **主役は誰か？という問い:** 画面中央には愛らしいマルガリータ王女と侍女（メニーナス）たちが描かれていますが、左端には巨大なカンヴァスに向かうベラスケス本人がこちら（鑑賞者側）を見つめています。
@@ -125,6 +135,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/960px-1665_Girl_with_a_Pearl_Earring.jpg)
 * **作者:** ヨハネス・フェルメール (Johannes Vermeer)
 * **制作年:** 1665年頃
+* **大きさ:** 44.5 × 39 cm
 * **作品の魅力と美術史における重要性:**
     * **北のモナ・リザ:** 17世紀オランダを代表するフェルメールの作品の中でも、その謎めいた魅力で世界中から愛され続けている傑作です。特定の誰かを描いた肖像画ではなく、異国情緒を纏った架空の人物像（トローニー）として描かれています。
     * **振り向く一瞬の魔法:** 暗い背景からふわりと浮かび上がるように、少女が肩越しにこちらを振り返る瞬間を捉えています。開かれた唇と大きな瞳が、何かを語りかけようとしているかのような親密さと余韻を感じさせます。
@@ -140,6 +151,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg/3840px-El_Tres_de_Mayo%2C_by_Francisco_de_Goya%2C_from_Prado_thin_black_margin.jpg)
 * **作者:** フランシスコ・デ・ゴヤ (Francisco de Goya)
 * **制作年:** 1814年
+* **大きさ:** 268 × 347 cm
 * **作品の魅力と美術史における重要性:**
     * **戦争のリアルな告発:** 戦争を英雄譚として美化する従来の絵画とは一線を画し、暴力の凄惨さと民衆の恐怖を容赦なく描き出した近代絵画の先駆けです。
     * **歴史的背景:** ナポレオン軍に対するマドリード市民の抵抗と、その後に引き起こされた冷酷な集団銃殺という悲劇的な史実をテーマにしています。
@@ -150,6 +162,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/960px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg)
 * **作者:** ウジェーヌ・ドラクロワ (Eugène Delacroix)
 * **制作年:** 1830年
+* **大きさ:** 260 × 325 cm
 * **作品の魅力と美術史における重要性:**
     * **ロマン主義を象徴する歴史画:** 1830年に起きたフランス7月革命の熱狂と興奮をカンヴァスに叩きつけた、ドラクロワの代表作です。
     * **自由の擬人化:** 画面中央で三色旗（トリコロール）を高く掲げ、銃剣を手にして民衆を先導する女性は、フランス共和国の理念そのものを象徴する女神「マリアンヌ」です。彼女の力強い姿は、抑圧に対する自由の勝利を力強く謳い上げています。
@@ -160,6 +173,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/The_Great_Wave_off_Kanagawa.jpg/3840px-The_Great_Wave_off_Kanagawa.jpg)
 * **作者:** 葛飾北斎 (Katsushika Hokusai)
 * **制作年:** 1830年頃
+* **大きさ:** 約25.7 × 37.9 cm（摺りにより若干の差）
 * **作品の魅力と美術史における重要性:**
     * **圧倒的な自然の脅威:** 荒狂う大波が今にも小舟を飲み込もうとする瞬間を捉えた、日本美術を代表する浮世絵の傑作です。
     * **静と動のコントラスト:** 画面の手前で猛威を振るうダイナミックな波に対し、遠景には日本の象徴である富士山が静粛に鎮座しています。この非対称で計算し尽くされた構図が、作品全体に強烈な緊張感を生み出しています。
@@ -175,6 +189,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/960px-Monet_-_Impression%2C_Sunrise.jpg)
 * **作者:** クロード・モネ (Claude Monet)
 * **制作年:** 1872年
+* **大きさ:** 50 × 65 cm（額なし）
 * **作品の魅力と美術史における重要性:**
     * **「印象派」誕生の引き金:** 美術の歴史を大きく塗り替えた一大ムーブメント「印象派」の語源となった、極めてシンボリックな作品です。
     * **主観的な感覚の描写:** ル・アーヴル港の朝霧にかすむ風景を、写実的に記録するのではなく、画家自身の目に飛び込んできた「光と大気の第一印象」をそのままカンヴァスに写し取ることを目指しました。
@@ -185,6 +200,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg/960px-Renoir%2C_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette%2C_1876.jpg)
 * **作者:** ピエール＝オーギュスト・ルノワール (Pierre-Auguste Renoir)
 * **制作年:** 1876年
+* **大きさ:** 131.5 × 176.5 cm
 * **作品の魅力と美術史における重要性:**
     * **印象派が捉えた都市の歓び:** モンマルトルにあった人気のダンスキャバレーを舞台に、休日の午後を楽しむパリの若者たちの活気あふれる社交風景を見事に描き出しています。
     * **光の魔法:** 木漏れ日が人物の服や地面に落とす斑点状の光と影のゆらめきを、軽やかな筆致で表現しています。この巧みな光の描写が、絵画全体に生命力とリズミカルな動きをもたらしています。
@@ -194,6 +210,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/A_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.jpg/960px-A_Sunday_on_La_Grande_Jatte%2C_Georges_Seurat%2C_1884.jpg)
 * **作者:** ジョルジュ・スーラ (Georges Seurat)
 * **制作年:** 1884年〜1886年
+* **大きさ:** 207.5 × 308.1 cm
 * **作品の魅力と美術史における重要性:**
     * **点描画法の金字塔:** パレットで絵の具を混ぜるのではなく、純色の細かな点をカンヴァスに無数に打ち込むことで、鑑賞者の網膜上で色彩を融合させる「視覚混合」を用いた科学的なアプローチの結晶です。
     * **計算された静寂:** 印象派が重んじた「一瞬の光の移ろい」とは対照的に、スーラは厳密な幾何学に基づく構図を採用しました。セーヌ川畔で憩う人々はどこか彫刻のように静止しており、永遠の時間を生きているかのような感覚を与えます。
@@ -203,6 +220,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Vincent_Willem_van_Gogh_127.jpg/500px-Vincent_Willem_van_Gogh_127.jpg)
 * **作者:** フィンセント・ファン・ゴッホ (Vincent Van Gogh)
 * **制作年:** 1888年〜1889年
+* **大きさ:** 92.1 × 73 cm（ロンドン・ナショナル・ギャラリー所蔵版）
 * **作品の魅力と美術史における重要性:**
     * **希望と友情の象徴:** 南仏アルルに移り住んだゴッホが、画家仲間と共同生活を送る夢を描き、尊敬するポール・ゴーギャンを迎えるためにアトリエ（黄色い家）を飾る目的で描いた情熱的な連作です。
     * **黄色のシンフォニー:** ゴッホにとって黄色は「太陽」や「生命」「感謝」を意味する特別な色でした。背景から花びらに至るまで、多種多様な黄色のトーンを駆使することで、単なる静物画を超えた深い精神性を表現しています。
@@ -213,6 +231,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg)
 * **作者:** フィンセント・ファン・ゴッホ (Vincent Van Gogh)
 * **制作年:** 1889年
+* **大きさ:** 73.7 × 92.1 cm
 * **作品の魅力と美術史における重要性:**
     * **心の宇宙を描いた絶唱:** ゴッホが南仏の精神療養院に入院していた時期に、病室の窓から見た夜明け前の景色をインスピレーションに、自身の渦巻く感情と宇宙的なヴィジョンを融合させた名作です。
     * **狂騒と静寂の対比:** 上半分を占める空では、三日月や星々が巨大な光の渦となって激しくうねり、圧倒的なエネルギーを放っています。一方、眼下に広がる村は教会の尖塔を中心に深い静けさに包まれており、人間の営みのちっぽけさと大宇宙のスケールの対比が際立ちます。
@@ -223,6 +242,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/f/fd/Le_bassin_aux_nymph%C3%A9as_-_Claude_Monet.jpg)
 * **作者:** クロード・モネ (Claude Monet)
 * **制作年:** 1897年〜1926年
+* **大きさ:** 100.4 × 201 cm（掲載画像の1919年作）
 * **作品の魅力と美術史における重要性:**
     * **光と水面の生涯をかけた探求:** ジヴェルニーの自宅の庭に造った池をモチーフに、モネが晩年まで描き続けた250点にも及ぶ連作の総称です。
     * **抽象へのアプローチ:** 作品を重ねるにつれて、岸辺の風景や明確な水平線は姿を消し、画面全体が水面だけで満たされるようになります。これは従来の遠近法を脱却し、20世紀の抽象絵画への扉を開く革新的な視点でした。
@@ -238,6 +258,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/960px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg)
 * **作者:** エドヴァルド・ムンク (Edvard Munch)
 * **制作年:** 1893年
+* **大きさ:** 91 × 73.5 cm
 * **作品の魅力と美術史における重要性:**
     * **表現主義の原点:** 目に見える外界の風景ではなく、人間の内面にある「不安」や「恐怖」といった主観的な感情を、色彩と形態の歪みを通してカンヴァスにぶつけた革新的な作品です。
     * **自然を貫く幻聴:** よく誤解されますが、描かれている人物が叫んでいるのではなく、「自然界全体を通り抜ける果てしない叫び声」に耐えきれず、耳を塞いで怯えている姿を描いています。
@@ -248,6 +269,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg/960px-The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg)
 * **作者:** グスタフ・クリムト (Gustav Klimt)
 * **制作年:** 1907年〜1908年
+* **大きさ:** 180 × 180 cm
 * **作品の魅力と美術史における重要性:**
     * **黄金時代（黄金様式）の頂点:** 金箔をふんだんに使用した豪奢で装飾的なスタイルで知られるクリムトの、最も有名で愛されている傑作です。
     * **エロスと精神性の融合:** 花畑の崖っぷちで抱き合い、陶酔の中で口付けを交わす男女の姿は、肉体的な愛の悦びだけでなく、魂が一つに溶け合うような神聖な一体感を表現しています。
@@ -258,6 +280,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/a/a7/Matissedance.jpg)
 * **作者:** アンリ・マティス (Henri Matisse)
 * **制作年:** 1910年
+* **大きさ:** 260 × 391 cm
 * **作品の魅力と美術史における重要性:**
     * **色彩の解放:** 現実の固有色に縛られない鮮烈な色彩を用いる「フォーヴィスム（野獣派）」を代表する記念碑的作品です。
     * **極限まで削ぎ落とされた要素:** 使用されている色は、人物を彩る「赤」、大地を示す「緑」、空を表す「青」のたった3色のみです。この強烈なコントラストが、生命のエネルギーをダイレクトに視覚へと訴えかけます。
@@ -267,6 +290,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/960px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg)
 * **作者:** グラント・ウッド (Grant Wood)
 * **制作年:** 1930年
+* **大きさ:** 78 × 65.3 cm
 * **作品の魅力と美術史における重要性:**
     * **アメリカン・アイコン:** アメリカ美術において最もパロディ化され、親しまれている象徴的なイメージの一つです。大恐慌時代のアメリカ中西部の風土を写し取った「リージョナリズム（地方主義）」の代表作とされています。
     * **謎めいた人間関係:** 農夫風の厳しい表情をした男性と、その傍らに立つ女性（画家の妹と主治医の歯科医がモデル）の姿が描かれていますが、二人が夫婦なのか父娘なのかは明確にされておらず、その関係性を巡る議論が絶えません。
@@ -277,6 +301,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg)
 * **作者:** パブロ・ピカソ (Pablo Picasso)
 * **制作年:** 1937年
+* **大きさ:** 349.3 × 776.6 cm
 * **作品の魅力と美術史における重要性:**
     * **20世紀最大の反戦メッセージ:** スペイン内戦中、ナチス・ドイツ等によるバスク地方の小都市ゲルニカへの無差別爆撃に対する激しい怒りと抗議を込めて制作された、美術史に残る巨大な壁画サイズの金字塔です。
     * **色彩の剥奪:** 赤などの生々しい色を一切使わず、白、黒、灰色のモノクロームだけで描かれています。この色調は報道写真や新聞紙面を連想させ、戦争という悲劇のドキュメンタリー性と、希望が奪われた絶望感を冷徹に突きつけます。
@@ -288,6 +313,7 @@ tags: [Art]
 ![Image](https://upload.wikimedia.org/wikipedia/commons/7/7b/Hopper_Nighthawks.jpg)
 * **作者:** エドワード・ホッパー (Edward Hopper)
 * **制作年:** 1942年
+* **大きさ:** 84.1 × 152.4 cm
 * **作品の魅力と美術史における重要性:**
     * **近代都市の孤独と疎外感:** 真夜中のダイナー（簡易食堂）に集う人々を描いた、20世紀アメリカ美術を代表する傑作です。物理的な距離は近いのに、深い沈黙に包まれた登場人物たちは、大都会における「群衆の中の孤独」を完璧に視覚化しています。
     * **シネマティックな光と影:** 当時普及し始めたばかりの蛍光灯の人工的で冷たい光が、暗く静まり返ったニューヨークの街角に漏れ出す様を強烈なコントラストで描き出しています。この照明効果は、フィルム・ノワールのようなサスペンスを生み出しています。
