@@ -12,7 +12,6 @@ import { IconType } from 'react-icons';
 import { LucideIcon } from 'lucide-react';
 import { SITE_CONFIG } from '@/config/site';
 
-// Define types for the footer links
 type FooterLinkWithIcon = {
   label: string;
   icon: IconType | LucideIcon;
@@ -53,7 +52,6 @@ const Footer = () => {
     <footer className="mt-auto border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-16">
         <div className="grid justify-evenly gap-8 sm:grid-cols-2 md:grid-cols-4">
-          {/* Logo Section */}
           <div className="flex flex-col gap-4">
             <Link href="/">
               <img 
@@ -67,7 +65,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Explore Section */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-800">
               Explore
@@ -79,7 +76,7 @@ const Footer = () => {
                   <li key={link.label}>
                     <Link 
                       href={link.href}
-                      className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-900"
+                      className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-300"
                     >
                       <Icon size={16} />
                       {link.label}
@@ -90,7 +87,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social Section */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-800">
               Connect
@@ -104,7 +100,7 @@ const Footer = () => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-900"
+                      className="flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-300"
                     >
                       <Icon size={16} />
                       {link.label}
@@ -115,7 +111,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Tech Stack Section */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-800">
               Powered by
@@ -127,7 +122,7 @@ const Footer = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-900"
+                    className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-300"
                   >
                     {link.label}
                     <ExternalLink size={14}/>
@@ -138,11 +133,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 text-sm text-slate-600 sm:flex-row">
           <p>© {new Date().getFullYear()} All rights reserved.</p>
           <div className="flex gap-4">
-            <Link href="/policy" className="transition-colors hover:text-slate-900">
+            <Link href="/policy" className="transition-colors hover:text-slate-300">
               Privacy Policy & Terms of Service
             </Link>
           </div>

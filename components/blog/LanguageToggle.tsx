@@ -17,15 +17,15 @@ export default function LanguageToggle({
 }: LanguageToggleProps) {
   return (
     <nav aria-label="Blog language" className="flex justify-end">
-      <div className="inline-flex rounded-lg border border-slate-200 bg-white p-1">
+      <div className="inline-flex rounded-lg border border-slate-700 bg-[#0f0f0f] p-1">
         {languages.map(({ value, label }) => (
           <Link
             key={value}
             aria-current={language === value ? 'page' : undefined}
-            className={`rounded-md px-3 py-1.5 text-sm font-medium transition ${
+            className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
               language === value
-                ? 'bg-slate-700 text-white'
-                : 'text-slate-600 hover:bg-slate-100'
+                ? 'bg-slate-700 text-slate-100'
+                : 'text-slate-400 hover:bg-slate-800 hover:text-slate-300'
             }`}
             href={value === 'en' ? `${basePath}?lang=en` : basePath}
           >
