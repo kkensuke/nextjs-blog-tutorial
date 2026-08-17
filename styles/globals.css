@@ -81,6 +81,8 @@ li::marker {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --surface-hover: 0 0% 9%;
+    --surface-hover-strong: 0 0% 18%;
     --radius: 0.5rem;
   }
 
@@ -159,19 +161,31 @@ li::marker {
 }
 
 :is([class~="hover:bg-slate-50"], [class~="hover:bg-slate-100"], [class~="hover:bg-gray-100"]):hover {
-  background-color: hsl(var(--accent));
+  background-color: hsl(var(--surface-hover));
 }
 :is([class~="hover:bg-slate-200"], [class~="hover:bg-gray-200"]):hover {
-  background-color: hsl(var(--secondary));
+  background-color: hsl(var(--surface-hover-strong));
 }
-:is([class~="hover:text-slate-900"], [class~="hover:text-slate-700"], [class~="hover:text-gray-900"]):hover {
-  color: hsl(var(--foreground));
+:is([class~="hover:text-slate-900"], [class~="hover:text-gray-900"]):hover {
+  color: #e2e8f0;
+}
+[class~="hover:text-slate-700"]:hover {
+  color: #cbd5e1;
+}
+:is([class~="hover:text-sky-600"], [class~="hover:text-sky-700"]):hover {
+  color: #7dd3fc;
 }
 :is([class~="hover:border-slate-300"], [class~="hover:border-slate-400"]):hover {
-  border-color: #475569;
+  border-color: #3f4752;
 }
 .group:hover :is([class~="group-hover:bg-slate-200"], [class~="group-hover:bg-gray-200"]) {
-  background-color: hsl(var(--accent));
+  background-color: hsl(var(--surface-hover-strong));
+}
+.group:hover [class~="group-hover:text-blue-600"] {
+  color: #bfdbfe;
+}
+.group:hover [class~="group-hover:text-blue-500"] {
+  color: #93c5fd;
 }
 [class~="focus:ring-offset-2"]:focus {
   --tw-ring-offset-color: hsl(var(--background));
@@ -198,7 +212,7 @@ li::marker {
 :is([class~="text-yellow-700"], [class~="text-yellow-600"]) { color: #fde047; }
 [class~="text-cyan-700"] { color: #67e8f9; }
 [class~="text-indigo-700"] { color: #a5b4fc; }
-[class~="text-sky-700"] { color: #7dd3fc; }
+:is([class~="text-sky-700"], [class~="text-sky-600"]) { color: #38bdf8; }
 [class~="text-amber-700"] { color: #fcd34d; }
 [class~="text-emerald-700"] { color: #6ee7b7; }
 [class~="text-rose-700"] { color: #fda4af; }
@@ -217,19 +231,26 @@ li::marker {
   border-color: hsl(var(--border));
 }
 
-[class~="hover:bg-red-200"]:hover { background-color: #7f1d1d; }
-[class~="hover:bg-green-200"]:hover { background-color: #14532d; }
-[class~="hover:bg-blue-200"]:hover { background-color: #1e3a8a; }
-[class~="hover:bg-yellow-200"]:hover { background-color: #713f12; }
+:is(
+  [class~="hover:bg-red-200"], [class~="hover:bg-green-200"], [class~="hover:bg-blue-200"],
+  [class~="hover:bg-yellow-200"], [class~="hover:bg-cyan-200"], [class~="hover:bg-indigo-200"],
+  [class~="hover:bg-sky-200"], [class~="hover:bg-amber-200"], [class~="hover:bg-emerald-200"],
+  [class~="hover:bg-rose-200"], [class~="hover:bg-violet-200"], [class~="hover:bg-teal-200"],
+  [class~="hover:bg-purple-200"], [class~="hover:bg-orange-200"]
+):hover {
+  background-color: color-mix(in srgb, currentColor 16%, hsl(var(--background)));
+}
 [class~="hover:text-red-800"]:hover { color: #fecaca; }
-.group:hover [class~="group-hover:bg-blue-200"] { background-color: #1e3a8a; }
+.group:hover [class~="group-hover:bg-blue-200"] {
+  background-color: color-mix(in srgb, currentColor 16%, hsl(var(--background)));
+}
 
 /* Table of contents uses component-level CSS, so keep its fixed colors readable. */
 .toc-link {
   color: #94a3b8 !important;
 }
 .toc-link:hover {
-  color: #f8fafc !important;
+  color: #cbd5e1 !important;
 }
 .is-active-link {
   color: #60a5fa !important;
