@@ -5,7 +5,7 @@ import type { BlogLanguage } from '@/lib/blog/localization';
 interface PaginationProps {
   currentPage: number;
   totalPages: number;
-  basePath?: string; // e.g. "/blog" or "/blog/tags/python"
+  basePath?: string;
   language?: BlogLanguage;
 }
 
@@ -27,42 +27,40 @@ export default function Pagination({
     return query ? `${basePath}?${query}` : basePath;
   };
 
-  // Calculate the page number to display (current ±2)
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1).filter(
     (p) => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 4
   );
 
+  const inactiveClass = 'border-slate-700 text-slate-400 hover:border-slate-600 hover:bg-[#171717] hover:text-slate-300';
+
   return (
     <nav className="mt-12 flex items-center justify-center gap-1">
-      {/* Go to the previous page */}
       {currentPage > 1 ? (
         <Link
           href={getHref(currentPage - 1)}
-          className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 transition hover:bg-slate-100"
+          className={`flex h-9 w-9 items-center justify-center rounded-lg border transition-colors ${inactiveClass}`}
         >
           <ChevronLeft size={16} />
         </Link>
       ) : (
-        <span className="flex h-9 w-9 cursor-not-allowed items-center justify-center rounded-lg border border-slate-200 text-slate-300">
+        <span className="flex h-9 w-9 cursor-not-allowed items-center justify-center rounded-lg border border-slate-800 text-slate-600">
           <ChevronLeft size={16} />
         </span>
       )}
 
-      {/* Page Numbers */}
       {pages.map((page, idx) => {
         const prev = pages[idx - 1];
         return (
           <span key={page} className="flex items-center gap-1">
-            {/* Ellipsis */}
             {prev && page - prev > 1 && (
-              <span className="px-1 text-slate-400">…</span>
+              <span className="px-1 text-slate-500">…</span>
             )}
             <Link
               href={getHref(page)}
-              className={`flex h-9 w-9 items-center justify-center rounded-lg border text-sm font-medium transition
-                ${page === currentPage
-                  ? 'border-blue-500 bg-blue-500 text-white'
-                  : 'border-slate-200 text-slate-600 hover:bg-slate-100'}`}
+              className={`flex h-9 w-9 items-center justify-center rounded-lg border text-sm font-medium transition-colors ${
+                page === currentPage
+                  ? 'border-blue-500 bg-blue-600 text-white'
+                  : inactiveClass}`}
             >
               {page}
             </Link>
@@ -70,16 +68,15 @@ export default function Pagination({
         );
       })}
 
-      {/* Next */}
       {currentPage < totalPages ? (
         <Link
           href={getHref(currentPage + 1)}
-          className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 transition hover:bg-slate-100"
+          className={`flex h-9 w-9 items-center justify-center rounded-lg border transition-colors ${inactiveClass}`}
         >
           <ChevronRight size={16} />
         </Link>
       ) : (
-        <span className="flex h-9 w-9 cursor-not-allowed items-center justify-center rounded-lg border border-slate-200 text-slate-300">
+        <span className="flex h-9 w-9 cursor-not-allowed items-center justify-center rounded-lg border border-slate-800 text-slate-600">
           <ChevronRight size={16} />
         </span>
       )}
