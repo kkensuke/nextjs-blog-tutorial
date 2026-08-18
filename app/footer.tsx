@@ -54,9 +54,9 @@ const Footer = () => {
         <div className="grid justify-evenly gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div className="flex flex-col gap-4">
             <Link href="/">
-              <img 
-                src="/images/simple_logo.jpeg" 
-                alt="Logo" 
+              <img
+                src="/images/simple_logo.jpeg"
+                alt="Logo"
                 className="h-12 w-12 rounded-xl"
               />
             </Link>
@@ -74,9 +74,9 @@ const Footer = () => {
                 const Icon = link.icon as React.ComponentType<{ size?: number }>;
                 return (
                   <li key={link.label}>
-                    <Link 
+                    <Link
                       href={link.href}
-                      className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-300"
+                      className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-sky-400"
                     >
                       <Icon size={16} />
                       {link.label}
@@ -96,11 +96,11 @@ const Footer = () => {
                 const Icon = link.icon as React.ComponentType<{ size?: number }>;
                 return (
                   <li key={link.label}>
-                    <a 
+                    <a
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-300"
+                      className="flex items-center gap-2 text-slate-600 transition-colors hover:text-sky-400"
                     >
                       <Icon size={16} />
                       {link.label}
@@ -118,11 +118,11 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.tech.map((link) => (
                 <li key={link.label}>
-                  <a 
+                  <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-300"
+                    className="group flex items-center gap-2 text-slate-600 transition-colors hover:text-sky-400"
                   >
                     {link.label}
                     <ExternalLink size={14}/>

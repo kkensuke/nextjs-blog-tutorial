@@ -12,13 +12,13 @@ type PostPreviewProps = PostMetadata & {
 const PostPreview = (props: PostPreviewProps) => {
   const language = props.language || 'ja';
   const moreThan = props.subtitle.length > LIMITS.POST_EXCERPT_LENGTH;
-  const subtitle = props.subtitle.slice(0, LIMITS.POST_EXCERPT_LENGTH) + 
+  const subtitle = props.subtitle.slice(0, LIMITS.POST_EXCERPT_LENGTH) +
   (moreThan ? "..." : "");
 
   return (
-    <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white will-change-transform hover:bg-[#171717]">
-      <Link 
-        href={`/blog/posts/${props.slug}`} 
+    <div className="flex flex-col justify-between rounded-xl border border-slate-200 bg-white will-change-transform hover:bg-slate-800">
+      <Link
+        href={`/blog/posts/${props.slug}`}
         className="block flex-1 overflow-hidden rounded-xl transition-colors"
       >
         <div className="p-6">
@@ -29,16 +29,16 @@ const PostPreview = (props: PostPreviewProps) => {
           </div>
 
           {/* Title */}
-          <h2 className="mb-3 text-xl font-semibold text-slate-800 transition-colors hover:text-sky-300">
+          <h2 className="mb-3 text-xl font-semibold text-slate-800 transition-colors">
             {props.title}
           </h2>
-          
+
           {/* Preview image */}
           {props.previewImage && (
-            <img 
-              src={props.previewImage} 
-              alt={props.title} 
-              className="mb-4 h-32 w-full rounded-lg object-cover object-center" 
+            <img
+              src={props.previewImage}
+              alt={props.title}
+              className="mb-4 h-32 w-full rounded-lg object-cover object-center"
             />
           )}
 
@@ -64,7 +64,7 @@ const PostPreview = (props: PostPreviewProps) => {
               <Link
                 key={tag}
                 href={`/blog/tags/${tag}${language === 'en' ? '?lang=en' : ''}`}
-                className="rounded-full bg-white px-2 text-sm text-slate-600 ring-1 ring-slate-200 hover:bg-[#171717] hover:text-slate-300"
+                className="rounded-full border border-slate-500 px-2 text-sm text-slate-600 ring-1 ring-slate-200 hover:text-slate-300"
               >
                 {tag}
               </Link>
