@@ -1,7 +1,3 @@
-<!-- <p align="center">
-  <img src="./public/og-image.jpeg" alt="kkensuke blog preview" width="900" />
-</p> -->
-
 <h1 align="center">kkensuke / pages</h1>
 
 <p align="center">
