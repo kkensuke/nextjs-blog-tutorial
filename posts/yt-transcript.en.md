@@ -231,7 +231,9 @@ When the Web app is running locally on `127.0.0.1`, it can also fall back to the
 
 In contrast, a hosted Web app does not use a server-side `GEMINI_API_KEY`; each user provides their own key.
 
-## 7. Basic CLI Usage: `yt-transcript [OPTIONS] YOUTUBE_URL/VIDEO_ID`
+## 7. Basic CLI Usage
+
+- `yt-transcript [OPTIONS] YOUTUBE_URL/VIDEO_ID`
 
 | Option                                    | Description                                                                      |
 | ----------------------------------------- | -------------------------------------------------------------------------------- |
