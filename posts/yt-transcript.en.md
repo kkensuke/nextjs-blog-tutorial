@@ -233,7 +233,9 @@ In contrast, a hosted Web app does not use a server-side `GEMINI_API_KEY`; each 
 
 ## 7. Basic CLI Usage
 
-- `yt-transcript [OPTIONS] YOUTUBE_URL/VIDEO_ID`
+```bash
+yt-transcript [OPTIONS] YOUTUBE_URL/VIDEO_ID
+```
 
 | Option                                    | Description                                                                      |
 | ----------------------------------------- | -------------------------------------------------------------------------------- |
